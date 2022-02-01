@@ -1,17 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net48</TargetFramework>
+    <TargetFramework>net50</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ClassGenerator" Version="21.205.63.65" />
-    <PackageReference Include="Core" Version="21.205.63.65" />
     <PackageReference Include="Execution" Version="21.205.63.65" />
     <PackageReference Include="GeneratedWrappers.Acumatica" Version="21.205.60-P130679" />
-    <PackageReference Include="Host" Version="21.205.63.65" />
-    <PackageReference Include="PX.QA.Tools" Version="21.205.63.65" />
   </ItemGroup>
 
 </Project>

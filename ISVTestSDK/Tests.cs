@@ -8,7 +8,11 @@ using ISVTestSDK.Extensions;
 namespace ISVTestSDK
 {
 
+    
     //Use the Check class as a parent for every test.
+    //All test cases must be self contained. Starting from SalesDemo Example data and rely on no previous tests.
+    //All test cases must perform the pre-config steps if required before performing the test action.
+
     public class Tests : Check
     {
         
