@@ -1,10 +1,14 @@
-﻿using Controls.Dashboard;
+﻿using Controls.Button;
+using Controls.Dashboard;
+using Controls.Editors.Selector;
+using Controls.Input;
+using Controls.ToolBarButton;
 using Core;
 using Core.Config;
 using Core.Login;
 using Core.TestExecution;
 using Core.Wait;
-using ISVTestSDK.Extensions;
+using ISVTestSDK.Extensions; //the namespace of the custom wrapper/extension we made.
 namespace ISVTestSDK
 {
 
@@ -46,10 +50,14 @@ namespace ISVTestSDK
                     VendorMaint.CreateContactform.LastName.Type("TestSDKContact"); // type in required fields on the popup form
                     
                     VendorMaint.CreateContactPopupFormButtons.Create(); // pressing the create button to submit the popup form
-                    
+
+                    VendorMaint.DynamicGrid("Activities"); //select financial tab
+                    VendorMaint.DynamicControl<Selector>("Currency ID:").Type("CAD");
+                    VendorMaint.ToolBar.Save.Click();
+
                 }
                 #endregion
-             
+
             }
             #endregion
         }
