@@ -1,5 +1,5 @@
 ﻿using GeneratedWrappers.Acumatica;
-namespace ISVTestSDK.Extensions
+namespace ISVTestSDK.Extensions //using custom namespace for our custom/modified screens
 {
     public partial class VendorMaint : AP303000_VendorMaint
     {
