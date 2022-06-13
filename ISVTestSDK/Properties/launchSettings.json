@@ -2,7 +2,7 @@
   "profiles": {
     "ISVTestSDK": {
       "commandName": "Project",
-      "commandLineArgs": ".\\Tests.exe /config \"C:\\Acumatica2021R2\\TestSDK_21_205\\config.xml\"",
+      "commandLineArgs": ".\\Tests.exe /config \"C:\\AcumaticaTestSDK\\TestSDK_22_105_0031_32\\config.xml\"",
       "nativeDebugging": true
     }
   }

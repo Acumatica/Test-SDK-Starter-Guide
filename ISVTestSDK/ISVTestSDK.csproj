@@ -2,12 +2,34 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net4.8</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
   </PropertyGroup>
 
+  
+
   <ItemGroup>
-    <PackageReference Include="Execution" Version="21.205.63.65" />
-    <PackageReference Include="GeneratedWrappers.Acumatica" Version="21.205.60-P130679" />
+    <PackageReference Include="Core" Version="22.105.31.32" />
+    <PackageReference Include="Execution" Version="22.105.31.32" />
+    <PackageReference Include="GeneratedWrappers.Acumatica" Version="22.105.28-P146426" />
+  </ItemGroup>
+
+  
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
 </Project>

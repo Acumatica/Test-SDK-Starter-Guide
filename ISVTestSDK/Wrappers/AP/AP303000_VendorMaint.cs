@@ -31,7 +31,7 @@ using Core.Wait;
 using System;
 
 
-namespace GeneratedWrappers.Acumatica
+namespace ISVTestSDK.Extensions
 {
     
     
@@ -738,9 +738,6 @@ namespace GeneratedWrappers.Acumatica
 			public Label StartedLabel { get; }
 			public PXTextEdit RequestsLogged { get; }
 			public Label RequestsLoggedLabel { get; }
-			public PXTextEdit ExportText { get; }
-			public Label ExportTextLabel { get; }
-			public Label PXLabel1_ { get; }
 			public Label LblPlace_ { get; }
             
             public c_profilerinfoview_formprofiler(string locator, string name) : 
@@ -755,10 +752,6 @@ namespace GeneratedWrappers.Acumatica
                 RequestsLogged = new PXTextEdit("ctl00_usrCaption_pnlProfiler_formProfiler_lblRequestsLogged", "Requests Logged", locator, null);
                 RequestsLoggedLabel = new Label(RequestsLogged);
                 RequestsLogged.DataField = "RequestsLogged";
-                ExportText = new PXTextEdit("ctl00_usrCaption_pnlProfiler_formProfiler_lblExportText", "Export Text", locator, null);
-                ExportTextLabel = new Label(ExportText);
-                ExportText.DataField = "ExportText";
-                PXLabel1_ = new Label("ctl00_usrCaption_pnlProfiler_formProfiler_PXLabel1", "PX Label 1_", locator, null);
                 LblPlace_ = new Label("ctl00_usrCaption_pnlProfiler_formProfiler_lblPlace", "Lbl Place _", locator, null);
                 DataMemberName = "ProfilerInfoView";
                 Buttons = new PxButtonCollection();
@@ -774,9 +767,9 @@ namespace GeneratedWrappers.Acumatica
                 Buttons.BtnStopProfiler.Click();
             }
             
-            public virtual void BtnLastRequest()
+            public virtual void BtnMainProfiler()
             {
-                Buttons.BtnLastRequest.Click();
+                Buttons.BtnMainProfiler.Click();
             }
             
             public class PxButtonCollection : PxControlCollection
@@ -784,13 +777,13 @@ namespace GeneratedWrappers.Acumatica
                 
 			public Button BtnStartProfiler { get; }
 			public Button BtnStopProfiler { get; }
-			public Button BtnLastRequest { get; }
+			public Button BtnMainProfiler { get; }
                 
                 public PxButtonCollection()
                 {
                     BtnStartProfiler = new Button("ctl00_usrCaption_pnlProfiler_formProfiler_btnStartProfiler", "btnStartProfiler", "ctl00_usrCaption_pnlProfiler_formProfiler");
                     BtnStopProfiler = new Button("ctl00_usrCaption_pnlProfiler_formProfiler_btnStopProfiler", "btnStopProfiler", "ctl00_usrCaption_pnlProfiler_formProfiler");
-                    BtnLastRequest = new Button("ctl00_usrCaption_pnlProfiler_formProfiler_btnLastRequest", "btnLastRequest", "ctl00_usrCaption_pnlProfiler_formProfiler");
+                    BtnMainProfiler = new Button("ctl00_usrCaption_pnlProfiler_formProfiler_btnMainProfiler", "btnMainProfiler", "ctl00_usrCaption_pnlProfiler_formProfiler");
                 }
             }
         }
@@ -4177,9 +4170,9 @@ namespace GeneratedWrappers.Acumatica
                     Active.DataField = "Active";
                     ContactType = new DropDown("_ctl00_phG_tab_t11_sp1_gridNR_lv0_edContactType", "Contact Type", grid.Locator, "ContactType");
                     ContactType.DataField = "ContactType";
-                    ContactType.Items.Add("P", "Primary");
+                    ContactType.Items.Add("P", "Account Email");
                     ContactType.Items.Add("R", "Remittance");
-                    ContactType.Items.Add("S", "Shipping");
+                    ContactType.Items.Add("S", "Account Location Email");
                     ContactType.Items.Add("E", "Employee");
                     ContactType.Items.Add("C", "Contact");
                     OriginalContactID = new PXNumberEdit("ctl00_phG_tab_t11_sp1_gridNR_en", "OriginalContactID", grid.Locator, "OriginalContactID");
@@ -4249,9 +4242,9 @@ namespace GeneratedWrappers.Acumatica
                 ContactType = new DropDown("ctl00_phG_tab_t11_sp1_gridNR_lv0_edContactType", "Contact Type", locator, null);
                 ContactTypeLabel = new Label(ContactType);
                 ContactType.DataField = "ContactType";
-                ContactType.Items.Add("P", "Primary");
+                ContactType.Items.Add("P", "Account Email");
                 ContactType.Items.Add("R", "Remittance");
-                ContactType.Items.Add("S", "Shipping");
+                ContactType.Items.Add("S", "Account Location Email");
                 ContactType.Items.Add("E", "Employee");
                 ContactType.Items.Add("C", "Contact");
                 ContactID = new Selector("ctl00_phG_tab_t11_sp1_gridNR_lv0_edContactID", "Contact ID", locator, null);
@@ -4337,11 +4330,6 @@ namespace GeneratedWrappers.Acumatica
                 ToolBar.NewActivityC.Click();
             }
             
-            public virtual void NewActivityE()
-            {
-                ToolBar.NewActivityE.Click();
-            }
-            
             public virtual void NewActivityES()
             {
                 ToolBar.NewActivityES.Click();
@@ -4412,7 +4400,6 @@ namespace GeneratedWrappers.Acumatica
 			public ToolBarButtonGrid CreateActivity { get; }
 			public ToolBarButtonGrid NewActivityN { get; }
 			public ToolBarButtonGrid NewActivityC { get; }
-			public ToolBarButtonGrid NewActivityE { get; }
 			public ToolBarButtonGrid NewActivityES { get; }
 			public ToolBarButtonGrid NewActivityM { get; }
 			public ToolBarButtonGrid NewActivityP { get; }
@@ -4442,8 +4429,6 @@ namespace GeneratedWrappers.Acumatica
                             " li[data-cmd=\'NewActivity@NewActivityN\']", "Create Note", locator, CreateActivity);
                     NewActivityC = new ToolBarButtonGrid("css=div#ctl00_phG_tab_t8_gridActivities_Activities_grid_at_tlb_menucmdAddActivity" +
                             " li[data-cmd=\'NewActivity@NewActivityC\']", "Create Chat", locator, CreateActivity);
-                    NewActivityE = new ToolBarButtonGrid("css=div#ctl00_phG_tab_t8_gridActivities_Activities_grid_at_tlb_menucmdAddActivity" +
-                            " li[data-cmd=\'NewActivity@NewActivityE\']", "Create Appointment", locator, CreateActivity);
                     NewActivityES = new ToolBarButtonGrid("css=div#ctl00_phG_tab_t8_gridActivities_Activities_grid_at_tlb_menucmdAddActivity" +
                             " li[data-cmd=\'NewActivity@NewActivityES\']", "Create Escalation", locator, CreateActivity);
                     NewActivityM = new ToolBarButtonGrid("css=div#ctl00_phG_tab_t8_gridActivities_Activities_grid_at_tlb_menucmdAddActivity" +
@@ -5124,9 +5109,14 @@ namespace GeneratedWrappers.Acumatica
                 Buttons.Last1.Click();
             }
             
-            public virtual void Createandreview()
+            public virtual void Back()
             {
-                Buttons.Createandreview.Click();
+                Buttons.Back.Click();
+            }
+            
+            public virtual void Cancel()
+            {
+                Buttons.Cancel.Click();
             }
             
             public virtual void Create()
@@ -5134,9 +5124,9 @@ namespace GeneratedWrappers.Acumatica
                 Buttons.Create.Click();
             }
             
-            public virtual void Cancel()
+            public virtual void Createandreview()
             {
-                Buttons.Cancel.Click();
+                Buttons.Createandreview.Click();
             }
             
             public class PxButtonCollection : PxControlCollection
@@ -5151,9 +5141,10 @@ namespace GeneratedWrappers.Acumatica
 			public Button Prev1 { get; }
 			public Button Next1 { get; }
 			public Button Last1 { get; }
-			public Button Createandreview { get; }
-			public Button Create { get; }
+			public Button Back { get; }
 			public Button Cancel { get; }
+			public Button Create { get; }
+			public Button Createandreview { get; }
                 
                 public PxButtonCollection()
                 {
@@ -5170,9 +5161,10 @@ namespace GeneratedWrappers.Acumatica
                     Prev1 = new Button("ctl00_phG_PanelCreateContact_tabCreateContact_t2_grdContactInfoUDF_lfPrev0", "Prev", "ctl00_phG_PanelCreateContact_tabCreateContact");
                     Next1 = new Button("ctl00_phG_PanelCreateContact_tabCreateContact_t2_grdContactInfoUDF_lfNext0", "Next", "ctl00_phG_PanelCreateContact_tabCreateContact");
                     Last1 = new Button("ctl00_phG_PanelCreateContact_tabCreateContact_t2_grdContactInfoUDF_lfLast0", "Last", "ctl00_phG_PanelCreateContact_tabCreateContact");
-                    Createandreview = new Button("ctl00_phG_PanelCreateContact_CreateContactBtnReview", "Create and review", "ctl00_phG_PanelCreateContact_tabCreateContact");
-                    Create = new Button("ctl00_phG_PanelCreateContact_CreateContactBtnConvert", "Create", "ctl00_phG_PanelCreateContact_tabCreateContact");
+                    Back = new Button("ctl00_phG_PanelCreateContact_CreateContactBtnBack", "Back", "ctl00_phG_PanelCreateContact_tabCreateContact");
                     Cancel = new Button("ctl00_phG_PanelCreateContact_CreateContactBtnCancel", "Cancel", "ctl00_phG_PanelCreateContact_tabCreateContact");
+                    Create = new Button("ctl00_phG_PanelCreateContact_CreateContactBtnConvert", "Create", "ctl00_phG_PanelCreateContact_tabCreateContact");
+                    Createandreview = new Button("ctl00_phG_PanelCreateContact_CreateContactBtnReview", "Create and review", "ctl00_phG_PanelCreateContact_tabCreateContact");
                 }
             }
         }
@@ -5919,10 +5911,10 @@ namespace GeneratedWrappers.Acumatica
                 LandedCostVendor = new CheckBox("ctl00_phG_tab_t0_chkLandedCostVendor", "Landed Cost Vendor", locator, null);
                 LandedCostVendorLabel = new Label(LandedCostVendor);
                 LandedCostVendor.DataField = "LandedCostVendor";
-                TaxAgency = new CheckBox("ctl00_phG_tab_t0_chkTaxAgency", "Vendor is Tax Agency", locator, null);
+                TaxAgency = new CheckBox("ctl00_phG_tab_t0_chkTaxAgency", "Vendor Is Tax Agency", locator, null);
                 TaxAgencyLabel = new Label(TaxAgency);
                 TaxAgency.DataField = "TaxAgency";
-                IsLaborUnion = new CheckBox("ctl00_phG_tab_t0_chkLaborUnion", "Vendor is Labor Union", locator, null);
+                IsLaborUnion = new CheckBox("ctl00_phG_tab_t0_chkLaborUnion", "Vendor Is Labor Union", locator, null);
                 IsLaborUnionLabel = new Label(IsLaborUnion);
                 IsLaborUnion.DataField = "IsLaborUnion";
                 Vendor1099 = new CheckBox("ctl00_phG_tab_t0_chkVendor1099", "1099 Vendor", locator, null);
