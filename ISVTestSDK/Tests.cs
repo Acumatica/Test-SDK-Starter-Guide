@@ -15,25 +15,25 @@ using Core.Core.Browser;
 using System.Threading;
 using ISVTestSDK.Extensions;
 using Core.Log;
-//the namespace of the custom wrapper/extension we made.
+
 namespace ISVTestSDK
 {
     //Use the Check class as a parent for every test.
-    //All test cases must be self contained. Starting from SalesDemo data, or from a restored snapshot from the acumatica tenants screen
-    //All tests must be individual tests that do not rely on previous tests running beforehand.
-    //All test cases must perform the pre-config steps if required before performing the test action.
+    //All test cases should not rely on previous tests running successfully, where possible.
+    //Test initial state should start from SalesDemo data, or from a restored snapshot from the acumatica tenants screen
+    
     public class Test : Check
     {
-        const string customizationName = "VyaPay[22.100.0178]";
+        const string customizationName = "SOLUTIONNAME";
         const string customizationURLPath = @"C:\TestSDK\" + customizationName + ".zip";
-        const string snapshotName = "VYAPAY[22.100.0178]snapshot";
+        const string snapshotName = "SOLUTIONNAMESNAPSHOT";
         const string snapshotURLPath = @"C:\TestSDK\" + snapshotName + ".zip";
 
         public ProjectList CustomizationProjects = new ProjectList();
         public CompanyMaint Companies = new CompanyMaint();
 
 
-        public override void BeforeExecute()
+        public override void BeforeExecute() //run this if you ha
         {
             CustomizationProjects.Details.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
             CustomizationProjects.CplnPanel.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);

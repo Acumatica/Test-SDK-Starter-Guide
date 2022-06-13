@@ -14,14 +14,9 @@ using Core.Core.Browser;
 using System.Threading;
 using GeneratedWrappers.Acumatica;
 using ISVTestSDK.Extensions;
- //the namespace of the custom wrapper/extension we made.
+
 namespace ISVTestSDK
 {
-
-    
-    //Use the Check class as a parent for every test.
-    //All test cases must start from SalesDemo data, or from a restored snapshot from the "Tenants" screen
-    //Tests should be individual tests that do not rely on previous tests being run.
 
     public class Tests1 : Check
     {
