@@ -21,20 +21,23 @@ namespace ISVTestSDK
     //Use the Check class as a parent for every test.
     //All test cases should not rely on previous tests running successfully, where possible.
     //Test initial state should start from SalesDemo data, or from a restored snapshot from the acumatica tenants screen
-    
+
     public class Test : Check
     {
-        const string customizationName = "SOLUTIONNAME";
-        const string customizationURLPath = @"C:\TestSDK\" + customizationName + ".zip";
-        const string snapshotName = "SOLUTIONNAMESNAPSHOT";
-        const string snapshotURLPath = @"C:\TestSDK\" + snapshotName + ".zip";
+        const string customizationName = "SOLUTION-FILE-NAME";
+        const string customizationURLPath = @"C:\TestSDKFiles\Customizations\" + customizationName + ".zip";
+        const string snapshotName = "SNAPSHOT-FILE-NAME";
+        const string snapshotURLPath = @"C:\share\Snapshots\" + snapshotName + ".zip";
 
         public ProjectList CustomizationProjects = new ProjectList();
         public CompanyMaint Companies = new CompanyMaint();
 
 
-        public override void BeforeExecute() //run this if you ha
+        public override void BeforeExecute() // run BeforeExecute if you have customization projects and/or a snapshot to restore
         {
+            PxLogin.LoginToDestinationSite();
+
+            #region Extend wait operations to allow customization publishing and snapshot restore time to complete.
             CustomizationProjects.Details.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
             CustomizationProjects.CplnPanel.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
             CustomizationProjects.CplnPanel.CloseCompilationPane.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
@@ -53,13 +56,9 @@ namespace ISVTestSDK
             Companies.cUploadSnapshotPackage.WaitActionOverride = () => Wait.WaitForLongOperationToComplete(Wait.LongTimeOut * 4);
             Companies.Snapshots.WaitActionOverride = () => Wait.WaitForLongOperationToComplete(Wait.LongTimeOut * 4);
             Companies.RestoreSnapshotSettings.WaitActionOverride = () => Wait.WaitForLongOperationToComplete(Wait.LongTimeOut * 4);
+            #endregion
 
-
-            PxLogin.LoginToDestinationSite();
-
-
-
-            #region Import and publish customization
+            #region Import and publish customization to the website
             using (TestExecution.CreateTestStepGroup("Upload/replace customization project(s)."))
             {
 
@@ -114,6 +113,7 @@ namespace ISVTestSDK
                 CustomizationProjects.Refresh();
             }
             #endregion
+
             #region Import and publish site snapshot backup from "tenants" screen, then republish customization project.
             using (TestExecution.CreateTestStepGroup("Companies screen (SM203520)"))
             {
@@ -124,7 +124,7 @@ namespace ISVTestSDK
                 Companies.cUploadSnapshotPackage.IncludeDataFromCustomColumns.SetTrue();
                 Companies.cUploadSnapshotPackage.Upload();
                 Companies.ImportSnapshotCommand();
-                
+
                 PxLogin.LoginToDestinationSite(); //login after snapshot restore then republish the newest customization project next.
             }
             using (TestExecution.CreateTestStepGroup("Upload/replace customization project(s)."))
@@ -183,12 +183,12 @@ namespace ISVTestSDK
 
         public override void Execute()
         {
-
-           Tests1 Tests1 = new Tests1();
+            PxLogin.LoginToDestinationSite();
+            Tests1 Tests1 = new Tests1();
             Tests1.Execute();
 
-           // Tests2 Tests2 = new Tests2();
-            //Tests2.Execute();
+            // Tests2 Tests2 = new Tests2();
+            // Tests2.Execute();
 
 
 
