@@ -71,51 +71,43 @@ namespace ISVTestSDK
                 OrderSo.OpenScreen();
                 OrderSo.Insert();
                 OrderSo.Note();
-                OrderSo.NotePanel.Cancel(); // PATCH: to remove the tooltip of the Insert Button
+                OrderSo.NotePanel.Cancel();
 
                 // OrderSo.Summary.OrderType.Select("SO");
-                OrderSo.Summary.OrderType.Type("SO");              // Bug Acumatica.  Use Type instead of Select because of the custom order type
+                OrderSo.Summary.OrderType.Type("SO"); 
 
                 OrderSo.Summary.CustomerID.Select("ABCSTUDIOS");
 
                 OrderSo.DocumentDetails.New();
                 OrderSo.DocumentDetails.Row.InventoryID.Select("ACCOMODATE");
-                //OrderSo.DocumentDetails.Row.TranDesc.GetValue().VerifyEquals(ACCOMODATE_EN);
                 OrderSo.DocumentDetails.New();
                 OrderSo.DocumentDetails.Row.InventoryID.Select("ADMCHARGE");
-                //OrderSo.DocumentDetails.Row.TranDesc.GetValue().VerifyEquals(ADMCHARGE_EN);
 
                 OrderSo.Cancel();
                 OrderSo.Insert();
                 OrderSo.Note();
-                OrderSo.NotePanel.Cancel(); // PATCH: to remove the tooltip of the Insert Button
+                OrderSo.NotePanel.Cancel(); 
 
-                // OrderSo.Summary.OrderType.Select("SO");
-                OrderSo.Summary.OrderType.Type("SO");              // Bug Acumatica.  Use Type instead of Select because of the custom order type
+                OrderSo.Summary.OrderType.Type("SO");              /
                 OrderSo.Summary.CustomerID.Select("ABARTENDE");
 
                 OrderSo.DocumentDetails.New();
                 OrderSo.DocumentDetails.Row.InventoryID.Select("ACCOMODATE");
-                //OrderSo.DocumentDetails.Row.TranDesc.GetValue().VerifyEquals(ACCOMODATE_FR);
                 OrderSo.DocumentDetails.New();
                 OrderSo.DocumentDetails.Row.InventoryID.Select("ADMCHARGE");
-                //OrderSo.DocumentDetails.Row.TranDesc.GetValue().VerifyEquals(ADMCHARGE_FR);
 
                 OrderSo.Cancel();
                 OrderSo.Insert();
                 OrderSo.Note();
-                OrderSo.NotePanel.Cancel(); // PATCH: to remove the tooltip of the Insert Button
+                OrderSo.NotePanel.Cancel(); 
 
-                // OrderSo.Summary.OrderType.Select("SO");
-                OrderSo.Summary.OrderType.Type("SO");              // Bug Acumatica.  Use Type instead of Select because of the custom order type
+                OrderSo.Summary.OrderType.Type("SO");          
                 OrderSo.Summary.CustomerID.Select("ALPHABETLD");
 
                 OrderSo.DocumentDetails.New();
                 OrderSo.DocumentDetails.Row.InventoryID.Select("ACCOMODATE");
-                //OrderSo.DocumentDetails.Row.TranDesc.GetValue().VerifyEquals(ACCOMODATE_EN);
                 OrderSo.DocumentDetails.New();
                 OrderSo.DocumentDetails.Row.InventoryID.Select("ADMCHARGE");
-                //OrderSo.DocumentDetails.Row.TranDesc.GetValue().VerifyEquals(ADMCHARGE_EN);
 
                 OrderSo.Cancel();
             }
