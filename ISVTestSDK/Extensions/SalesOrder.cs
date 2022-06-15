@@ -1,4 +1,4 @@
-﻿using GeneratedWrappers.Acumatica;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace GeneratedWrappers.VYAPAY
+namespace ISVTestSDK.Extensions
 {
    public class SalesOrder: SO301000_SOOrderEntry
     {

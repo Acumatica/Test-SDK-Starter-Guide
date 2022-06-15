@@ -1,11 +1,11 @@
-﻿using GeneratedWrappers.Acumatica;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GeneratedWrappers.VYAPAY
+namespace ISVTestSDK.Extensions
 {
    public class SOShipment: SO302000_SOShipmentEntry
     {

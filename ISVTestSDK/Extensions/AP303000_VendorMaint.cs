@@ -1,5 +1,5 @@
 ﻿
-namespace ISVTestSDK.Extensions //using custom namespace for our custom/modified screens
+namespace ISVTestSDK.Extensions 
 {
     public partial class VendorMaint : AP303000_VendorMaint
     {

@@ -9,7 +9,7 @@ using System;
 using Core;
 using Controls.DefaultControl;
 
-namespace GeneratedWrappers.VYAPAY
+namespace ISVTestSDK.Extensions
 {
     public class HostedFormHandler : Wrapper
     {

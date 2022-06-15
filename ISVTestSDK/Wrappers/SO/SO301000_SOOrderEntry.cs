@@ -134,14 +134,14 @@ namespace ISVTestSDK.Extensions
         protected c_splits_grid2 Splits_grid2 { get; } = new c_splits_grid2("ctl00_phG_PanelLS_grid2", "splits_grid2");
         protected c_splits_lv0 Splits_lv0 { get; } = new c_splits_lv0("ctl00_phG_PanelLS_grid2_lv0", "splits_lv0");
         protected c_reasonapproverejectparams_pxformviewpanelreason ReasonApproveRejectParams_PXFormViewPanelReason { get; } = new c_reasonapproverejectparams_pxformviewpanelreason("ctl00_phG_panelReason_PXFormViewPanelReason", "ReasonApproveRejectParams_PXFormViewPanelReason");
+        protected c_quickpayment_createpaymentformview QuickPayment_CreatePaymentFormView { get; } = new c_quickpayment_createpaymentformview("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView", "QuickPayment_CreatePaymentFormView");
+        protected c_importexternaltran_importpaymentformview ImportExternalTran_ImportPaymentFormView { get; } = new c_importexternaltran_importpaymentformview("ctl00_phG_ImportPaymentSmartPanel_ImportPaymentFormView", "ImportExternalTran_ImportPaymentFormView");
         protected c_header_matrixentryformview Header_MatrixEntryFormView { get; } = new c_header_matrixentryformview("ctl00_phG_InventoryMatrixEntrySmartPanel_MatrixEntryFormView", "Header_MatrixEntryFormView");
         protected c_header_matrixformview Header_MatrixFormView { get; } = new c_header_matrixformview("ctl00_phG_InventoryMatrixLookupSmartPanel_MatrixFormView", "Header_MatrixFormView");
         protected c_additionalattributes_matrixattributes AdditionalAttributes_MatrixAttributes { get; } = new c_additionalattributes_matrixattributes("ctl00_phG_InventoryMatrixLookupSmartPanel_MatrixAttributes", "AdditionalAttributes_MatrixAttributes");
         protected c_additionalattributes_lv0 AdditionalAttributes_lv0 { get; } = new c_additionalattributes_lv0("ctl00_phG_InventoryMatrixLookupSmartPanel_MatrixAttributes_lv0", "AdditionalAttributes_lv0");
         protected c_matrixitems_matrixitems MatrixItems_MatrixItems { get; } = new c_matrixitems_matrixitems("ctl00_phG_InventoryMatrixEntrySmartPanel_MatrixItems", "MatrixItems_MatrixItems");
         protected c_matrixitems_lv0 MatrixItems_lv0 { get; } = new c_matrixitems_lv0("ctl00_phG_InventoryMatrixEntrySmartPanel_MatrixItems_lv0", "MatrixItems_lv0");
-        protected c_quickpayment_createpaymentformview QuickPayment_CreatePaymentFormView { get; } = new c_quickpayment_createpaymentformview("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView", "QuickPayment_CreatePaymentFormView");
-        protected c_importexternaltran_importpaymentformview ImportExternalTran_ImportPaymentFormView { get; } = new c_importexternaltran_importpaymentformview("ctl00_phG_ImportPaymentSmartPanel_ImportPaymentFormView", "ImportExternalTran_ImportPaymentFormView");
         protected c_orderrisks_gridorderrisks OrderRisks_gridOrderRisks { get; } = new c_orderrisks_gridorderrisks("ctl00_phG_tab_t12_gridOrderRisks", "OrderRisks_gridOrderRisks");
         protected c_orderestimaterecords_gridestimates OrderEstimateRecords_gridEstimates { get; } = new c_orderestimaterecords_gridestimates("ctl00_phG_tab_t1_gridEstimates", "OrderEstimateRecords_gridEstimates");
         protected c_orderestimaterecords_lv0 OrderEstimateRecords_lv0 { get; } = new c_orderestimaterecords_lv0("ctl00_phG_tab_t1_gridEstimates_lv0", "OrderEstimateRecords_lv0");
@@ -611,11 +611,6 @@ namespace ISVTestSDK.Extensions
             ToolBar.Notification.Click();
         }
         
-        public virtual void MatrixGridCellChanged()
-        {
-            ToolBar.MatrixGridCellChanged.Click();
-        }
-        
         public virtual void SyncPaymentTransaction()
         {
             ToolBar.SyncPaymentTransaction.Click();
@@ -625,6 +620,11 @@ namespace ISVTestSDK.Extensions
         {
             ToolBar.SyncPaymentTransaction.WaitActionOverride = () => Wait.WaitForLongOperationToComplete(status, message);
             ToolBar.SyncPaymentTransaction.Click();
+        }
+        
+        public virtual void MatrixGridCellChanged()
+        {
+            ToolBar.MatrixGridCellChanged.Click();
         }
         
         public virtual void ManageCCPaymentMethodHF()
@@ -731,8 +731,8 @@ namespace ISVTestSDK.Extensions
 			public ToolBarButton Reject { get; }
 			public ToolBarButton PutOnHold { get; }
 			public ToolBarButton Notification { get; }
-			public ToolBarButton MatrixGridCellChanged { get; }
 			public ToolBarButton SyncPaymentTransaction { get; }
+			public ToolBarButton MatrixGridCellChanged { get; }
 			public ToolBarButton ManageCCPaymentMethodHF { get; }
 			public ToolBarButton LongRun { get; }
 			public ToolBarButton LongrunCancel { get; }
@@ -861,11 +861,11 @@ namespace ISVTestSDK.Extensions
                 PutOnHold = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_PutOnHold,#ctl00_phDS_ds_ToolBar_PutOnHold_item", "Hold", locator, MenuOpener);
                 Notification = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_Notification,#ctl00_phDS_ds_ToolBar_Notification_item", "Notifications", locator, MenuOpener);
                 Notification.WaitAction = Wait.WaitForLongOperationToComplete;
-                MatrixGridCellChanged = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_matrixGridCellChanged,#ctl00_phDS_ds_ToolBar_matrixGri" +
-                        "dCellChanged_item", "matrixGridCellChanged", locator, MenuOpener);
                 SyncPaymentTransaction = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_SyncPaymentTransaction,#ctl00_phDS_ds_ToolBar_SyncPaym" +
                         "entTransaction_item", "SyncPaymentTransaction", locator, MenuOpener);
                 SyncPaymentTransaction.WaitAction = Wait.WaitForLongOperationToComplete;
+                MatrixGridCellChanged = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_matrixGridCellChanged,#ctl00_phDS_ds_ToolBar_matrixGri" +
+                        "dCellChanged_item", "matrixGridCellChanged", locator, MenuOpener);
                 ManageCCPaymentMethodHF = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_ManageCCPaymentMethodHF,#ctl00_phDS_ds_ToolBar_ManageC" +
                         "CPaymentMethodHF_item", "Edit", locator, MenuOpener);
                 LongRun = new ToolBarButton("css=qp-long-run", "Nothing in progress", locator, null);
@@ -12731,6 +12731,171 @@ namespace ISVTestSDK.Extensions
             }
         }
         
+        public class c_quickpayment_createpaymentformview : Container
+        {
+            
+            public PxButtonCollection Buttons;
+            
+			public PXNumberEdit CuryOrigDocAmt { get; }
+			public Label CuryOrigDocAmtLabel { get; }
+			public PXNumberEdit CuryRefundAmt { get; }
+			public Label CuryRefundAmtLabel { get; }
+			public Selector CuryID { get; }
+			public Label CuryIDLabel { get; }
+			public PXTextEdit DocDesc { get; }
+			public Label DocDescLabel { get; }
+			public Selector PaymentMethodID { get; }
+			public Label PaymentMethodIDLabel { get; }
+			public Selector RefTranExtNbr { get; }
+			public Label RefTranExtNbrLabel { get; }
+			public CheckBox NewCard { get; }
+			public Label NewCardLabel { get; }
+			public CheckBox SaveCard { get; }
+			public Label SaveCardLabel { get; }
+			public Selector PMInstanceID { get; }
+			public Label PMInstanceIDLabel { get; }
+			public Selector CashAccountID { get; }
+			public Label CashAccountIDLabel { get; }
+			public Selector ProcessingCenterID { get; }
+			public Label ProcessingCenterIDLabel { get; }
+			public PXTextEdit ExtRefNbr { get; }
+			public Label ExtRefNbrLabel { get; }
+            
+            public c_quickpayment_createpaymentformview(string locator, string name) : 
+                    base(locator, name)
+            {
+                CuryOrigDocAmt = new PXNumberEdit("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView_edCuryOrigDocAmt", "Cury Orig Doc Amt", locator, null);
+                CuryOrigDocAmtLabel = new Label(CuryOrigDocAmt);
+                CuryOrigDocAmt.DataField = "CuryOrigDocAmt";
+                CuryRefundAmt = new PXNumberEdit("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView_edCuryRefundAmt", "Cury Refund Amt", locator, null);
+                CuryRefundAmtLabel = new Label(CuryRefundAmt);
+                CuryRefundAmt.DataField = "CuryRefundAmt";
+                CuryID = new Selector("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView_edCuryID", "Cury ID", locator, null);
+                CuryIDLabel = new Label(CuryID);
+                CuryID.DataField = "CuryID";
+                DocDesc = new PXTextEdit("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView_edDocDesc", "Doc Desc", locator, null);
+                DocDescLabel = new Label(DocDesc);
+                DocDesc.DataField = "DocDesc";
+                PaymentMethodID = new Selector("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView_selPaymentMethodID", "Payment Method ID", locator, null);
+                PaymentMethodIDLabel = new Label(PaymentMethodID);
+                PaymentMethodID.DataField = "PaymentMethodID";
+                RefTranExtNbr = new Selector("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView_selRefTranExtNbr", "Ref Tran Ext Nbr", locator, null);
+                RefTranExtNbrLabel = new Label(RefTranExtNbr);
+                RefTranExtNbr.DataField = "RefTranExtNbr";
+                NewCard = new CheckBox("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView_chkNewCard", "New Card", locator, null);
+                NewCardLabel = new Label(NewCard);
+                NewCard.DataField = "NewCard";
+                SaveCard = new CheckBox("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView_chkSaveCard", "Save Card", locator, null);
+                SaveCardLabel = new Label(SaveCard);
+                SaveCard.DataField = "SaveCard";
+                PMInstanceID = new Selector("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView_edPMInstanceID", "PM Instance ID", locator, null);
+                PMInstanceIDLabel = new Label(PMInstanceID);
+                PMInstanceID.DataField = "PMInstanceID";
+                CashAccountID = new Selector("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView_edCashAccountID", "Cash Account ID", locator, null);
+                CashAccountIDLabel = new Label(CashAccountID);
+                CashAccountID.DataField = "CashAccountID";
+                ProcessingCenterID = new Selector("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView_edProcessingCenterID", "Processing Center ID", locator, null);
+                ProcessingCenterIDLabel = new Label(ProcessingCenterID);
+                ProcessingCenterID.DataField = "ProcessingCenterID";
+                ExtRefNbr = new PXTextEdit("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView_edExtRefNbr", "Ext Ref Nbr", locator, null);
+                ExtRefNbrLabel = new Label(ExtRefNbr);
+                ExtRefNbr.DataField = "ExtRefNbr";
+                DataMemberName = "QuickPayment";
+                Buttons = new PxButtonCollection();
+            }
+            
+            public virtual void CreatePaymentRefundButton()
+            {
+                Buttons.CreatePaymentRefundButton.Click();
+            }
+            
+            public virtual void CreatePaymentCaptureButton()
+            {
+                Buttons.CreatePaymentCaptureButton.Click();
+            }
+            
+            public virtual void CreatePaymentAuthorizeButton()
+            {
+                Buttons.CreatePaymentAuthorizeButton.Click();
+            }
+            
+            public virtual void CreatePaymentOKButton()
+            {
+                Buttons.CreatePaymentOKButton.Click();
+            }
+            
+            public virtual void Cancel()
+            {
+                Buttons.Cancel.Click();
+            }
+            
+            public class PxButtonCollection : PxControlCollection
+            {
+                
+			public Button CreatePaymentRefundButton { get; }
+			public Button CreatePaymentCaptureButton { get; }
+			public Button CreatePaymentAuthorizeButton { get; }
+			public Button CreatePaymentOKButton { get; }
+			public Button Cancel { get; }
+                
+                public PxButtonCollection()
+                {
+                    CreatePaymentRefundButton = new Button("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentRefundButton", "CreatePaymentRefundButton", "ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView");
+                    CreatePaymentCaptureButton = new Button("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentCaptureButton", "CreatePaymentCaptureButton", "ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView");
+                    CreatePaymentAuthorizeButton = new Button("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentAuthorizeButton", "CreatePaymentAuthorizeButton", "ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView");
+                    CreatePaymentOKButton = new Button("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentOKButton", "CreatePaymentOKButton", "ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView");
+                    Cancel = new Button("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentCancelButton", "Cancel", "ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView");
+                }
+            }
+        }
+        
+        public class c_importexternaltran_importpaymentformview : Container
+        {
+            
+            public PxButtonCollection Buttons;
+            
+			public PXTextEdit TranNumber { get; }
+			public Label TranNumberLabel { get; }
+			public Selector ProcessingCenterID { get; }
+			public Label ProcessingCenterIDLabel { get; }
+            
+            public c_importexternaltran_importpaymentformview(string locator, string name) : 
+                    base(locator, name)
+            {
+                TranNumber = new PXTextEdit("ctl00_phG_ImportPaymentSmartPanel_ImportPaymentFormView_edTranNumber", "Tran Number", locator, null);
+                TranNumberLabel = new Label(TranNumber);
+                TranNumber.DataField = "TranNumber";
+                ProcessingCenterID = new Selector("ctl00_phG_ImportPaymentSmartPanel_ImportPaymentFormView_edProcessingCenterID", "Processing Center ID", locator, null);
+                ProcessingCenterIDLabel = new Label(ProcessingCenterID);
+                ProcessingCenterID.DataField = "ProcessingCenterID";
+                DataMemberName = "ImportExternalTran";
+                Buttons = new PxButtonCollection();
+            }
+            
+            public virtual void ImportPaymentCreateButton()
+            {
+                Buttons.ImportPaymentCreateButton.Click();
+            }
+            
+            public virtual void Cancel()
+            {
+                Buttons.Cancel.Click();
+            }
+            
+            public class PxButtonCollection : PxControlCollection
+            {
+                
+			public Button ImportPaymentCreateButton { get; }
+			public Button Cancel { get; }
+                
+                public PxButtonCollection()
+                {
+                    ImportPaymentCreateButton = new Button("ctl00_phG_ImportPaymentSmartPanel_ImportPaymentCreateButton", "ImportPaymentCreateButton", "ctl00_phG_ImportPaymentSmartPanel_ImportPaymentFormView");
+                    Cancel = new Button("ctl00_phG_ImportPaymentSmartPanel_ImportPaymentCancelButton", "Cancel", "ctl00_phG_ImportPaymentSmartPanel_ImportPaymentFormView");
+                }
+            }
+        }
+        
         public class c_header_matrixentryformview : Container
         {
             
@@ -13422,171 +13587,6 @@ namespace ISVTestSDK.Extensions
                     Addandclose = new Button("ctl00_phG_InventoryMatrixEntrySmartPanel_InventoryMatrixEntrySmartPanelButtonOK", "Add and close", "ctl00_phG_InventoryMatrixEntrySmartPanel_MatrixItems_lv0");
                     Cancel = new Button("ctl00_phG_InventoryMatrixEntrySmartPanel_InventoryMatrixEntrySmartPanelButtonCanc" +
                             "el", "Cancel", "ctl00_phG_InventoryMatrixEntrySmartPanel_MatrixItems_lv0");
-                }
-            }
-        }
-        
-        public class c_quickpayment_createpaymentformview : Container
-        {
-            
-            public PxButtonCollection Buttons;
-            
-			public PXNumberEdit CuryOrigDocAmt { get; }
-			public Label CuryOrigDocAmtLabel { get; }
-			public PXNumberEdit CuryRefundAmt { get; }
-			public Label CuryRefundAmtLabel { get; }
-			public Selector CuryID { get; }
-			public Label CuryIDLabel { get; }
-			public PXTextEdit DocDesc { get; }
-			public Label DocDescLabel { get; }
-			public Selector PaymentMethodID { get; }
-			public Label PaymentMethodIDLabel { get; }
-			public Selector RefTranExtNbr { get; }
-			public Label RefTranExtNbrLabel { get; }
-			public CheckBox NewCard { get; }
-			public Label NewCardLabel { get; }
-			public CheckBox SaveCard { get; }
-			public Label SaveCardLabel { get; }
-			public Selector PMInstanceID { get; }
-			public Label PMInstanceIDLabel { get; }
-			public Selector CashAccountID { get; }
-			public Label CashAccountIDLabel { get; }
-			public Selector ProcessingCenterID { get; }
-			public Label ProcessingCenterIDLabel { get; }
-			public PXTextEdit ExtRefNbr { get; }
-			public Label ExtRefNbrLabel { get; }
-            
-            public c_quickpayment_createpaymentformview(string locator, string name) : 
-                    base(locator, name)
-            {
-                CuryOrigDocAmt = new PXNumberEdit("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView_edCuryOrigDocAmt", "Cury Orig Doc Amt", locator, null);
-                CuryOrigDocAmtLabel = new Label(CuryOrigDocAmt);
-                CuryOrigDocAmt.DataField = "CuryOrigDocAmt";
-                CuryRefundAmt = new PXNumberEdit("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView_edCuryRefundAmt", "Cury Refund Amt", locator, null);
-                CuryRefundAmtLabel = new Label(CuryRefundAmt);
-                CuryRefundAmt.DataField = "CuryRefundAmt";
-                CuryID = new Selector("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView_edCuryID", "Cury ID", locator, null);
-                CuryIDLabel = new Label(CuryID);
-                CuryID.DataField = "CuryID";
-                DocDesc = new PXTextEdit("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView_edDocDesc", "Doc Desc", locator, null);
-                DocDescLabel = new Label(DocDesc);
-                DocDesc.DataField = "DocDesc";
-                PaymentMethodID = new Selector("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView_selPaymentMethodID", "Payment Method ID", locator, null);
-                PaymentMethodIDLabel = new Label(PaymentMethodID);
-                PaymentMethodID.DataField = "PaymentMethodID";
-                RefTranExtNbr = new Selector("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView_selRefTranExtNbr", "Ref Tran Ext Nbr", locator, null);
-                RefTranExtNbrLabel = new Label(RefTranExtNbr);
-                RefTranExtNbr.DataField = "RefTranExtNbr";
-                NewCard = new CheckBox("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView_chkNewCard", "New Card", locator, null);
-                NewCardLabel = new Label(NewCard);
-                NewCard.DataField = "NewCard";
-                SaveCard = new CheckBox("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView_chkSaveCard", "Save Card", locator, null);
-                SaveCardLabel = new Label(SaveCard);
-                SaveCard.DataField = "SaveCard";
-                PMInstanceID = new Selector("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView_edPMInstanceID", "PM Instance ID", locator, null);
-                PMInstanceIDLabel = new Label(PMInstanceID);
-                PMInstanceID.DataField = "PMInstanceID";
-                CashAccountID = new Selector("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView_edCashAccountID", "Cash Account ID", locator, null);
-                CashAccountIDLabel = new Label(CashAccountID);
-                CashAccountID.DataField = "CashAccountID";
-                ProcessingCenterID = new Selector("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView_edProcessingCenterID", "Processing Center ID", locator, null);
-                ProcessingCenterIDLabel = new Label(ProcessingCenterID);
-                ProcessingCenterID.DataField = "ProcessingCenterID";
-                ExtRefNbr = new PXTextEdit("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView_edExtRefNbr", "Ext Ref Nbr", locator, null);
-                ExtRefNbrLabel = new Label(ExtRefNbr);
-                ExtRefNbr.DataField = "ExtRefNbr";
-                DataMemberName = "QuickPayment";
-                Buttons = new PxButtonCollection();
-            }
-            
-            public virtual void CreatePaymentRefundButton()
-            {
-                Buttons.CreatePaymentRefundButton.Click();
-            }
-            
-            public virtual void CreatePaymentCaptureButton()
-            {
-                Buttons.CreatePaymentCaptureButton.Click();
-            }
-            
-            public virtual void CreatePaymentAuthorizeButton()
-            {
-                Buttons.CreatePaymentAuthorizeButton.Click();
-            }
-            
-            public virtual void CreatePaymentOKButton()
-            {
-                Buttons.CreatePaymentOKButton.Click();
-            }
-            
-            public virtual void Cancel()
-            {
-                Buttons.Cancel.Click();
-            }
-            
-            public class PxButtonCollection : PxControlCollection
-            {
-                
-			public Button CreatePaymentRefundButton { get; }
-			public Button CreatePaymentCaptureButton { get; }
-			public Button CreatePaymentAuthorizeButton { get; }
-			public Button CreatePaymentOKButton { get; }
-			public Button Cancel { get; }
-                
-                public PxButtonCollection()
-                {
-                    CreatePaymentRefundButton = new Button("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentRefundButton", "CreatePaymentRefundButton", "ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView");
-                    CreatePaymentCaptureButton = new Button("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentCaptureButton", "CreatePaymentCaptureButton", "ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView");
-                    CreatePaymentAuthorizeButton = new Button("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentAuthorizeButton", "CreatePaymentAuthorizeButton", "ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView");
-                    CreatePaymentOKButton = new Button("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentOKButton", "CreatePaymentOKButton", "ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView");
-                    Cancel = new Button("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentCancelButton", "Cancel", "ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView");
-                }
-            }
-        }
-        
-        public class c_importexternaltran_importpaymentformview : Container
-        {
-            
-            public PxButtonCollection Buttons;
-            
-			public PXTextEdit TranNumber { get; }
-			public Label TranNumberLabel { get; }
-			public Selector ProcessingCenterID { get; }
-			public Label ProcessingCenterIDLabel { get; }
-            
-            public c_importexternaltran_importpaymentformview(string locator, string name) : 
-                    base(locator, name)
-            {
-                TranNumber = new PXTextEdit("ctl00_phG_ImportPaymentSmartPanel_ImportPaymentFormView_edTranNumber", "Tran Number", locator, null);
-                TranNumberLabel = new Label(TranNumber);
-                TranNumber.DataField = "TranNumber";
-                ProcessingCenterID = new Selector("ctl00_phG_ImportPaymentSmartPanel_ImportPaymentFormView_edProcessingCenterID", "Processing Center ID", locator, null);
-                ProcessingCenterIDLabel = new Label(ProcessingCenterID);
-                ProcessingCenterID.DataField = "ProcessingCenterID";
-                DataMemberName = "ImportExternalTran";
-                Buttons = new PxButtonCollection();
-            }
-            
-            public virtual void ImportPaymentCreateButton()
-            {
-                Buttons.ImportPaymentCreateButton.Click();
-            }
-            
-            public virtual void Cancel()
-            {
-                Buttons.Cancel.Click();
-            }
-            
-            public class PxButtonCollection : PxControlCollection
-            {
-                
-			public Button ImportPaymentCreateButton { get; }
-			public Button Cancel { get; }
-                
-                public PxButtonCollection()
-                {
-                    ImportPaymentCreateButton = new Button("ctl00_phG_ImportPaymentSmartPanel_ImportPaymentCreateButton", "ImportPaymentCreateButton", "ctl00_phG_ImportPaymentSmartPanel_ImportPaymentFormView");
-                    Cancel = new Button("ctl00_phG_ImportPaymentSmartPanel_ImportPaymentCancelButton", "Cancel", "ctl00_phG_ImportPaymentSmartPanel_ImportPaymentFormView");
                 }
             }
         }

@@ -1,7 +1,7 @@
 How to use this file for the first time:
 
 PreReq:
-1) Install Acumatica website with the correct specific version you want to target - recommended using SalesDemo data during install - or restore an "Initial test state" snapshot from the tenants screen
+1) Install Acumatica website with the correct specific version you want to target - use SalesDemo data during install - or restore an "Initial test state" snapshot from the tenants screen
 2) Download the Test SDK.zip for the same version - extract it to C:\AcumaticaTestSDK
 3) Create C:\share
 4) Create C:\share\download

@@ -5,12 +5,20 @@
     <TargetFramework>net48</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Configuration\Custom Configuration\Cc110.cs" />
+    <Compile Remove="VYAPAYTests.cs" />
+  </ItemGroup>
+
   
 
   <ItemGroup>
+    <PackageReference Include="ClassGenerator" Version="22.105.31.32" />
     <PackageReference Include="Core" Version="22.105.31.32" />
     <PackageReference Include="Execution" Version="22.105.31.32" />
     <PackageReference Include="GeneratedWrappers.Acumatica" Version="22.105.28-P146426" />
+    <PackageReference Include="Host" Version="22.105.31.32" />
+    <PackageReference Include="PX.QA.Tools" Version="22.105.31.32" />
   </ItemGroup>
 
   
@@ -30,6 +38,12 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+
+  
+
+  <ItemGroup>
+    <Folder Include="Configuration\Custom Configuration\" />
   </ItemGroup>
 
 </Project>

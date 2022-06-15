@@ -10,7 +10,7 @@ using System;
 using System.Threading;
 
 
-namespace GeneratedWrappers.VYAPAY
+namespace ISVTestSDK.Extensions
 {
     public class HostedFormHandlerACH
     {

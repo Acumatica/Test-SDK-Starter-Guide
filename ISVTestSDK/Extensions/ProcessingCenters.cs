@@ -1,11 +1,11 @@
-﻿using GeneratedWrappers.Acumatica;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GeneratedWrappers.VYAPAY
+namespace ISVTestSDK.Extensions
 {
   public  class ProcessingCenters: CA205000_CCProcessingCenterMaint
     {

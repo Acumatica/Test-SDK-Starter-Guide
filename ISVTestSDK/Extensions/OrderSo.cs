@@ -1,6 +1,6 @@
 ﻿using System;
 using Controls.Button;
-using GeneratedWrappers.Acumatica;
+using ISVTestSDK.Extensions;
 
 namespace Core
 {
@@ -348,7 +348,7 @@ namespace Core
                 Wait.Wait.WaitForPageToLoad();
             };
 
-            ToolBar.ViewServiceOrder.WaitAction = Wait.Wait.WaitForNewWindowToOpen;
+            //ToolBar.ViewServiceOrder.WaitAction = Wait.Wait.WaitForNewWindowToOpen;
 
             Allocations.Row.RefNoteID.WaitAction = () => Wait.Wait.WaitForPageToLoad(true);
 
