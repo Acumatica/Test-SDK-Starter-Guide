@@ -18,14 +18,16 @@ using Core.Log;
 
 namespace ISVTestSDK
 {
+    //Follow the readme.txt for instructions to get the project running successfully,
+    //Or, Follow "1 - Starting a new Test SDK Project.pdf" for a step by step on how to recreate this project from nothing
+
     //Use the Check class as a parent for every test.
     //All test cases should not rely on previous tests running successfully, where possible.
-    //Test initial state should start from SalesDemo data, or from a restored snapshot from the acumatica tenants screen
-
+    //Test initial state should start from blank Acumatica data, SalesDemo data, or from a restored data snapshot from the Acumatica "Tenants" screen
     public class Test : Check
     {
         //const string customizationName = "SOLUTION-FILE-NAME";
-        //const string customizationURLPath = @"C:\TestSDKFiles\Customizations\" + customizationName + ".zip";
+        //const string customizationURLPath = @"C:\share\Customizations\" + customizationName + ".zip";
         //const string snapshotName = "SNAPSHOT-FILE-NAME";
         //const string snapshotURLPath = @"C:\share\Snapshots\" + snapshotName + ".zip";
 
@@ -35,7 +37,7 @@ namespace ISVTestSDK
 
         public override void BeforeExecute() // run BeforeExecute if you have customization projects and/or a snapshot to restore
         {
-            PxLogin.LoginToDestinationSite();
+           // PxLogin.LoginToDestinationSite();
 
             //#region Extend wait operations to allow customization publishing and snapshot restore time to complete.
             //CustomizationProjects.Details.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);

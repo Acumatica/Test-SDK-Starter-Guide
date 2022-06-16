@@ -39,7 +39,7 @@ namespace ISVTestSDK
 
             //  PxLogin.LoginToDestinationSite();
 
-            #region TestCase 1 - Basic Test
+            #region TestCase 1 - Basic create vendor test
             using (TestExecution.CreateTestCaseGroup("Test SDK Example"))
             {
 
@@ -75,7 +75,7 @@ namespace ISVTestSDK
             }
             #endregion
 
-            #region TestCase 1 - Basic Test
+            #region TestCase 2 - Basic Screen test
             using (TestExecution.CreateGroup($"Testing order of type "))
             {
                 OrderSo.OpenScreen();
@@ -123,7 +123,7 @@ namespace ISVTestSDK
 
             #endregion
 
-            #region Test case So1-1: Preparation.
+            #region Advanced Data entry Tests.
 
             using (TestExecution.CreateTestCaseGroup("So1-1: Preparation."))
             {
@@ -199,7 +199,7 @@ namespace ISVTestSDK
 
             #endregion
 
-            #region Test case So1-2: Create, release, change, delete sales order.
+            #region Advanced Tests: Create, release, change, delete sales order.
 
             using (TestExecution.CreateTestCaseGroup("So1-2: Create, release, change, delete sales order."))
             {
