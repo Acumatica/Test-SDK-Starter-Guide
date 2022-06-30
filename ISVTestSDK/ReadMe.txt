@@ -39,7 +39,7 @@ Continued process after initial setup:
 4) Name the source with the version number, using the "packages" folder from the TestSDK download folder as the source.
 5) Update/Install the project dependancies/references to use the newly added version
 6) Update the project Properties->launchSettings.json to the new config.xml location - This lets you just press run in Visual studio to kick off the test.
-7) Regenerate the wrappers using classgenerator.exe, after updating the 2 config files described at the top of this readme, paste the new wrappers into the project.
+7) Regenerate the wrappers using classgenerator.exe, after updating the 2 config files described in step 2, paste the new wrappers into the project.
 8) Existing Extensions should not require any changes unless a field was moved or changed.
 
 Run the test, fix anything you missed. Congrats you have upgraded your Test SDK Test project.

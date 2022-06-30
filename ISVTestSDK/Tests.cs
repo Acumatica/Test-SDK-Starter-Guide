@@ -23,102 +23,98 @@ namespace ISVTestSDK
 
     //Use the Check class as a parent for every test.
     //All test cases should not rely on previous tests running successfully, where possible.
-    //Test initial state should start from blank Acumatica data, SalesDemo data, or from a restored data snapshot from the Acumatica "Tenants" screen
+    //
+    //Test initial state should start from blank Acumatica, SalesDemo data,
+    //or from a restored data snapshot from the Acumatica "Tenants" screen
+    //for maximum compatibility it needs to be created from salesdemo data with the config steps done via testSDK code.
+
     public class Test : Check
     {
-        //const string customizationName = "SOLUTION-FILE-NAME";
-        //const string customizationURLPath = @"C:\share\Customizations\" + customizationName + ".zip";
-        //const string snapshotName = "SNAPSHOT-FILE-NAME";
+        const string customizationName = "SOLUTION_FILE_NAME";
+        const string customizationURLPath = @"C:\share\Customizations\" + customizationName + ".zip";
+        //const string snapshotName = "SNAPSHOT_FILE_NAME";
         //const string snapshotURLPath = @"C:\share\Snapshots\" + snapshotName + ".zip";
 
         public ProjectList CustomizationProjects = new ProjectList();
         public CompanyMaint Companies = new CompanyMaint();
 
 
-        public override void BeforeExecute() // run BeforeExecute if you have customization projects and/or a snapshot to restore
+        public override void BeforeExecute()
         {
-           // PxLogin.LoginToDestinationSite();
+            PxLogin.LoginToDestinationSite();
 
-            //#region Extend wait operations to allow customization publishing and snapshot restore time to complete.
-            //CustomizationProjects.Details.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
-            //CustomizationProjects.CplnPanel.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
-            //CustomizationProjects.CplnPanel.CloseCompilationPane.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
-            //CustomizationProjects.Opn.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
-            //CustomizationProjects.CplnPanel.WaitActionOverride = () => Wait.WaitForLongOperationToComplete(Wait.LongTimeOut * 2);
+            #region Allow extra wait time for customization publishing and snapshot restore to complete.
 
-            //Companies.cUploadSnapshotPackage.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
-            //Companies.Snapshots.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
-            //Companies.RestoreSnapshotSettings.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
+            CustomizationProjects.Details.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
+            CustomizationProjects.CplnPanel.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
+            CustomizationProjects.CplnPanel.CloseCompilationPane.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
+            CustomizationProjects.Opn.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
 
-            //CustomizationProjects.Details.WaitActionOverride = () => Wait.WaitForLongOperationToComplete(Wait.LongTimeOut * 4);
-            //CustomizationProjects.CplnPanel.WaitActionOverride = () => Wait.WaitForLongOperationToComplete(Wait.LongTimeOut * 4);
-            //CustomizationProjects.CplnPanel.CloseCompilationPane.WaitActionOverride = () => Wait.WaitForLongOperationToComplete(Wait.LongTimeOut * 4);
-            //CustomizationProjects.Opn.WaitActionOverride = () => Wait.WaitForLongOperationToComplete(Wait.LongTimeOut * 4);
+            Companies.cUploadSnapshotPackage.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
+            Companies.Snapshots.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
+            Companies.RestoreSnapshotSettings.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
 
-            //Companies.cUploadSnapshotPackage.WaitActionOverride = () => Wait.WaitForLongOperationToComplete(Wait.LongTimeOut * 4);
-            //Companies.Snapshots.WaitActionOverride = () => Wait.WaitForLongOperationToComplete(Wait.LongTimeOut * 4);
-            //Companies.RestoreSnapshotSettings.WaitActionOverride = () => Wait.WaitForLongOperationToComplete(Wait.LongTimeOut * 4);
-            //#endregion
+            #endregion
 
-            //#region Import and publish customization to the website
-            //using (TestExecution.CreateTestStepGroup("Upload/replace customization project(s)."))
-            //{
+            #region Import and publish customization to the website
+            using (TestExecution.CreateTestStepGroup("Upload/replace customization project(s)."))
+            {
 
-            //    Log.Information("Upload/replace customization project: ");
-            //    CustomizationProjects.OpenScreen();
-            //    CustomizationProjects.Details.Columns.Name.Equals(customizationName);
+                Log.Information("Upload/replace customization project: ");
+                CustomizationProjects.OpenScreen();
+                CustomizationProjects.Details.Columns.Name.Equals(customizationName);
 
-            //    if (CustomizationProjects.Details.RowsCount() == 0)
-            //    {
-            //        CustomizationProjects.Details.Columns.Name.ClearFilter();
-            //        CustomizationProjects.ActionImport();
-            //    }
-            //    else
-            //    {
-            //        CustomizationProjects.ActionImportReplace();
-            //    }
+                if (CustomizationProjects.Details.RowsCount() == 0)
+                {
+                    CustomizationProjects.Details.Columns.Name.ClearFilter();
+                    CustomizationProjects.ActionImport();
+                }
+                else
+                {
+                    CustomizationProjects.ActionImportReplace();
+                }
 
-            //    CustomizationProjects.Opn.SelectFile(customizationURLPath);
-            //    CustomizationProjects.Opn.Upload();
-            //    CustomizationProjects.Details.Columns.Name.Equals(customizationName);
-            //    CustomizationProjects.Details.RowsCount().VerifyEquals(1);
-            //    CustomizationProjects.Details.Columns.Name.ClearFilter();
-            //    CustomizationProjects.Details.Row.Level.Type("1"); // set publishing level
-            //    CustomizationProjects.Save();
-            //}
+                CustomizationProjects.Opn.SelectFile(customizationURLPath);
+                CustomizationProjects.Opn.Upload();
+                CustomizationProjects.Details.Columns.Name.Equals(customizationName);
+                CustomizationProjects.Details.RowsCount().VerifyEquals(1);
+                CustomizationProjects.Details.Columns.Name.ClearFilter();
+                CustomizationProjects.Details.Row.Level.Type("1"); // set publishing level
+                CustomizationProjects.Save();
+            }
 
-            //using (TestExecution.CreateTestStepGroup("Publish customization projects."))
-            //{
+            using (TestExecution.CreateTestStepGroup("Publish customization projects."))
+            {
 
-            //    CustomizationProjects.OpenScreen();
-            //    CustomizationProjects.Details.SetFalse();
+                CustomizationProjects.OpenScreen();
+                CustomizationProjects.Details.SetFalse();
 
-            //    CustomizationProjects.Details.SelectRow(CustomizationProjects.Details.Columns.Name, customizationName);
-            //    CustomizationProjects.Details.Row.IsWorking.SetTrue();
+                CustomizationProjects.Details.SelectRow(CustomizationProjects.Details.Columns.Name, customizationName);
+                CustomizationProjects.Details.Row.IsWorking.SetTrue();
 
 
-            //    CustomizationProjects.Save();
-            //    CustomizationProjects.ActionPublish();
-            //    CustomizationProjects.CplnPanel.Validate(true);
+                CustomizationProjects.Save();
+                CustomizationProjects.ActionPublish();
+                CustomizationProjects.CplnPanel.Validate(true);
 
-            //    CustomizationProjects.CplnPanel.Publish(true);
+                CustomizationProjects.CplnPanel.Publish(true);
 
 
-            //    try
-            //    {
-            //        CustomizationProjects.CplnPanel.Close();
-            //    }
-            //    catch
-            //    {
-            //        CustomizationProjects.CplnPanel.CloseCompilationPane.Click();
-            //    }
-            //    CustomizationProjects.Refresh();
-            //}
-            //#endregion
+                try
+                {
+                    CustomizationProjects.CplnPanel.Close();
+                }
+                catch
+                {
+                    CustomizationProjects.CplnPanel.CloseCompilationPane.Click();
+                }
+                CustomizationProjects.Refresh();
+            }
+            #endregion
 
-            //#region Import and publish site snapshot backup from "tenants" screen, then republish customization project.
-            //using (TestExecution.CreateTestStepGroup("Companies screen (SM203520)"))
-            //{
+            #region (*If you have a snapshot to restore only) Import and publish site snapshot backup from "tenants" screen, then republish customization project.
+            using (TestExecution.CreateTestStepGroup("Companies screen (SM203520)"))
+            {
             //    Companies.OpenScreen(true);
             //    Companies.Snapshots.UploadSnapshotCommand();
             //    Companies.cUploadSnapshotPackage.SelectFile(snapshotURLPath);
@@ -179,8 +175,8 @@ namespace ISVTestSDK
             //    }
 
             //    CustomizationProjects.Refresh();
-            //}
-            //#endregion
+            }
+            #endregion
         }
 
         public override void Execute()

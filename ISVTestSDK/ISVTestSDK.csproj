@@ -44,9 +44,10 @@
 
   <ItemGroup>
     <Folder Include="Configuration\Custom Configuration\" />
-    <Folder Include="ISV Certification Submission Template\Extensions\" />
     <Folder Include="ISV Certification Submission Template\Customization Project\" />
+    <Folder Include="ISV Certification Submission Template\Extensions\" />
     <Folder Include="ISV Certification Submission Template\Snapshot\" />
+    <Folder Include="ISV Certification Submission Template\Test.cs file\" />
   </ItemGroup>
 
 </Project>
