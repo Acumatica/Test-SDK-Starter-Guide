@@ -10,11 +10,11 @@ PreReq:
 7) Create C:\share\Snapshots -> for storing snapshots
 8) Create C:\share\Out -> for ClassGenerator.exe wrapper file output
 
-1) Configure the config.xml, and classgenerator.exe.config files.(file output locations, website url, website folder location, screens to generate)
-2) Generate the wrappers for all screens you plan to touch by double clicking classgenerator.exe (launches with command prompt, admin not required)
+1) Configure the config.xml, and classgenerator.exe.config files.(file output locations, website url, website folder location, screens to generate(any screen that has been edited by customization))
+2) Generate the wrappers for the screens by double clicking classgenerator.exe (launches with command prompt, admin not required) - untouched Acumatica screens can be referenced from the dependencies set up below.
 In Visual Studio:
 1) Import the nuget package into the project dependencies. Test SDK download -> packages folder is the location of the packages.
-2) Create, or copy the extensions into the extensions folder
+2) Create, or copy the extension files into the extensions folder
 3) Update the names and locations of the customization project and snapshot. If no snapshot exists comment out the "Companies" screen snapshot import code in BeforeExecute
 4) Create, or copy your test code into the test.cs
 5) Update the project's Properties->launchSettings.json file to use the config.xml location - This lets you just press run(f5) in Visual studio to kick off the test.
@@ -34,7 +34,7 @@ Initial setup:
 
 Continued process after initial setup:
 1) Download and extract the testSDK.zip for the same version
-2) Configure the config.xml, and classgenerator.exe.config files.(file output locations, website url, website folder location, screens to generate)
+2) Configure the config.xml, and classgenerator.exe.config files.(file output locations, website url, website folder location, screens to generate (any screen that has been edited by customization))
 3) In your visual studio test project, go to "Manage Nuget Packages" and create a new package source
 4) Name the source with the version number, using the "packages" folder from the TestSDK download folder as the source.
 5) Update/Install the project dependancies/references to use the newly added version
