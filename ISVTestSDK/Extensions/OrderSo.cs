@@ -1,6 +1,7 @@
 ﻿using System;
 using Controls.Button;
-using ISVTestSDK.Extensions;
+using GeneratedWrappers.ISVTestSDK;
+using GeneratedWrappers.Acumatica;
 
 namespace Core
 {

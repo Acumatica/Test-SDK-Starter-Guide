@@ -1,8 +1,8 @@
 ﻿using Controls.CompilationPanel;
 using Controls.Grid.Upload;
+using GeneratedWrappers.Acumatica;
 
-
-namespace ISVTestSDK.Extensions
+namespace GeneratedWrappers.ISVTestSDK
 {
     public partial class ProjectList : SM204505_ProjectList
     {

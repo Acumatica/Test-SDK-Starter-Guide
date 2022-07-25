@@ -1,5 +1,5 @@
 ﻿using Controls.Alert;
-using ISVTestSDK.Extensions;
+using GeneratedWrappers.Acumatica;
 
 namespace Core
 {

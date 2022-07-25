@@ -1,6 +1,6 @@
-﻿
+﻿using GeneratedWrappers.Acumatica;
 using Core.Core.Browser;
-using ISVTestSDK.Extensions;
+using GeneratedWrappers.ISVTestSDK;
 using System;
 
 namespace Core

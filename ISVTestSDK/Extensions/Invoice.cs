@@ -1,11 +1,11 @@
-﻿
+﻿using GeneratedWrappers.Acumatica;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ISVTestSDK.Extensions
+namespace Core
 {
    public class Invoice: SO303000_SOInvoiceEntry
     {

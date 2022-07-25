@@ -13,7 +13,7 @@ using System;
 using Core.Attributes;
 using Core.Core.Browser;
 using System.Threading;
-using ISVTestSDK.Extensions;
+using GeneratedWrappers.ISVTestSDK;
 using Core.Log;
 
 namespace ISVTestSDK
@@ -40,7 +40,7 @@ namespace ISVTestSDK
 
         public override void BeforeExecute()
         {
-            PxLogin.LoginToDestinationSite();
+            //PxLogin.LoginToDestinationSite();
 
             #region Allow extra wait time for customization publishing and snapshot restore to complete.
 
@@ -180,7 +180,7 @@ namespace ISVTestSDK
 
         public override void Execute()
         {
-            //PxLogin.LoginToDestinationSite();
+            PxLogin.LoginToDestinationSite();
 
             Tests1 Tests1 = new Tests1();
             Tests1.Execute();

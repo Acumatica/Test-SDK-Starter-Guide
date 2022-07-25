@@ -9,7 +9,7 @@ using System;
 using Core;
 using Controls.DefaultControl;
 
-namespace ISVTestSDK.Extensions
+namespace GeneratedWrappers.ISVTestSDK
 {
     public class HostedFormHandler : Wrapper
     {

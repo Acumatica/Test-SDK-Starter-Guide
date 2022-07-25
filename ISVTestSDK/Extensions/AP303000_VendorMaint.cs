@@ -1,5 +1,5 @@
 ﻿
-namespace ISVTestSDK.Extensions 
+namespace GeneratedWrappers.ISVTestSDK 
 {
     public partial class VendorMaint : AP303000_VendorMaint
     {

@@ -10,7 +10,7 @@ using System;
 using System.Threading;
 
 
-namespace ISVTestSDK.Extensions
+namespace GeneratedWrappers.ISVTestSDK
 {
     public class HostedFormHandlerACH
     {

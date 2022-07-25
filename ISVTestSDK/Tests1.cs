@@ -12,8 +12,7 @@ using System;
 using Core.Attributes;
 using Core.Core.Browser;
 using System.Threading;
-using GeneratedWrappers.Acumatica;
-using ISVTestSDK.Extensions;
+using GeneratedWrappers.ISVTestSDK;
 
 namespace ISVTestSDK
 {
@@ -21,18 +20,18 @@ namespace ISVTestSDK
     public class Tests1 : Check
     {
 
-        private readonly VendorMaint VendorMaint = new VendorMaint();
-        private readonly ReceiptIn ReceiptIn = new ReceiptIn();
+        private readonly VendorMaint VendorMaint = new VendorMaint(); // Modified or new screen example from Extensions/AP303000_VendorMaint using GeneratedWrappers.ISVTestSDK wrappers
+        private readonly ReceiptIn ReceiptIn = new ReceiptIn(); // Unmodified Acumatica screen example from  Extensions/ReceiptIn using GeneratedWrappers.Acumatica wrappers
         private readonly InventorySummary InventorySummary = new InventorySummary();
         private readonly SetupSo SetupSo = new SetupSo();
         private readonly OrderType OrderType = new OrderType();
+        private readonly OrderSo OrderSo = new OrderSo();
 
         protected const string UPDATING_SALES_ORDER_RECORD_RAISED_ONE_OR_MORE_ERRORS_PLEASE_REVIEW =
            "Updating  'Sales Order' record raised at least one error. Please review the errors.";
         protected const string DOCUMENT_IS_OUT_OF_BALANCE = "The document is out of the balance.";
-        private const string InventoryID = "SO00000001";
+        private const string InventoryID = "AACOMPUT01";
 
-        private OrderSo OrderSo { get; } = new OrderSo();
 
         public override void Execute()
         {
@@ -136,10 +135,11 @@ namespace ISVTestSDK
                     ReceiptIn.Insert();
                     ReceiptIn.Summary.ExtRefNbr.Type("SO001-01-03");
                     ReceiptIn.Summary.TranDesc.Type("SO001-01-03");
+                    ReceiptIn.Summary.TranDate.Type("02-2013");
                     ReceiptIn.TransactionDetails.New();
                     ReceiptIn.TransactionDetails.Row.InventoryID.Select(InventoryID);
                     ReceiptIn.TransactionDetails.Row.SiteID.Select("WHOLESALE");
-                    ReceiptIn.TransactionDetails.Row.LocationID.Select("R01C01L01");
+                    ReceiptIn.TransactionDetails.Row.LocationID.Select("R1S1");
                     ReceiptIn.TransactionDetails.Row.Qty.Type(15);
                     ReceiptIn.TransactionDetails.Row.UnitCost.Type(10);
                     ReceiptIn.ReleaseFromHold();
@@ -148,17 +148,17 @@ namespace ISVTestSDK
 
                 #endregion
 
-                #region Step 2 Verify inventory summary for the stock item: SO00000001
+                #region Step 2 Verify inventory summary for the stock item: AACOMPUT01
 
-                using (TestExecution.CreateTestStepGroup("Verify inventory summary for the stock item: SO00000001"))
+                using (TestExecution.CreateTestStepGroup("Verify inventory summary for the stock item: AACOMPUT01"))
                 {
                     InventorySummary.OpenScreen();
                     InventorySummary.Summary.InventoryID.Select(InventoryID);
                     InventorySummary.Details.SelectRow(1);
-                    InventorySummary.Details.Row.SiteID.GetValue().VerifyEquals("WHOLESALE");
-                    InventorySummary.Details.Row.LocationID.GetValue().VerifyEquals("R01C01L01");
-                    InventorySummary.Details.Row.QtyOnHand.GetValue().VerifyEquals(15.00m);
-                    InventorySummary.Details.Row.QtyAvail.GetValue().VerifyEquals(15.00m);
+                    InventorySummary.Details.Row.SiteID.GetValue().VerifyEquals("RETAIL");
+                    InventorySummary.Details.Row.LocationID.GetValue().VerifyEquals("STORAGE");
+                    InventorySummary.Details.Row.QtyOnHand.GetValue().VerifyEquals(40.00m);
+                    InventorySummary.Details.Row.QtyAvail.GetValue().VerifyEquals(40.00m);
                     InventorySummary.Details.Row.QtySOBooked.GetValue().VerifyEquals(0.00m);
                     InventorySummary.Details.Row.QtySOBackOrdered.GetValue().VerifyEquals(0.00m);
                     InventorySummary.Details.Row.QtySOShipping.GetValue().VerifyEquals(0.00m);
@@ -211,7 +211,7 @@ namespace ISVTestSDK
                     OrderSo.SetBusinessDate(new DateTime(2009, 02, 01));
                     OrderSo.Insert();
                     OrderSo.Summary.OrderType.Select("SO");
-                    OrderSo.Summary.CustomerID.Select(InventoryID);
+                    OrderSo.Summary.CustomerID.Select("AACUSTOMER");
                     OrderSo.Summary.CustomerOrderNbr.Type("SO-090201-001");
                     OrderSo.Summary.OrderDesc.Type("SO001-02-01");
                     OrderSo.DocumentDetails.New();
@@ -224,22 +224,22 @@ namespace ISVTestSDK
 
                 #endregion
 
-                #region Step 2 Verify inventory summary for the stock item: SO00000001
+                #region Step 2 Verify inventory summary for the stock item: AACOMPUT01
 
-                using (TestExecution.CreateTestStepGroup("Verify inventory summary for the stock item: SO00000001"))
+                using (TestExecution.CreateTestStepGroup("Verify inventory summary for the stock item: AACOMPUT01"))
                 {
                     InventorySummary.OpenScreen();
                     InventorySummary.Summary.InventoryID.Select(InventoryID);
-                    InventorySummary.Details.RowsCount().VerifyEquals(3);
+                    InventorySummary.Details.RowsCount().VerifyEquals(4);
                     InventorySummary.Details.Columns.QtySOPrepared.ShowColumn();
                     InventorySummary.Details.Columns.QtyINIssues.ShowColumn();
 
                     InventorySummary.Details.SelectRow(1);
-                    InventorySummary.Details.Row.SiteID.GetValue().VerifyEquals("WHOLESALE");
-                    InventorySummary.Details.Row.LocationID.GetValue().VerifyEquals("<UNASSIGNED>");
-                    InventorySummary.Details.Row.QtyOnHand.GetValue().VerifyEquals(0.00m);
-                    InventorySummary.Details.Row.QtyAvail.GetValue().VerifyEquals(0.00m);
-                    InventorySummary.Details.Row.QtySOPrepared.GetValue().VerifyEquals(3.00m);
+                    InventorySummary.Details.Row.SiteID.GetValue().VerifyEquals("RETAIL");
+                    InventorySummary.Details.Row.LocationID.GetValue().VerifyEquals("STORAGE");
+                    InventorySummary.Details.Row.QtyOnHand.GetValue().VerifyEquals(40.00m);
+                    InventorySummary.Details.Row.QtyAvail.GetValue().VerifyEquals(40.00m);
+                    InventorySummary.Details.Row.QtySOPrepared.GetValue().VerifyEquals(0.00m);
                     InventorySummary.Details.Row.QtySOBooked.GetValue().VerifyEquals(0.00m);
                     InventorySummary.Details.Row.QtySOBackOrdered.GetValue().VerifyEquals(0.00m);
                     InventorySummary.Details.Row.QtySOShipping.GetValue().VerifyEquals(0.00m);
@@ -247,11 +247,11 @@ namespace ISVTestSDK
                     InventorySummary.Details.Row.QtyINIssues.GetValue().VerifyEquals(0.00m);
                     InventorySummary.Details.SelectRow(2);
                     InventorySummary.Details.Row.SiteID.GetValue().VerifyEquals("WHOLESALE");
-                    InventorySummary.Details.Row.LocationID.GetValue().VerifyEquals("R01C01L01");
-                    InventorySummary.Details.Row.QtyOnHand.GetValue().VerifyEquals(15.00m);
-                    InventorySummary.Details.Row.QtyAvail.GetValue().VerifyEquals(15.00m);
-                    InventorySummary.Details.Row.QtySOPrepared.GetValue().VerifyEquals(0.00m);
-                    InventorySummary.Details.Row.QtySOBooked.GetValue().VerifyEquals(0.00m);
+                    InventorySummary.Details.Row.LocationID.GetValue().VerifyEquals("<UNASSIGNED>");
+                    InventorySummary.Details.Row.QtyOnHand.GetValue().VerifyEquals(0.00m);
+                    InventorySummary.Details.Row.QtyAvail.GetValue().VerifyEquals(-3.00m);
+                    InventorySummary.Details.Row.QtySOPrepared.GetValue().VerifyEquals(9.00m);
+                    InventorySummary.Details.Row.QtySOBooked.GetValue().VerifyEquals(3.00m);
                     InventorySummary.Details.Row.QtySOBackOrdered.GetValue().VerifyEquals(0.00m);
                     InventorySummary.Details.Row.QtySOShipping.GetValue().VerifyEquals(0.00m);
                     InventorySummary.Details.Row.QtySOShipped.GetValue().VerifyEquals(0.00m);
@@ -265,7 +265,7 @@ namespace ISVTestSDK
                 using (TestExecution.CreateTestStepGroup("Update sales order #000001"))
                 {
                     OrderSo.OpenScreen();
-                    OrderSo.Summary.OrderNbr.Select("000001");
+                    OrderSo.Summary.OrderNbr.Open(0);
 
                     OrderSo.VerifyAlert(OrderSo.ToolBar.ReleaseFromHold.Click, UPDATING_SALES_ORDER_RECORD_RAISED_ONE_OR_MORE_ERRORS_PLEASE_REVIEW);
                     OrderSo.GetErrors().VerifyAnyOfValuesContains(DOCUMENT_IS_OUT_OF_BALANCE);
@@ -276,29 +276,29 @@ namespace ISVTestSDK
 
                 #endregion
 
-                #region Step 4 Verify inventory summary for the stock item: SO00000001
+                #region Step 4 Verify inventory summary for the stock item: AACOMPUT01
 
-                using (TestExecution.CreateTestStepGroup("Verify inventory summary for the stock item: SO00000001"))
+                using (TestExecution.CreateTestStepGroup("Verify inventory summary for the stock item: AACOMPUT01"))
                 {
                     InventorySummary.OpenScreen();
                     InventorySummary.Summary.InventoryID.Select(InventoryID);
-                    InventorySummary.Details.RowsCount().VerifyEquals(3);
+                    InventorySummary.Details.RowsCount().VerifyEquals(4);
                     InventorySummary.Details.SelectRow(1);
-                    InventorySummary.Details.Row.SiteID.GetValue().VerifyEquals("WHOLESALE");
-                    InventorySummary.Details.Row.LocationID.GetValue().VerifyEquals("<UNASSIGNED>");
-                    InventorySummary.Details.Row.QtyOnHand.GetValue().VerifyEquals(0.00m);
-                    InventorySummary.Details.Row.QtyAvail.GetValue().VerifyEquals(-3.00m);
-                    InventorySummary.Details.Row.QtySOBooked.GetValue().VerifyEquals(3.00m);
+                    InventorySummary.Details.Row.SiteID.GetValue().VerifyEquals("RETAIL");
+                    InventorySummary.Details.Row.LocationID.GetValue().VerifyEquals("STORAGE");
+                    InventorySummary.Details.Row.QtyOnHand.GetValue().VerifyEquals(40.00m);
+                    InventorySummary.Details.Row.QtyAvail.GetValue().VerifyEquals(40.00m);
+                    InventorySummary.Details.Row.QtySOBooked.GetValue().VerifyEquals(0.00m);
                     InventorySummary.Details.Row.QtySOBackOrdered.GetValue().VerifyEquals(0.00m);
                     InventorySummary.Details.Row.QtySOShipping.GetValue().VerifyEquals(0.00m);
                     InventorySummary.Details.Row.QtySOShipped.GetValue().VerifyEquals(0.00m);
                     InventorySummary.Details.Row.QtyINIssues.GetValue().VerifyEquals(0.00m);
                     InventorySummary.Details.SelectRow(2);
                     InventorySummary.Details.Row.SiteID.GetValue().VerifyEquals("WHOLESALE");
-                    InventorySummary.Details.Row.LocationID.GetValue().VerifyEquals("R01C01L01");
-                    InventorySummary.Details.Row.QtyOnHand.GetValue().VerifyEquals(15.00m);
-                    InventorySummary.Details.Row.QtyAvail.GetValue().VerifyEquals(15.00m);
-                    InventorySummary.Details.Row.QtySOBooked.GetValue().VerifyEquals(0.00m);
+                    InventorySummary.Details.Row.LocationID.GetValue().VerifyEquals("<UNASSIGNED>");
+                    InventorySummary.Details.Row.QtyOnHand.GetValue().VerifyEquals(0.00m);
+                    InventorySummary.Details.Row.QtyAvail.GetValue().VerifyEquals(-6.00m);
+                    InventorySummary.Details.Row.QtySOBooked.GetValue().VerifyEquals(6.00m);
                     InventorySummary.Details.Row.QtySOBackOrdered.GetValue().VerifyEquals(0.00m);
                     InventorySummary.Details.Row.QtySOShipping.GetValue().VerifyEquals(0.00m);
                     InventorySummary.Details.Row.QtySOShipped.GetValue().VerifyEquals(0.00m);
@@ -312,7 +312,7 @@ namespace ISVTestSDK
                 using (TestExecution.CreateTestStepGroup("Update sales order #000001"))
                 {
                     OrderSo.OpenScreen();
-                    OrderSo.Summary.OrderNbr.Select("000001");
+                    OrderSo.Summary.OrderNbr.Open(0);
                     OrderSo.DocumentDetails.Row.OrderQty.Type(4.00m);
                     OrderSo.Summary.CuryControlTotal.Type(80.00m);
                     OrderSo.Save();
@@ -320,32 +320,32 @@ namespace ISVTestSDK
 
                 #endregion
 
-                #region Step 6 Verify inventory summary for the stock item: SO00000001
+                #region Step 6 Verify inventory summary for the stock item: AACOMPUT01
 
-                using (TestExecution.CreateTestStepGroup("Verify inventory summary for the stock item: SO00000001"))
+                using (TestExecution.CreateTestStepGroup("Verify inventory summary for the stock item: AACOMPUT01"))
                 {
                     InventorySummary.OpenScreen();
 
                     InventorySummary.Summary.InventoryID.Select(InventoryID);
-                    InventorySummary.Details.RowsCount().VerifyEquals(3);
+                    InventorySummary.Details.RowsCount().VerifyEquals(4);
                     InventorySummary.Details.SelectRow(1);
-                    InventorySummary.Details.Row.SiteID.GetValue().VerifyEquals("WHOLESALE");
-                    InventorySummary.Details.Row.LocationID.GetValue().VerifyEquals("<UNASSIGNED>");
-                    InventorySummary.Details.Row.QtyOnHand.GetValue().VerifyEquals(0.00m);
-                    InventorySummary.Details.Row.QtyAvail.GetValue().VerifyEquals(-4.00m);
+                    InventorySummary.Details.Row.SiteID.GetValue().VerifyEquals("RETAIL");
+                    InventorySummary.Details.Row.LocationID.GetValue().VerifyEquals("STORAGE");
+                    InventorySummary.Details.Row.QtyOnHand.GetValue().VerifyEquals(40.00m);
+                    InventorySummary.Details.Row.QtyAvail.GetValue().VerifyEquals(40.00m);
                     InventorySummary.Details.Row.QtySOPrepared.GetValue().VerifyEquals(0.00m);
-                    InventorySummary.Details.Row.QtySOBooked.GetValue().VerifyEquals(4.00m);
+                    InventorySummary.Details.Row.QtySOBooked.GetValue().VerifyEquals(0.00m);
                     InventorySummary.Details.Row.QtySOBackOrdered.GetValue().VerifyEquals(0.00m);
                     InventorySummary.Details.Row.QtySOShipping.GetValue().VerifyEquals(0.00m);
                     InventorySummary.Details.Row.QtySOShipped.GetValue().VerifyEquals(0.00m);
                     InventorySummary.Details.Row.QtyINIssues.GetValue().VerifyEquals(0.00m);
                     InventorySummary.Details.SelectRow(2);
                     InventorySummary.Details.Row.SiteID.GetValue().VerifyEquals("WHOLESALE");
-                    InventorySummary.Details.Row.LocationID.GetValue().VerifyEquals("R01C01L01");
-                    InventorySummary.Details.Row.QtyOnHand.GetValue().VerifyEquals(15.00m);
-                    InventorySummary.Details.Row.QtyAvail.GetValue().VerifyEquals(15.00m);
-                    InventorySummary.Details.Row.QtySOPrepared.GetValue().VerifyEquals(0.00m);
-                    InventorySummary.Details.Row.QtySOBooked.GetValue().VerifyEquals(0.00m);
+                    InventorySummary.Details.Row.LocationID.GetValue().VerifyEquals("<UNASSIGNED>");
+                    InventorySummary.Details.Row.QtyOnHand.GetValue().VerifyEquals(0.00m);
+                    InventorySummary.Details.Row.QtyAvail.GetValue().VerifyEquals(-7.00m);
+                    InventorySummary.Details.Row.QtySOPrepared.GetValue().VerifyEquals(6.00m);
+                    InventorySummary.Details.Row.QtySOBooked.GetValue().VerifyEquals(7.00m);
                     InventorySummary.Details.Row.QtySOBackOrdered.GetValue().VerifyEquals(0.00m);
                     InventorySummary.Details.Row.QtySOShipping.GetValue().VerifyEquals(0.00m);
                     InventorySummary.Details.Row.QtySOShipped.GetValue().VerifyEquals(0.00m);
@@ -359,24 +359,24 @@ namespace ISVTestSDK
                 using (TestExecution.CreateTestStepGroup("Delete sales order #000001"))
                 {
                     OrderSo.OpenScreen();
-                    OrderSo.Summary.OrderNbr.Select("000001");
+                    OrderSo.Summary.OrderNbr.Open(0);
                     OrderSo.Delete();
                 }
 
                 #endregion
 
-                #region Step 8 Verify inventory summary for the stock item: SO00000001
+                #region Step 8 Verify inventory summary for the stock item: AACOMPUT01
 
-                using (TestExecution.CreateTestStepGroup("Verify inventory summary for the stock item: SO00000001"))
+                using (TestExecution.CreateTestStepGroup("Verify inventory summary for the stock item: AACOMPUT01"))
                 {
                     InventorySummary.OpenScreen();
                     InventorySummary.Summary.InventoryID.Select(InventoryID);
-                    InventorySummary.Details.RowsCount().VerifyEquals(2);
+                    InventorySummary.Details.RowsCount().VerifyEquals(4);
                     InventorySummary.Details.SelectRow(1);
-                    InventorySummary.Details.Row.SiteID.GetValue().VerifyEquals("WHOLESALE");
-                    InventorySummary.Details.Row.LocationID.GetValue().VerifyEquals("R01C01L01");
-                    InventorySummary.Details.Row.QtyOnHand.GetValue().VerifyEquals(15.00m);
-                    InventorySummary.Details.Row.QtyAvail.GetValue().VerifyEquals(15.00m);
+                    InventorySummary.Details.Row.SiteID.GetValue().VerifyEquals("RETAIL");
+                    InventorySummary.Details.Row.LocationID.GetValue().VerifyEquals("STORAGE");
+                    InventorySummary.Details.Row.QtyOnHand.GetValue().VerifyEquals(40.00m);
+                    InventorySummary.Details.Row.QtyAvail.GetValue().VerifyEquals(40.00m);
                     InventorySummary.Details.Row.QtySOPrepared.GetValue().VerifyEquals(0.00m);
                     InventorySummary.Details.Row.QtySOBooked.GetValue().VerifyEquals(0.00m);
                     InventorySummary.Details.Row.QtySOBackOrdered.GetValue().VerifyEquals(0.00m);

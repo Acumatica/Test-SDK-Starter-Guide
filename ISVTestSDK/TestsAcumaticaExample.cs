@@ -11,7 +11,7 @@ using Core.Login;
 using Core.TestExecution;
 using Core.Verifications;
 
-namespace ISVTestSDK.Extensions
+namespace GeneratedWrappers.ISVTestSDK
 {
     public class TestsAcumaticaExample : Check
     {
