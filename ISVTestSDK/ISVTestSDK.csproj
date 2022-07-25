@@ -4,14 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net48</TargetFramework>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="Configuration\Custom Configuration\Cc110.cs" />
-    <Compile Remove="VYAPAYTests.cs" />
-  </ItemGroup>
-
-  
-
+ 
   <ItemGroup>
     <PackageReference Include="ClassGenerator" Version="22.105.31.32" />
     <PackageReference Include="Core" Version="22.105.31.32" />
@@ -43,11 +36,11 @@
   
 
   <ItemGroup>
-    <Folder Include="Configuration\Custom Configuration\" />
     <Folder Include="ISV Certification Submission Template\Customization Project\" />
     <Folder Include="ISV Certification Submission Template\Extensions\" />
     <Folder Include="ISV Certification Submission Template\Snapshot\" />
     <Folder Include="ISV Certification Submission Template\Test.cs file\" />
   </ItemGroup>
 
+  
 </Project>

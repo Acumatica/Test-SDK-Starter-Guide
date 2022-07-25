@@ -24,14 +24,13 @@ namespace ISVTestSDK
     //Use the Check class as a parent for every test.
     //All test cases should not rely on previous tests running successfully, where possible.
     //
-    //Test initial state should start from blank Acumatica, SalesDemo data,
+    //Test initial state should start from blank Acumatica, SalesDemo data, using TestSDK code to pre-configure the website,
     //or from a restored data snapshot from the Acumatica "Tenants" screen
-    //for maximum compatibility it needs to be created from salesdemo data with the config steps done via testSDK code.
 
     public class Test : Check
     {
-        const string customizationName = "SOLUTION_FILE_NAME";
-        const string customizationURLPath = @"C:\share\Customizations\" + customizationName + ".zip";
+        //const string customizationName = "SOLUTION_FILE_NAME";
+        //const string customizationURLPath = @"C:\share\Customizations\" + customizationName + ".zip";
         //const string snapshotName = "SNAPSHOT_FILE_NAME";
         //const string snapshotURLPath = @"C:\share\Snapshots\" + snapshotName + ".zip";
 
@@ -60,59 +59,59 @@ namespace ISVTestSDK
             using (TestExecution.CreateTestStepGroup("Upload/replace customization project(s)."))
             {
 
-                Log.Information("Upload/replace customization project: ");
-                CustomizationProjects.OpenScreen();
-                CustomizationProjects.Details.Columns.Name.Equals(customizationName);
+            //    Log.Information("Upload/replace customization project: ");
+            //    CustomizationProjects.OpenScreen();
+            //    CustomizationProjects.Details.Columns.Name.Equals(customizationName);
 
-                if (CustomizationProjects.Details.RowsCount() == 0)
-                {
-                    CustomizationProjects.Details.Columns.Name.ClearFilter();
-                    CustomizationProjects.ActionImport();
-                }
-                else
-                {
-                    CustomizationProjects.ActionImportReplace();
-                }
+            //    if (CustomizationProjects.Details.RowsCount() == 0)
+            //    {
+            //        CustomizationProjects.Details.Columns.Name.ClearFilter();
+            //        CustomizationProjects.ActionImport();
+            //    }
+            //    else
+            //    {
+            //        CustomizationProjects.ActionImportReplace();
+            //    }
 
-                CustomizationProjects.Opn.SelectFile(customizationURLPath);
-                CustomizationProjects.Opn.Upload();
-                CustomizationProjects.Details.Columns.Name.Equals(customizationName);
-                CustomizationProjects.Details.RowsCount().VerifyEquals(1);
-                CustomizationProjects.Details.Columns.Name.ClearFilter();
-                CustomizationProjects.Details.Row.Level.Type("1"); // set publishing level
-                CustomizationProjects.Save();
-            }
+            //    CustomizationProjects.Opn.SelectFile(customizationURLPath);
+            //    CustomizationProjects.Opn.Upload();
+            //    CustomizationProjects.Details.Columns.Name.Equals(customizationName);
+            //    CustomizationProjects.Details.RowsCount().VerifyEquals(1);
+            //    CustomizationProjects.Details.Columns.Name.ClearFilter();
+            //    CustomizationProjects.Details.Row.Level.Type("1"); // set publishing level
+            //    CustomizationProjects.Save();
+            //}
 
-            using (TestExecution.CreateTestStepGroup("Publish customization projects."))
-            {
+            //using (TestExecution.CreateTestStepGroup("Publish customization projects."))
+            //{
 
-                CustomizationProjects.OpenScreen();
-                CustomizationProjects.Details.SetFalse();
+            //    CustomizationProjects.OpenScreen();
+            //    CustomizationProjects.Details.SetFalse();
 
-                CustomizationProjects.Details.SelectRow(CustomizationProjects.Details.Columns.Name, customizationName);
-                CustomizationProjects.Details.Row.IsWorking.SetTrue();
-
-
-                CustomizationProjects.Save();
-                CustomizationProjects.ActionPublish();
-                CustomizationProjects.CplnPanel.Validate(true);
-
-                CustomizationProjects.CplnPanel.Publish(true);
+            //    CustomizationProjects.Details.SelectRow(CustomizationProjects.Details.Columns.Name, customizationName);
+            //    CustomizationProjects.Details.Row.IsWorking.SetTrue();
 
 
-                try
-                {
-                    CustomizationProjects.CplnPanel.Close();
-                }
-                catch
-                {
-                    CustomizationProjects.CplnPanel.CloseCompilationPane.Click();
-                }
-                CustomizationProjects.Refresh();
+            //    CustomizationProjects.Save();
+            //    CustomizationProjects.ActionPublish();
+            //    CustomizationProjects.CplnPanel.Validate(true);
+
+            //    CustomizationProjects.CplnPanel.Publish(true);
+
+
+            //    try
+            //    {
+            //        CustomizationProjects.CplnPanel.Close();
+            //    }
+            //    catch
+            //    {
+            //        CustomizationProjects.CplnPanel.CloseCompilationPane.Click();
+            //    }
+            //    CustomizationProjects.Refresh();
             }
             #endregion
 
-            #region (*If you have a snapshot to restore only) Import and publish site snapshot backup from "tenants" screen, then republish customization project.
+            #region Import and publish site snapshot backup from "tenants" screen, then republish customization project.
             using (TestExecution.CreateTestStepGroup("Companies screen (SM203520)"))
             {
             //    Companies.OpenScreen(true);
@@ -181,13 +180,13 @@ namespace ISVTestSDK
 
         public override void Execute()
         {
-            PxLogin.LoginToDestinationSite();
+            //PxLogin.LoginToDestinationSite();
 
             Tests1 Tests1 = new Tests1();
             Tests1.Execute();
 
-            TestsAcumaticaExample TestsAcumaticaExample = new TestsAcumaticaExample();
-            TestsAcumaticaExample.Execute();
+           // TestsAcumaticaExample TestsAcumaticaExample = new TestsAcumaticaExample();
+           // TestsAcumaticaExample.Execute();
 
         }
 

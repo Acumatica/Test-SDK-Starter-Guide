@@ -1273,7 +1273,7 @@ namespace ISVTestSDK.Extensions
 
             #endregion
 
-            ////#region Test Case 7
+            #region Test Case 7
 
             ////using (TestExecution.CreateTestCaseGroup("Carriers settings"))
             ////{
@@ -1331,7 +1331,7 @@ namespace ISVTestSDK.Extensions
             ////    #endregion
             ////}
 
-            ////#endregion
+            #endregion
 
             #region Test Case 8
 
@@ -1725,7 +1725,7 @@ namespace ISVTestSDK.Extensions
 
             #endregion
 
-            ////#region Test Case 16
+            #region Test Case 16
 
             ////using (TestExecution.CreateTestCaseGroup("Create stock items"))
             ////{
@@ -1735,7 +1735,7 @@ namespace ISVTestSDK.Extensions
             ////    }
             ////}
 
-            ////#endregion
+            #endregion
 
             #region Test Case 17
 
