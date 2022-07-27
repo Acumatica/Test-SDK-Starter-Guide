@@ -35,9 +35,6 @@ namespace ISVTestSDK
 
         public override void Execute()
         {
-
-            //  PxLogin.LoginToDestinationSite();
-
             #region TestCase 1 - Basic create vendor test
             using (TestExecution.CreateTestCaseGroup("Test SDK Example"))
             {

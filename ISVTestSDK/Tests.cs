@@ -29,19 +29,17 @@ namespace ISVTestSDK
 
     public class Test : Check
     {
-        //const string customizationName = "SOLUTION_FILE_NAME";
-        //const string customizationURLPath = @"C:\share\Customizations\" + customizationName + ".zip";
-        //const string snapshotName = "SNAPSHOT_FILE_NAME";
-        //const string snapshotURLPath = @"C:\share\Snapshots\" + snapshotName + ".zip";
+        const string customizationName = "SOLUTION_FILE_NAME"; // ISV Customization project
+        const string customizationURLPath = @"C:\share\Customizations\" + customizationName + ".zip";
+        const string snapshotName = "SNAPSHOT_FILE_NAME"; //initial test state snapshot (salesdemo + custom config)
+        const string snapshotURLPath = @"C:\share\Snapshots\" + snapshotName + ".zip";
 
         public ProjectList CustomizationProjects = new ProjectList();
         public CompanyMaint Companies = new CompanyMaint();
 
-
         public override void BeforeExecute()
         {
-            //PxLogin.LoginToDestinationSite();
-
+            PxLogin.LoginToDestinationSite();
             #region Allow extra wait time for customization publishing and snapshot restore to complete.
 
             CustomizationProjects.Details.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
@@ -52,142 +50,98 @@ namespace ISVTestSDK
             Companies.cUploadSnapshotPackage.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
             Companies.Snapshots.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
             Companies.RestoreSnapshotSettings.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
-
             #endregion
 
-            #region Import and publish customization to the website
-            using (TestExecution.CreateTestStepGroup("Upload/replace customization project(s)."))
-            {
-
-            //    Log.Information("Upload/replace customization project: ");
-            //    CustomizationProjects.OpenScreen();
-            //    CustomizationProjects.Details.Columns.Name.Equals(customizationName);
-
-            //    if (CustomizationProjects.Details.RowsCount() == 0)
-            //    {
-            //        CustomizationProjects.Details.Columns.Name.ClearFilter();
-            //        CustomizationProjects.ActionImport();
-            //    }
-            //    else
-            //    {
-            //        CustomizationProjects.ActionImportReplace();
-            //    }
-
-            //    CustomizationProjects.Opn.SelectFile(customizationURLPath);
-            //    CustomizationProjects.Opn.Upload();
-            //    CustomizationProjects.Details.Columns.Name.Equals(customizationName);
-            //    CustomizationProjects.Details.RowsCount().VerifyEquals(1);
-            //    CustomizationProjects.Details.Columns.Name.ClearFilter();
-            //    CustomizationProjects.Details.Row.Level.Type("1"); // set publishing level
-            //    CustomizationProjects.Save();
-            //}
-
-            //using (TestExecution.CreateTestStepGroup("Publish customization projects."))
-            //{
-
-            //    CustomizationProjects.OpenScreen();
-            //    CustomizationProjects.Details.SetFalse();
-
-            //    CustomizationProjects.Details.SelectRow(CustomizationProjects.Details.Columns.Name, customizationName);
-            //    CustomizationProjects.Details.Row.IsWorking.SetTrue();
-
-
-            //    CustomizationProjects.Save();
-            //    CustomizationProjects.ActionPublish();
-            //    CustomizationProjects.CplnPanel.Validate(true);
-
-            //    CustomizationProjects.CplnPanel.Publish(true);
-
-
-            //    try
-            //    {
-            //        CustomizationProjects.CplnPanel.Close();
-            //    }
-            //    catch
-            //    {
-            //        CustomizationProjects.CplnPanel.CloseCompilationPane.Click();
-            //    }
-            //    CustomizationProjects.Refresh();
-            }
-            #endregion
-
-            #region Import and publish site snapshot backup from "tenants" screen, then republish customization project.
-            using (TestExecution.CreateTestStepGroup("Companies screen (SM203520)"))
-            {
-            //    Companies.OpenScreen(true);
-            //    Companies.Snapshots.UploadSnapshotCommand();
-            //    Companies.cUploadSnapshotPackage.SelectFile(snapshotURLPath);
-            //    Companies.cUploadSnapshotPackage.IncludeDataFromCustomColumns.SetFalse();
-            //    Companies.cUploadSnapshotPackage.IncludeDataFromCustomColumns.SetTrue();
-            //    Companies.cUploadSnapshotPackage.Upload();
-            //    Companies.ImportSnapshotCommand();
-
-            //    PxLogin.LoginToDestinationSite(); //login after snapshot restore then republish the newest customization project next.
-            //}
-            //using (TestExecution.CreateTestStepGroup("Upload/replace customization project(s)."))
-            //{
-
-            //    // Log.Information("Upload/replace customization project: ");
-            //    CustomizationProjects.OpenScreen();
-            //    CustomizationProjects.Details.Columns.Name.Equals(customizationName);
-
-            //    if (CustomizationProjects.Details.RowsCount() == 0)
-            //    {
-            //        CustomizationProjects.Details.Columns.Name.ClearFilter();
-            //        CustomizationProjects.ActionImport();
-            //    }
-            //    else
-            //    {
-            //        CustomizationProjects.ActionImportReplace();
-            //    }
-            //    CustomizationProjects.Opn.SelectFile(customizationURLPath);
-            //    CustomizationProjects.Opn.Upload();
-            //    CustomizationProjects.Details.Columns.Name.Equals(customizationName);
-            //    CustomizationProjects.Details.RowsCount().VerifyEquals(1);
-            //    CustomizationProjects.Details.Columns.Name.ClearFilter();
-            //    CustomizationProjects.Details.Row.Level.Type("1"); // set publishing level
-            //    CustomizationProjects.Save();
-            //}
-
-            //using (TestExecution.CreateTestStepGroup("Publish customization projects."))
-            //{
-
-            //    CustomizationProjects.OpenScreen();
-            //    CustomizationProjects.Details.SetFalse();
-
-            //    CustomizationProjects.Details.SelectRow(CustomizationProjects.Details.Columns.Name, customizationName);
-            //    CustomizationProjects.Details.Row.IsWorking.SetTrue();
-
-
-            //    CustomizationProjects.Save();
-            //    CustomizationProjects.ActionPublish();
-            //    CustomizationProjects.CplnPanel.Validate(true);
-            //    CustomizationProjects.CplnPanel.Publish(true);
-
-            //    try
-            //    {
-            //        CustomizationProjects.CplnPanel.Close();
-            //    }
-            //    catch
-            //    {
-            //        CustomizationProjects.CplnPanel.CloseCompilationPane.Click();
-            //    }
-
-            //    CustomizationProjects.Refresh();
-            }
-            #endregion
+            //ImportCustomization();
+            //PublishCustomization();
+            //ImportPublishSnapshot();
         }
 
         public override void Execute()
         {
-            PxLogin.LoginToDestinationSite();
 
             Tests1 Tests1 = new Tests1();
             Tests1.Execute();
 
-           // TestsAcumaticaExample TestsAcumaticaExample = new TestsAcumaticaExample();
-           // TestsAcumaticaExample.Execute();
+            // TestsAcumaticaExample TestsAcumaticaExample = new TestsAcumaticaExample();
+            // TestsAcumaticaExample.Execute();
 
+        }
+
+        public void ImportCustomization()
+        {
+            using (TestExecution.CreateTestStepGroup("Upload/replace customization project(s)."))
+            {
+                Log.Information("Upload/replace customization project: ");
+                CustomizationProjects.OpenScreen();
+                CustomizationProjects.Details.Columns.Name.Equals(customizationName);
+
+                if (CustomizationProjects.Details.RowsCount() == 0)
+                {
+                    CustomizationProjects.Details.Columns.Name.ClearFilter();
+                    CustomizationProjects.ActionImport();
+                }
+                else
+                {
+                    CustomizationProjects.ActionImportReplace();
+                }
+
+                CustomizationProjects.Opn.SelectFile(customizationURLPath);
+                CustomizationProjects.Opn.Upload();
+                CustomizationProjects.Details.Columns.Name.Equals(customizationName);
+                CustomizationProjects.Details.RowsCount().VerifyEquals(1);
+                CustomizationProjects.Details.Columns.Name.ClearFilter();
+                CustomizationProjects.Details.Row.Level.Type("1"); // set publishing level
+                CustomizationProjects.Save();
+            }
+
+        }
+        public void PublishCustomization()
+        {
+            using (TestExecution.CreateTestStepGroup("Publish customization projects."))
+            {
+
+                CustomizationProjects.OpenScreen();
+                CustomizationProjects.Details.SetFalse();
+
+                CustomizationProjects.Details.SelectRow(CustomizationProjects.Details.Columns.Name, customizationName);
+                CustomizationProjects.Details.Row.IsWorking.SetTrue();
+
+
+                CustomizationProjects.Save();
+                CustomizationProjects.ActionPublish();
+                CustomizationProjects.CplnPanel.Validate(true);
+
+                CustomizationProjects.CplnPanel.Publish(true);
+
+
+                try
+                {
+                    CustomizationProjects.CplnPanel.Close();
+                }
+                catch
+                {
+                    CustomizationProjects.CplnPanel.CloseCompilationPane.Click();
+                }
+                CustomizationProjects.Refresh();
+            }
+        }
+        public void ImportPublishSnapshot()
+        {
+            using (TestExecution.CreateTestStepGroup("Companies screen (SM203520)"))
+            {
+                Companies.OpenScreen(true);
+                Companies.Snapshots.UploadSnapshotCommand();
+                Companies.cUploadSnapshotPackage.SelectFile(snapshotURLPath);
+                Companies.cUploadSnapshotPackage.IncludeDataFromCustomColumns.SetFalse();
+                Companies.cUploadSnapshotPackage.IncludeDataFromCustomColumns.SetTrue();
+                Companies.cUploadSnapshotPackage.Upload();
+                Companies.ImportSnapshotCommand();
+
+                PxLogin.LoginToDestinationSite(); //login after snapshot restore then republish the newest customization project next.
+                ImportCustomization(); //republish the customization
+                PublishCustomization(); //republish the customization
+            }
         }
 
     }
