@@ -19,13 +19,8 @@ using Core.Log;
 namespace ISVTestSDK
 {
     //Follow the readme.txt for instructions to get the project running successfully,
-    //Or, Follow "1 - Starting a new Test SDK Project.pdf" for a step by step on how to recreate this project from nothing
+    //Or, follow the How to Start or Upgrade a Test SDK Project to build this project yourself from a new solution
 
-    //Use the Check class as a parent for every test.
-    //All test cases should not rely on previous tests running successfully, where possible.
-    //
-    //Test initial state should start from blank Acumatica, SalesDemo data, using TestSDK code to pre-configure the website,
-    //or from a restored data snapshot from the Acumatica "Tenants" screen
 
     public class Test : Check
     {
@@ -43,11 +38,11 @@ namespace ISVTestSDK
             #region Allow extra wait time for customization publishing and snapshot restore to complete.
 
             CustomizationProjects.Details.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
-            CustomizationProjects.CplnPanel.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
-            CustomizationProjects.CplnPanel.CloseCompilationPane.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
-            CustomizationProjects.Opn.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
+            CustomizationProjects.CompilationPanel.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
+            CustomizationProjects.CompilationPanel.CloseCompilationPane.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
+            CustomizationProjects.OpenPackage.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
 
-            Companies.cUploadSnapshotPackage.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
+            Companies.cUploadSnapshotPackage.WaitAction = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
             Companies.Snapshots.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
             Companies.RestoreSnapshotSettings.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
             #endregion
@@ -55,6 +50,9 @@ namespace ISVTestSDK
             //ImportCustomization();
             //PublishCustomization();
             //ImportPublishSnapshot();
+
+            //Pre config code goes here, all the setup required for your wrappers to generate and tests to run successfully should be done before the tests start.
+
         }
 
         public override void Execute()
@@ -86,8 +84,8 @@ namespace ISVTestSDK
                     CustomizationProjects.ActionImportReplace();
                 }
 
-                CustomizationProjects.Opn.SelectFile(customizationURLPath);
-                CustomizationProjects.Opn.Upload();
+                CustomizationProjects.OpenPackage.SelectFile(customizationURLPath);
+                CustomizationProjects.OpenPackage.Upload();
                 CustomizationProjects.Details.Columns.Name.Equals(customizationName);
                 CustomizationProjects.Details.RowsCount().VerifyEquals(1);
                 CustomizationProjects.Details.Columns.Name.ClearFilter();
@@ -110,18 +108,18 @@ namespace ISVTestSDK
 
                 CustomizationProjects.Save();
                 CustomizationProjects.ActionPublish();
-                CustomizationProjects.CplnPanel.Validate(true);
+                CustomizationProjects.CompilationPanel.Validate(true);
 
-                CustomizationProjects.CplnPanel.Publish(true);
+                CustomizationProjects.CompilationPanel.Publish(true);
 
 
                 try
                 {
-                    CustomizationProjects.CplnPanel.Close();
+                    CustomizationProjects.CompilationPanel.Close();
                 }
                 catch
                 {
-                    CustomizationProjects.CplnPanel.CloseCompilationPane.Click();
+                    CustomizationProjects.CompilationPanel.CloseCompilationPane.Click();
                 }
                 CustomizationProjects.Refresh();
             }
