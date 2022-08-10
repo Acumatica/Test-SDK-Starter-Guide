@@ -22,7 +22,7 @@ namespace ISVTestSDK
     //Or, follow the How to Start or Upgrade a Test SDK Project to build this project yourself from a new solution
 
 
-    public class Test : Check
+    public class Tests : Check
     {
         const string customizationName = "SOLUTION_FILE_NAME"; // ISV Customization project
         const string customizationURLPath = @"C:\share\Customizations\" + customizationName + ".zip";
@@ -52,6 +52,12 @@ namespace ISVTestSDK
             //ImportPublishSnapshot();
 
             //Pre config code goes here, all the setup required for your wrappers to generate and tests to run successfully should be done before the tests start.
+            
+            //ClassGenerator.ClassGenerator WG = new ClassGenerator.ClassGenerator(@"C:\AcumaticaInstallers\22.109.0023\Acumatica ERP\22r109sales", @"C:\Users\aaron.beehoo\Downloads\ISVTestSDK\ISVTestSDK\ISVTestSDK\CustomWrappers\");
+
+            //WG.Namespace = "GeneratedWrappers.ISVTest";
+            //WG.Run("SO301000, SO303000");
+
 
         }
 
