@@ -1,6 +1,6 @@
 ﻿using GeneratedWrappers.Acumatica;
 
-namespace GeneratedWrappers.ISVTestSDK
+namespace GeneratedWrappers.ISVTEST
 {
     public partial class SOOrderEntry : SO301000_SOOrderEntry
     {

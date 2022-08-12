@@ -1,7 +1,7 @@
 ﻿using GeneratedWrappers.Acumatica;
 using Controls.Uploader;
 
-namespace GeneratedWrappers.ISVTestSDK
+namespace GeneratedWrappers.ISVTEST
 {
     public partial class CompanyMaint : SM203520_CompanyMaint
     {

@@ -31,7 +31,7 @@ using Core.Wait;
 using System;
 
 
-namespace GeneratedWrappers.ISVTestSDK
+namespace GeneratedWrappers.ISVTEST
 {
     
     

@@ -1,5 +1,6 @@
-﻿
-namespace GeneratedWrappers.ISVTestSDK 
+﻿using GeneratedWrappers.Acumatica;
+
+namespace GeneratedWrappers.ISVTEST
 {
     public partial class VendorMaint : AP303000_VendorMaint
     {

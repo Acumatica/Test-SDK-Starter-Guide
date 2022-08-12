@@ -5,8 +5,8 @@
     <TargetFramework>net48</TargetFramework>
   </PropertyGroup>
 
- 
- 
+  
+  
   <ItemGroup>
     <PackageReference Include="ClassGenerator" Version="22.105.31.32" />
     <PackageReference Include="Core" Version="22.105.31.32" />

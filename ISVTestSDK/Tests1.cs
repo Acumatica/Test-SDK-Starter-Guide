@@ -12,7 +12,7 @@ using System;
 using Core.Attributes;
 using Core.Core.Browser;
 using System.Threading;
-using GeneratedWrappers.ISVTestSDK;
+using GeneratedWrappers.ISVTEST;
 
 namespace ISVTestSDK
 {
