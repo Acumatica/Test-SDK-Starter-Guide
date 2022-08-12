@@ -58,7 +58,7 @@ namespace ISVTestSDK
 
                     VendorMaint.CreateContactform.FirstName.Type("TestSDKContact");
                     VendorMaint.CreateContactform.LastName.Type("TestSDKContact"); // type in required fields on the popup form
-                    
+
                     VendorMaint.CreateContactPopupFormButtons.Create(); // pressing the create button to submit the popup form
 
                     VendorMaint.DynamicGrid("Activities"); //select financial tab

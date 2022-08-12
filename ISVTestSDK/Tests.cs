@@ -41,13 +41,18 @@ namespace ISVTestSDK
 
             //Pre config code goes here, all the setup required for your wrappers to generate and tests to run successfully should be done before the tests start.
             //The start state of the test should be SalesDemo data with your customization freshly published.
-            
+
             //If you need to do configuration on a custom screen where wrappers required, you should use a sql script to insert the required data into the database.
             //Or use DynamicControl<>
 
             ImportCustomization(customizationName);
             PublishCustomization(customizationName);
             ImportPublishSnapshot();
+
+            //Sql script to insert config data, allows ISV to pre-configure a screen before the wrapper exists and makes the screen accessable.
+            //This is used in the case where a custom screen must be used to "enable" other custom screens. A screen that is not accessable will fail wrapper generation.
+            Support.GetSite().RunSqlScript($@"INSERT [dbo].[TABLE] ([CompanyID], [ApiKey], [ApiURL]) VALUES (2, N'8fds867f68sd768f78ds8f', N'https://sandbox.testsite.com/api/v4');");
+            
             using (TestExecution.CreateTestStepGroup("Configure Site for Wrapper Generation."))
             {
                 Features.OpenScreen();
@@ -74,15 +79,14 @@ namespace ISVTestSDK
         public void GenerateNewWrappers()
         {
             ClassGenerator.ClassGenerator WG = new ClassGenerator.ClassGenerator(@"C:\AcumaticaInstallers\22.109.0023\Acumatica ERP\22r109sales", @"C:\Users\aaron.beehoo\Downloads\ISVTestSDK\ISVTestSDK\ISVTestSDK\CustomWrappers\");
-
             WG.Namespace = "GeneratedWrappers.ISVTEST";       // Replace ISVTEST with your solution name
             WG.Run("SM203520, SM204505, AP303000, AP301000"); // Generate wrappers for all new or modified screens, use the same namespace as above for your Extension.cs file for these wrappers
                                                               // Untouched Acumatica screen wrappers do not need to be generated, but they still will need an extension file created
                                                               // Acumatica wrappers can be accessed by "using GeneratedWrappers.Acumatica;" inside your Extension.cs file
         }
-    
 
-            public void ImportCustomization(Dictionary<string, int> Customizations)
+
+        public void ImportCustomization(Dictionary<string, int> Customizations)
         {
             CustomizationProjects.Details.WaitAction = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
             CustomizationProjects.OpenPackage.WaitAction = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
@@ -163,7 +167,7 @@ namespace ISVTestSDK
             {
                 Companies.cUploadSnapshotPackage.WaitAction = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
                 Companies.Snapshots.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
-                
+
                 Companies.OpenScreen(true);
                 Companies.Snapshots.UploadSnapshotCommand();
                 Companies.cUploadSnapshotPackage.SelectFile(snapshotURLPath);
