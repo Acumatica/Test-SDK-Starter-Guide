@@ -8,12 +8,12 @@
   
   
   <ItemGroup>
-    <PackageReference Include="ClassGenerator" Version="22.105.31.32" />
-    <PackageReference Include="Core" Version="22.105.31.32" />
-    <PackageReference Include="Execution" Version="22.105.31.32" />
-    <PackageReference Include="GeneratedWrappers.Acumatica" Version="22.105.28-P146426" />
-    <PackageReference Include="Host" Version="22.105.31.32" />
-    <PackageReference Include="PX.QA.Tools" Version="22.105.31.32" />
+    <PackageReference Include="ClassGenerator" Version="22.109.23.24" />
+    <PackageReference Include="Core" Version="22.109.23.24" />
+    <PackageReference Include="Execution" Version="22.109.23.24" />
+    <PackageReference Include="GeneratedWrappers.Acumatica" Version="22.109.9-P152734" />
+    <PackageReference Include="Host" Version="22.109.23.24" />
+    <PackageReference Include="PX.QA.Tools" Version="22.109.23.24" />
   </ItemGroup>
 
   

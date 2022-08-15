@@ -43,25 +43,24 @@ namespace ISVTestSDK
             //The start state of the test should be SalesDemo data with your customization freshly published.
 
             //If you need to do configuration on a custom screen where wrappers required, you should use a sql script to insert the required data into the database.
-            //Or use DynamicControl<>
 
             ImportCustomization(customizationName);
             PublishCustomization(customizationName);
             ImportPublishSnapshot();
 
-            //Sql script to insert config data, allows ISV to pre-configure a screen before the wrapper exists and makes the screen accessable.
-            //This is used in the case where a custom screen must be used to "enable" other custom screens. A screen that is not accessable will fail wrapper generation.
-            Support.GetSite().RunSqlScript($@"INSERT [dbo].[TABLE] ([CompanyID], [ApiKey], [ApiURL]) VALUES (2, N'8fds867f68sd768f78ds8f', N'https://sandbox.testsite.com/api/v4');");
-            
+
             using (TestExecution.CreateTestStepGroup("Configure Site for Wrapper Generation."))
             {
-                Features.OpenScreen();
-                Features.Insert();
-                Features.Summary.DynamicControl<CheckBox>("Commerce Integration").SetTrue(); // use dynamic control to find Commerce Integration text/checkbox and enable it
-                Features.RequestValidation();
-            }
+                //Sql script to insert config data, allows ISV to pre-configure a screen before the wrapper exists and makes the screen accessable.
+                //This is used in the case where a custom screen must be used to "enable" other custom screens. A screen that is not accessable will fail wrapper generation.
 
-            GenerateNewWrappers(); // run this to regenerate Wrappers for new version of acumatica or after changeing your customization project
+                //enable feature via sql
+                //Support.GetSite().RunSqlScript($@"UPDATE [dbo].[FeaturesSet] SET [UsrNEWFEATURE1] = 1,[UsrNEWFEATURE2] = 1,[UsrNEWFEATURE3] = 1;");
+                //Add custom screen config data via sql
+                //Support.GetSite().RunSqlScript($@"INSERT [dbo].[TABLE] ([CompanyID], [ApiKey], [ApiURL]) VALUES (2, N'8fds867f68sd768f78ds8f', N'https://sandbox.testsite.com/api/v4');");
+
+                //GenerateNewWrappers(); // run this to regenerate Wrappers for new version of acumatica or after changeing your customization project
+            }
 
         }
 
