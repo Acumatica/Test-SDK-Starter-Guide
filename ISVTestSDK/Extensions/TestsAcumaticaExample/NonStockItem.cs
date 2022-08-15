@@ -9,8 +9,7 @@ namespace Core
     {
         public c_item_form Summary => base.Item_form;
         public c_itemsettings_tab GeneralSettings => base.ItemSettings_tab;
-        public c_curysettings_inventoryitem_curysettingsform BasePrice => base.CurySettings_InventoryItem_curySettingsForm;
-        public c_curysettings_inventoryitem_curysettingsform2 StdPrice => base.CurySettings_InventoryItem_curySettingsForm2;
+       
         public c_itemunits_gridunits Conversions => base.Itemunits_gridunits;
         public c_components_pxgridcomponents Components => Components_PXGridComponents;
         public c_itemsettings_formdr DeferredRevenue => base.ItemSettings_formDR;
@@ -27,7 +26,6 @@ namespace Core
         public c_inventoryfileurls_gridinventoryfileurls MediaURLS => base.InventoryFileUrls_gridInventoryFileUrls;
         public c_itemsettings_tab CostAccrual => ItemSettings_tab;
         public c_curysettings_inventoryitem_curysettingsformdefaultsite DefSite => CurySettings_InventoryItem_CurySettingsFormDefaultSite;
-        public c_curysettings_inventoryitem_curysettingsform2 InventoryitemSettings => CurySettings_InventoryItem_curySettingsForm2;
         public c_serviceskills_gridserviceskills Skills => base.ServiceSkills_gridServiceSkills;
         public c_servicelicensetypes_gridservicelicensetypes LicenseTypes => base.ServiceLicenseTypes_gridServiceLicenseTypes;
         public c_serviceequipmenttypes_gridserviceequipmenttypes ResourceEquipmentTypes => base.ServiceEquipmentTypes_gridServiceEquipmentTypes;
