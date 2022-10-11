@@ -17,6 +17,10 @@ using Core.Log;
 using GeneratedWrappers.ISVTEST;
 using Controls.CheckBox;
 using System.Collections.Generic;
+using System.Net.Mail;
+using System.Net;
+using System.IO;
+using System.Linq;
 
 namespace ISVTestSDK
 {
@@ -30,6 +34,8 @@ namespace ISVTestSDK
         const string customizationURLPath = @"C:\share\Customizations\";
         const string snapshotName = "SNAPSHOT_FILE_NAME"; // initial test state snapshot if needed (salesdemo + custom config)
         const string snapshotURLPath = @"C:\share\Snapshots\" + snapshotName + ".zip";
+        public const string ValidationSuccessfully = "Validation finished successfully.";
+        public const string PublishSuccessfully = "Website updated.";
 
         public ProjectList CustomizationProjects = new ProjectList();
         public CompanyMaint Companies = new CompanyMaint();
@@ -44,9 +50,9 @@ namespace ISVTestSDK
 
             //If you need to do configuration on a custom screen where wrappers required, you should use a sql script to insert the required data into the database.
 
-            ImportCustomization(customizationName);
-            PublishCustomization(customizationName);
-            ImportPublishSnapshot();
+            //ImportCustomization(customizationName);
+            //PublishCustomization(customizationName);
+            //ImportPublishSnapshot();
 
 
             using (TestExecution.CreateTestStepGroup("Configure Site for Wrapper Generation."))
@@ -57,7 +63,7 @@ namespace ISVTestSDK
                 //enable feature via sql
                 //Support.GetSite().RunSqlScript($@"UPDATE [dbo].[FeaturesSet] SET [UsrNEWFEATURE1] = 1,[UsrNEWFEATURE2] = 1,[UsrNEWFEATURE3] = 1;");
                 //Add custom screen config data via sql
-                //Support.GetSite().RunSqlScript($@"INSERT [dbo].[TABLE] ([CompanyID], [ApiKey], [ApiURL]) VALUES (2, N'8fds867f68sd768f78ds8f', N'https://sandbox.testsite.com/api/v4');");
+                //Support.GetSite().RunSqlScript($@"INSERT [dbo].[TABLE] ([CompanyID], [ApiKey], [ApiURL]) VALUES (2, N'8fds86256hh7j8f78ds8f', N'https://sandbox.testsite.com/api/v4');");
 
                 //GenerateNewWrappers(); // run this to regenerate Wrappers for new version of acumatica or after changeing your customization project
             }
@@ -74,7 +80,7 @@ namespace ISVTestSDK
             // TestsAcumaticaExample.Execute();
 
         }
-
+        
         public void GenerateNewWrappers()
         {
             ClassGenerator.ClassGenerator WG = new ClassGenerator.ClassGenerator(@"C:\AcumaticaInstallers\22.109.0023\Acumatica ERP\22r109sales", @"C:\Users\aaron.beehoo\Downloads\ISVTestSDK\ISVTestSDK\ISVTestSDK\CustomWrappers\");
@@ -90,8 +96,7 @@ namespace ISVTestSDK
             CustomizationProjects.Details.WaitAction = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
             CustomizationProjects.OpenPackage.WaitAction = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
             this.customizationName = Customizations;
-            #region Step 4
-
+            
             using (TestExecution.CreateTestStepGroup("Upload/replace customization projects."))
             {
                 foreach (var cst in Customizations)
@@ -120,13 +125,10 @@ namespace ISVTestSDK
                     CustomizationProjects.Save();
                 }
             }
-
-            #endregion
         }
 
         public void PublishCustomization(Dictionary<string, int> Customizations)
         {
-            #region Step 5
             this.customizationName = Customizations;
             using (TestExecution.CreateTestStepGroup("Publish customization projects."))
             {
@@ -140,30 +142,27 @@ namespace ISVTestSDK
                 }
 
                 CustomizationProjects.Save();
-                CustomizationProjects.ActionPublish();
-                CustomizationProjects.CompilationPanel.WaitAction = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
-                CustomizationProjects.CompilationPanel.CloseCompilationPane.WaitAction = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
-                CustomizationProjects.CompilationPanel.Validate(true);
-                CustomizationProjects.CompilationPanel.Publish(true);
+                CustomizationProjects.ActionPublishExt();
+                CustomizationProjects.PublishToMultipleCompanies.Ok();
 
-                try
+                using (new Wait(Wait.LongTimeOut * 2))
                 {
+                    CustomizationProjects.CompilationPanel.WaitAction = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
+                    CustomizationProjects.CompilationPanel.Validate(true, ValidationSuccessfully);
+                    CustomizationProjects.CompilationPanel.Buttons.Publish.WaitAction = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 10);
+                    CustomizationProjects.CompilationPanel.Publish(true, PublishSuccessfully);
                     CustomizationProjects.CompilationPanel.Close();
                 }
-                catch
-                {
-                    CustomizationProjects.CompilationPanel.CloseCompilationPane.Click();
-                }
 
-                CustomizationProjects.Refresh();
+
+                CustomizationProjects.RefreshScreen(true);
             }
-
-            #endregion
         }
-        public void ImportPublishSnapshot()
+        public void ImportPublishSnapshot(Dictionary<string, int> Customizations)
         {
             using (TestExecution.CreateTestStepGroup("Companies screen (SM203520)"))
             {
+                this.customizationName = Customizations;
                 Companies.cUploadSnapshotPackage.WaitAction = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
                 Companies.Snapshots.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
 
@@ -179,6 +178,32 @@ namespace ISVTestSDK
                 ImportCustomization(customizationName); //republish the customization
                 PublishCustomization(customizationName); //republish the customization
             }
+        }
+        public void EmailResults(Exception ex)
+        {
+            string ISVEmail = "user@mail.com";
+            var smtpClient = new SmtpClient("smtp.office365.com")
+            {
+                Port = 587,
+                Credentials = new NetworkCredential("sender@mail.com", "password"),
+                EnableSsl = true,
+            };
+
+            var directory = new DirectoryInfo(Log.Storage[0].Settings.ScreenshotFolder);
+            var myFile = directory.GetFiles()
+             .OrderByDescending(f => f.LastWriteTime)
+             .First();
+
+            var attachment = new Attachment(myFile.FullName);
+            MailMessage mailMessage = new MailMessage();
+            mailMessage.Subject = "Test Failed";
+            mailMessage.To.Add(ISVEmail);
+
+            mailMessage.From = new System.Net.Mail.MailAddress("sender@mail.com", "Sender name");
+            mailMessage.Body = "error: " + ex.Message.ToString() + Environment.NewLine + Environment.NewLine + ex.StackTrace.ToString();
+            mailMessage.Attachments.Add(attachment);
+            smtpClient.Send(mailMessage);
+
         }
 
     }
