@@ -17,6 +17,7 @@ In Visual Studio:
 2) Create, or copy the extension files into the extensions folder
 3) Update the names and locations of the customization project and snapshot. If no snapshot exists comment out the "Companies" screen snapshot import code in BeforeExecute
 4) Create, or copy your test code into the test.cs
+5) If your test or wrapper generation requires config of custom screens to generate all wrappers. Use SQL to insert the data - Support.GetSite().RunSqlScript($@"INSERT [dbo].[TABLE] ([CompanyID], [ApiKey], [ApiURL]) VALUES (2, N'8fds86256hh7j8f78ds8f', N'https://sandbox.testsite.com/api/v4');");
 5) Update the project's Properties->launchSettings.json file to use the config.xml location - This lets you just press run(f5) in Visual studio to kick off the test.
 
 _______________________________________________________________________________________________________________
