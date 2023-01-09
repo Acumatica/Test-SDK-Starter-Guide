@@ -5,8 +5,12 @@
     <TargetFramework>net48</TargetFramework>
   </PropertyGroup>
 
-  
-  
+  <ItemGroup>
+    <Compile Remove="CustomWrappers\**" />
+    <EmbeddedResource Remove="CustomWrappers\**" />
+    <None Remove="CustomWrappers\**" />
+  </ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="ClassGenerator" Version="22.202.40.40" />
     <PackageReference Include="Core" Version="22.202.40.40" />
@@ -33,6 +37,12 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+
+  
+
+  <ItemGroup>
+    <Folder Include="Wrappers\" />
   </ItemGroup>
 
   

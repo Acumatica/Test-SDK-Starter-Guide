@@ -1,10 +1,9 @@
 ﻿using Controls.CompilationPanel;
 using Controls.Grid.Upload;
-using GeneratedWrappers.Acumatica;
 
-namespace GeneratedWrappers.ISVTEST
+namespace GeneratedWrappers.Acumatica
 {
-    public partial class ProjectList : SM204505_ProjectList
+    public partial class SM204505ProjectList : SM204505_ProjectList
     {
         public c_projects_grid Details => Projects_grid;
         public new c_grid_upload OpenPackage => base.OpenPackage;

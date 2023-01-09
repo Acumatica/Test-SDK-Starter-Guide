@@ -1,9 +1,8 @@
-﻿using GeneratedWrappers.Acumatica;
-using Controls.Uploader;
+﻿using Controls.Uploader;
 
-namespace GeneratedWrappers.ISVTEST
+namespace GeneratedWrappers.Acumatica
 {
-    public partial class CompanyMaint : SM203520_CompanyMaint
+    public partial class SM203520CompanyMaint : SM203520_CompanyMaint
     {
         public c_snapshots_gridsnapshots Snapshots => Snapshots_gridSnapshots;
         public c_screen_upload cUploadSnapshotPackage => UploadSnapshotPackage;
