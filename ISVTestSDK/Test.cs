@@ -40,7 +40,22 @@ namespace ISVTestSDK
             PxLogin.LoginToDestinationSite();
             //ImportCustomization();
             //PublishCustomization();
-            //ImportPublishSnapshot();
+            //ImportPublishSnapshot(); // not recomended to use snapshots because they are version specific, use below pre config instead..
+
+            //Pre wrapper generation setup - to allow all wrappers to generate successfully based off salesdemo base data
+
+            //use SQL to enter data on customizaed screens
+            Support.GetSite().RunSqlScript($@"INSERT [dbo].[TABLE] ([CompanyID], [ApiKey], [ApiURL]) VALUES (2, N'8fds86256hh7j8f78ds8f', N'https://sandbox.testsite.com/api/v4');");
+            
+            //Use GeneratedWrappers.Acumatica to enter data for unmodified screens
+            Features Features = new Features();
+            Features.OpenScreen();
+            Features.Insert();
+            Features.Summary.SalesQuotes.SetTrue();
+            Features.Summary.ProjectQuotes.SetTrue();
+            Features.Summary.Multicurrency.SetTrue();
+            Features.RequestValidation();
+
             //GenerateWrappers();
         }
 
