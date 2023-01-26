@@ -1,4 +1,5 @@
-﻿using Core.Log;
+﻿using Core;
+using Core.Log;
 using Core.Login;
 using Core.TestExecution;
 using Core.Wait;
