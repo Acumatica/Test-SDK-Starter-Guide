@@ -15,7 +15,7 @@ namespace ISVTestSDK
         const string physicalSitePath = @"C:\AcumaticaSites\22r202";
         Dictionary<string, int> customizationName = new Dictionary<string, int>() { { "SOLUTIONNAME1[22.200.0145][22r2r11b1]", 1 }, { "SOLUTIONNAME2[22.200.0145][22r2r11b1]", 2 } }; //solution file name(s), in publishing order
         const string customizationURLPath = @"C:\share\Customizations\";
-        const string snapshotName = "ISVSnapshot22r202"; // initial test state snapshot if needed (salesdemo + custom config)
+        const string snapshotName = "ISVSnapshot22r202"; //  initial test state snapshot if needed (salesdemo + custom config) - Not recomended to use snapshots because they are version specific, use below pre config instead..
         const string snapshotURLPath = @"C:\share\Snapshots\" + snapshotName + ".zip";
 
         public const string ValidationSuccessfully = "Validation finished successfully.";
