@@ -43,21 +43,28 @@ namespace ISVTestSDK
             //PublishCustomization();
             //ImportPublishSnapshot(); // not recomended to use snapshots because they are version specific, use below pre config instead..
 
-            //Pre wrapper generation setup - to allow all wrappers to generate successfully based off salesdemo base data
+            using (TestExecution.CreateTestStepGroup("Configure Site for Wrapper Generation."))
+            {
+                //Sql script to insert config data, allows ISV to pre-configure a screen before the wrapper exists and makes the screen accessable.
+                //This is used in the case where a custom screen must be used to "enable" other custom screens. A screen that is not accessable will fail wrapper generation.
 
-            //use SQL to enter data on customizaed screens
-            Support.GetSite().RunSqlScript($@"INSERT [dbo].[TABLE] ([CompanyID], [ApiKey], [ApiURL]) VALUES (2, N'8fds86256hh7j8f78ds8f', N'https://sandbox.testsite.com/api/v4');");
+                //enable feature via sql if feature was added via customization
+                //Support.GetSite().RunSqlScript($@"UPDATE [dbo].[FeaturesSet] SET [UsrNEWFEATURE1] = 1,[UsrNEWFEATURE2] = 1,[UsrNEWFEATURE3] = 1;");
+                //Add custom screen config data via sql
+                //Support.GetSite().RunSqlScript($@"INSERT [dbo].[TABLE] ([CompanyID], [ApiKey], [ApiURL]) VALUES (2, N'8fds86256hh7j8f78ds8f', N'https://sandbox.testsite.com/api/v4');");
+
+                //Use GeneratedWrappers.Acumatica to enter data for UNMODIFIED screens
+                //Features Features = new Features();
+                //Features.OpenScreen();
+                //Features.Insert();
+                //Features.Summary.SalesQuotes.SetTrue();
+                //Features.Summary.ProjectQuotes.SetTrue();
+                //Features.Summary.Multicurrency.SetTrue();
+                //Features.RequestValidation();
+                //GenerateNewWrappers(); // run this to regenerate Wrappers for new version of acumatica or after changeing your customization project
+            }
             
-            //Use GeneratedWrappers.Acumatica to enter data for unmodified screens
-            Features Features = new Features();
-            Features.OpenScreen();
-            Features.Insert();
-            Features.Summary.SalesQuotes.SetTrue();
-            Features.Summary.ProjectQuotes.SetTrue();
-            Features.Summary.Multicurrency.SetTrue();
-            Features.RequestValidation();
 
-            //GenerateWrappers();
         }
 
         public override void Execute()
