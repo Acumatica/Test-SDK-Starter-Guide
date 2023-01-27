@@ -20,7 +20,7 @@ namespace ISVTestSDK
             {
                 CABankTransactionsMaint.OpenScreen();
                 CABankTransactionsMaint.Filter.CashAccountID.Type("10200");
-                CABankTransactionsMaint.Filter.CashAccountID.GetValue().VerifyContains("10300").Assert();
+                CABankTransactionsMaint.Filter.CashAccountID.GetValue().VerifyContains("10200").Assert();
                 CABankTransactionsMaint.Filter.CashAccountID.Type("10400");
             }
         }

@@ -15,7 +15,7 @@
     <PackageReference Include="ClassGenerator" Version="22.202.40.40" />
     <PackageReference Include="Core" Version="22.202.40.40" />
     <PackageReference Include="Execution" Version="22.202.40.40" />
-    <PackageReference Include="GeneratedWrappers.Acumatica" Version="22.202.39-P163973" />
+    <PackageReference Include="GeneratedWrappers.Acumatica" Version="22.209.27-P178461" />
     <PackageReference Include="Host" Version="22.202.40.40" />
     <PackageReference Include="PX.QA.Tools" Version="22.202.40.40" />
   </ItemGroup>

@@ -1,10 +1,13 @@
-﻿using Core;
+﻿using Controls.CheckBox;
+using Core;
+using Core.Config;
 using Core.Log;
 using Core.Login;
 using Core.TestExecution;
 using Core.Wait;
 using GeneratedWrappers.Acumatica;
 using GeneratedWrappers.ISVNAME;
+using PX.QA.Tools;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -16,14 +19,17 @@ namespace ISVTestSDK
         const string physicalSitePath = @"C:\AcumaticaSites\22r202";
         Dictionary<string, int> customizationName = new Dictionary<string, int>() { { "SOLUTIONNAME1[22.200.0145][22r2r11b1]", 1 }, { "SOLUTIONNAME2[22.200.0145][22r2r11b1]", 2 } }; //solution file name(s), in publishing order
         const string customizationURLPath = @"C:\share\Customizations\";
-        const string snapshotName = "ISVSnapshot22r202"; //  initial test state snapshot if needed (salesdemo + custom config) - Not recomended to use snapshots because they are version specific, use below pre config instead..
+        const string snapshotName = "ISVSnapshot22r202"; // Not recomended to use snapshots because they are version specific, use below pre config code instead..
         const string snapshotURLPath = @"C:\share\Snapshots\" + snapshotName + ".zip";
 
         public const string ValidationSuccessfully = "Validation finished successfully.";
         public const string PublishSuccessfully = "Website updated.";
 
-        //add all screen you will be using here
+        //import all screen you will be using here
+        //How to Create Extension Files is a very useful guide to create these extensions.
         public SM204505ProjectList CustomizationProjects = new SM204505ProjectList();
+        public CS100000FeaturesMaint features = new CS100000FeaturesMaint();
+        public GL102000GLSetupMaint setupGl = new GL102000GLSetupMaint();
         public SM203520CompanyMaint Companies = new SM203520CompanyMaint();
         public CA306000CABankTransactions CABankTransactionsMaint = new CA306000CABankTransactions();
 
@@ -32,11 +38,11 @@ namespace ISVTestSDK
             //Update the TestSDK folder config.xml and ClassGenerator/classgenerator.exe.config
             //update the Properties->Launchsettings.json to your testSDK folder location
 
-            //If first run on a new minor or major verson, delete the packages in Dependencies->Packages
+            //If first run on a new minor or major verson, update the packages in Dependencies->Packages to the desired version:
             //Right click on the project and select "Manage NuGet Packages"
             //Add a new source named as the version number (eg 22r101) that links to the testSDK download folder-> packages folder
             //Once added as a source, switch to the added source and add all the packages there. to the project.
-            //GeneratedWrappers.Acumatica package in the packages folder needs to be renamed to GeneratedWrappers.Acumatica.21.213.33-P147318 before it can be added successfully.
+            //GeneratedWrappers.Acumatica package in the packages folder sometimes needs to be renamed to  include the build and P###### seen in the nuget manager GeneratedWrappers.Acumatica.21.213.33-P147318 before it can be added successfully.
 
             PxLogin.LoginToDestinationSite();
             //ImportCustomization();
@@ -45,26 +51,26 @@ namespace ISVTestSDK
 
             using (TestExecution.CreateTestStepGroup("Configure Site for Wrapper Generation."))
             {
-                //Sql script to insert config data, allows ISV to pre-configure a screen before the wrapper exists and makes the screen accessable.
-                //This is used in the case where a custom screen must be used to "enable" other custom screens. A screen that is not accessable will fail wrapper generation.
+                /*
+                Before wrapper generation, all screns must be accessable with no manual pre-configuration
+                There are a few ways to set up your site before Wrapper generation using automated code.
+                1) For existing unmodified acumatica screens:   Using GeneratedWrappers.Acumatica wrappers
+                2) For modified acumatica screens:              Using DynamicControl to interact with the new fields before a updated wrapper exists.
+                */
 
-                //enable feature via sql if feature was added via customization
-                //Support.GetSite().RunSqlScript($@"UPDATE [dbo].[FeaturesSet] SET [UsrNEWFEATURE1] = 1,[UsrNEWFEATURE2] = 1,[UsrNEWFEATURE3] = 1;");
-                //Add custom screen config data via sql
-                //Support.GetSite().RunSqlScript($@"INSERT [dbo].[TABLE] ([CompanyID], [ApiKey], [ApiURL]) VALUES (2, N'8fds86256hh7j8f78ds8f', N'https://sandbox.testsite.com/api/v4');");
+                //Use GeneratedWrappers.Acumatica to enter data for UNMODIFIED Acumatica screens
+                features.OpenScreen();
+                features.Insert();
+                features.Summary.SalesQuotes.SetTrue();
+                features.Summary.DynamicControl<CheckBox>("Multicurrency Accounting").SetTrue(); //enable customization added feature (not found in default wrapper)
+                features.RequestValidation();
 
-                //Use GeneratedWrappers.Acumatica to enter data for UNMODIFIED screens
-                //Features Features = new Features();
-                //Features.OpenScreen();
-                //Features.Insert();
-                //Features.Summary.SalesQuotes.SetTrue();
-                //Features.Summary.ProjectQuotes.SetTrue();
-                //Features.Summary.Multicurrency.SetTrue();
-                //Features.RequestValidation();
-                //GenerateNewWrappers(); // run this to regenerate Wrappers for new version of acumatica or after changeing your customization project
+                //Using DynamicControl to interact with customization added fields before a updated wrapper exists
+                setupGl.OpenScreen();
+                setupGl.general.DynamicControl<CheckBox>("Generate Consolidated Batches").SetTrue(); //the text is the fields label text
+                setupGl.Save();
             }
-            
-
+            //GenerateWrappers();
         }
 
         public override void Execute()
@@ -87,7 +93,7 @@ namespace ISVTestSDK
             WG.Run("SCREENID1, SCREENID2"); // add your customized screens here
             // Replace ISVTEST with your solution name
             // Generate wrappers for all new or modified screens
-            // Untouched Acumatica screens do not need wrappers to be generated
+            // Untouched Acumatica screens do not need wrappers to be generated - Use using GeneratedWrappers.Acumatica;
             // All wrappers will need an extension file created to access the elements of the screens wrapper.
             // The namespace of your Extension.cs files will be "using GeneratedWrappers.Acumatica;" or "using GeneratedWrappers.ISVTEST;"
         }
