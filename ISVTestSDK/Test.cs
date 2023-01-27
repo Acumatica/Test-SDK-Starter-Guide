@@ -26,7 +26,7 @@ namespace ISVTestSDK
         public const string PublishSuccessfully = "Website updated.";
 
         //import all screen you will be using here
-        //How to Create Extension Files is a very useful guide to create these extensions.
+        //How to Create Extension Files.docx is a very useful guide to create these extensions.
         public SM204505ProjectList CustomizationProjects = new SM204505ProjectList();
         public CS100000FeaturesMaint features = new CS100000FeaturesMaint();
         public GL102000GLSetupMaint setupGl = new GL102000GLSetupMaint();
