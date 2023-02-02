@@ -56,16 +56,20 @@ namespace ISVTestSDK
                 There are a few ways to set up your site before Wrapper generation using automated code.
                 1) For existing unmodified acumatica screens:   Using GeneratedWrappers.Acumatica wrappers
                 2) For modified acumatica screens:              Using DynamicControl to interact with the new fields before a updated wrapper exists.
-                */
+                3) For New Custom screens:                      Using Customization Plug-in to configure the data
+                                                                https://www.acumatica.com/blog/customization-plugin-packages-configuration/
+                                                                https://riptutorial.com/acumatica/example/29435/implementation-of-a-customization-plug-in-to-update-multiple-companies
 
-                //Use GeneratedWrappers.Acumatica to enter data for UNMODIFIED Acumatica screens
+                 */
+
+                // 1) Use GeneratedWrappers.Acumatica to enter data for UNMODIFIED Acumatica screens
                 features.OpenScreen();
                 features.Insert();
                 features.Summary.SalesQuotes.SetTrue();
                 features.Summary.DynamicControl<CheckBox>("Multicurrency Accounting").SetTrue(); //enable customization added feature (not found in default wrapper)
                 features.RequestValidation();
 
-                //Using DynamicControl to interact with customization added fields before a updated wrapper exists
+                // 2) Using DynamicControl to interact with customization added fields before a updated wrapper exists
                 setupGl.OpenScreen();
                 setupGl.general.DynamicControl<CheckBox>("Generate Consolidated Batches").SetTrue(); //the text is the fields label text
                 setupGl.Save();
