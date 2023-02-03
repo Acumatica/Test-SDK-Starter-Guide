@@ -19,8 +19,8 @@ namespace ISVTestSDK
         const string physicalSitePath = @"C:\AcumaticaSites\22r202";
         Dictionary<string, int> customizationName = new Dictionary<string, int>() { { "SOLUTIONNAME1[22.200.0145][22r2r11b1]", 1 }, { "SOLUTIONNAME2[22.200.0145][22r2r11b1]", 2 } }; //solution file name(s), in publishing order
         const string customizationURLPath = @"C:\share\Customizations\";
-        const string snapshotName = "ISVSnapshot22r202"; // Not recomended to use snapshots because they are version specific, use below pre config code instead..
-        const string snapshotURLPath = @"C:\share\Snapshots\" + snapshotName + ".zip";
+        //const string snapshotName = "ISVSnapshot22r202"; // Not recomended to use snapshots because they are version specific, use below pre config code instead..
+        //const string snapshotURLPath = @"C:\share\Snapshots\" + snapshotName + ".zip";
 
         public const string ValidationSuccessfully = "Validation finished successfully.";
         public const string PublishSuccessfully = "Website updated.";
@@ -163,26 +163,26 @@ namespace ISVTestSDK
                 }
             }
         }
-        public void ImportPublishSnapshot()
-        {
-            using (TestExecution.CreateTestStepGroup("Companies screen (SM203520)"))
-            {
-                Companies.cUploadSnapshotPackage.WaitAction = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
-                Companies.Snapshots.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
+        //public void ImportPublishSnapshot()
+        //{
+        //    using (TestExecution.CreateTestStepGroup("Companies screen (SM203520)"))
+        //    {
+        //        Companies.cUploadSnapshotPackage.WaitAction = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
+        //        Companies.Snapshots.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
 
-                Companies.OpenScreen(true);
-                Companies.Snapshots.UploadSnapshotCommand();
-                Companies.cUploadSnapshotPackage.SelectFile(snapshotURLPath);
-                Companies.cUploadSnapshotPackage.IncludeDataFromCustomColumns.SetFalse();
-                Companies.cUploadSnapshotPackage.IncludeDataFromCustomColumns.SetTrue();
-                Companies.cUploadSnapshotPackage.Upload();
-                Companies.ImportSnapshotCommand();
+        //        Companies.OpenScreen(true);
+        //        Companies.Snapshots.UploadSnapshotCommand();
+        //        Companies.cUploadSnapshotPackage.SelectFile(snapshotURLPath);
+        //        Companies.cUploadSnapshotPackage.IncludeDataFromCustomColumns.SetFalse();
+        //        Companies.cUploadSnapshotPackage.IncludeDataFromCustomColumns.SetTrue();
+        //        Companies.cUploadSnapshotPackage.Upload();
+        //        Companies.ImportSnapshotCommand();
 
-                PxLogin.LoginToDestinationSite(); //login after snapshot restore then republish the newest customization project next.
-                ImportCustomization(); //republish the customization
-                PublishCustomization(); //republish the customization
-            }
-        }
+        //        PxLogin.LoginToDestinationSite(); //login after snapshot restore then republish the newest customization project next.
+        //        ImportCustomization(); //republish the customization
+        //        PublishCustomization(); //republish the customization
+        //    }
+        //}
     }
 
 
