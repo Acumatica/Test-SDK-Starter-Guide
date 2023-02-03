@@ -93,13 +93,15 @@ namespace ISVTestSDK
 
             ClassGenerator.ClassGenerator WG = new ClassGenerator.ClassGenerator(physicalSitePath, wrapperPath);
             WG.Username = "admin@Company2";
-            WG.Namespace = "GeneratedWrappers.ISVNAME";
-            WG.Run("SCREENID1, SCREENID2"); // add your customized screens here
-            // Replace ISVTEST with your solution name
-            // Generate wrappers for all new or modified screens
-            // Untouched Acumatica screens do not need wrappers to be generated - Use using GeneratedWrappers.Acumatica;
-            // All wrappers will need an extension file created to access the elements of the screens wrapper.
-            // The namespace of your Extension.cs files will be "using GeneratedWrappers.Acumatica;" or "using GeneratedWrappers.ISVTEST;"
+            WG.Namespace = "GeneratedWrappers.ISVNAME"; // Replace ISVTEST with your solution name
+            
+            // PL and GI screens are added like this, get the "URL" from the site map screen.
+            WG.Screens.Add("IN2025PL", "~/GenericInquiry/GenericInquiry.aspx?id=e4352bbd-a53a-42c4-9b96-e9f0fda070c7"); 
+            
+            WG.Run("SCREENID1, SCREENID2"); // add all screens here you need to use in your test
+            
+            // All wrappers will need an extension file created to access the UI elements of the screen wrapper.
+            // The namespace of your Extension.cs files will be "using GeneratedWrappers.ISVTEST;"
         }
         public void ImportCustomization()
         {
