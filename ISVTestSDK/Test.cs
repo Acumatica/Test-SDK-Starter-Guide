@@ -57,9 +57,9 @@ namespace ISVTestSDK
                 1) For existing unmodified acumatica screens:   Using GeneratedWrappers.Acumatica wrappers
                 2) For modified acumatica screens:              Using DynamicControl to interact with the new fields before a updated wrapper exists.
                 3) For New Custom screens:                      Using Customization Plug-in to configure the data
-                                                                https://www.acumatica.com/blog/customization-plugin-packages-configuration/
+                                                                https://github.com/Acumatica/Test-SDK-Starter-Guide/blob/master/ISVTestSDK/Customization%20PlugIn%20Guide.docx
                                                                 https://riptutorial.com/acumatica/example/29435/implementation-of-a-customization-plug-in-to-update-multiple-companies
-
+                                                                https://www.acumatica.com/blog/customization-plugin-packages-configuration/
                  */
 
                 // 1) Use GeneratedWrappers.Acumatica to enter data for UNMODIFIED Acumatica screens
