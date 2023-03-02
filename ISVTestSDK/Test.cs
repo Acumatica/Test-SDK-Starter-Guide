@@ -108,61 +108,32 @@ namespace ISVTestSDK
             CustomizationProjects.Details.WaitAction = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
             CustomizationProjects.OpenPackage.WaitAction = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
 
-            using (TestExecution.CreateTestStepGroup("Upload/replace customization projects."))
+            using (TestExecution.CreateTestStepGroup("Upload customization projects."))
             {
                 foreach (var cst in customizationName)
                 {
-                    Log.Information("Upload/replace customization project: ");
-
+                    Log.Information("Uploading customization project: " + cst.Key);
                     CustomizationProjects.OpenScreen();
-                    CustomizationProjects.Details.Columns.Name.Equals(cst.Key);
-
-                    if (CustomizationProjects.Details.RowsCount() == 0)
-                    {
-                        CustomizationProjects.Details.Columns.Name.ClearFilter();
-                        CustomizationProjects.ActionImport();
-                    }
-                    else
-                    {
-                        CustomizationProjects.ActionImportReplace();
-                    }
-
+                    CustomizationProjects.ActionImport();
                     CustomizationProjects.OpenPackage.SelectFile(customizationURLPath + cst.Key + ".zip");
                     CustomizationProjects.OpenPackage.Upload();
-                    CustomizationProjects.Details.Columns.Name.Equals(cst.Key);
-                    CustomizationProjects.Details.RowsCount().VerifyEquals(1);
-                    CustomizationProjects.Details.Columns.Name.ClearFilter();
+                    CustomizationProjects.Details.SelectRow(CustomizationProjects.Details.Columns.Name, cst.Key);
                     CustomizationProjects.Details.Row.Level.Type(cst.Value);
+                    CustomizationProjects.Details.Row.IsWorking.SetTrue();
                     CustomizationProjects.Save();
                 }
             }
         }
         public void PublishCustomization()
         {
-
             using (TestExecution.CreateTestStepGroup("Publish customization projects."))
             {
                 CustomizationProjects.OpenScreen();
-                CustomizationProjects.Details.SetFalse();
-
-                foreach (var cst in customizationName)
-                {
-                    CustomizationProjects.Details.SelectRow(CustomizationProjects.Details.Columns.Name, cst.Key);
-                    CustomizationProjects.Details.Row.IsWorking.SetTrue();
-                }
-
-                CustomizationProjects.Save();
-                CustomizationProjects.ActionPublishExt();
-                CustomizationProjects.PublishToMultipleCompanies.Ok();
-
-                using (new Wait(Wait.LongTimeOut * 2))
-                {
-                    CustomizationProjects.CompilationPanel.WaitAction = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
-                    CustomizationProjects.CompilationPanel.Validate(true, ValidationSuccessfully);
-                    CustomizationProjects.CompilationPanel.Buttons.Publish.WaitAction = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 10);
-                    CustomizationProjects.CompilationPanel.Publish(true, PublishSuccessfully);
-                    CustomizationProjects.CompilationPanel.Close();
-                }
+                CustomizationProjects.CompilationPanel.WaitAction = () => Wait.WaitForLongOperationToComplete(Wait.LongTimeOut * 4);
+                CustomizationProjects.ActionPublish();
+                CustomizationProjects.CompilationPanel.Validate(true, ValidationSuccessfully);
+                CustomizationProjects.CompilationPanel.Publish(true, PublishSuccessfully);
+                CustomizationProjects.RefreshScreen(true);
             }
         }
         //public void ImportPublishSnapshot()
