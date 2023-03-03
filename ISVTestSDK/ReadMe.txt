@@ -1,21 +1,20 @@
 How to use this file for the first time:
 
 PreReq:
-1) Install Acumatica website with the correct specific version you want to target - use SalesDemo data during install - or restore an "Initial test state" snapshot from the tenants screen
+1) Install Acumatica website with the correct specific version you want to target - use SalesDemo data during install
 2) Download the Test SDK.zip for the same version - extract it to C:\AcumaticaTestSDK
 3) Create C:\share
 4) Create C:\share\download
 5) Create C:\share\logs -> for test results
 6) Create C:\share\Customizations -> for storing customizations
-7) Create C:\share\Snapshots -> for storing snapshots
-8) Create C:\share\Out -> for ClassGenerator.exe wrapper file output
+7) Create C:\share\Out -> for ClassGenerator.exe wrapper file output
 
 1) Configure the config.xml, and classgenerator.exe.config files.(file output locations, website url, website folder location, screens to generate(any screen that has been edited by customization))
 2) Generate the wrappers for the screens by double clicking classgenerator.exe (launches with command prompt, admin not required) - untouched Acumatica screens can be referenced from the dependencies set up below.
 In Visual Studio:
 1) Import the nuget package into the project dependencies. Test SDK download -> packages folder is the location of the packages.
 2) Create, or copy the extension files into the extensions folder
-3) Update the names and locations of the customization project and snapshot. If no snapshot exists comment out the "Companies" screen snapshot import code in BeforeExecute
+3) Update the names and locations of the customization project
 4) Create, or copy your test code into the test.cs
 5) If your test or wrapper generation requires config of custom screens to generate all wrappers. Use SQL to insert the data - Support.GetSite().RunSqlScript($@"INSERT [dbo].[TABLE] ([CompanyID], [ApiKey], [ApiURL]) VALUES (2, N'8fds86256hh7j8f78ds8f', N'https://sandbox.testsite.com/api/v4');");
 5) Update the project's Properties->launchSettings.json file to use the config.xml location - This lets you just press run(f5) in Visual studio to kick off the test.

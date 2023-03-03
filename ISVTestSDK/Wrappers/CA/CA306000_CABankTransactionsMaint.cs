@@ -26,7 +26,7 @@ using Core.Wait;
 using System;
 
 
-namespace GeneratedWrappers.ISVNAME
+namespace GeneratedWrappers.ISVSOLUTIONNAME
 {
     
     

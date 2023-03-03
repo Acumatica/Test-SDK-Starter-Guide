@@ -3,7 +3,7 @@ using Core.Login;
 using Core.TestExecution;
 using Core.Wait;
 using GeneratedWrappers.Acumatica;
-using GeneratedWrappers.ISVNAME;
+using GeneratedWrappers.ISVSOLUTIONNAME;
 using System;
 using System.Collections.Generic;
 using System.IO;

@@ -1,13 +1,10 @@
 ﻿using Controls.CheckBox;
-using Core;
-using Core.Config;
 using Core.Log;
 using Core.Login;
 using Core.TestExecution;
 using Core.Wait;
 using GeneratedWrappers.Acumatica;
-using GeneratedWrappers.ISVNAME;
-using PX.QA.Tools;
+using GeneratedWrappers.ISVSOLUTIONNAME;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -16,23 +13,38 @@ namespace ISVTestSDK
 {
     public class Test : Check
     {
+        // Update the below links to your envrionment
         const string physicalSitePath = @"C:\AcumaticaSites\22r202";
         Dictionary<string, int> customizationName = new Dictionary<string, int>() { { "SOLUTIONNAME1[22.200.0145][22r2r11b1]", 1 }, { "SOLUTIONNAME2[22.200.0145][22r2r11b1]", 2 } }; //solution file name(s), in publishing order
         const string customizationURLPath = @"C:\share\Customizations\";
-        //const string snapshotName = "ISVSnapshot22r202"; // Not recomended to use snapshots because they are version specific, use below pre config code instead..
-        //const string snapshotURLPath = @"C:\share\Snapshots\" + snapshotName + ".zip";
 
         public const string ValidationSuccessfully = "Validation finished successfully.";
         public const string PublishSuccessfully = "Website updated.";
 
-        //import all screen you will be using here
-        //How to Create Extension Files.docx is a very useful guide to create these extensions.
+        // Import all screens you will be using here
+        // How to Create Extension Files.docx is a very useful guide to create these extensions.
         public SM204505ProjectList CustomizationProjects = new SM204505ProjectList();
-        public CS100000FeaturesMaint features = new CS100000FeaturesMaint();
-        public GL102000GLSetupMaint setupGl = new GL102000GLSetupMaint();
-        public SM203520CompanyMaint Companies = new SM203520CompanyMaint();
+        public CS100000FeaturesMaint Features = new CS100000FeaturesMaint();
+        public GL102000GLSetupMaint SetupGl = new GL102000GLSetupMaint();
         public CA306000CABankTransactions CABankTransactionsMaint = new CA306000CABankTransactions();
 
+        public void GenerateWrappers()
+        {
+            string projectPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
+            string wrapperPath = String.Format(projectPath + @"\Wrappers\");
+
+            ClassGenerator.ClassGenerator WG = new ClassGenerator.ClassGenerator(physicalSitePath, wrapperPath);
+            WG.Username = "admin@Company2";
+            WG.Namespace = "GeneratedWrappers.ISVSOLUTIONNAME"; // Replace ISVSOLUTIONNAME with your solution name
+
+            // PL and GI screens are added like this, get the "URL" from the site map screen.
+            WG.Screens.Add("IN2025PL", "~/GenericInquiry/GenericInquiry.aspx?id=e4352bbd-a53a-42c4-9b96-e9f0fda070c7");
+
+            WG.Run("SCREENID1, SCREENID2, CA306000, CS100000, GL102000, SM204505, SO301000"); // add all screens here you need to use in your test
+
+            // All wrappers will need an extension file created to access the UI elements of the screen wrapper.
+            // The namespace of your Extension.cs files will be "using GeneratedWrappers.ISVSOLUTIONNAME;"
+        }
         public override void BeforeExecute()
         {
             //Update the TestSDK folder config.xml and ClassGenerator/classgenerator.exe.config
@@ -47,13 +59,14 @@ namespace ISVTestSDK
             PxLogin.LoginToDestinationSite();
             //ImportCustomization();
             //PublishCustomization();
-            //ImportPublishSnapshot(); // not recomended to use snapshots because they are version specific, use below pre config instead..
 
             using (TestExecution.CreateTestStepGroup("Configure Site for Wrapper Generation."))
             {
                 /*
-                Before wrapper generation, all screns must be accessable with no manual pre-configuration
-                There are a few ways to set up your site before Wrapper generation using automated code.
+                Before wrapper generation, all modified screens must be accessable with no manual pre-configuration
+                Automate the configuration via code below to pre config the site.
+
+                There are a few ways to set up your site before Wrapper Generation using automated code.
                 1) For existing unmodified acumatica screens:   Using GeneratedWrappers.Acumatica wrappers
                 2) For modified acumatica screens:              Using DynamicControl to interact with the new fields before a updated wrapper exists.
                 3) For New Custom screens:                      Using Customization Plug-in to configure the data
@@ -63,18 +76,20 @@ namespace ISVTestSDK
                  */
 
                 // 1) Use GeneratedWrappers.Acumatica to enter data for UNMODIFIED Acumatica screens
-                features.OpenScreen();
-                features.Insert();
-                features.Summary.SalesQuotes.SetTrue();
-                features.Summary.DynamicControl<CheckBox>("Multicurrency Accounting").SetTrue(); //enable customization added feature (not found in default wrapper)
-                features.RequestValidation();
+                Features.OpenScreen();
+                Features.Insert();
+                Features.Summary.SalesQuotes.SetTrue();
+                // Use Dynamic Control to enable a customization added Feature not found in the default wrapper
+                Features.Summary.DynamicControl<CheckBox>("Multicurrency Accounting").SetTrue();
+                Features.RequestValidation();
 
                 // 2) Using DynamicControl to interact with customization added fields before a updated wrapper exists
-                setupGl.OpenScreen();
-                setupGl.general.DynamicControl<CheckBox>("Generate Consolidated Batches").SetTrue(); //the text is the fields label text
-                setupGl.Save();
+                SetupGl.OpenScreen();
+                SetupGl.general.DynamicControl<CheckBox>("Generate Consolidated Batches").SetTrue(); //the text is the fields label text
+                SetupGl.Save();
             }
-            //GenerateWrappers();
+            //GenerateWrappers(); // Only needs to be run once after updating the project version or customization project.
+            // It takes 5-15 minutes to run, do not close it manually or else you will need to fix your web.config
         }
 
         public override void Execute()
@@ -85,23 +100,6 @@ namespace ISVTestSDK
 
         public override void AfterExecute()
         {
-        }
-        public void GenerateWrappers()
-        {
-            string projectPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
-            string wrapperPath = String.Format(projectPath + @"\Wrappers\");
-
-            ClassGenerator.ClassGenerator WG = new ClassGenerator.ClassGenerator(physicalSitePath, wrapperPath);
-            WG.Username = "admin@Company2";
-            WG.Namespace = "GeneratedWrappers.ISVNAME"; // Replace ISVTEST with your solution name
-            
-            // PL and GI screens are added like this, get the "URL" from the site map screen.
-            WG.Screens.Add("IN2025PL", "~/GenericInquiry/GenericInquiry.aspx?id=e4352bbd-a53a-42c4-9b96-e9f0fda070c7"); 
-            
-            WG.Run("SCREENID1, SCREENID2"); // add all screens here you need to use in your test
-            
-            // All wrappers will need an extension file created to access the UI elements of the screen wrapper.
-            // The namespace of your Extension.cs files will be "using GeneratedWrappers.ISVTEST;"
         }
         public void ImportCustomization()
         {
@@ -126,37 +124,16 @@ namespace ISVTestSDK
         }
         public void PublishCustomization()
         {
+            CustomizationProjects.CompilationPanel.WaitAction = () => Wait.WaitForLongOperationToComplete(Wait.LongTimeOut * 4);
+            CustomizationProjects.ToolBar.ActionPublish.WaitAction = () => Wait.WaitForLongOperationToComplete(Wait.LongTimeOut * 4);
             using (TestExecution.CreateTestStepGroup("Publish customization projects."))
             {
                 CustomizationProjects.OpenScreen();
-                CustomizationProjects.CompilationPanel.WaitAction = () => Wait.WaitForLongOperationToComplete(Wait.LongTimeOut * 4);
                 CustomizationProjects.ActionPublish();
                 CustomizationProjects.CompilationPanel.Validate(true, ValidationSuccessfully);
                 CustomizationProjects.CompilationPanel.Publish(true, PublishSuccessfully);
                 CustomizationProjects.RefreshScreen(true);
             }
         }
-        //public void ImportPublishSnapshot()
-        //{
-        //    using (TestExecution.CreateTestStepGroup("Companies screen (SM203520)"))
-        //    {
-        //        Companies.cUploadSnapshotPackage.WaitAction = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
-        //        Companies.Snapshots.WaitActionOverride = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
-
-        //        Companies.OpenScreen(true);
-        //        Companies.Snapshots.UploadSnapshotCommand();
-        //        Companies.cUploadSnapshotPackage.SelectFile(snapshotURLPath);
-        //        Companies.cUploadSnapshotPackage.IncludeDataFromCustomColumns.SetFalse();
-        //        Companies.cUploadSnapshotPackage.IncludeDataFromCustomColumns.SetTrue();
-        //        Companies.cUploadSnapshotPackage.Upload();
-        //        Companies.ImportSnapshotCommand();
-
-        //        PxLogin.LoginToDestinationSite(); //login after snapshot restore then republish the newest customization project next.
-        //        ImportCustomization(); //republish the customization
-        //        PublishCustomization(); //republish the customization
-        //    }
-        //}
     }
-
-
 }
