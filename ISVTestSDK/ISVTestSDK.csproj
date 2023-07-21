@@ -11,15 +11,6 @@
     <None Remove="CustomWrappers\**" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="ClassGenerator" Version="22.202.40.40" />
-    <PackageReference Include="Core" Version="22.202.40.40" />
-    <PackageReference Include="Execution" Version="22.202.40.40" />
-    <PackageReference Include="GeneratedWrappers.Acumatica" Version="22.209.27-P178461" />
-    <PackageReference Include="Host" Version="22.202.40.40" />
-    <PackageReference Include="PX.QA.Tools" Version="22.202.40.40" />
-  </ItemGroup>
-
   
 
   <ItemGroup>
@@ -43,6 +34,17 @@
 
   <ItemGroup>
     <Folder Include="Wrappers\" />
+  </ItemGroup>
+
+  
+
+  <ItemGroup>
+    <PackageReference Include="ClassGenerator" Version="23.106.50.52" />
+    <PackageReference Include="Core" Version="23.106.50.52" />
+    <PackageReference Include="Execution" Version="23.106.50.52" />
+    <PackageReference Include="GeneratedWrappers.Acumatica" Version="23.106.40-P195521" />
+    <PackageReference Include="Host" Version="23.106.50.52" />
+    <PackageReference Include="PX.QA.Tools" Version="23.106.50.52" />
   </ItemGroup>
 
   

@@ -4,7 +4,7 @@ using Core.Login;
 using Core.TestExecution;
 using Core.Wait;
 using GeneratedWrappers.Acumatica;
-using GeneratedWrappers.ISVSOLUTIONNAME;
+using GeneratedWrappers.SOLUTIONNAME;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -14,7 +14,7 @@ namespace ISVTestSDK
     public class Test : Check
     {
         // Update the below links to your envrionment
-        const string physicalSitePath = @"C:\AcumaticaSites\22r202";
+        const string physicalSitePath = @"C:\AcumaticaSites\23r106";
         Dictionary<string, int> customizationName = new Dictionary<string, int>() { { "SOLUTIONNAME1[22.200.0145][22r2r11b1]", 1 }, { "SOLUTIONNAME2[22.200.0145][22r2r11b1]", 2 } }; //solution file name(s), in publishing order
         const string customizationURLPath = @"C:\share\Customizations\";
 
@@ -34,11 +34,11 @@ namespace ISVTestSDK
             string wrapperPath = String.Format(projectPath + @"\Wrappers\");
 
             ClassGenerator.ClassGenerator WG = new ClassGenerator.ClassGenerator(physicalSitePath, wrapperPath);
-            WG.Username = "admin@Company2";
-            WG.Namespace = "GeneratedWrappers.ISVSOLUTIONNAME"; // Replace ISVSOLUTIONNAME with your solution name
+            WG.Username = "admin";
+            WG.Namespace = "GeneratedWrappers.SOLUTIONNAME"; // Replace SOLUTIONNAME with your solution name
 
             // PL and GI screens are added like this, get the "URL" from the site map screen.
-            WG.Screens.Add("IN2025PL", "~/GenericInquiry/GenericInquiry.aspx?id=e4352bbd-a53a-42c4-9b96-e9f0fda070c7");
+            //WG.Screens.Add("IN2025PL", "~/GenericInquiry/GenericInquiry.aspx?id=e4352bbd-a53a-42c4-9b96-e9f0fda070c7");
 
             WG.Run("SCREENID1, SCREENID2, CA306000, CS100000, GL102000, SM204505, SO301000"); // add all screens here you need to use in your test
 
@@ -76,17 +76,17 @@ namespace ISVTestSDK
                  */
 
                 // 1) Use GeneratedWrappers.Acumatica to enter data for UNMODIFIED Acumatica screens
-                Features.OpenScreen();
-                Features.Insert();
-                Features.Summary.SalesQuotes.SetTrue();
-                // Use Dynamic Control to enable a customization added Feature not found in the default wrapper
-                Features.Summary.DynamicControl<CheckBox>("Multicurrency Accounting").SetTrue();
-                Features.RequestValidation();
+                //Features.OpenScreen();
+                //Features.Insert();
+                //Features.Summary.SalesQuotes.SetTrue();
+                //// Use Dynamic Control to enable a customization added Feature not found in the default wrapper
+                //Features.Summary.DynamicControl<CheckBox>("Multicurrency Accounting").SetTrue();
+                //Features.RequestValidation();
 
-                // 2) Using DynamicControl to interact with customization added fields before a updated wrapper exists
-                SetupGl.OpenScreen();
-                SetupGl.general.DynamicControl<CheckBox>("Generate Consolidated Batches").SetTrue(); //the text is the fields label text
-                SetupGl.Save();
+                //// 2) Using DynamicControl to interact with customization added fields before a updated wrapper exists
+                //SetupGl.OpenScreen();
+                //SetupGl.general.DynamicControl<CheckBox>("Generate Consolidated Batches").SetTrue(); //the text is the fields label text
+                //SetupGl.Save();
             }
             //GenerateWrappers(); // Only needs to be run once after updating the project version or customization project.
             // It takes 5-15 minutes to run, do not close it manually or else you will need to fix your web.config

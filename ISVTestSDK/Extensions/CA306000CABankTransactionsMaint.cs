@@ -1,6 +1,6 @@
 ﻿using Controls.Uploader;
 
-namespace GeneratedWrappers.ISVSOLUTIONNAME
+namespace GeneratedWrappers.SOLUTIONNAME
 {
     public partial class CA306000CABankTransactions : CA306000_CABankTransactionsMaint
     {
