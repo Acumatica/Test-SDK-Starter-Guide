@@ -25,8 +25,6 @@ namespace ISVTestSDK
         // How to Create Extension Files.docx is a very useful guide to create these extensions.
         public SM204505ProjectList CustomizationProjects = new SM204505ProjectList();
         public CS100000FeaturesMaint Features = new CS100000FeaturesMaint();
-        public GL102000GLSetupMaint SetupGl = new GL102000GLSetupMaint();
-        public CA306000CABankTransactions CABankTransactionsMaint = new CA306000CABankTransactions();
 
         public void GenerateWrappers()
         {
@@ -43,7 +41,7 @@ namespace ISVTestSDK
             WG.Run("SCREENID1, SCREENID2, CA306000, CS100000, GL102000, SM204505, SO301000"); // add all screens here you need to use in your test
 
             // All wrappers will need an extension file created to access the UI elements of the screen wrapper.
-            // The namespace of your Extension.cs files will be "using GeneratedWrappers.ISVSOLUTIONNAME;"
+            // The namespace of your Extension.cs files will be "using GeneratedWrappers.SOLUTIONNAME;"
         }
         public override void BeforeExecute()
         {
@@ -54,16 +52,17 @@ namespace ISVTestSDK
             //Right click on the project and select "Manage NuGet Packages"
             //Add a new source named as the version number (eg 22r101) that links to the testSDK download folder-> packages folder
             //Once added as a source, switch to the added source and add all the packages there. to the project.
-            
-            PxLogin.LoginToDestinationSite();
-            //ImportCustomization();
-            //PublishCustomization();
 
+            PxLogin.LoginToDestinationSite();
             using (TestExecution.CreateTestStepGroup("Configure Site for Wrapper Generation."))
             {
                 /*
                  * PRECONFIG:
                  * 
+                
+                //ImportCustomization();
+                //PublishCustomization();
+
                 Before wrapper generation, all modified screens must be accessable with no manual pre-configuration
                 Automate the configuration via code below to pre config the site.
 
@@ -99,7 +98,7 @@ namespace ISVTestSDK
         public override void Execute()
         {
             GenerateWrappers(); // Only needs to be run once after updating the project version or customization project.
-            // It takes 5-15 minutes to run, do not close it manually or else you will need to fix your web.config
+                                // It takes 5-15 minutes to run, do not close it manually or else you will need to fix your web.config
             Test1 Test1 = new Test1();
             Test1.Execute();
         }

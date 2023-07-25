@@ -15,7 +15,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
 {
     public class Test1 : Check
     {
-
         CA306000CABankTransactions CABankTransactionsMaint = new CA306000CABankTransactions();
         SO301000SOOrderEntry SOOrderEntry = new SO301000SOOrderEntry();
         public override void Execute()
