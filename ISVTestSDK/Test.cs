@@ -38,7 +38,7 @@ namespace ISVTestSDK
             WG.Namespace = "GeneratedWrappers.SOLUTIONNAME"; // Replace SOLUTIONNAME with your solution name
 
             // PL and GI screens are added like this, get the "URL" from the site map screen.
-            //WG.Screens.Add("IN2025PL", "~/GenericInquiry/GenericInquiry.aspx?id=e4352bbd-a53a-42c4-9b96-e9f0fda070c7");
+            WG.Screens.Add("IN2025PL", "~/GenericInquiry/GenericInquiry.aspx?id=e4352bbd-a53a-42c4-9b96-e9f0fda070c7");
 
             WG.Run("SCREENID1, SCREENID2, CA306000, CS100000, GL102000, SM204505, SO301000"); // add all screens here you need to use in your test
 
@@ -47,15 +47,14 @@ namespace ISVTestSDK
         }
         public override void BeforeExecute()
         {
-            //Update the TestSDK folder config.xml and ClassGenerator/classgenerator.exe.config
-            //update the Properties->Launchsettings.json to your testSDK folder location
+            //Ensure you have updated the TestSDK folder config.xml to point to your website
+            //Update the Properties->Launchsettings.json to your testSDK folder location to your site as well
 
-            //If first run on a new minor or major verson, update the packages in Dependencies->Packages to the desired version:
+            //If it is the first run on a new verson, update the solution Dependencies->Packages to the desired version packages folder from the TestSDK download:
             //Right click on the project and select "Manage NuGet Packages"
             //Add a new source named as the version number (eg 22r101) that links to the testSDK download folder-> packages folder
             //Once added as a source, switch to the added source and add all the packages there. to the project.
-            //GeneratedWrappers.Acumatica package in the packages folder sometimes needs to be renamed to  include the build and P###### seen in the nuget manager GeneratedWrappers.Acumatica.21.213.33-P147318 before it can be added successfully.
-
+            
             PxLogin.LoginToDestinationSite();
             //ImportCustomization();
             //PublishCustomization();
@@ -63,37 +62,44 @@ namespace ISVTestSDK
             using (TestExecution.CreateTestStepGroup("Configure Site for Wrapper Generation."))
             {
                 /*
+                 * PRECONFIG:
+                 * 
                 Before wrapper generation, all modified screens must be accessable with no manual pre-configuration
                 Automate the configuration via code below to pre config the site.
 
                 There are a few ways to set up your site before Wrapper Generation using automated code.
-                1) For existing unmodified acumatica screens:   Using GeneratedWrappers.Acumatica wrappers
-                2) For modified acumatica screens:              Using DynamicControl to interact with the new fields before a updated wrapper exists.
-                3) For New Custom screens:                      Using Customization Plug-in to configure the data
+                1) For existing unmodified acumatica screens:   Use GeneratedWrappers.Acumatica wrappers
+                2) For modified acumatica screens:              Use DynamicControl to interact with the new fields before a updated wrapper exists.
+                3) For New Custom screens:                      Use Customization Plug-in to configure the data
                                                                 https://github.com/Acumatica/Test-SDK-Starter-Guide/blob/master/ISVTestSDK/Customization%20PlugIn%20Guide.docx
                                                                 https://riptutorial.com/acumatica/example/29435/implementation-of-a-customization-plug-in-to-update-multiple-companies
                                                                 https://www.acumatica.com/blog/customization-plugin-packages-configuration/
-                 */
+                 
 
-                // 1) Use GeneratedWrappers.Acumatica to enter data for UNMODIFIED Acumatica screens
-                //Features.OpenScreen();
-                //Features.Insert();
-                //Features.Summary.SalesQuotes.SetTrue();
-                //// Use Dynamic Control to enable a customization added Feature not found in the default wrapper
-                //Features.Summary.DynamicControl<CheckBox>("Multicurrency Accounting").SetTrue();
-                //Features.RequestValidation();
+                
+                 1) Use GeneratedWrappers.Acumatica to enter data for UNMODIFIED Acumatica screens
 
-                //// 2) Using DynamicControl to interact with customization added fields before a updated wrapper exists
-                //SetupGl.OpenScreen();
-                //SetupGl.general.DynamicControl<CheckBox>("Generate Consolidated Batches").SetTrue(); //the text is the fields label text
-                //SetupGl.Save();
+                Features.OpenScreen();
+                Features.Insert();
+                Features.Summary.SalesQuotes.SetTrue();
+                Features.Summary.DynamicControl<CheckBox>("Multicurrency Accounting").SetTrue();
+                Features.RequestValidation();
+
+                 2) Using DynamicControl to interact with customization added fields before a updated wrapper exists
+                The text is the fields label text.
+
+                SetupGl.OpenScreen();
+                SetupGl.general.DynamicControl<CheckBox>("Generate Consolidated Batches").SetTrue();
+                SetupGl.Save();
+
+                */
             }
-            //GenerateWrappers(); // Only needs to be run once after updating the project version or customization project.
-            // It takes 5-15 minutes to run, do not close it manually or else you will need to fix your web.config
         }
 
         public override void Execute()
         {
+            GenerateWrappers(); // Only needs to be run once after updating the project version or customization project.
+            // It takes 5-15 minutes to run, do not close it manually or else you will need to fix your web.config
             Test1 Test1 = new Test1();
             Test1.Execute();
         }
@@ -103,6 +109,7 @@ namespace ISVTestSDK
         }
         public void ImportCustomization()
         {
+            //It's easier to publish the customization on the test site manually.
             CustomizationProjects.Details.WaitAction = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
             CustomizationProjects.OpenPackage.WaitAction = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
 
@@ -124,6 +131,7 @@ namespace ISVTestSDK
         }
         public void PublishCustomization()
         {
+            //It's easier to publish the customization on the test site manually.
             CustomizationProjects.CompilationPanel.WaitAction = () => Wait.WaitForLongOperationToComplete(Wait.LongTimeOut * 4);
             CustomizationProjects.ToolBar.ActionPublish.WaitAction = () => Wait.WaitForLongOperationToComplete(Wait.LongTimeOut * 4);
             using (TestExecution.CreateTestStepGroup("Publish customization projects."))

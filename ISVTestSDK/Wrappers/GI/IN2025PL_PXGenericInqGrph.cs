@@ -35,7 +35,7 @@ using Core.Wait;
 using System;
 
 
-namespace GeneratedWrappers.ISVSOLUTIONNAME
+namespace GeneratedWrappers.SOLUTIONNAME
 {
     
     
@@ -75,6 +75,16 @@ namespace GeneratedWrappers.ISVSOLUTIONNAME
         public virtual void KeyBtnGenericInquiryCustomize()
         {
             ToolBar.KeyBtnGenericInquiryCustomize.Click();
+        }
+        
+        public virtual void EditGenericInquiry()
+        {
+            ToolBar.EditGenericInquiry.Click();
+        }
+        
+        public virtual void PivotTables()
+        {
+            ToolBar.PivotTables.Click();
         }
         
         public virtual void Help()
@@ -152,6 +162,8 @@ namespace GeneratedWrappers.ISVSOLUTIONNAME
             
 			public ToolBarButton KeyBtnRefresh { get; }
 			public ToolBarButton KeyBtnGenericInquiryCustomize { get; }
+			public ToolBarButton EditGenericInquiry { get; }
+			public ToolBarButton PivotTables { get; }
 			public ToolBarButton Help { get; }
 			public ToolBarButton SyncTOC { get; }
 			public ToolBarButton MenuOpener { get; }
@@ -170,7 +182,12 @@ namespace GeneratedWrappers.ISVSOLUTIONNAME
             public PxToolBar(string locator)
             {
                 KeyBtnRefresh = new ToolBarButton("css=#ctl00_usrCaption_tlbTools div[data-cmd=\'keyBtnRefresh\']", "Click to refresh page.", locator, null);
-                KeyBtnGenericInquiryCustomize = new ToolBarButton("css=#ctl00_usrCaption_tlbTools div[data-cmd=\'keyBtnGenericInquiryCustomize\']", "Customization", locator, null);
+                KeyBtnGenericInquiryCustomize = new ToolBarButton("css=#ctl00_usrCaption_tlbTools div:textEqual(\"Customization\") > div[data-type=\'dr" +
+                        "op\']", "Customization", locator, null);
+                EditGenericInquiry = new ToolBarButton("css=div#ctl00_usrCaption_tlbTools_menukeyBtnGenericInquiryCustomize li.menuItem d" +
+                        "iv:textEqual(\"Edit Generic Inquiry\")", "Edit Generic Inquiry", locator, KeyBtnGenericInquiryCustomize);
+                PivotTables = new ToolBarButton("css=div#ctl00_usrCaption_tlbTools_menukeyBtnGenericInquiryCustomize li.menuItem d" +
+                        "iv:textEqual(\"Pivot Tables\")", "Pivot Tables", locator, KeyBtnGenericInquiryCustomize);
                 Help = new ToolBarButton("css=#ctl00_usrCaption_tlbTools div[data-cmd=\'help\']", "View Tools", locator, null);
                 SyncTOC = new ToolBarButton("css=#ctl00_usrCaption_tlbPath div[data-cmd=\'syncTOC\']", "Sync Navigation Pane", locator, null);
                 MenuOpener = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_MenuOpener", "Menu", locator, null);
@@ -401,7 +418,7 @@ namespace GeneratedWrappers.ISVSOLUTIONNAME
                 public c_grid_row(c_gridlist_gridgrid grid) : 
                         base(grid)
                 {
-                    Selected = new CheckBox("ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid", "Included", grid.Locator, "Selected");
+                    Selected = new CheckBox("ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid_ef", "Included", grid.Locator, "Selected");
                     Selected.DataField = "Selected";
                     View = new PXTextEdit("ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid_ei", "Table ID", grid.Locator, "View");
                     View.DataField = "View";
@@ -552,7 +569,7 @@ namespace GeneratedWrappers.ISVSOLUTIONNAME
                 public c_grid_row(c_userlist_usergrid grid) : 
                         base(grid)
                 {
-                    Included = new CheckBox("ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid", "Included", grid.Locator, "Included");
+                    Included = new CheckBox("ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_ef", "Included", grid.Locator, "Included");
                     Included.DataField = "Included";
                     Username = new Selector("_ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_lv0_es", "Login", grid.Locator, "Username");
                     Username.DataField = "Username";
@@ -560,7 +577,7 @@ namespace GeneratedWrappers.ISVSOLUTIONNAME
                     DisplayName.DataField = "DisplayName";
                     Email = new PXTextEdit("ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_ei", "Email", grid.Locator, "Email");
                     Email.DataField = "Email";
-                    Guest = new PXTextEdit("ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid", "Guest Account", grid.Locator, "Guest");
+                    Guest = new PXTextEdit("ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_ef", "Guest Account", grid.Locator, "Guest");
                     Guest.DataField = "Guest";
                     State = new DropDown("_ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_lv0_ec", "Status", grid.Locator, "State");
                     State.DataField = "State";
@@ -864,7 +881,7 @@ namespace GeneratedWrappers.ISVSOLUTIONNAME
                 {
                     Files = new FileColumnButton(null, "Files", grid.Locator, "Files");
                     Notes = new NoteColumnButton(null, "Notes", grid.Locator, "Notes");
-                    Selected = new CheckBox("ctl00_phG_grid", "Selected", grid.Locator, "Selected");
+                    Selected = new CheckBox("ctl00_phG_grid_ef", "Selected", grid.Locator, "Selected");
                     Selected.DataField = "Selected";
                     InventoryItem_inventoryCD = new Selector("_ctl00_phG_grid_lv0_es", "Inventory ID", grid.Locator, "InventoryItem_inventoryCD");
                     InventoryItem_inventoryCD.DataField = "InventoryItem_inventoryCD";
@@ -1356,7 +1373,7 @@ namespace GeneratedWrappers.ISVSOLUTIONNAME
                 public c_grid_row(c_fields_grdfields grid) : 
                         base(grid)
                 {
-                    Selected = new CheckBox("ctl00_phG_dlgUpdateParams_grdFields", "Selected", grid.Locator, "Selected");
+                    Selected = new CheckBox("ctl00_phG_dlgUpdateParams_grdFields_ef", "Selected", grid.Locator, "Selected");
                     Selected.DataField = "Selected";
                     FieldName = new PXTextEdit("ctl00_phG_dlgUpdateParams_grdFields_ei", "FieldName", grid.Locator, "FieldName");
                     FieldName.DataField = "FieldName";

@@ -8912,7 +8912,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     ItemClassID.DataField = "ItemClassID";
                     ItemClassDescription = new InputLocalizable("ctl00_phG_PanelAddSiteStatus_gripSiteStatus_ei", "Item Class Description", grid.Locator, "ItemClassDescription");
                     ItemClassDescription.DataField = "ItemClassDescription";
-                    PriceClassID = new PXTextEdit("ctl00_phG_PanelAddSiteStatus_gripSiteStatus_ei", "Price Class ID", grid.Locator, "PriceClassID");
+                    PriceClassID = new PXTextEdit("ctl00_phG_PanelAddSiteStatus_gripSiteStatus_em", "Price Class ID", grid.Locator, "PriceClassID");
                     PriceClassID.DataField = "PriceClassID";
                     PriceClassDescription = new PXTextEdit("ctl00_phG_PanelAddSiteStatus_gripSiteStatus_ei", "Price Class Description", grid.Locator, "PriceClassDescription");
                     PriceClassDescription.DataField = "PriceClassDescription";

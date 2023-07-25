@@ -33,11 +33,13 @@ namespace GeneratedWrappers.SOLUTIONNAME
 
         public void ExcelDataEntryExample()
         {
+            string excelsPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName + @"\Excels\";
+
             //Excel Data Import Example
             using (TestExecution.CreateTestStepGroup("Test 2 - Import and enter data from excel"))
             {
                 SOOrderEntry.OpenScreen();
-                var excel = new ExcelPackage(new FileInfo(@"C:\excelfiles\SOLUTIONINITIALSExcelData.xlsx"));
+                var excel = new ExcelPackage(new FileInfo(excelsPath + "SOLUTIONINITIALSExcelData.xlsx"));
                 {
                     var ExcelHeaderTab = excel.Workbook.Worksheets["Header"];
                     var ExcelDetailsTab = excel.Workbook.Worksheets["Details"];
