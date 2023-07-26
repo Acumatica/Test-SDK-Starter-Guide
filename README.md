@@ -9,7 +9,7 @@ PreReq:
 6) Create C:\share\Customizations -> for storing customizations
 
 1) Configure the config.xml, and test.cs Wrapper Generation variables.(physicalSitePath, username, Namespace, GI's, screens)
-2) Generate the wrappers for the screens by using the GenerateWrappers() method in Test.cs (launches with command prompt - let it process for 5+ mins, do not close this windown manually)
+2) Generate the wrappers for the screens by using the GenerateWrappers() method in Test.cs (launches with command prompt - let it process for 10+ mins, do not close this windown manually)
 In Visual Studio:
 1) Import the nuget package into the project dependencies. Test SDK download -> packages folder is the location of the packages.
 2) Create, or copy the extension files into the extensions folder
@@ -25,12 +25,12 @@ How to update a test project to a newer minor or major version:
 2) Publish your customization to the site
 
 3) Download and extract the testSDK.zip for the same version
-4) Configure the config.xml, and test.cs Wrapper Generation variables.(physicalSitePath, username, Namespace, GI's, screens)
+4) Configure the GenerateWrappers() Method, and test.cs Wrapper Generation variables.(physicalSitePath, username, Namespace, GI's, screens)
 5) In your visual studio test project, go to "Manage Nuget Packages" and create a new package source
 6) Name the source with the version number, using the "packages" folder from the TestSDK download folder as the source.
 7) Update/Install the project dependancies/references to use the newly added version
 8) Update the project Properties->launchSettings.json to the new config.xml location - This lets you just press run in Visual studio to kick off the test.
-9) Regenerate the wrappers using GenerateWrappers() method, after updating the 2 config files described in step 2, paste the new wrappers into the project.
+9) Regenerate the wrappers using GenerateWrappers() method.
 10) Existing Extensions should not require any changes unless a field was moved or changed.
 
-Run the test, fix anything you missed. Congrats you have upgraded your Test SDK Test project.
+Run the test, fix anything you missed. The Test SDK project has been updated!
