@@ -15,15 +15,9 @@ namespace ISVTestSDK
     {
         // Update the below links to your envrionment
         const string physicalSitePath = @"C:\AcumaticaSites\23r106";
-        Dictionary<string, int> customizationName = new Dictionary<string, int>() { { "SOLUTIONNAME1[22.200.0145][22r2r11b1]", 1 }, { "SOLUTIONNAME2[22.200.0145][22r2r11b1]", 2 } }; //solution file name(s), in publishing order
-        const string customizationURLPath = @"C:\share\Customizations\";
-
-        public const string ValidationSuccessfully = "Validation finished successfully.";
-        public const string PublishSuccessfully = "Website updated.";
 
         // Import all screens you will be using here
         // How to Create Extension Files.docx is a very useful guide to create these extensions.
-        public SM204505ProjectList CustomizationProjects = new SM204505ProjectList();
         public CS100000FeaturesMaint Features = new CS100000FeaturesMaint();
 
         public void GenerateWrappers()
@@ -41,7 +35,7 @@ namespace ISVTestSDK
             WG.Run("SCREENID1, SCREENID2, CA306000, CS100000, GL102000, SM204505, SO301000"); // add all screens here you need to use in your test
 
             // All wrappers will need an extension file created to access the UI elements of the screen wrapper.
-            // The namespace of your Extension.cs files will be "using GeneratedWrappers.SOLUTIONNAME;"
+            // The namespace of your Extension.cs files will be exactly "using GeneratedWrappers.SOLUTIONNAME;"
         }
         public override void BeforeExecute()
         {
@@ -50,8 +44,8 @@ namespace ISVTestSDK
 
             //If it is the first run on a new verson, update the solution Dependencies->Packages to the desired version packages folder from the TestSDK download:
             //Right click on the project and select "Manage NuGet Packages"
-            //Add a new source named as the version number (eg 22r101) that links to the testSDK download folder-> packages folder
-            //Once added as a source, switch to the added source and add all the packages there. to the project.
+            //Add a new source named as the version number (eg 23r101) that links to the testSDK download folder-> packages folder
+            //Once added as a source, Browse the added source and add all the nuget packages inside to the project.
 
             PxLogin.LoginToDestinationSite();
             using (TestExecution.CreateTestStepGroup("Configure Site for Wrapper Generation."))
@@ -60,19 +54,20 @@ namespace ISVTestSDK
                  * PRECONFIG:
                  * 
                 
-                //ImportCustomization();
-                //PublishCustomization();
+                You must publish your customization(s) before running and also config 
+                the site to make all screen accessable at minimum before wrapper generation.
+                
+                All Pre config steps after publishing the customization on a salesdemo data instance 
+                must be done via test code no manual website pre-configuration is allowed. See how to do 
+                so below.
 
-                Before wrapper generation, all modified screens must be accessable with no manual pre-configuration
-                Automate the configuration via code below to pre config the site.
+                Automate the configuration via code below to pre config the site:
 
                 There are a few ways to set up your site before Wrapper Generation using automated code.
-                1) For existing unmodified acumatica screens:   Use GeneratedWrappers.Acumatica wrappers
+                1) For existing unmodified acumatica screens:   Use GeneratedWrappers.Acumatica wrappers and make the extension file
                 2) For modified acumatica screens:              Use DynamicControl to interact with the new fields before a updated wrapper exists.
-                3) For New Custom screens:                      Use Customization Plug-in to configure the data
-                                                                https://github.com/Acumatica/Test-SDK-Starter-Guide/blob/master/ISVTestSDK/Customization%20PlugIn%20Guide.docx
-                                                                https://riptutorial.com/acumatica/example/29435/implementation-of-a-customization-plug-in-to-update-multiple-companies
-                                                                https://www.acumatica.com/blog/customization-plugin-packages-configuration/
+                3) For New Custom screens:                      Use Customization Plug-in code to configure the data during customization publishing
+                                                                
                  
 
                 
@@ -91,6 +86,10 @@ namespace ISVTestSDK
                 SetupGl.general.DynamicControl<CheckBox>("Generate Consolidated Batches").SetTrue();
                 SetupGl.Save();
 
+                3) 
+                https://github.com/Acumatica/Test-SDK-Starter-Guide/blob/master/ISVTestSDK/Customization%20PlugIn%20Guide.docx
+                https://riptutorial.com/acumatica/example/29435/implementation-of-a-customization-plug-in-to-update-multiple-companies
+                https://www.acumatica.com/blog/customization-plugin-packages-configuration/
                 */
             }
         }
@@ -106,41 +105,6 @@ namespace ISVTestSDK
         public override void AfterExecute()
         {
         }
-        public void ImportCustomization()
-        {
-            //It's easier to publish the customization on the test site manually.
-            CustomizationProjects.Details.WaitAction = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
-            CustomizationProjects.OpenPackage.WaitAction = () => Wait.WaitForCallbackToComplete(Wait.LongTimeOut * 4);
-
-            using (TestExecution.CreateTestStepGroup("Upload customization projects."))
-            {
-                foreach (var cst in customizationName)
-                {
-                    Log.Information("Uploading customization project: " + cst.Key);
-                    CustomizationProjects.OpenScreen();
-                    CustomizationProjects.ActionImport();
-                    CustomizationProjects.OpenPackage.SelectFile(customizationURLPath + cst.Key + ".zip");
-                    CustomizationProjects.OpenPackage.Upload();
-                    CustomizationProjects.Details.SelectRow(CustomizationProjects.Details.Columns.Name, cst.Key);
-                    CustomizationProjects.Details.Row.Level.Type(cst.Value);
-                    CustomizationProjects.Details.Row.IsWorking.SetTrue();
-                    CustomizationProjects.Save();
-                }
-            }
-        }
-        public void PublishCustomization()
-        {
-            //It's easier to publish the customization on the test site manually.
-            CustomizationProjects.CompilationPanel.WaitAction = () => Wait.WaitForLongOperationToComplete(Wait.LongTimeOut * 4);
-            CustomizationProjects.ToolBar.ActionPublish.WaitAction = () => Wait.WaitForLongOperationToComplete(Wait.LongTimeOut * 4);
-            using (TestExecution.CreateTestStepGroup("Publish customization projects."))
-            {
-                CustomizationProjects.OpenScreen();
-                CustomizationProjects.ActionPublish();
-                CustomizationProjects.CompilationPanel.Validate(true, ValidationSuccessfully);
-                CustomizationProjects.CompilationPanel.Publish(true, PublishSuccessfully);
-                CustomizationProjects.RefreshScreen(true);
-            }
-        }
+        
     }
 }
