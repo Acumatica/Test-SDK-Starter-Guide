@@ -6,18 +6,14 @@ PreReq:
 3) Create C:\share
 4) Create C:\share\download
 5) Create C:\share\logs -> for test results
-6) Create C:\share\Customizations -> for storing customizations
 
-1) Configure the config.xml, and test.cs Wrapper Generation variables.(physicalSitePath, username, Namespace, GI's, screens)
-2) Generate the wrappers for the screens by using the GenerateWrappers() method in Test.cs (launches with command prompt - let it process for 10+ mins, do not close this windown manually)
-In Visual Studio:
-1) Import the nuget package into the project dependencies. Test SDK download -> packages folder is the location of the packages.
-2) Create, or copy the extension files into the extensions folder
-3) Update the names and locations of the customization project in the test.cs and launchSettings.json
-4) Create, or copy your test code into the test.cs
-5) If your screens require pre configuration to become accessible: Use Customization plug-In to enter the required data
-5) Update the project's Properties->launchSettings.json file to use the config.xml location - This lets you just press run(f5) in Visual studio to kick off the test.
-
+6) Remove old Dependancies -> Packages
+7) Manage Nuget Packages -> Add the packages folder of testSDK download
+8) Add all references from the packages folder
+9) In test.cs update physicalSitePath to websites install folder
+10) In launchsettings.json update the commandLineArgs to use your testSDK download config.xml - This lets you just press run in Visual studio to kick off the test.
+11) Configure that config.xml for your site (update chrome location from testSDK download folder, not your personal chrome browser and website url)
+12) Generate the wrappers using GenerateWrappers() method.
 _______________________________________________________________________________________________________________
 How to update a test project to a newer minor or major version:
 
@@ -25,12 +21,22 @@ How to update a test project to a newer minor or major version:
 2) Publish your customization to the site
 
 3) Download and extract the testSDK.zip for the same version
-4) Configure the GenerateWrappers() Method, and test.cs Wrapper Generation variables.(physicalSitePath, username, Namespace, GI's, screens)
-5) In your visual studio test project, go to "Manage Nuget Packages" and create a new package source
-6) Name the source with the version number, using the "packages" folder from the TestSDK download folder as the source.
-7) Update/Install the project dependancies/references to use the newly added version
-8) Update the project Properties->launchSettings.json to the new config.xml location - This lets you just press run in Visual studio to kick off the test.
-9) Regenerate the wrappers using GenerateWrappers() method.
-10) Existing Extensions should not require any changes unless a field was moved or changed.
+4) Remove old Dependancies -> Packages
+5) Manage Nuget Packages -> Add the packages folder of testSDK download
+6) Add all references from the packages folder
+7) In test.cs update physicalSitePath to websites install folder
+8) In launchsettings.json update the commandLineArgs to use your testSDK download config.xml - This lets you just press run in Visual studio to kick off the test.
+9) Configure that config.xml for your site (update chrome location from testSDK download folder, not your personal chrome browser and website url)
+11) Regenerate the wrappers using GenerateWrappers() method.
+12) Existing Extensions should not require any changes unless a field was moved or changed.
 
-Run the test, fix anything you missed. The Test SDK project has been updated!
+
+Common Errors: 
+If you encounter any errors check the C:\share\logs, or your file paths in the previous config steps if a log doesnt exist.
+
+1) Test exited with Error code 0: The test passed successfully. 
+2) Test exited with Error code 2: Your test has failed, please check the generated log file we configured in step 11 
+3) Test exited with Error code 1: Invalid/missing file, likely incorrect folder mapped in the config files somewhere or a missing wrapper/extension 
+4) Acumatica site no longer accessible after generating wrappers or running a test: The Wrapper Generation process ended without resetting and releasing the web.config. 
+    a) Wait for the Wrapper generation to finish and self close and it will unlock. Do not manually close the classgenerator.exe window.
+    b) Fix it by copying the original saved web.config that was stored in the website folder as “web.config.63b98fa0”  or similar into the web.config file.

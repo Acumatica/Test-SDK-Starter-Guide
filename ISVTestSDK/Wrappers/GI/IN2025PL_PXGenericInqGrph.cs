@@ -147,14 +147,14 @@ namespace GeneratedWrappers.SOLUTIONNAME
             ToolBar.LongRun.Click();
         }
         
-        public virtual void LongrunCancel()
+        public virtual void LongRun_cancel()
         {
-            ToolBar.LongrunCancel.Click();
+            ToolBar.LongRun_cancel.Click();
         }
         
-        public virtual void LongrunTimer()
+        public virtual void LongRun_timer()
         {
-            ToolBar.LongrunTimer.Click();
+            ToolBar.LongRun_timer.Click();
         }
         
         public class PxToolBar : PxControlCollection
@@ -176,8 +176,8 @@ namespace GeneratedWrappers.SOLUTIONNAME
 			public ToolBarButton Adjust { get; }
 			public ToolBarButton Export { get; }
 			public ToolBarButton LongRun { get; }
-			public ToolBarButton LongrunCancel { get; }
-			public ToolBarButton LongrunTimer { get; }
+			public ToolBarButton LongRun_cancel { get; }
+			public ToolBarButton LongRun_timer { get; }
             
             public PxToolBar(string locator)
             {
@@ -202,8 +202,8 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 Adjust = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_AdjustColumns", "Fit to Screen", locator, null);
                 Export = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_ExportExcel", "Export to Excel", locator, null);
                 LongRun = new ToolBarButton("css=qp-long-run", "Nothing in progress", locator, null);
-                LongrunCancel = new ToolBarButton("css=#ctl00_phDS_ds_LongRun_cancel", "Cancel", locator, null);
-                LongrunTimer = new ToolBarButton("css=#ctl00_phDS_ds_LongRun_timer", "Elapsed Time", locator, null);
+                LongRun_cancel = new ToolBarButton("css=#ctl00_phDS_ds_LongRun_cancel", "Cancel", locator, null);
+                LongRun_timer = new ToolBarButton("css=#ctl00_phDS_ds_LongRun_timer", "Elapsed Time", locator, null);
             }
         }
         
@@ -810,7 +810,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     AllRecords = new ToolBarButtonGrid("css=#ctl00_phG_grid_at_ft div[data-cmd=\'all\']", "All Records", locator, null);
                     Edit = new ToolBarButtonGrid("css=#ctl00_phG_grid_at_ft div[data-cmd=\'edit\']", "Edit", locator, null);
                     Hi = new ToolBarButtonGrid("css=#ctl00_phG_grid_at_ft div[data-cmd=\'hi\']", "Hi", locator, null);
-                    EditPivot = new ToolBarButtonGrid("css=#ctl00_phG_grid_tf div[data-cmd=\'EditPivot\']", "Edit pivot table", locator, null);
+                    EditPivot = new ToolBarButtonGrid("css=#ctl00_phG_grid_tf div[data-cmd=\'EditPivot\']", "Edit Pivot Table", locator, null);
                     Filter = new ToolBarButtonGrid("css=#ctl00_phG_grid_tf div[data-cmd=\'FilterShow\']", "Filter Settings", locator, null);
                     FilterSave = new ToolBarButtonGrid("css=#ctl00_phG_grid_tf div[data-cmd=\'FilterSave\']", "Save", locator, null);
                     More = new ToolBarButtonGrid("css=#ctl00_phG_grid_tf div[data-cmd=\'more\']", "...", locator, null);

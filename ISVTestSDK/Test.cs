@@ -14,7 +14,7 @@ namespace ISVTestSDK
     public class Test : Check
     {
         // Update the below links to your envrionment
-        const string physicalSitePath = @"C:\AcumaticaSites\23r106";
+        const string physicalSitePath = @"C:\AcumaticaSites\23r2001";
 
         // Import all screens you will be using here
         // How to Create Extension Files.docx is a very useful guide to create these extensions.

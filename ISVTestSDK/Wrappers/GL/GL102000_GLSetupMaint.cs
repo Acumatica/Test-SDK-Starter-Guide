@@ -129,14 +129,14 @@ namespace GeneratedWrappers.SOLUTIONNAME
             ToolBar.LongRun.Click();
         }
         
-        public virtual void LongrunCancel()
+        public virtual void LongRun_cancel()
         {
-            ToolBar.LongrunCancel.Click();
+            ToolBar.LongRun_cancel.Click();
         }
         
-        public virtual void LongrunTimer()
+        public virtual void LongRun_timer()
         {
-            ToolBar.LongrunTimer.Click();
+            ToolBar.LongRun_timer.Click();
         }
         
         public class PxToolBar : PxControlCollection
@@ -153,8 +153,8 @@ namespace GeneratedWrappers.SOLUTIONNAME
 			public ToolBarButton Save { get; }
 			public ToolBarButton Cancel { get; }
 			public ToolBarButton LongRun { get; }
-			public ToolBarButton LongrunCancel { get; }
-			public ToolBarButton LongrunTimer { get; }
+			public ToolBarButton LongRun_cancel { get; }
+			public ToolBarButton LongRun_timer { get; }
             
             public PxToolBar(string locator)
             {
@@ -174,8 +174,8 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 Cancel = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_Cancel", "Cancel (Esc)", locator, null);
                 Cancel.ConfirmAction = () => Alert.AlertToException("Any unsaved changes will be discarded.");
                 LongRun = new ToolBarButton("css=qp-long-run", "Nothing in progress", locator, null);
-                LongrunCancel = new ToolBarButton("css=#ctl00_phDS_ds_LongRun_cancel", "Cancel", locator, null);
-                LongrunTimer = new ToolBarButton("css=#ctl00_phDS_ds_LongRun_timer", "Elapsed Time", locator, null);
+                LongRun_cancel = new ToolBarButton("css=#ctl00_phDS_ds_LongRun_cancel", "Cancel", locator, null);
+                LongRun_timer = new ToolBarButton("css=#ctl00_phDS_ds_LongRun_timer", "Elapsed Time", locator, null);
             }
         }
         
@@ -664,9 +664,9 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 Buttons = new PxButtonCollection();
             }
             
-            public virtual void Drop_downValues()
+            public virtual void DropdownValues()
             {
-                Buttons.Drop_downValues.Click();
+                Buttons.DropdownValues.Click();
             }
             
             public virtual void Customize()
@@ -687,14 +687,14 @@ namespace GeneratedWrappers.SOLUTIONNAME
             public class PxButtonCollection : PxControlCollection
             {
                 
-			public Button Drop_downValues { get; }
+			public Button DropdownValues { get; }
 			public Button Customize { get; }
 			public Button Actions { get; }
 			public Button Cancel { get; }
                 
                 public PxButtonCollection()
                 {
-                    Drop_downValues = new Button("ctl00_usrCaption_CustomizationDialogs_PanelElemInfo_FormElemInfo_panelPXBUtton1_P" +
+                    DropdownValues = new Button("ctl00_usrCaption_CustomizationDialogs_PanelElemInfo_FormElemInfo_panelPXBUtton1_P" +
                             "XButton1", "Drop-down Values", "ctl00_usrCaption_CustomizationDialogs_PanelElemInfo_FormElemInfo");
                     Customize = new Button("ctl00_usrCaption_CustomizationDialogs_PanelElemInfo_PXButton3", "Customize", "ctl00_usrCaption_CustomizationDialogs_PanelElemInfo_FormElemInfo");
                     Actions = new Button("ctl00_usrCaption_CustomizationDialogs_PanelElemInfo_ButtonGraphActions", "Actions", "ctl00_usrCaption_CustomizationDialogs_PanelElemInfo_FormElemInfo");

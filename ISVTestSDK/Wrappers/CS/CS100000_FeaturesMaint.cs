@@ -151,14 +151,14 @@ namespace GeneratedWrappers.SOLUTIONNAME
             ToolBar.LongRun.Click();
         }
         
-        public virtual void LongrunCancel()
+        public virtual void LongRun_cancel()
         {
-            ToolBar.LongrunCancel.Click();
+            ToolBar.LongRun_cancel.Click();
         }
         
-        public virtual void LongrunTimer()
+        public virtual void LongRun_timer()
         {
-            ToolBar.LongrunTimer.Click();
+            ToolBar.LongRun_timer.Click();
         }
         
         public class PxToolBar : PxControlCollection
@@ -180,8 +180,8 @@ namespace GeneratedWrappers.SOLUTIONNAME
 			public ToolBarButton RequestValidation { get; }
 			public ToolBarButton CancelRequest { get; }
 			public ToolBarButton LongRun { get; }
-			public ToolBarButton LongrunCancel { get; }
-			public ToolBarButton LongrunTimer { get; }
+			public ToolBarButton LongRun_cancel { get; }
+			public ToolBarButton LongRun_timer { get; }
             
             public PxToolBar(string locator)
             {
@@ -207,8 +207,8 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 CancelRequest = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_cancelRequest,#ctl00_phDS_ds_ToolBar_cancelRequest_ite" +
                         "m", "Cancel Validation Request", locator, MenuOpener);
                 LongRun = new ToolBarButton("css=qp-long-run", "Nothing in progress", locator, null);
-                LongrunCancel = new ToolBarButton("css=#ctl00_phDS_ds_LongRun_cancel", "Cancel", locator, null);
-                LongrunTimer = new ToolBarButton("css=#ctl00_phDS_ds_LongRun_timer", "Elapsed Time", locator, null);
+                LongRun_cancel = new ToolBarButton("css=#ctl00_phDS_ds_LongRun_cancel", "Cancel", locator, null);
+                LongRun_timer = new ToolBarButton("css=#ctl00_phDS_ds_LongRun_timer", "Elapsed Time", locator, null);
             }
         }
         
@@ -331,6 +331,8 @@ namespace GeneratedWrappers.SOLUTIONNAME
 			public Label DropShipmentsLabel { get; }
 			public CheckBox Warehouse { get; }
 			public Label WarehouseLabel { get; }
+			public CheckBox DistributionReqPlan { get; }
+			public Label DistributionReqPlanLabel { get; }
 			public CheckBox WarehouseLocation { get; }
 			public Label WarehouseLocationLabel { get; }
 			public CheckBox Replenishment { get; }
@@ -411,8 +413,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
 			public Label RowLevelSecurityLabel { get; }
 			public CheckBox ScheduleModule { get; }
 			public Label ScheduleModuleLabel { get; }
-			public CheckBox AutomationModule { get; }
-			public Label AutomationModuleLabel { get; }
 			public CheckBox DeviceHub { get; }
 			public Label DeviceHubLabel { get; }
 			public CheckBox GDPRCompliance { get; }
@@ -429,8 +429,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
 			public Label AdvancedAuthenticationLabel { get; }
 			public CheckBox TwoFactorAuthentication { get; }
 			public Label TwoFactorAuthenticationLabel { get; }
-			public CheckBox GoogleAndMicrosoftSSO { get; }
-			public Label GoogleAndMicrosoftSSOLabel { get; }
 			public CheckBox ActiveDirectoryAndOtherExternalSSO { get; }
 			public Label ActiveDirectoryAndOtherExternalSSOLabel { get; }
 			public CheckBox OpenIDConnect { get; }
@@ -443,6 +441,10 @@ namespace GeneratedWrappers.SOLUTIONNAME
 			public Label IntegrationModuleLabel { get; }
 			public CheckBox SendGridIntegration { get; }
 			public Label SendGridIntegrationLabel { get; }
+			public CheckBox AdvancedIntegration { get; }
+			public Label AdvancedIntegrationLabel { get; }
+			public CheckBox CustomCommerceConnectors { get; }
+			public Label CustomCommerceConnectorsLabel { get; }
 			public CheckBox CommerceIntegration { get; }
 			public Label CommerceIntegrationLabel { get; }
 			public CheckBox BigCommerceIntegration { get; }
@@ -451,14 +453,14 @@ namespace GeneratedWrappers.SOLUTIONNAME
 			public Label ShopifyIntegrationLabel { get; }
 			public CheckBox ShopifyPOS { get; }
 			public Label ShopifyPOSLabel { get; }
-			public CheckBox CustomCommerceConnectors { get; }
-			public Label CustomCommerceConnectorsLabel { get; }
 			public CheckBox CommerceB2B { get; }
 			public Label CommerceB2BLabel { get; }
 			public CheckBox BankFeedIntegration { get; }
 			public Label BankFeedIntegrationLabel { get; }
 			public CheckBox IntegratedCardProcessing { get; }
 			public Label IntegratedCardProcessingLabel { get; }
+			public CheckBox AcumaticaPayments { get; }
+			public Label AcumaticaPaymentsLabel { get; }
 			public CheckBox AuthorizeNetIntegration { get; }
 			public Label AuthorizeNetIntegrationLabel { get; }
 			public CheckBox StripeIntegration { get; }
@@ -521,6 +523,8 @@ namespace GeneratedWrappers.SOLUTIONNAME
 			public Label GLAnomalyDetectionLabel { get; }
 			public CheckBox TeamsIntegration { get; }
 			public Label TeamsIntegrationLabel { get; }
+			public CheckBox IntelligentTextCompletion { get; }
+			public Label IntelligentTextCompletionLabel { get; }
             
             public c_features_form(string locator, string name) : 
                     base(locator, name)
@@ -703,6 +707,9 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 Warehouse = new CheckBox("ctl00_phF_form_Warehouse", "Multiple Warehouses", locator, null);
                 WarehouseLabel = new Label(Warehouse);
                 Warehouse.DataField = "Warehouse";
+                DistributionReqPlan = new CheckBox("ctl00_phF_form_DistributionReqPlan", "Distribution Requirements Planning", locator, null);
+                DistributionReqPlanLabel = new Label(DistributionReqPlan);
+                DistributionReqPlan.DataField = "DistributionReqPlan";
                 WarehouseLocation = new CheckBox("ctl00_phF_form_WarehouseLocation", "Multiple Warehouse Locations", locator, null);
                 WarehouseLocationLabel = new Label(WarehouseLocation);
                 WarehouseLocation.DataField = "WarehouseLocation";
@@ -823,9 +830,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 ScheduleModule = new CheckBox("ctl00_phF_form_ScheduleModule", "Scheduled Processing", locator, null);
                 ScheduleModuleLabel = new Label(ScheduleModule);
                 ScheduleModule.DataField = "ScheduleModule";
-                AutomationModule = new CheckBox("ctl00_phF_form_AutomationModule", "Workflow Automation", locator, null);
-                AutomationModuleLabel = new Label(AutomationModule);
-                AutomationModule.DataField = "AutomationModule";
                 DeviceHub = new CheckBox("ctl00_phF_form_DeviceHub", "DeviceHub", locator, null);
                 DeviceHubLabel = new Label(DeviceHub);
                 DeviceHub.DataField = "DeviceHub";
@@ -850,9 +854,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 TwoFactorAuthentication = new CheckBox("ctl00_phF_form_TwoFactorAuthentication", "Two-Factor Authentication", locator, null);
                 TwoFactorAuthenticationLabel = new Label(TwoFactorAuthentication);
                 TwoFactorAuthentication.DataField = "TwoFactorAuthentication";
-                GoogleAndMicrosoftSSO = new CheckBox("ctl00_phF_form_GoogleAndMicrosoftSSO", "Google and Microsoft SSO", locator, null);
-                GoogleAndMicrosoftSSOLabel = new Label(GoogleAndMicrosoftSSO);
-                GoogleAndMicrosoftSSO.DataField = "GoogleAndMicrosoftSSO";
                 ActiveDirectoryAndOtherExternalSSO = new CheckBox("ctl00_phF_form_ActiveDirectoryAndOtherExternalSSO", "Active Directory and Other External SSO", locator, null);
                 ActiveDirectoryAndOtherExternalSSOLabel = new Label(ActiveDirectoryAndOtherExternalSSO);
                 ActiveDirectoryAndOtherExternalSSO.DataField = "ActiveDirectoryAndOtherExternalSSO";
@@ -871,6 +872,12 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 SendGridIntegration = new CheckBox("ctl00_phF_form_SendGridIntegration", "SendGrid Integration", locator, null);
                 SendGridIntegrationLabel = new Label(SendGridIntegration);
                 SendGridIntegration.DataField = "SendGridIntegration";
+                AdvancedIntegration = new CheckBox("ctl00_phF_form_AdvancedIntegration", "Advanced Integration Engine", locator, null);
+                AdvancedIntegrationLabel = new Label(AdvancedIntegration);
+                AdvancedIntegration.DataField = "AdvancedIntegration";
+                CustomCommerceConnectors = new CheckBox("ctl00_phF_form_CustomCommerceConnectors", "Custom Connectors", locator, null);
+                CustomCommerceConnectorsLabel = new Label(CustomCommerceConnectors);
+                CustomCommerceConnectors.DataField = "CustomCommerceConnectors";
                 CommerceIntegration = new CheckBox("ctl00_phF_form_CommerceIntegration", "Retail Commerce", locator, null);
                 CommerceIntegrationLabel = new Label(CommerceIntegration);
                 CommerceIntegration.DataField = "CommerceIntegration";
@@ -880,13 +887,10 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 ShopifyIntegration = new CheckBox("ctl00_phF_form_ShopifyIntegration", "Shopify Connector", locator, null);
                 ShopifyIntegrationLabel = new Label(ShopifyIntegration);
                 ShopifyIntegration.DataField = "ShopifyIntegration";
-                ShopifyPOS = new CheckBox("ctl00_phF_form_ShopifyPOS", "Shopify and Shopify POS Connector", locator, null);
+                ShopifyPOS = new CheckBox("ctl00_phF_form_ShopifyPOS", "Shopify POS Connector", locator, null);
                 ShopifyPOSLabel = new Label(ShopifyPOS);
                 ShopifyPOS.DataField = "ShopifyPOS";
-                CustomCommerceConnectors = new CheckBox("ctl00_phF_form_CustomCommerceConnectors", "Custom Connectors", locator, null);
-                CustomCommerceConnectorsLabel = new Label(CustomCommerceConnectors);
-                CustomCommerceConnectors.DataField = "CustomCommerceConnectors";
-                CommerceB2B = new CheckBox("ctl00_phF_form_CommerceB2B", "B2B Entities", locator, null);
+                CommerceB2B = new CheckBox("ctl00_phF_form_CommerceB2B", "Business-to-Business Entities", locator, null);
                 CommerceB2BLabel = new Label(CommerceB2B);
                 CommerceB2B.DataField = "CommerceB2B";
                 BankFeedIntegration = new CheckBox("ctl00_phF_form_BankFeedIntegration", "Bank Feed Integration", locator, null);
@@ -895,6 +899,9 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 IntegratedCardProcessing = new CheckBox("ctl00_phF_form_IntegratedCardProcessing", "Integrated Card Processing", locator, null);
                 IntegratedCardProcessingLabel = new Label(IntegratedCardProcessing);
                 IntegratedCardProcessing.DataField = "IntegratedCardProcessing";
+                AcumaticaPayments = new CheckBox("ctl00_phF_form_AcumaticaPayments", "Acumatica Payments", locator, null);
+                AcumaticaPaymentsLabel = new Label(AcumaticaPayments);
+                AcumaticaPayments.DataField = "AcumaticaPayments";
                 AuthorizeNetIntegration = new CheckBox("ctl00_phF_form_AuthorizeNetIntegration", "Authorize.Net Payment Plug-In", locator, null);
                 AuthorizeNetIntegrationLabel = new Label(AuthorizeNetIntegration);
                 AuthorizeNetIntegration.DataField = "AuthorizeNetIntegration";
@@ -988,6 +995,9 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 TeamsIntegration = new CheckBox("ctl00_phF_form_TeamsIntegration", "Teams Integration", locator, null);
                 TeamsIntegrationLabel = new Label(TeamsIntegration);
                 TeamsIntegration.DataField = "TeamsIntegration";
+                IntelligentTextCompletion = new CheckBox("ctl00_phF_form_IntelligentTextCompletion", "Intelligent Text Completion", locator, null);
+                IntelligentTextCompletionLabel = new Label(IntelligentTextCompletion);
+                IntelligentTextCompletion.DataField = "IntelligentTextCompletion";
                 DataMemberName = "Features";
             }
         }
@@ -1305,9 +1315,9 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 Buttons = new PxButtonCollection();
             }
             
-            public virtual void Drop_downValues()
+            public virtual void DropdownValues()
             {
-                Buttons.Drop_downValues.Click();
+                Buttons.DropdownValues.Click();
             }
             
             public virtual void Customize()
@@ -1328,14 +1338,14 @@ namespace GeneratedWrappers.SOLUTIONNAME
             public class PxButtonCollection : PxControlCollection
             {
                 
-			public Button Drop_downValues { get; }
+			public Button DropdownValues { get; }
 			public Button Customize { get; }
 			public Button Actions { get; }
 			public Button Cancel { get; }
                 
                 public PxButtonCollection()
                 {
-                    Drop_downValues = new Button("ctl00_usrCaption_CustomizationDialogs_PanelElemInfo_FormElemInfo_panelPXBUtton1_P" +
+                    DropdownValues = new Button("ctl00_usrCaption_CustomizationDialogs_PanelElemInfo_FormElemInfo_panelPXBUtton1_P" +
                             "XButton1", "Drop-down Values", "ctl00_usrCaption_CustomizationDialogs_PanelElemInfo_FormElemInfo");
                     Customize = new Button("ctl00_usrCaption_CustomizationDialogs_PanelElemInfo_PXButton3", "Customize", "ctl00_usrCaption_CustomizationDialogs_PanelElemInfo_FormElemInfo");
                     Actions = new Button("ctl00_usrCaption_CustomizationDialogs_PanelElemInfo_ButtonGraphActions", "Actions", "ctl00_usrCaption_CustomizationDialogs_PanelElemInfo_FormElemInfo");

@@ -40,12 +40,13 @@
   
 
   <ItemGroup>
-    <PackageReference Include="ClassGenerator" Version="23.106.50.52" />
-    <PackageReference Include="Core" Version="23.106.50.52" />
-    <PackageReference Include="Execution" Version="23.106.50.52" />
-    <PackageReference Include="GeneratedWrappers.Acumatica" Version="23.106.40-P195521" />
-    <PackageReference Include="Host" Version="23.106.50.52" />
-    <PackageReference Include="PX.QA.Tools" Version="23.106.50.52" />
+    <PackageReference Include="ClassGenerator" Version="23.200.136.148" />
+    <PackageReference Include="Core" Version="23.200.136.148" />
+    <PackageReference Include="Execution" Version="23.200.136.148" />
+    <PackageReference Include="GeneratedWrappers.Acumatica" Version="23.200.117-P200569" />
+    <PackageReference Include="Host" Version="23.200.136.148" />
+    <PackageReference Include="PX.QA.Tools" Version="23.200.136.148" />
+    <PackageReference Include="PX.QA.WrappersGenerator" Version="23.200.136.148" />
   </ItemGroup>
 
   

@@ -202,14 +202,14 @@ namespace GeneratedWrappers.SOLUTIONNAME
             ToolBar.LongRun.Click();
         }
         
-        public virtual void LongrunCancel()
+        public virtual void LongRun_cancel()
         {
-            ToolBar.LongrunCancel.Click();
+            ToolBar.LongRun_cancel.Click();
         }
         
-        public virtual void LongrunTimer()
+        public virtual void LongRun_timer()
         {
-            ToolBar.LongrunTimer.Click();
+            ToolBar.LongRun_timer.Click();
         }
         
         public class PxToolBar : PxControlCollection
@@ -239,8 +239,8 @@ namespace GeneratedWrappers.SOLUTIONNAME
 			public ToolBarButton ActionRuntimeValidationDACAttributes { get; }
 			public ToolBarButton ActionRuntimeValidationLookupsDefinitions { get; }
 			public ToolBarButton LongRun { get; }
-			public ToolBarButton LongrunCancel { get; }
-			public ToolBarButton LongrunTimer { get; }
+			public ToolBarButton LongRun_cancel { get; }
+			public ToolBarButton LongRun_timer { get; }
             
             public PxToolBar(string locator)
             {
@@ -281,8 +281,8 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 ActionRuntimeValidationLookupsDefinitions = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_actionRuntimeValidationLookupsDefinitions,#ctl00_phDS_" +
                         "ds_ToolBar_actionRuntimeValidationLookupsDefinitions_item", "Lookup Definitions (Runtime Validation)", locator, MenuOpener);
                 LongRun = new ToolBarButton("css=qp-long-run", "Nothing in progress", locator, null);
-                LongrunCancel = new ToolBarButton("css=#ctl00_phDS_ds_LongRun_cancel", "Cancel", locator, null);
-                LongrunTimer = new ToolBarButton("css=#ctl00_phDS_ds_LongRun_timer", "Elapsed Time", locator, null);
+                LongRun_cancel = new ToolBarButton("css=#ctl00_phDS_ds_LongRun_cancel", "Cancel", locator, null);
+                LongRun_timer = new ToolBarButton("css=#ctl00_phDS_ds_LongRun_timer", "Elapsed Time", locator, null);
             }
         }
         

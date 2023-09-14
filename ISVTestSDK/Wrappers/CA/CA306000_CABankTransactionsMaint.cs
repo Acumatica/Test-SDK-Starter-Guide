@@ -69,14 +69,14 @@ namespace GeneratedWrappers.SOLUTIONNAME
         protected c_detailmatchesca_lv0 DetailMatchesCA_lv0 { get; } = new c_detailmatchesca_lv0("ctl00_phG_PXSplitContainer_tab2_t0_PXGrid1_lv0", "DetailMatchesCA_lv0");
         protected c_adjustments_gridadjustments Adjustments_gridAdjustments { get; } = new c_adjustments_gridadjustments("ctl00_phG_PXSplitContainer_tab2_t3_gridAdjustments", "Adjustments_gridAdjustments");
         protected c_adjustments_lv0 Adjustments_lv0 { get; } = new c_adjustments_lv0("ctl00_phG_PXSplitContainer_tab2_t3_gridAdjustments_lv0", "Adjustments_lv0");
-        protected c_cashaccount_tabmatchsettings Cashaccount_tabmatchsettings { get; } = new c_cashaccount_tabmatchsettings("ctl00_phG_pnlMatchSettings_tabMatchSettings", "cashAccount_tabMatchSettings");
-        protected c_detailmatchinginvoices_griddetailmatches4 Detailmatchinginvoices_griddetailmatches4 { get; } = new c_detailmatchinginvoices_griddetailmatches4("ctl00_phG_PXSplitContainer_tab2_t1_gridDetailMatches4", "detailMatchingInvoices_gridDetailMatches4");
-        protected c_detailmatchinginvoices_lv0 Detailmatchinginvoices_lv0 { get; } = new c_detailmatchinginvoices_lv0("ctl00_phG_PXSplitContainer_tab2_t1_gridDetailMatches4_lv0", "detailMatchingInvoices_lv0");
+        protected c_cashaccount_tabmatchsettings CashAccount_tabMatchSettings { get; } = new c_cashaccount_tabmatchsettings("ctl00_phG_pnlMatchSettings_tabMatchSettings", "cashAccount_tabMatchSettings");
+        protected c_detailmatchinginvoices_griddetailmatches4 DetailMatchingInvoices_gridDetailMatches4 { get; } = new c_detailmatchinginvoices_griddetailmatches4("ctl00_phG_PXSplitContainer_tab2_t1_gridDetailMatches4", "detailMatchingInvoices_gridDetailMatches4");
+        protected c_detailmatchinginvoices_lv0 DetailMatchingInvoices_lv0 { get; } = new c_detailmatchinginvoices_lv0("ctl00_phG_PXSplitContainer_tab2_t1_gridDetailMatches4_lv0", "detailMatchingInvoices_lv0");
         protected c_expensereceiptdetailmatches_gridexpensereceiptdetailmatches ExpenseReceiptDetailMatches_gridExpenseReceiptDetailMatches { get; } = new c_expensereceiptdetailmatches_gridexpensereceiptdetailmatches("ctl00_phG_PXSplitContainer_tab2_t2_gridExpenseReceiptDetailMatches", "ExpenseReceiptDetailMatches_gridExpenseReceiptDetailMatches");
         protected c_expensereceiptdetailmatches_lv0 ExpenseReceiptDetailMatches_lv0 { get; } = new c_expensereceiptdetailmatches_lv0("ctl00_phG_PXSplitContainer_tab2_t2_gridExpenseReceiptDetailMatches_lv0", "ExpenseReceiptDetailMatches_lv0");
         protected c_transplit_gridcasplits TranSplit_gridCASplits { get; } = new c_transplit_gridcasplits("ctl00_phG_PXSplitContainer_tab2_t3_gridCASplits", "TranSplit_gridCASplits");
         protected c_transplit_lv0 TranSplit_lv0 { get; } = new c_transplit_lv0("ctl00_phG_PXSplitContainer_tab2_t3_gridCASplits_lv0", "TranSplit_lv0");
-        protected c_loadopts_loform Loadopts_loform { get; } = new c_loadopts_loform("ctl00_phG_pnlLoadOpts_loform", "loadOpts_loform");
+        protected c_loadopts_loform LoadOpts_loform { get; } = new c_loadopts_loform("ctl00_phG_pnlLoadOpts_loform", "loadOpts_loform");
         protected c_rulecreation_frmcreaterule RuleCreation_frmCreateRule { get; } = new c_rulecreation_frmcreaterule("ctl00_phG_pnlCreateRule_frmCreateRule", "RuleCreation_frmCreateRule");
         protected c_filterpreview_formpreview FilterPreview_FormPreview { get; } = new c_filterpreview_formpreview("ctl00_usrCaption_PanelDynamicForm_FormPreview", "FilterPreview_FormPreview");
         protected c_screen_upload StatementFileUpload { get; } = new c_screen_upload("ctl00_phG_PXSplitContainer_pnlNewRev", "StatementFileUpload");
@@ -190,14 +190,14 @@ namespace GeneratedWrappers.SOLUTIONNAME
             ToolBar.LongRun.Click();
         }
         
-        public virtual void LongrunCancel()
+        public virtual void LongRun_cancel()
         {
-            ToolBar.LongrunCancel.Click();
+            ToolBar.LongRun_cancel.Click();
         }
         
-        public virtual void LongrunTimer()
+        public virtual void LongRun_timer()
         {
-            ToolBar.LongrunTimer.Click();
+            ToolBar.LongRun_timer.Click();
         }
         
         public class PxToolBar : PxControlCollection
@@ -221,8 +221,8 @@ namespace GeneratedWrappers.SOLUTIONNAME
 			public ToolBarButton MatchSettingsPanel { get; }
 			public ToolBarButton UploadFile { get; }
 			public ToolBarButton LongRun { get; }
-			public ToolBarButton LongrunCancel { get; }
-			public ToolBarButton LongrunTimer { get; }
+			public ToolBarButton LongRun_cancel { get; }
+			public ToolBarButton LongRun_timer { get; }
             
             public PxToolBar(string locator)
             {
@@ -254,8 +254,8 @@ namespace GeneratedWrappers.SOLUTIONNAME
                         "sPanel_item", "Match Settings", locator, MenuOpener);
                 UploadFile = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_UploadFile,#ctl00_phDS_ds_ToolBar_UploadFile_item", "Upload File", locator, MenuOpener);
                 LongRun = new ToolBarButton("css=qp-long-run", "Nothing in progress", locator, null);
-                LongrunCancel = new ToolBarButton("css=#ctl00_phDS_ds_LongRun_cancel", "Cancel", locator, null);
-                LongrunTimer = new ToolBarButton("css=#ctl00_phDS_ds_LongRun_timer", "Elapsed Time", locator, null);
+                LongRun_cancel = new ToolBarButton("css=#ctl00_phDS_ds_LongRun_cancel", "Cancel", locator, null);
+                LongRun_timer = new ToolBarButton("css=#ctl00_phDS_ds_LongRun_timer", "Elapsed Time", locator, null);
             }
         }
         
@@ -614,9 +614,9 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 Buttons = new PxButtonCollection();
             }
             
-            public virtual void Drop_downValues()
+            public virtual void DropdownValues()
             {
-                Buttons.Drop_downValues.Click();
+                Buttons.DropdownValues.Click();
             }
             
             public virtual void Customize()
@@ -637,14 +637,14 @@ namespace GeneratedWrappers.SOLUTIONNAME
             public class PxButtonCollection : PxControlCollection
             {
                 
-			public Button Drop_downValues { get; }
+			public Button DropdownValues { get; }
 			public Button Customize { get; }
 			public Button Actions { get; }
 			public Button Cancel { get; }
                 
                 public PxButtonCollection()
                 {
-                    Drop_downValues = new Button("ctl00_usrCaption_CustomizationDialogs_PanelElemInfo_FormElemInfo_panelPXBUtton1_P" +
+                    DropdownValues = new Button("ctl00_usrCaption_CustomizationDialogs_PanelElemInfo_FormElemInfo_panelPXBUtton1_P" +
                             "XButton1", "Drop-down Values", "ctl00_usrCaption_CustomizationDialogs_PanelElemInfo_FormElemInfo");
                     Customize = new Button("ctl00_usrCaption_CustomizationDialogs_PanelElemInfo_PXButton3", "Customize", "ctl00_usrCaption_CustomizationDialogs_PanelElemInfo_FormElemInfo");
                     Actions = new Button("ctl00_usrCaption_CustomizationDialogs_PanelElemInfo_ButtonGraphActions", "Actions", "ctl00_usrCaption_CustomizationDialogs_PanelElemInfo_FormElemInfo");
@@ -1062,19 +1062,19 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 ToolBar.Refresh.Click();
             }
             
-            public virtual void Unmatch()
+            public virtual void ClearMatch()
             {
-                ToolBar.Unmatch.Click();
+                ToolBar.ClearMatch.Click();
             }
             
-            public virtual void UnmatchAll()
+            public virtual void ClearAllMatches()
             {
-                ToolBar.UnmatchAll.Click();
+                ToolBar.ClearAllMatches.Click();
             }
             
-            public virtual void HideTransaction()
+            public virtual void Hide()
             {
-                ToolBar.HideTransaction.Click();
+                ToolBar.Hide.Click();
             }
             
             public virtual void Adjust()
@@ -1127,9 +1127,9 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 
 			public ToolBarButtonGrid Delete { get; }
 			public ToolBarButtonGrid Refresh { get; }
-			public ToolBarButtonGrid Unmatch { get; }
-			public ToolBarButtonGrid UnmatchAll { get; }
-			public ToolBarButtonGrid HideTransaction { get; }
+			public ToolBarButtonGrid ClearMatch { get; }
+			public ToolBarButtonGrid ClearAllMatches { get; }
+			public ToolBarButtonGrid Hide { get; }
 			public ToolBarButtonGrid Adjust { get; }
 			public ToolBarButtonGrid Split { get; }
 			public ToolBarButtonGrid Filter { get; }
@@ -1144,15 +1144,11 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 {
                     Delete = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_grid1_at_tlb div[data-cmd=\'Delete\']", "Delete Row", locator, null);
                     Refresh = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_grid1_at_tlb div[data-cmd=\'Refresh\']", "Refresh", locator, null);
-                    Unmatch = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_grid1_at_tlb div:textEqual(\"Unmatch\") > div[data-" +
-                            "type=\'button\']", "Unmatch", locator, null);
-                    UnmatchAll = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_grid1_at_tlb div:textEqual(\"Unmatch All\") > div[d" +
-                            "ata-type=\'button\']", "Unmatch All", locator, null);
-                    HideTransaction = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_grid1_at_tlb div:textEqual(\"Hide Transaction\") > " +
-                            "div[data-type=\'button\']", "Hide Transaction", locator, null);
+                    ClearMatch = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_grid1_at_tlb div[data-cmd=\'cmdCM\']", "Unmatch", locator, null);
+                    ClearAllMatches = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_grid1_at_tlb div[data-cmd=\'cmdCAM\']", "Unmatch All", locator, null);
+                    Hide = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_grid1_at_tlb div[data-cmd=\'cmdH\']", "Hide Transaction", locator, null);
                     Adjust = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_grid1_at_tlb div[data-cmd=\'AdjustColumns\']", "Fit to Screen", locator, null);
-                    Split = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_grid1_at_tlb div:textEqual(\"Split\") > div[data-ty" +
-                            "pe=\'button\']", "Split", locator, null);
+                    Split = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_grid1_at_tlb div[data-cmd=\'cmdS\']", "Split", locator, null);
                     Filter = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_grid1_at_tlb div[data-cmd=\'FilterShow\']", "Filter Settings", locator, null);
                     Hi = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_grid1_at_tlb div[data-cmd=\'hi\']", "Hi", locator, null);
                     PageFirst = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_grid1_ab_tlb div[data-cmd=\'PageFirst\']", "Go to First Page (Ctrl+PgUp)", locator, null);
@@ -1191,6 +1187,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
 			public Selector AcctName { get; }
 			public DropDown OrigModule1 { get; }
 			public Selector PayeeLocationID1 { get; }
+			public PXTextEdit UserDesc { get; }
 			public PXNumberEdit TranID { get; }
 			public PXTextEdit MatchStatsInfo { get; }
                 
@@ -1234,7 +1231,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     TranCode.DataField = "TranCode";
                     TranEntryDate = new DateSelector("_ctl00_phG_PXSplitContainer_grid1_lv0_ed16", "Tran. Entry Date", grid.Locator, "TranEntryDate");
                     TranEntryDate.DataField = "TranEntryDate";
-                    PayeeName = new PXTextEdit("ctl00_phG_PXSplitContainer_grid1_ei", "Payee Name", grid.Locator, "PayeeName");
+                    PayeeName = new PXTextEdit("ctl00_phG_PXSplitContainer_grid1_ei", "Payee/Payer", grid.Locator, "PayeeName");
                     PayeeName.DataField = "PayeeName";
                     EntryTypeID1 = new Selector("_ctl00_phG_PXSplitContainer_grid1_lv0_es", "Entry Type ID", grid.Locator, "EntryTypeID1");
                     EntryTypeID1.DataField = "EntryTypeID1";
@@ -1253,6 +1250,8 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     OrigModule1.Items.Add("CA", "CA");
                     PayeeLocationID1 = new Selector("_ctl00_phG_PXSplitContainer_grid1_lv0_es", "Location", grid.Locator, "PayeeLocationID1");
                     PayeeLocationID1.DataField = "PayeeLocationID1";
+                    UserDesc = new PXTextEdit("ctl00_phG_PXSplitContainer_grid1_ei", "Custom Tran. Desc.", grid.Locator, "UserDesc");
+                    UserDesc.DataField = "UserDesc";
                     TranID = new PXNumberEdit("ctl00_phG_PXSplitContainer_grid1_en", "ID", grid.Locator, "TranID");
                     TranID.DataField = "TranID";
                     MatchStatsInfo = new PXTextEdit("ctl00_phG_PXSplitContainer_grid1_ei", "MatchStatsInfo", grid.Locator, "MatchStatsInfo");
@@ -1288,6 +1287,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
 				public SelectorColumnFilter AcctName { get; }
 				public DropDownColumnFilter OrigModule1 { get; }
 				public SelectorColumnFilter PayeeLocationID1 { get; }
+				public PXTextEditColumnFilter UserDesc { get; }
 				public PXNumberEditColumnFilter TranID { get; }
 				public PXTextEditColumnFilter MatchStatsInfo { get; }
                 
@@ -1319,6 +1319,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     AcctName = new SelectorColumnFilter(grid.Row.AcctName);
                     OrigModule1 = new DropDownColumnFilter(grid.Row.OrigModule1);
                     PayeeLocationID1 = new SelectorColumnFilter(grid.Row.PayeeLocationID1);
+                    UserDesc = new PXTextEditColumnFilter(grid.Row.UserDesc);
                     TranID = new PXNumberEditColumnFilter(grid.Row.TranID);
                     MatchStatsInfo = new PXTextEditColumnFilter(grid.Row.MatchStatsInfo);
                 }
@@ -1500,7 +1501,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 CuryUnappliedBalCA = new PXNumberEdit("ctl00_phG_PXSplitContainer_tab2_t3_frmCreateDocument_edCuryUnappliedBalCA", "Discrepancy", locator, null);
                 CuryUnappliedBalCALabel = new Label(CuryUnappliedBalCA);
                 CuryUnappliedBalCA.DataField = "CuryUnappliedBalCA";
-                UserDesc = new PXTextEdit("ctl00_phG_PXSplitContainer_tab2_t3_frmCreateDocument_edUserDesc", "Tran. Desc", locator, null);
+                UserDesc = new PXTextEdit("ctl00_phG_PXSplitContainer_tab2_t3_frmCreateDocument_edUserDesc", "Custom Tran. Desc.", locator, null);
                 UserDescLabel = new Label(UserDesc);
                 UserDesc.DataField = "UserDesc";
                 Ctl11_ = new Label("ctl00_phG_PXSplitContainer_tab2_t3_frmCreateDocument_ctl11", "Ctl 11_", locator, null);
@@ -2036,6 +2037,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     OrigTranTypeUI.Items.Add("SMC", "Credit WO");
                     OrigTranTypeUI.Items.Add("CSL", "Cash Sale");
                     OrigTranTypeUI.Items.Add("RCS", "Cash Return");
+                    OrigTranTypeUI.Items.Add("PPI", "Prepayment Invoice");
                     OrigTranTypeUI.Items.Add("INV", "AR Invoice or AP Bill");
                     OrigTranTypeUI.Items.Add("PPM", "Prepayment");
                     OrigTranTypeUI.Items.Add("REF", "Refund");
