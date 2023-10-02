@@ -70,13 +70,20 @@ namespace GeneratedWrappers.SOLUTIONNAME
 
         public void ExcelDataEntryExample()
         {
-            string excelsPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName + @"\Excels\";
+            // Inside of the "Core" package dependancy, Acumatica has included EPPlus 4.5.3.2,
+            // it is free to use without a commercial license, later versions require a license to use.
+            // Excel files can be imported with the example below or any other way using EPPlus
+            // but you must not add any dependancies outside what is included in Acumatica's
+            // TestSDK packages folder.
 
-            //Excel Data Import Example
-            using (TestExecution.CreateTestStepGroup("Test 2 - Import and enter data from excel"))
+            //Excel files must be placed in the project's Excels folder and the file imported as below
+            //Excel files MUST start with your solutions initials to make them uniquely named.
+            string excelsPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName + @"\Excels\";
+            var excel = new ExcelPackage(new FileInfo(excelsPath + "SOLUTIONINITIALSExcelData.xlsx"));
+            
+            using (TestExecution.CreateTestStepGroup("Import and enter data from excel"))
             {
                 SOOrderEntry.OpenScreen();
-                var excel = new ExcelPackage(new FileInfo(excelsPath + "SOLUTIONINITIALSExcelData.xlsx"));
                 {
                     var ExcelHeaderTab = excel.Workbook.Worksheets["Header"];
                     var ExcelDetailsTab = excel.Workbook.Worksheets["Details"];
@@ -111,8 +118,9 @@ namespace GeneratedWrappers.SOLUTIONNAME
 
                             SOOrderEntry.Save();
                         }
-                        catch
+                        catch (Exception ex) 
                         {
+                            Log.Error(ex.StackTrace.ToString());
                             continue;
                         }
                     }
