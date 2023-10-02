@@ -3,7 +3,6 @@ using Core.Log;
 using Core.Login;
 using Core.TestExecution;
 using Core.Wait;
-using GeneratedWrappers.Acumatica;
 using GeneratedWrappers.SOLUTIONNAME;
 using System;
 using System.Collections.Generic;
@@ -14,11 +13,11 @@ namespace ISVTestSDK
     public class Test : Check
     {
         // Update the below links to your envrionment
-        const string physicalSitePath = @"C:\AcumaticaSites\23r2001";
+        const string physicalSitePath = @"C:\AcumaticaSites\23r200pre1";
 
         // Import all screens you will be using here
         // How to Create Extension Files.docx is a very useful guide to create these extensions.
-        public CS100000FeaturesMaint Features = new CS100000FeaturesMaint();
+        //public CS100000FeaturesMaint Features = new CS100000FeaturesMaint();
 
         public void GenerateWrappers()
         {
@@ -32,7 +31,8 @@ namespace ISVTestSDK
             // PL and GI screens are added like this, get the "URL" from the site map screen.
             WG.Screens.Add("IN2025PL", "~/GenericInquiry/GenericInquiry.aspx?id=e4352bbd-a53a-42c4-9b96-e9f0fda070c7");
 
-            WG.Run("SCREENID1, SCREENID2, CA306000, CS100000, GL102000, SM204505, SO301000"); // add all screens here you need to use in your test
+            WG.Run("SO301000, CA306000, CS100000"); // add all screens here you need to use in your test
+
 
             // All wrappers will need an extension file created to access the UI elements of the screen wrapper.
             // The namespace of your Extension.cs files will be exactly "using GeneratedWrappers.SOLUTIONNAME;"
@@ -96,7 +96,7 @@ namespace ISVTestSDK
 
         public override void Execute()
         {
-            GenerateWrappers(); // Only needs to be run once after updating the project version or customization project.
+            //GenerateWrappers(); // Only needs to be run once after updating the project version or customization project.
                                 // It takes 5-15 minutes to run, do not close it manually or else you will need to fix your web.config
             Test1 Test1 = new Test1();
             Test1.Execute();

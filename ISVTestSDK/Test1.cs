@@ -19,16 +19,28 @@ namespace GeneratedWrappers.SOLUTIONNAME
         SO301000SOOrderEntry SOOrderEntry = new SO301000SOOrderEntry();
         public override void Execute()
         {
-            ExcelDataEntryExample();
             using (TestExecution.CreateTestStepGroup("Test 1 - Open Screen"))
             {
-                CABankTransactionsMaint.OpenScreen();
-                CABankTransactionsMaint.Filter.CashAccountID.Type("10200");
-                CABankTransactionsMaint.Filter.CashAccountID.GetValue().VerifyContains("10200").Assert();
-                CABankTransactionsMaint.Filter.CashAccountID.Type("10400");
+                BasicTest();
+                ExcelDataEntryExample();
+                GenericInquiryViewExample();
             }
         }
-
+        public void BasicTest()
+        {
+            CABankTransactionsMaint.OpenScreen();
+            CABankTransactionsMaint.Filter.CashAccountID.Type("10200");
+            CABankTransactionsMaint.Filter.CashAccountID.GetValue().VerifyContains("10200").Assert();
+            CABankTransactionsMaint.Filter.CashAccountID.Type("10400");
+        }
+        public void GenericInquiryViewExample()
+        {
+            //Logic for viewing GenericInquiry and checking if a value exists.
+            IN2025PLPXGenericInqGrph IN2025PL = new IN2025PLPXGenericInqGrph();
+            IN2025PL.OpenScreen();
+            IN2025PL.ResultGrid.Columns.InventoryItem_inventoryCD.Equals("AACOMPUT01");
+            IN2025PL.ResultGrid.ResetColumnFilters();
+        }
 
         public void ExcelDataEntryExample()
         {

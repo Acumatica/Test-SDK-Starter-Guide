@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace GeneratedWrappers.SOLUTIONNAME
 {
-    public partial class CS100000FeaturesMaint : CS100000_FeaturesMaint
+    public class IN2025PLPXGenericInqGrph : IN2025PL_PXGenericInqGrph
     {
-        public c_features_form Summary => Features_form;
+        public c_results_grid ResultGrid => Results_grid;
     }
-
 }
