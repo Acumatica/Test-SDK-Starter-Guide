@@ -1,12 +1,10 @@
-﻿using ClassGenerator;
-using Controls.CheckBox;
+﻿using Controls.CheckBox;
 using Core.Log;
 using Core.Login;
 using Core.TestExecution;
 using Core.Wait;
 using GeneratedWrappers.SOLUTIONNAME;
 using System;
-using System.Collections.Generic;
 using System.IO;
 
 namespace ISVTestSDK
@@ -54,7 +52,7 @@ namespace ISVTestSDK
         public void ConfigForWrapperGeneration()
         {
             //Before Generating the Wrappers, all screens must be accessable at minimum for success.
-            //SThe starting state of wrapper generation is SalesDemo data + your customization published.
+            //The starting state of wrapper generation is SalesDemo data + your customization published.
             //Any aditional steps to enable the custom screens or features must be done before Wrapper generation.
 
             CS100000FeaturesMaint Features = new CS100000FeaturesMaint();
