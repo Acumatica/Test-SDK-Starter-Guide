@@ -1,4 +1,6 @@
-﻿using Core;
+﻿using Controls.CheckBox;
+using Core;
+using Core.Config;
 using Core.Log;
 using Core.Login;
 using Core.TestExecution;
@@ -17,15 +19,38 @@ namespace GeneratedWrappers.SOLUTIONNAME
     {
         CA306000CABankTransactions CABankTransactionsMaint = new CA306000CABankTransactions();
         SO301000SOOrderEntry SOOrderEntry = new SO301000SOOrderEntry();
+        public CS100000FeaturesMaint Features = new CS100000FeaturesMaint();
         public override void Execute()
         {
-            using (TestExecution.CreateTestStepGroup("Test 1 - Open Screen"))
+            PxLogin.LoginToDestinationSite();
+            using (TestExecution.CreateTestStepGroup("Config site"))
+            {
+                ConfigWebsiteFromSalesDemo();
+                ExcelDataEntryExample();
+            }
+            using (TestExecution.CreateTestStepGroup("Main Tests"))
             {
                 BasicTest();
-                ExcelDataEntryExample();
                 GenericInquiryViewExample();
             }
         }
+
+        public void ConfigWebsiteFromSalesDemo()
+        {
+            //We assume the test starts from a blank salesdemo data + your customization published again.
+            //If you had test steps running for wrapper generation, they must be run again here before the test.
+
+            Features.OpenScreen();
+            Features.Insert();
+            Features.Summary.SalesQuotes.SetTrue();
+            Features.Summary.DynamicControl<CheckBox>("Multicurrency Accounting").SetTrue();
+            Features.RequestValidation();
+
+            //Use TestSDK code to enter any data required for the following tests to run.
+            //eg. Configure numbering sequences, Enableing features, checkboxes on screens, setting up items
+            // with newly added attributes.
+        }
+
         public void BasicTest()
         {
             CABankTransactionsMaint.OpenScreen();
@@ -33,6 +58,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
             CABankTransactionsMaint.Filter.CashAccountID.GetValue().VerifyContains("10200").Assert();
             CABankTransactionsMaint.Filter.CashAccountID.Type("10400");
         }
+
         public void GenericInquiryViewExample()
         {
             //Logic for viewing GenericInquiry and checking if a value exists.
