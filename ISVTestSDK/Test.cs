@@ -16,8 +16,10 @@ namespace ISVTestSDK
         const string physicalSitePath = @"C:\AcumaticaSites\23r200pre1";
         public override void Execute()
         {
-            GenerateWrappers(); // Make sure to set up ConfigForWrapperGeneration() if needed to enable your screens.
-            // Only needs to be run once after updating the Acumatica version or editing your customization project.
+            PxLogin.LoginToDestinationSite();
+            ConfigForWrapperGeneration();//Before Generating the Wrappers, all screens must be accessable at minimum for success.
+            GenerateWrappers();
+            // GenerateWrappers() Only needs to be run once after updating the Acumatica version or editing your customization project.
             // It takes 5-20 minutes to run, do not close it manually or else you will need to fix your web.config
 
             // Run tests like this, there should be a single test.cs file that executes all your tests
@@ -34,10 +36,6 @@ namespace ISVTestSDK
             classGenerator.Username = "admin";
             // Replace SOLUTIONNAME with your registered solution name from the Partner Portal in all capitals.
             classGenerator.Namespace = "GeneratedWrappers.SOLUTIONNAME";
-
-            PxLogin.LoginToDestinationSite();
-            //Before Generating the Wrappers, all screens must be accessable at minimum for success.
-            ConfigForWrapperGeneration();
 
             // PL and GI screens are added like this, get the "URL" from the site map screen.
             classGenerator.Screens.Add("IN2025PL", "~/GenericInquiry/GenericInquiry.aspx?id=e4352bbd-a53a-42c4-9b96-e9f0fda070c7");
