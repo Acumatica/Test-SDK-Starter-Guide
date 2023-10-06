@@ -5,21 +5,22 @@ Prerequisite steps:
 2) Extract the .msi with the following command using command prompt "msiexec /a C:\AcumaticaInstallers\23.200.0151.msi /qb targetdir=C:\AcumaticaInstallers\23.200.0151" - then run ac.exe to start the installer
     This allows you to install multiple versions of acumatica at the same time.
 3) Install Acumatica website to C:\AcumaticaSites\23r200 for the correct specific version you want to target - use SalesDemo data during install - name the website and database 23r200
-4) Download the TestSDK.zip for the same version from https://builds.acumatica.com/index.html?prefix=builds/23.2/23.200.0151/TestSDK/ - extract it to C:\AcumaticaTestSDK
-5) Create C:\share
-6) Create C:\share\download
-7) Create C:\share\logs -> for test results
+4) Login to the new website localhost/23r200 the initial credentials will be Username: admin Password: setup - it will prompt you to set a new password, 123 is suggested for local instance testing.
+5) Download the TestSDK.zip for the same version from https://builds.acumatica.com/index.html?prefix=builds/23.2/23.200.0151/TestSDK/ - extract it to C:\AcumaticaTestSDK
+6) Create C:\share
+7) Create C:\share\download
+8) Create C:\share\logs -> for test results
 
 In Visual Studio open the Test-SDK-Starter-Guide solution - ISVTestSDK.sln
 
-8) Remove all the old Dependancies -> Packages
-9) Go to Manage Nuget Packages -> Add a new package source and add the packages folder from C:\AcumaticaTestSDK\TestSDK_23_200_0151_163\packages
-10) Add all references from the new source to the project
-11) In test.cs update physicalSitePath to the websites install folder location
-12) In launchsettings.json update the commandLineArgs to use your testSDK download C:\AcumaticaTestSDK\TestSDK_23_200_0151_163\config.xml  - This lets you just press run in Visual studio to kick off the test.
-13) Configure that config.xml from C:\AcumaticaTestSDK\TestSDK_23_200_0151_163 to match your site (use the chrome location from testSDK download folder C:\AcumaticaTestSDK\TestSDK_23_200_0151_163\Chrome\chrome.exe 
+9) Remove all the old Dependancies -> Packages
+10) Go to Manage Nuget Packages -> Add a new package source and add the packages folder from C:\AcumaticaTestSDK\TestSDK_23_200_0151_163\packages
+11) Add all references from the new source to the project
+12) In test.cs update physicalSitePath to the websites install folder location
+13) In launchsettings.json update the commandLineArgs to use your testSDK download C:\AcumaticaTestSDK\TestSDK_23_200_0151_163\config.xml  - This lets you just press run in Visual studio to kick off the test.
+14) Configure that config.xml from C:\AcumaticaTestSDK\TestSDK_23_200_0151_163 to match your site (use the chrome location from testSDK download folder C:\AcumaticaTestSDK\TestSDK_23_200_0151_163\Chrome\chrome.exe 
     , not your personal chrome browser and website url)
-14) Configure and run the GenerateWrappers() method.
+15) Configure and run the GenerateWrappers() method.
 _______________________________________________________________________________________________________________
 How to update a test project to a newer minor or major version:
 
