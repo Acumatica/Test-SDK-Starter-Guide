@@ -6,6 +6,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="ClassGenerator" Version="23.200.151.163" />
+    <PackageReference Include="Core" Version="23.200.151.163" />
+    <PackageReference Include="Execution" Version="23.200.151.163" />
+    <PackageReference Include="GeneratedWrappers.Acumatica" Version="23.200.143-P202684" />
+    <PackageReference Include="Host" Version="23.200.151.163" />
+    <PackageReference Include="PX.QA.Tools" Version="23.200.151.163" />
+    <PackageReference Include="PX.QA.WrappersGenerator" Version="23.200.151.163" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Properties\Settings.Designer.cs">
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <AutoGen>True</AutoGen>
@@ -18,16 +28,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="ClassGenerator" Version="23.200.144.156" />
-    <PackageReference Include="Core" Version="23.200.144.156" />
-    <PackageReference Include="Execution" Version="23.200.144.156" />
-    <PackageReference Include="GeneratedWrappers.Acumatica" Version="23.200.143-P202684" />
-    <PackageReference Include="Host" Version="23.200.144.156" />
-    <PackageReference Include="PX.QA.Tools" Version="23.200.144.156" />
-    <PackageReference Include="PX.QA.WrappersGenerator" Version="23.200.144.156" />
   </ItemGroup>
 
 </Project>

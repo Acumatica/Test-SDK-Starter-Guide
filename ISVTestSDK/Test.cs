@@ -9,9 +9,10 @@ using System.IO;
 
 namespace ISVTestSDK
 {
+    //Do not rename test.cs - if you do - you will have to change <Check Name="Test"/> in the config.xml. and launchSettings.json
     public class Test : Check
     {
-        // Ensure to follow the readme steps for this project before running to properly configure it.
+        // Ensure to follow the readme steps for this project before running as to properly configure it.
         // https://github.com/Acumatica/Test-SDK-Starter-Guide/blob/master/README.md
         const string physicalSitePath = @"C:\AcumaticaSites\23r200pre1";
         public override void Execute()

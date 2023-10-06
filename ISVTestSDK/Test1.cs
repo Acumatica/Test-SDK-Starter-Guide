@@ -11,7 +11,10 @@ using System.Collections.Generic;
 using System.Data;
 using System.IO;
 
-namespace GeneratedWrappers.SOLUTIONNAME
+//namespace of all tests, extensions, wrappers, and helper files
+//should be the same as below, with SOLUTIONNAME being your registered solution name
+//in all capitals from the ISV Solutions page of the Acumatica Partner Portal.
+namespace GeneratedWrappers.SOLUTIONNAME 
 {
     public class Test1 : Check
     {
@@ -21,7 +24,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
         public override void Execute()
         {
             PxLogin.LoginToDestinationSite();
-            using (TestExecution.CreateTestStepGroup("Config site"))
+            using (TestExecution.CreateTestStepGroup("Config site to the test start state"))
             {
                 ConfigWebsiteFromSalesDemo();
                 ExcelDataEntryExample();
