@@ -11,18 +11,21 @@ Welcome to the Acumatica Test SDK Starter Guide! This guide is designed to help 
 ## Setting up a New Test Project
 
 ### Prerequisites
-1. Download the [AcumaticaERPInstall.msi](https://builds.acumatica.com/index.html?prefix=builds/23.2/23.200.0151/AcumaticaERP/AcumaticaERPInstall.msi) and rename it to the version build number eg. 23.200.0151.msi.
-2. Create directories: 
+1. Create directories:
+    - 'C:\AcumaticaTestSDK'
+    - 'C:\AcumaticaInstallers'
+    - 'C:\AcumaticaSites'
     - `C:\share`
     - `C:\share\download`
     - `C:\share\logs` (for test results)
+2. Download the [AcumaticaERPInstall.msi](https://builds.acumatica.com/index.html?prefix=builds/23.2/23.200.0151/AcumaticaERP/AcumaticaERPInstall.msi) and rename it to the version build number eg. 23.200.0151.msi then place it into the 'C:\AcumaticaInstallers' folder.
 
 ### Installation and Configuration
 1. Extract the .msi using this command, this command allows you to install multiple versions of Acumatica on the same machine.:
     ```cmd
     msiexec /a C:\AcumaticaInstallers\23.200.0151.msi /qb targetdir=C:\AcumaticaInstallers\23.200.0151
     ```
-   Run `ac.exe` to start the installer.
+   Run `ac.exe` from the extracted folder to start the Acumatica installer.
 2. Install Acumatica website to `C:\AcumaticaSites\23r200` for the specific version. Use the `SalesDemo` data during install and name the website and database `23r200`.
 3. Login to the new website at `localhost/23r200` with initial credentials: 
 - **Username:** `admin`
