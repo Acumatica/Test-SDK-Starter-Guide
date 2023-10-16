@@ -19,6 +19,7 @@ Welcome to the Acumatica Test SDK Starter Guide! This guide is designed to help 
     - `C:\share\download`
     - `C:\share\logs` (for test results)
 2. Download the [AcumaticaERPInstall.msi](https://builds.acumatica.com/index.html?prefix=builds/23.2/23.200.0151/AcumaticaERP/AcumaticaERPInstall.msi) and rename it to the version build number eg. 23.200.0151.msi then place it into the 'C:\AcumaticaInstallers' folder.
+3. Download and extract the `TestSDK.zip` for the matching version from [this link](https://builds.acumatica.com/index.html?prefix=builds/23.2/23.200.0151/TestSDK/) to `C:\AcumaticaTestSDK\TestSDK_23_200_0151_163`.
 
 ### Installation and Configuration
 1. Extract the .msi using this command, this command allows you to install multiple versions of Acumatica on the same machine.:
@@ -31,15 +32,14 @@ Welcome to the Acumatica Test SDK Starter Guide! This guide is designed to help 
 - **Username:** `admin`
 - **Password:** `setup`
 - **Suggested new password:** `123` for local testing 
-4. Download and extract the `TestSDK.zip` for the matching version from [this link](https://builds.acumatica.com/index.html?prefix=builds/23.2/23.200.0151/TestSDK/) to `C:\AcumaticaTestSDK`.
-5. In Visual Studio, open the `Test-SDK-Starter-Guide` solution (`ISVTestSDK.sln`).
-6. Remove all old Dependencies -> Packages.
-7. Navigate to Manage NuGet Packages, add a new package source, and include the packages folder from `C:\AcumaticaTestSDK\TestSDK_23_200_0151_163\packages`.
-8. Add all references from the new NuGet source to the project.
-9. In `test.cs`, update `physicalSitePath` to the website's install folder location`C:\AcumaticaSites\23r200`.
-10. In `launchsettings.json`, update the `commandLineArgs` to point to `C:\AcumaticaTestSDK\TestSDK_23_200_0151_163\config.xml`.
-11. Configure `config.xml` from `C:\AcumaticaTestSDK\TestSDK_23_200_0151_163` to match your site. Use the Chrome version from `C:\AcumaticaTestSDK\TestSDK_23_200_0151_163\Chrome\chrome.exe`.
-12. Configure and run the `GenerateWrappers()` method.
+4. In Visual Studio, open the `Test-SDK-Starter-Guide` solution (`ISVTestSDK.sln`).
+5. Remove all old Dependencies -> Packages.
+6. Navigate to Manage NuGet Packages, add a new package source, and include the packages folder from `C:\AcumaticaTestSDK\TestSDK_23_200_0151_163\packages`.
+7. Add all references from the new NuGet source to the project.
+8. In `test.cs`, update `physicalSitePath` to the website's install folder location`C:\AcumaticaSites\23r200`.
+9. In `launchsettings.json`, update the `commandLineArgs` to point to `C:\AcumaticaTestSDK\TestSDK_23_200_0151_163\config.xml`.
+10. Configure `config.xml` from `C:\AcumaticaTestSDK\TestSDK_23_200_0151_163` to match your site. Use the Chrome version from `C:\AcumaticaTestSDK\TestSDK_23_200_0151_163\Chrome\chrome.exe`.
+11. Configure and run the `GenerateWrappers()` method.
 
 ## Upgrading to a Newer Version
 
