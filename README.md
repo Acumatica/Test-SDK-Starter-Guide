@@ -1,66 +1,72 @@
-How to use this project for the first time:
+# Acumatica Test SDK Starter Guide
 
-Prerequisite steps:
-1) Download the AcumaticaERPInstall.msi from https://builds.acumatica.com/index.html?prefix=builds/23.2/23.200.0151/AcumaticaERP/AcumaticaERPInstall.msi, rename it to the version build number
-2) Extract the .msi with the following command using command prompt "msiexec /a C:\AcumaticaInstallers\23.200.0151.msi /qb targetdir=C:\AcumaticaInstallers\23.200.0151" - then run ac.exe to start the installer
-    This allows you to install multiple versions of acumatica at the same time.
-3) Install Acumatica website to C:\AcumaticaSites\23r200 for the correct specific version you want to target - use SalesDemo data during install - name the website and database 23r200
-4) Login to the new website localhost/23r200 the initial credentials will be Username: admin Password: setup - it will prompt you to set a new password, 123 is suggested for local instance testing.
-5) Download the TestSDK.zip for the same version from https://builds.acumatica.com/index.html?prefix=builds/23.2/23.200.0151/TestSDK/ - extract it to C:\AcumaticaTestSDK
-6) Create C:\share
-7) Create C:\share\download
-8) Create C:\share\logs -> for test results
+Welcome to the Acumatica Test SDK Starter Guide! This guide is designed to help developers set up and run tests using the Acumatica Test Software Development Kit (SDK). Whether you're just starting out or looking to upgrade an existing project, follow the steps below to ensure a smooth testing experience with Acumatica.
 
-In Visual Studio open the Test-SDK-Starter-Guide solution - ISVTestSDK.sln
+## Table of Contents
+- [Setting up a New Test Project](#setting-up-a-new-test-project)
+- [Upgrading to a Newer Version](#upgrading-to-a-newer-version)
+- [Certification Submission Requirements](#certification-submission-requirements)
+- [Common Errors and Troubleshooting](#common-errors-and-troubleshooting)
 
-9) Remove all the old Dependancies -> Packages
-10) Go to Manage Nuget Packages -> Add a new package source and add the packages folder from C:\AcumaticaTestSDK\TestSDK_23_200_0151_163\packages
-11) Add all references from the new source to the project
-12) In test.cs update physicalSitePath to the websites install folder location
-13) In launchsettings.json update the commandLineArgs to use your testSDK download C:\AcumaticaTestSDK\TestSDK_23_200_0151_163\config.xml  - This lets you just press run in Visual studio to kick off the test.
-14) Configure that config.xml from C:\AcumaticaTestSDK\TestSDK_23_200_0151_163 to match your site (use the chrome location from testSDK download folder C:\AcumaticaTestSDK\TestSDK_23_200_0151_163\Chrome\chrome.exe 
-    , not your personal chrome browser and website url)
-15) Configure and run the GenerateWrappers() method.
-_______________________________________________________________________________________________________________
-How to update a test project to a newer minor or major version:
+## Setting up a New Test Project
 
-Prerequisite steps:
-1) Download and install the Acumatica version you want to upgrade to. Install it to C:\AcumaticaSites\23r200 for the correct specific version you want to target - use SalesDemo data during install - 
-    name the website and database 23r200
-2) Publish your customization to the site
-3) Download and extract the testSDK.zip for the same version - extract it to C:\AcumaticaTestSDK
+### Prerequisites
+1. Download the [AcumaticaERPInstall.msi](https://builds.acumatica.com/index.html?prefix=builds/23.2/23.200.0151/AcumaticaERP/AcumaticaERPInstall.msi) and rename it to the version build number eg. 23.200.0151.msi.
+2. Create directories: 
+    - `C:\share`
+    - `C:\share\download`
+    - `C:\share\logs` (for test results)
 
-In Visual Studio open the Test-SDK-Starter-Guide solution - ISVTestSDK.sln
+### Installation and Configuration
+1. Extract the .msi using this command, this command allows you to install multiple versions of Acumatica on the same machine.:
+    ```cmd
+    msiexec /a C:\AcumaticaInstallers\23.200.0151.msi /qb targetdir=C:\AcumaticaInstallers\23.200.0151
+    ```
+   Run `ac.exe` to start the installer.
+2. Install Acumatica website to `C:\AcumaticaSites\23r200` for the specific version. Use the `SalesDemo` data during install and name the website and database `23r200`.
+3. Login to the new website at `localhost/23r200` with initial credentials: 
+- **Username:** `admin`
+- **Password:** `setup`
+- **Suggested new password:** `123` for local testing 
+4. Download and extract the `TestSDK.zip` for the matching version from [this link](https://builds.acumatica.com/index.html?prefix=builds/23.2/23.200.0151/TestSDK/) to `C:\AcumaticaTestSDK`.
+5. In Visual Studio, open the `Test-SDK-Starter-Guide` solution (`ISVTestSDK.sln`).
+6. Remove all old Dependencies -> Packages.
+7. Navigate to Manage NuGet Packages, add a new package source, and include the packages folder from `C:\AcumaticaTestSDK\TestSDK_23_200_0151_163\packages`.
+8. Add all references from the new NuGet source to the project.
+9. In `test.cs`, update `physicalSitePath` to the website's install folder location`C:\AcumaticaSites\23r200`.
+10. In `launchsettings.json`, update the `commandLineArgs` to point to `C:\AcumaticaTestSDK\TestSDK_23_200_0151_163\config.xml`.
+11. Configure `config.xml` from `C:\AcumaticaTestSDK\TestSDK_23_200_0151_163` to match your site. Use the Chrome version from `C:\AcumaticaTestSDK\TestSDK_23_200_0151_163\Chrome\chrome.exe`.
+12. Configure and run the `GenerateWrappers()` method.
 
-4) Remove all the old Dependancies -> Packages
-5) Go to Manage Nuget Packages -> Add a new package source and add the packages folder from C:\AcumaticaTestSDK\TestSDK_23_200_0151_163\packages
-6) Add all references from the new source to the project
-7) In test.cs update physicalSitePath to the websites install folder location
-8) In launchsettings.json update the commandLineArgs to use your testSDK download C:\AcumaticaTestSDK\TestSDK_23_200_0151_163\config.xml  - This lets you just press run in Visual studio to kick off the test.
-9) Configure that config.xml from C:\AcumaticaTestSDK\TestSDK_23_200_0151_163 to match your site (use the chrome location from testSDK download folder C:\AcumaticaTestSDK\TestSDK_23_200_0151_163\Chrome\chrome.exe
-    , not your personal chrome browser and website url)
-10) Configure and run the GenerateWrappers() method.
-11) Existing Extensions should not require any changes unless a field was moved or changed.
-_______________________________________________________________________________________________________________
-Certification submission Requirements and best practices:
+## Upgrading to a Newer Version
 
-1) No external dependancies may be used to run the tests
-2) Any Excel files must be included in the Excels folder and imported using the sample code
-3) All files must have the namespace - exactly "namespace GeneratedWrappers.SOLUTIONNAME" where SOLUTIONNAME is your registered solution name from the ISV Partner Portal in capital letters
-4) You must use the GenerateWrappers() Method
-5) From the starting state of SalesDemo data + your customization packages published - with no manual configuration - You must make all pages accessable before wrapper generation using a Customization Plug-In 
-    or testSDK code or wrapper generation will fail.
-6) From the starting state of SalesDemo data + your customization packages published - All setup data must be done via testSDK code or Customization Plug-in to configure the test starting state. Snapshots 
-    are not supported.
-7) You must execute all tests in order from 1 test.cs file
+### Prerequisites
+1. Download and install the Acumatica version you want to upgrade to at `C:\AcumaticaSites\23r200`. Use `SalesDemo` data during install and name the website and database `23r200`.
+2. Publish your customization to the site.
+3. Download and extract `testSDK.zip` for the corresponding version to `C:\AcumaticaTestSDK`.
 
-_______________________________________________________________________________________________________________
-Common Errors: 
-If you encounter any errors check the C:\share\logs, or your file paths in the previous config steps if a log doesnt exist.
+### Visual Studio Configuration
+1. Open the `Test-SDK-Starter-Guide` solution (`ISVTestSDK.sln`).
+2. Remove all old Dependencies -> Packages.
+3. Navigate to Manage NuGet Packages, add a new package source, and include the packages folder from `C:\AcumaticaTestSDK\TestSDK_23_200_0151_163\packages`.
+4. Add all references from the new NuGet source to the project.
+5. In `test.cs`, update `physicalSitePath` to the website's install folder location.
+6. In `launchsettings.json`, update the `commandLineArgs` to point to `C:\AcumaticaTestSDK\TestSDK_23_200_0151_163\config.xml`.
+7. Configure `config.xml` from `C:\AcumaticaTestSDK\TestSDK_23_200_0151_163` to match your site. Use the Chrome version from `C:\AcumaticaTestSDK\TestSDK_23_200_0151_163\Chrome\chrome.exe`.
+8. Configure and run the `GenerateWrappers()` method.
 
-1) Test exited with Error code 0: The test passed successfully. 
-2) Test exited with Error code 2: Your test has failed, please check the generated log file we configured in step 11 
-3) Test exited with Error code 1: Invalid/missing file, likely incorrect folder mapped in the config files somewhere or a missing wrapper/extension 
-4) Acumatica site no longer accessible after generating wrappers or running a test: The Wrapper Generation process ended without resetting and releasing the web.config. 
-    a) Wait for the Wrapper generation to finish and self close and it will unlock. Do not manually close the classgenerator.exe window.
-    b) Fix it by copying the original saved web.config that was stored in the website folder as “web.config.63b98fa0”  or similar into the web.config file.
+## Certification Submission Requirements
+- No external dependencies may be used to run the tests.
+- Any Excel files must be in the `Excels` folder and imported using sample code.
+- **All files** should have the exact namespace: "namespace GeneratedWrappers.SOLUTIONNAME" where `SOLUTIONNAME` is your registered solution name from the ISV Partner Portal in uppercase.
+- Use the `GenerateWrappers()` method.
+- From the starting state of SalesDemo data + your customization packages published - with no manual configuration - You must make all pages accessable before wrapper generation using a Customization Plug-In or testSDK code or wrapper generation will fail.
+- From the starting state of SalesDemo data + your customization packages published - All setup data must be done via testSDK code or Customization Plug-in to configure the test starting state. Snapshots are not supported.
+- Execute all tests in order from the `test.cs` file.
+
+## Common Errors and Troubleshooting
+- **Error Codes**:
+  - `0`: Test passed successfully.
+  - `2`: Test failed. Check the generated log at `C:\share\logs`.
+  - `1`: Invalid/missing file or folder mapping error.
+- **Site Inaccessible after Generating Wrappers**: The Wrapper Generation cmd window was closed manually and didnt reset the `web.config` back to the prognal. You must wait for the Wrapper generation to complete and self-close. To restore the website you must copy the original web.config - now named 'web.config.63b98fa0' and paste the contects back into the web.config file.
