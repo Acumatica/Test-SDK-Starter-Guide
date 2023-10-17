@@ -12,9 +12,9 @@ Welcome to the Acumatica Test SDK Starter Guide! This guide is designed to help 
 
 ### Prerequisites
 1. Create directories:
-    - 'C:\AcumaticaTestSDK'
-    - 'C:\AcumaticaInstallers'
-    - 'C:\AcumaticaSites'
+    - `C:\AcumaticaTestSDK`
+    - `C:\AcumaticaInstallers`
+    - `C:\AcumaticaSites`
     - `C:\share`
     - `C:\share\download`
     - `C:\share\logs` (for test results)
@@ -72,4 +72,4 @@ Welcome to the Acumatica Test SDK Starter Guide! This guide is designed to help 
   - `0`: Test passed successfully.
   - `2`: Test failed. Check the generated log at `C:\share\logs`.
   - `1`: Invalid/missing file or folder mapping error.
-- **Site Inaccessible after Generating Wrappers**: The Wrapper Generation cmd window was closed manually and didnt reset the `web.config` back to the prognal. You must wait for the Wrapper generation to complete and self-close. To restore the website you must copy the original web.config - now named 'web.config.63b98fa0' and paste the contects back into the web.config file.
+- **Site Inaccessible after Generating Wrappers**: The Wrapper Generation cmd window was closed manually and didnt reset the `web.config` back to the prognal. You must wait for the Wrapper generation to complete and self-close. To restore the website you must copy the original web.config - now named `web.config.63b98fa0` and paste the contects back into the web.config file.
