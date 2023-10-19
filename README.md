@@ -59,6 +59,7 @@ Welcome to the Acumatica Test SDK Starter Guide! This guide is designed to help 
 8. Configure and run the `GenerateWrappers()` method.
 
 ## Certification Submission Requirements
+- Submit the following folders and file inside a .zip `Excels, Extensions, Helpers,Tests, Wrappers, Test.cs`
 - No external dependencies may be used to run the tests.
 - Any Excel files must be in the `Excels` folder and imported using sample code.
 - **All files** should have the exact namespace: "namespace GeneratedWrappers.SOLUTIONNAME" where `SOLUTIONNAME` is your registered solution name from the ISV Partner Portal in uppercase.
