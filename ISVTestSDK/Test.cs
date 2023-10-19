@@ -10,7 +10,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
     {
         // Ensure to follow the readme steps for this project before running as to properly configure it.
         // https://github.com/Acumatica/Test-SDK-Starter-Guide/blob/master/README.md
-        const string physicalSitePath = @"C:\AcumaticaSites\23r200pre1";
+        const string physicalSitePath = @"C:\AcumaticaSites\23r201";
 
         public void GenerateWrappers()
         {
