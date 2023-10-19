@@ -1,74 +1,13 @@
-﻿using Controls.CheckBox;
-using Core;
-using Core.Log;
-using Core.Login;
+﻿using Core.Log;
 using Core.TestExecution;
-using Core.Wait;
-using GeneratedWrappers.SOLUTIONNAME;
 using OfficeOpenXml;
 using System;
-using System.Collections.Generic;
-using System.Data;
 using System.IO;
 
-//namespace of all tests, extensions, wrappers, and helper files
-//should be the same as below, with SOLUTIONNAME being your registered solution name
-//in all capitals from the ISV Solutions page of the Acumatica Partner Portal.
-namespace GeneratedWrappers.SOLUTIONNAME 
+namespace GeneratedWrappers.SOLUTIONNAME
 {
-    public class Test1 : Check
+    internal class ExcelExample
     {
-        CA306000CABankTransactions CABankTransactionsMaint = new CA306000CABankTransactions();
-        SO301000SOOrderEntry SOOrderEntry = new SO301000SOOrderEntry();
-        public CS100000FeaturesMaint Features = new CS100000FeaturesMaint();
-        public override void Execute()
-        {
-            PxLogin.LoginToDestinationSite();
-            using (TestExecution.CreateTestStepGroup("Config site to the test start state"))
-            {
-                ConfigWebsiteFromSalesDemo();
-                ExcelDataEntryExample();
-            }
-            using (TestExecution.CreateTestStepGroup("Main Tests"))
-            {
-                BasicTest();
-                GenericInquiryViewExample();
-            }
-        }
-
-        public void ConfigWebsiteFromSalesDemo()
-        {
-            // We assume the test starts from a blank salesdemo data + your customization published again.
-            // If you had test steps running for wrapper generation, they must be run again here before the test.
-
-            Features.OpenScreen();
-            Features.Insert();
-            Features.Summary.SalesQuotes.SetTrue();
-            Features.Summary.DynamicControl<CheckBox>("Multicurrency Accounting").SetTrue();
-            Features.RequestValidation();
-
-            // Use TestSDK code to enter any data required for the following tests to run.
-            // eg. Configure numbering sequences, Enableing features, checkboxes on screens, setting up items
-            // with newly added attributes.
-        }
-
-        public void BasicTest()
-        {
-            CABankTransactionsMaint.OpenScreen();
-            CABankTransactionsMaint.Filter.CashAccountID.Type("10200");
-            CABankTransactionsMaint.Filter.CashAccountID.GetValue().VerifyContains("10200").Assert();
-            CABankTransactionsMaint.Filter.CashAccountID.Type("10400");
-        }
-
-        public void GenericInquiryViewExample()
-        {
-            //Logic for viewing GenericInquiry and checking if a value exists.
-            IN2025PLPXGenericInqGrph IN2025PL = new IN2025PLPXGenericInqGrph();
-            IN2025PL.OpenScreen();
-            IN2025PL.ResultGrid.Columns.InventoryItem_inventoryCD.Equals("AACOMPUT01");
-            IN2025PL.ResultGrid.ResetColumnFilters();
-        }
-
         public void ExcelDataEntryExample()
         {
             // Inside of the "Core" package dependancy, Acumatica has included EPPlus 4.5.3.2,
@@ -78,12 +17,13 @@ namespace GeneratedWrappers.SOLUTIONNAME
             // TestSDK packages folder.
 
             //Excel files must be placed in the project's Excels folder and the file imported as below
-            //Excel files MUST start with your solutions initials to make them uniquely named.
+            //Excel files MUST start with your registered SOLUTIONNAME to make them uniquely named.
             string excelsPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName + @"\Excels\";
-            var excel = new ExcelPackage(new FileInfo(excelsPath + "SOLUTIONINITIALSExcelData.xlsx"));
-            
+            var excel = new ExcelPackage(new FileInfo(excelsPath + "SOLUTIONNAMEExcelData.xlsx"));
+
             using (TestExecution.CreateTestStepGroup("Import and enter data from excel"))
             {
+                SO301000SOOrderEntry SOOrderEntry = new SO301000SOOrderEntry();
                 SOOrderEntry.OpenScreen();
                 {
                     var ExcelHeaderTab = excel.Workbook.Worksheets["Header"];
@@ -112,14 +52,12 @@ namespace GeneratedWrappers.SOLUTIONNAME
                                     SOOrderEntry.Transactions.Row.OrderQty.Type(ExcelDetailsTab.Cells[detailsTab, 3].Text);
                                 }
                             }
-
                             SOOrderEntry.Shipping.ShipVia.Type(ExcelShippingTab.Cells[row, 2].Text);
                             SOOrderEntry.Addresses.OverrideAddress.Set(true);
                             SOOrderEntry.Addresses.AddressLine1.Type(ExcelAddressesTab.Cells[row, 3].Text);
-
                             SOOrderEntry.Save();
                         }
-                        catch (Exception ex) 
+                        catch (Exception ex)
                         {
                             Log.Error(ex.StackTrace.ToString());
                             continue;
@@ -128,6 +66,5 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 }
             }
         }
-
     }
 }
