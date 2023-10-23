@@ -17,6 +17,11 @@ namespace GeneratedWrappers.SOLUTIONNAME
             string projectPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
             string wrapperPath = String.Format(projectPath + @"\Wrappers\");
 
+            PxLogin.LoginToDestinationSite();
+            //You must config the website to enable all screens before running Wrapper Generation
+            ConfigWebsite configWebsite = new ConfigWebsite();
+            configWebsite.ConfigForWrapperGeneration();
+
             ClassGenerator.ClassGenerator classGenerator = new ClassGenerator.ClassGenerator(physicalSitePath, wrapperPath);
             classGenerator.Username = "admin";
             // Replace SOLUTIONNAME with your registered solution name from the Partner Portal in all capitals.
@@ -31,13 +36,8 @@ namespace GeneratedWrappers.SOLUTIONNAME
             // exactly "namespace GeneratedWrappers.SOLUTIONNAME"
             // How to Create Extension Files.docx is a very useful guide to create these extensions.
         }
-        public override void Execute()
-        {
-            PxLogin.LoginToDestinationSite();
-
-            ConfigWebsite configWebsite = new ConfigWebsite();
-            configWebsite.ConfigForWrapperGeneration();
-
+        public override void Execute() //Do not modify this method
+        { 
             GenerateWrappers();
             // GenerateWrappers() Only needs to be run once after updating the Acumatica version or editing your customization project.
             // It takes 5-20 minutes to run, do not close it manually or else you will need to fix your web.config
