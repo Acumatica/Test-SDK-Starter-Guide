@@ -5,6 +5,7 @@
     <TargetFramework>net48</TargetFramework>
   </PropertyGroup>
 
+
   <ItemGroup>
     <PackageReference Include="ClassGenerator" Version="23.201.92.93" />
     <PackageReference Include="Core" Version="23.201.92.93" />
@@ -28,6 +29,10 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Extensions\" />
   </ItemGroup>
 
 </Project>

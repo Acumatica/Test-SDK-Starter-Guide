@@ -24,6 +24,9 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 BasicExampleTests basicExampleTests = new BasicExampleTests();
                 basicExampleTests.BasicTest();
                 basicExampleTests.GenericInquiryViewExample();
+
+                ExcelExample excelExample = new ExcelExample();
+                excelExample.ExcelDataEntryExample();
             }
         }
     }
