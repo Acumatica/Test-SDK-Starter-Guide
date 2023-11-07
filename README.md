@@ -50,7 +50,7 @@ Welcome to the Acumatica Test SDK Starter Guide! This guide is designed to help 
 
 ### Visual Studio Configuration
 1. Open the `Test-SDK-Starter-Guide` solution (`ISVTestSDK.sln`).
-2. Remove all old Dependencies -> Packages.
+2. Remove all old Dependencies -> Packages from the project.
 3. Navigate to Manage NuGet Packages, add a new package source, and include the packages folder from `C:\AcumaticaTestSDK\TestSDK_23_201_0092_93\packages`.
 4. Add all references from the new NuGet source to the project.
 5. In `test.cs`, update `physicalSitePath` to the website's install folder location.
