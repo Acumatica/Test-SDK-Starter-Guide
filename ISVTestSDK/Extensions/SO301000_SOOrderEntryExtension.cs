@@ -105,6 +105,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
         public c_matrixitems_lv0 matrixItems_lv0 => MatrixItems_lv0;
         public c_quickpayment_createpaymentformview quickPayment_CreatePaymentFormView => QuickPayment_CreatePaymentFormView;
         public c_importexternaltran_importpaymentformview importExternalTran_ImportPaymentFormView => ImportExternalTran_ImportPaymentFormView;
+        public c_paylink_pxformpaylink2 payLink_PXFormPayLink2 => PayLink_PXFormPayLink2;
         public c_orderrisks_gridorderrisks orderRisks_gridOrderRisks => OrderRisks_gridOrderRisks;
         public c_orderestimaterecords_gridestimates orderEstimateRecords_gridEstimates => OrderEstimateRecords_gridEstimates;
         public c_orderestimaterecords_lv0 orderEstimateRecords_lv0 => OrderEstimateRecords_lv0;
@@ -113,7 +114,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
         public c_linkprodorderselectfilter_formlinkfilter linkProdOrderSelectFilter_formLinkFilter => LinkProdOrderSelectFilter_formLinkFilter;
         public c_selectedestimaterecord_quickestimateform selectedEstimateRecord_QuickEstimateForm => SelectedEstimateRecord_QuickEstimateForm;
         public c_orderestimateitemfilter_estimateaddform orderEstimateItemFilter_estimateAddForm => OrderEstimateItemFilter_estimateAddForm;
-        public c_paylink_pxformpaylink2 payLink_PXFormPayLink2 => PayLink_PXFormPayLink2;
         public c_createserviceorderfilter_formcreateserviceorder createServiceOrderFilter_formCreateServiceOrder => CreateServiceOrderFilter_formCreateServiceOrder;
         public c_soorderlinesplittingextension_lotseroptions_optform sOOrderLineSplittingExtension_LotSerOptions_optform => SOOrderLineSplittingExtension_LotSerOptions_optform;
         public c_workflowview_workflowfictivediagram workflowView_WorkflowFictiveDiagram => WorkflowView_WorkflowFictiveDiagram;

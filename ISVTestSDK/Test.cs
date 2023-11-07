@@ -31,9 +31,10 @@ namespace GeneratedWrappers.SOLUTIONNAME
             // PL and GI screens are added like this, get the "URL" from the site map screen.
             classGenerator.Screens.Add("IN2025PL", "~/GenericInquiry/GenericInquiry.aspx?id=e4352bbd-a53a-42c4-9b96-e9f0fda070c7");
             // Add all screens here you use in your test below, except PL screens are added as above.
-            classGenerator.Run("CA306000,CS100000,SO, AR5*");
-            //more examples. uou can also use regex such as 
-            //,AR201000,AR202000,AR209500,AR303000,CS205000,IN101000,IN201000,IN202000,IN202500,IN204060,IN301000,SM205020,SM208000,SM302000,SO201000,SO301000,SO302000
+            classGenerator.Run("CA306000,CS100000,SO301000");
+            // You can also use regex such as:
+            // classGenerator.Run("SO, AR5*"); // generates all SO screens and all AR5***** screens
+            // more example screens : R201000,AR202000,AR209500,AR303000,CS205000,IN101000,IN201000,IN202000,IN202500,IN204060,IN301000,SM205020,SM208000,SM302000,SO201000,SO301000,SO302000
 
             // AutoGenerate Extension files:
             // How to Create Extension Files.docx is a very useful guide to create these extensions.

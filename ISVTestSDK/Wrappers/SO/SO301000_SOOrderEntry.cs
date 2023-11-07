@@ -157,6 +157,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
         protected c_matrixitems_lv0 MatrixItems_lv0 { get; } = new c_matrixitems_lv0("ctl00_phG_InventoryMatrixEntrySmartPanel_MatrixItems_lv0", "MatrixItems_lv0");
         protected c_quickpayment_createpaymentformview QuickPayment_CreatePaymentFormView { get; } = new c_quickpayment_createpaymentformview("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView", "QuickPayment_CreatePaymentFormView");
         protected c_importexternaltran_importpaymentformview ImportExternalTran_ImportPaymentFormView { get; } = new c_importexternaltran_importpaymentformview("ctl00_phG_ImportPaymentSmartPanel_ImportPaymentFormView", "ImportExternalTran_ImportPaymentFormView");
+        protected c_paylink_pxformpaylink2 PayLink_PXFormPayLink2 { get; } = new c_paylink_pxformpaylink2("ctl00_phG_tab_t11_PayLinks_PXFormPayLink2", "PayLink_PXFormPayLink2");
         protected c_orderrisks_gridorderrisks OrderRisks_gridOrderRisks { get; } = new c_orderrisks_gridorderrisks("ctl00_phG_tab_t13_gridOrderRisks", "OrderRisks_gridOrderRisks");
         protected c_orderestimaterecords_gridestimates OrderEstimateRecords_gridEstimates { get; } = new c_orderestimaterecords_gridestimates("ctl00_phG_tab_t1_gridEstimates", "OrderEstimateRecords_gridEstimates");
         protected c_orderestimaterecords_lv0 OrderEstimateRecords_lv0 { get; } = new c_orderestimaterecords_lv0("ctl00_phG_tab_t1_gridEstimates_lv0", "OrderEstimateRecords_lv0");
@@ -165,7 +166,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
         protected c_linkprodorderselectfilter_formlinkfilter LinkProdOrderSelectFilter_formLinkFilter { get; } = new c_linkprodorderselectfilter_formlinkfilter("ctl00_phG_edPanelLinkProd_formLinkFilter", "linkProdOrderSelectFilter_formLinkFilter");
         protected c_selectedestimaterecord_quickestimateform SelectedEstimateRecord_QuickEstimateForm { get; } = new c_selectedestimaterecord_quickestimateform("ctl00_phG_QuickEstimatePanel_QuickEstimateForm", "SelectedEstimateRecord_QuickEstimateForm");
         protected c_orderestimateitemfilter_estimateaddform OrderEstimateItemFilter_estimateAddForm { get; } = new c_orderestimateitemfilter_estimateaddform("ctl00_phG_AddEstimatePanel_estimateAddForm", "OrderEstimateItemFilter_estimateAddForm");
-        protected c_paylink_pxformpaylink2 PayLink_PXFormPayLink2 { get; } = new c_paylink_pxformpaylink2("ctl00_phG_tab_t11_PayLinks_PXFormPayLink2", "PayLink_PXFormPayLink2");
         protected c_createserviceorderfilter_formcreateserviceorder CreateServiceOrderFilter_formCreateServiceOrder { get; } = new c_createserviceorderfilter_formcreateserviceorder("ctl00_phG_panelCreateServiceOrder_formCreateServiceOrder", "CreateServiceOrderFilter_formCreateServiceOrder");
         protected c_soorderlinesplittingextension_lotseroptions_optform SOOrderLineSplittingExtension_LotSerOptions_optform { get; } = new c_soorderlinesplittingextension_lotseroptions_optform("ctl00_phG_PanelLS_optform", "SOOrderLineSplittingExtension_LotSerOptions_optform");
         protected c_workflowview_workflowfictivediagram WorkflowView_WorkflowFictiveDiagram { get; } = new c_workflowview_workflowfictivediagram("ctl00_usrCaption_WorkflowDiagram_pnlWorkFlow_WorkflowFictiveDiagram", "WorkflowView_WorkflowFictiveDiagram");
@@ -14207,6 +14207,67 @@ namespace GeneratedWrappers.SOLUTIONNAME
             }
         }
         
+        public class c_paylink_pxformpaylink2 : Container
+        {
+            
+            public PxButtonCollection Buttons;
+            
+			public PXTextEdit Url { get; }
+			public Label UrlLabel { get; }
+			public DropDown LinkStatus { get; }
+			public Label LinkStatusLabel { get; }
+            
+            public c_paylink_pxformpaylink2(string locator, string name) : 
+                    base(locator, name)
+            {
+                Url = new PXTextEdit("ctl00_phG_tab_t11_PayLinks_PXFormPayLink2_txtUrl", "Url", locator, null);
+                UrlLabel = new Label(Url);
+                Url.DataField = "Url";
+                LinkStatus = new DropDown("ctl00_phG_tab_t11_PayLinks_PXFormPayLink2_cmbLinkStatus1", "Link Status", locator, null);
+                LinkStatusLabel = new Label(LinkStatus);
+                LinkStatus.DataField = "LinkStatus";
+                DataMemberName = "PayLink";
+                Buttons = new PxButtonCollection();
+            }
+            
+            public virtual void CreateLink()
+            {
+                Buttons.CreateLink.Click();
+            }
+            
+            public virtual void SyncLink()
+            {
+                Buttons.SyncLink.Click();
+            }
+            
+            public virtual void DeactivateLink()
+            {
+                Buttons.DeactivateLink.Click();
+            }
+            
+            public virtual void ResendLink()
+            {
+                Buttons.ResendLink.Click();
+            }
+            
+            public class PxButtonCollection : PxControlCollection
+            {
+                
+			public Button CreateLink { get; }
+			public Button SyncLink { get; }
+			public Button DeactivateLink { get; }
+			public Button ResendLink { get; }
+                
+                public PxButtonCollection()
+                {
+                    CreateLink = new Button("ctl00_phG_tab_t11_PayLinks_btnCreateLink", "Create Payment Link", "ctl00_phG_tab_t11_PayLinks_PXFormPayLink2");
+                    SyncLink = new Button("ctl00_phG_tab_t11_PayLinks_btnSyncLink", "Sync Payment Link", "ctl00_phG_tab_t11_PayLinks_PXFormPayLink2");
+                    DeactivateLink = new Button("ctl00_phG_tab_t11_PayLinks_btnDeactivateLink", "Close Payment Link", "ctl00_phG_tab_t11_PayLinks_PXFormPayLink2");
+                    ResendLink = new Button("ctl00_phG_tab_t11_PayLinks_btnResend", "Resend Payment Link", "ctl00_phG_tab_t11_PayLinks_PXFormPayLink2");
+                }
+            }
+        }
+        
         public class c_orderrisks_gridorderrisks : Grid<c_orderrisks_gridorderrisks.c_grid_row, c_orderrisks_gridorderrisks.c_grid_header>
         {
             
@@ -15337,67 +15398,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 {
                     Ok = new Button("ctl00_phG_AddEstimatePanel_AddEstButton1", "OK", "ctl00_phG_AddEstimatePanel_estimateAddForm");
                     Cancel = new Button("ctl00_phG_AddEstimatePanel_AddEstButton2", "Cancel", "ctl00_phG_AddEstimatePanel_estimateAddForm");
-                }
-            }
-        }
-        
-        public class c_paylink_pxformpaylink2 : Container
-        {
-            
-            public PxButtonCollection Buttons;
-            
-			public PXTextEdit Url { get; }
-			public Label UrlLabel { get; }
-			public DropDown LinkStatus { get; }
-			public Label LinkStatusLabel { get; }
-            
-            public c_paylink_pxformpaylink2(string locator, string name) : 
-                    base(locator, name)
-            {
-                Url = new PXTextEdit("ctl00_phG_tab_t11_PayLinks_PXFormPayLink2_txtUrl", "Url", locator, null);
-                UrlLabel = new Label(Url);
-                Url.DataField = "Url";
-                LinkStatus = new DropDown("ctl00_phG_tab_t11_PayLinks_PXFormPayLink2_cmbLinkStatus1", "Link Status", locator, null);
-                LinkStatusLabel = new Label(LinkStatus);
-                LinkStatus.DataField = "LinkStatus";
-                DataMemberName = "PayLink";
-                Buttons = new PxButtonCollection();
-            }
-            
-            public virtual void CreateLink()
-            {
-                Buttons.CreateLink.Click();
-            }
-            
-            public virtual void SyncLink()
-            {
-                Buttons.SyncLink.Click();
-            }
-            
-            public virtual void DeactivateLink()
-            {
-                Buttons.DeactivateLink.Click();
-            }
-            
-            public virtual void ResendLink()
-            {
-                Buttons.ResendLink.Click();
-            }
-            
-            public class PxButtonCollection : PxControlCollection
-            {
-                
-			public Button CreateLink { get; }
-			public Button SyncLink { get; }
-			public Button DeactivateLink { get; }
-			public Button ResendLink { get; }
-                
-                public PxButtonCollection()
-                {
-                    CreateLink = new Button("ctl00_phG_tab_t11_PayLinks_btnCreateLink", "Create Payment Link", "ctl00_phG_tab_t11_PayLinks_PXFormPayLink2");
-                    SyncLink = new Button("ctl00_phG_tab_t11_PayLinks_btnSyncLink", "Sync Payment Link", "ctl00_phG_tab_t11_PayLinks_PXFormPayLink2");
-                    DeactivateLink = new Button("ctl00_phG_tab_t11_PayLinks_btnDeactivateLink", "Close Payment Link", "ctl00_phG_tab_t11_PayLinks_PXFormPayLink2");
-                    ResendLink = new Button("ctl00_phG_tab_t11_PayLinks_btnResend", "Resend Payment Link", "ctl00_phG_tab_t11_PayLinks_PXFormPayLink2");
                 }
             }
         }
