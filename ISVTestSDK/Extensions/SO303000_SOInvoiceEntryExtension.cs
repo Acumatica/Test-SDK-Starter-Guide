@@ -1,0 +1,72 @@
+using Controls.Uploader;
+namespace GeneratedWrappers.SOLUTIONNAME
+{
+    public partial class SO303000_SOInvoiceEntryExtension : SO303000_SOInvoiceEntry
+    {
+        public c_document_form document_form => Document_form;
+        public c_parameters_gridwizard parameters_gridWizard => Parameters_gridWizard;
+        public c_profilerinfoview_formprofiler profilerInfoView_formProfiler => ProfilerInfoView_formProfiler;
+        public c_firstselect_formactions firstSelect_FormActions => FirstSelect_FormActions;
+        public c_comboboxvalues_gridcombos comboBoxValues_gridCombos => ComboBoxValues_gridCombos;
+        public c_vieweleminfo_formeleminfo viewElemInfo_FormElemInfo => ViewElemInfo_FormElemInfo;
+        public c_filterworkingproject_formnewproject filterWorkingProject_FormNewProject => FilterWorkingProject_FormNewProject;
+        public c_filterworkingproject_formselectproject filterWorkingProject_FormSelectProject => FilterWorkingProject_FormSelectProject;
+        public c_gridlist_gridgrid gridList_gridGrid => GridList_gridGrid;
+        public c_userlist_usergrid userList_userGrid => UserList_userGrid;
+        public c_userlist_lv0 userList_lv0 => UserList_lv0;
+        public c_currencyinfo_rf currencyInfo_rf => CurrencyInfo_rf;
+        public c_currentdocument_tab currentDocument_tab => CurrentDocument_tab;
+        public c_currentdocument_commission currentDocument_Commission => CurrentDocument_Commission;
+        public c_currentdocument_formg currentDocument_formG => CurrentDocument_formG;
+        public c_currentdocument_paylinks currentDocument_PayLinks => CurrentDocument_PayLinks;
+        public c_currentdocument_formpt currentDocument_formPT => CurrentDocument_formPT;
+        public c_rutrots_rutrotform rutrots_RUTROTForm => Rutrots_RUTROTForm;
+        public c_transactions_grid transactions_grid => Transactions_grid;
+        public c_transactions_lv0 transactions_lv0 => Transactions_lv0;
+        public c_sodocument_formp sODocument_formP => SODocument_formP;
+        public c_taxes_grid1 taxes_grid1 => Taxes_grid1;
+        public c_taxes_lv0 taxes_lv0 => Taxes_lv0;
+        public c_adjustments_detgrid adjustments_detgrid => Adjustments_detgrid;
+        public c_adjustments_lv0 adjustments_lv0 => Adjustments_lv0;
+        public c_adjustments_1_detgrid2 adjustments_1_detgrid2 => Adjustments_1_detgrid2;
+        public c_adjustments_1_lv0 adjustments_1_lv0 => Adjustments_1_lv0;
+        public c_shipping_address_shipping_address shipping_Address_Shipping_Address => Shipping_Address_Shipping_Address;
+        public c_currentdocument_address currentDocument_Address => CurrentDocument_Address;
+        public c_shipping_contact_shipping_contact shipping_Contact_Shipping_Contact => Shipping_Contact_Shipping_Contact;
+        public c_billing_address_forma billing_Address_formA => Billing_Address_formA;
+        public c_billing_contact_formc billing_Contact_formC => Billing_Contact_formC;
+        public c_recalcdiscountsfilter_formrecalcdiscounts recalcdiscountsfilter_formRecalcDiscounts => Recalcdiscountsfilter_formRecalcDiscounts;
+        public c_ardiscountdetails_discountdetailgrid aRDiscountDetails_discountDetailGrid => ARDiscountDetails_discountDetailGrid;
+        public c_ardiscountdetails_lv0 aRDiscountDetails_lv0 => ARDiscountDetails_lv0;
+        public c_salespertrans_gridsalespertran salesPerTrans_gridSalesPerTran => SalesPerTrans_gridSalesPerTran;
+        public c_salespertrans_lv0 salesPerTrans_lv0 => SalesPerTrans_lv0;
+        public c_freightdetails_gridfreightdetails freightDetails_gridFreightDetails => FreightDetails_gridFreightDetails;
+        public c_freightdetails_lv0 freightDetails_lv0 => FreightDetails_lv0;
+        public c_rrdistribution_griddistribution rRDistribution_gridDistribution => RRDistribution_gridDistribution;
+        public c_rrdistribution_lv0 rRDistribution_lv0 => RRDistribution_lv0;
+        public c_duplicatefilter_pxformviewpanelduplicate duplicatefilter_PXFormViewPanelDuplicate => Duplicatefilter_PXFormViewPanelDuplicate;
+        public c_shipmentlist_grid4 shipmentlist_grid4 => Shipmentlist_grid4;
+        public c_shipmentlist_lv0 shipmentlist_lv0 => Shipmentlist_lv0;
+        public c_addresslookupfilter_addresslookuppanelformaddress addressLookupFilter_AddressLookupPanelformAddress => AddressLookupFilter_AddressLookupPanelformAddress;
+        public c_relateditemsfilter_fvrelateditemsheader relatedItemsFilter_fvRelatedItemsHeader => RelatedItemsFilter_fvRelatedItemsHeader;
+        public c_allrelateditems_gridallrelateditems allRelatedItems_gridAllRelatedItems => AllRelatedItems_gridAllRelatedItems;
+        public c_allrelateditems_lv0 allRelatedItems_lv0 => AllRelatedItems_lv0;
+        public c_substituteitems_gridsubstituteitems substituteItems_gridSubstituteItems => SubstituteItems_gridSubstituteItems;
+        public c_substituteitems_lv0 substituteItems_lv0 => SubstituteItems_lv0;
+        public c_upsellitems_gridupsellitems upSellItems_gridUpSellItems => UpSellItems_gridUpSellItems;
+        public c_upsellitems_lv0 upSellItems_lv0 => UpSellItems_lv0;
+        public c_crosssellitems_gridcrosssellitems crossSellItems_gridCrossSellItems => CrossSellItems_gridCrossSellItems;
+        public c_crosssellitems_lv0 crossSellItems_lv0 => CrossSellItems_lv0;
+        public c_otherrelateditems_gridotherrelateditems otherRelatedItems_gridOtherRelatedItems => OtherRelatedItems_gridOtherRelatedItems;
+        public c_otherrelateditems_lv0 otherRelatedItems_lv0 => OtherRelatedItems_lv0;
+        public c_artranlist_gridartranlist arTranList_gridARTranList => ArTranList_gridARTranList;
+        public c_artranlist_lv0 arTranList_lv0 => ArTranList_lv0;
+        public c_solinelist_gridsolinelist soLineList_gridSOLineList => SoLineList_gridSOLineList;
+        public c_solinelist_lv0 soLineList_lv0 => SoLineList_lv0;
+        public c_quickpayment_createpaymentformview quickPayment_CreatePaymentFormView => QuickPayment_CreatePaymentFormView;
+        public c_importexternaltran_importpaymentformview importExternalTran_ImportPaymentFormView => ImportExternalTran_ImportPaymentFormView;
+        public c_paylink_pxformpaylink1 payLink_PXFormPayLink1 => PayLink_PXFormPayLink1;
+        public c_workflowview_workflowfictivediagram workflowView_WorkflowFictiveDiagram => WorkflowView_WorkflowFictiveDiagram;
+        public c_filterpreview_formpreview filterPreview_FormPreview => FilterPreview_FormPreview;
+    }
+}
