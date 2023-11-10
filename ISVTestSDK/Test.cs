@@ -36,10 +36,12 @@ namespace GeneratedWrappers.SOLUTIONNAME
             // classGenerator.Run("SO, AR5*"); // generates all SO screens and all AR5***** screens
             // more example screens : R201000,AR202000,AR209500,AR303000,CS205000,IN101000,IN201000,IN202000,IN202500,IN204060,IN301000,SM205020,SM208000,SM302000,SO201000,SO301000,SO302000
 
+            // You must create an extension file for each wrapper you have generated.
+            // Documentation/How to Create Extension Files.docx is a very useful guide to create extensions.
+
             // AutoGenerate Extension files:
-            // How to Create Extension Files.docx is a very useful guide to create these extensions.
-            GenerateExtensionsFromWrappers generateExtensionsFromWrappers = new GenerateExtensionsFromWrappers();
-            generateExtensionsFromWrappers.Execute(classGenerator.Namespace);
+            // GenerateExtensionsFromWrappers generateExtensionsFromWrappers = new GenerateExtensionsFromWrappers();
+            // generateExtensionsFromWrappers.Execute(classGenerator.Namespace);
         }
         public override void Execute() //Do not modify this method
         {
