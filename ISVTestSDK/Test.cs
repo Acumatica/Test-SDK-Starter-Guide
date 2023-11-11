@@ -39,7 +39,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
             // You must create an extension file for each wrapper you have generated.
             // Documentation/How to Create Extension Files.docx is a very useful guide to create extensions.
 
-            // AutoGenerate Extension files:
+            // AutoGenerate Extension files (defaulted names):
             // GenerateExtensionsFromWrappers generateExtensionsFromWrappers = new GenerateExtensionsFromWrappers();
             // generateExtensionsFromWrappers.Execute(classGenerator.Namespace);
         }
@@ -48,8 +48,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
             PxLogin.LoginToDestinationSite();
 
             //GenerateWrappers();
-            //GenerateExtensionsFromWrappers generateExtensionsFromWrappers = new GenerateExtensionsFromWrappers();
-            // generateExtensionsFromWrappers.Execute("GeneratedWrappers.SOLUTIONNAME");
             // GenerateWrappers() Only needs to be run once after updating the Acumatica version or editing your customization project.
             // It takes 5-20 minutes to run, do not close it manually or else you will need to fix your web.config
             // The wrappers are exact version specific.
