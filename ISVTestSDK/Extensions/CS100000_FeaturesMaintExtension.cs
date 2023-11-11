@@ -1,7 +1,7 @@
 using Controls.Uploader;
 namespace GeneratedWrappers.SOLUTIONNAME
 {
-    public partial class CS100000_FeaturesMaintExtension : CS100000_FeaturesMaint
+    class CS100000_FeaturesMaintExtension : CS100000_FeaturesMaint
     {
         public c_features_form features_form => Features_form;
         public c_parameters_gridwizard parameters_gridWizard => Parameters_gridWizard;

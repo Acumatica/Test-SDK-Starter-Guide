@@ -47,8 +47,9 @@ namespace GeneratedWrappers.SOLUTIONNAME
         {
             PxLogin.LoginToDestinationSite();
 
-            GenerateWrappers();
-
+            //GenerateWrappers();
+            //GenerateExtensionsFromWrappers generateExtensionsFromWrappers = new GenerateExtensionsFromWrappers();
+            // generateExtensionsFromWrappers.Execute("GeneratedWrappers.SOLUTIONNAME");
             // GenerateWrappers() Only needs to be run once after updating the Acumatica version or editing your customization project.
             // It takes 5-20 minutes to run, do not close it manually or else you will need to fix your web.config
             // The wrappers are exact version specific.

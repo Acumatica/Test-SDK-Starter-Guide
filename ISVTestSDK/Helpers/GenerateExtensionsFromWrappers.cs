@@ -52,7 +52,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     sw.WriteLine("using Controls.Uploader;");
                     sw.WriteLine("namespace GeneratedWrappers.SOLUTIONNAME");
                     sw.WriteLine("{");
-                    sw.WriteLine($"    public partial class {wrapperFileName}Extension : {wrapperFileName}");
+                    sw.WriteLine($"    class {wrapperFileName}Extension : {wrapperFileName}");
                     sw.WriteLine("    {");
 
                     foreach (Match match in matches)

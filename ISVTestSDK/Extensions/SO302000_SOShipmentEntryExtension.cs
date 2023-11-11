@@ -1,7 +1,7 @@
 using Controls.Uploader;
 namespace GeneratedWrappers.SOLUTIONNAME
 {
-    public partial class SO302000_SOShipmentEntryExtension : SO302000_SOShipmentEntry
+    class SO302000_SOShipmentEntryExtension : SO302000_SOShipmentEntry
     {
         public c_document_form document_form => Document_form;
         public c_parameters_gridwizard parameters_gridWizard => Parameters_gridWizard;

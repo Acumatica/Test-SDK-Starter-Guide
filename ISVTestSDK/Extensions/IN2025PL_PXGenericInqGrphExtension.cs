@@ -1,7 +1,7 @@
 using Controls.Uploader;
 namespace GeneratedWrappers.SOLUTIONNAME
 {
-    public partial class IN2025PL_PXGenericInqGrphExtension : IN2025PL_PXGenericInqGrph
+    class IN2025PL_PXGenericInqGrphExtension : IN2025PL_PXGenericInqGrph
     {
         public c_filter_form filter_form => Filter_form;
         public c_parameters_gridwizard parameters_gridWizard => Parameters_gridWizard;

@@ -1,7 +1,7 @@
 using Controls.Uploader;
 namespace GeneratedWrappers.SOLUTIONNAME
 {
-    public partial class CA306000_CABankTransactionsMaintExtension : CA306000_CABankTransactionsMaint
+    class CA306000_CABankTransactionsMaintExtension : CA306000_CABankTransactionsMaint
     {
         public c_tranfilter_form tranFilter_form => TranFilter_form;
         public c_parameters_gridwizard parameters_gridWizard => Parameters_gridWizard;
