@@ -56,49 +56,51 @@ namespace GeneratedWrappers.SOLUTIONNAME
         public PxToolBar ToolBar;
         
         public Container Translations { get; } = new Container("ctl00_L10nEditor", "Translations");
-        protected c_document_form Document_form { get; } = new c_document_form("ctl00_phF_form", "Document_form");
-        protected c_parameters_gridwizard Parameters_gridWizard { get; } = new c_parameters_gridwizard("ctl00_usrCaption_shareColumnsDlg_gridWizard", "Parameters_gridWizard");
-        protected c_profilerinfoview_formprofiler ProfilerInfoView_formProfiler { get; } = new c_profilerinfoview_formprofiler("ctl00_usrCaption_pnlProfiler_formProfiler", "ProfilerInfoView_formProfiler");
-        protected c_firstselect_formactions FirstSelect_FormActions { get; } = new c_firstselect_formactions("ctl00_usrCaption_CustomizationDialogs_PXSmartPanel1_FormActions", "FirstSelect_FormActions");
-        protected c_comboboxvalues_gridcombos ComboBoxValues_gridCombos { get; } = new c_comboboxvalues_gridcombos("ctl00_usrCaption_CustomizationDialogs_ComboBoxValuesDictDialog_gridCombos", "ComboBoxValues_gridCombos");
-        protected c_vieweleminfo_formeleminfo ViewElemInfo_FormElemInfo { get; } = new c_vieweleminfo_formeleminfo("ctl00_usrCaption_CustomizationDialogs_PanelElemInfo_FormElemInfo", "ViewElemInfo_FormElemInfo");
-        protected c_filterworkingproject_formnewproject FilterWorkingProject_FormNewProject { get; } = new c_filterworkingproject_formnewproject("ctl00_usrCaption_CustomizationDialogs_DlgNewProject_FormNewProject", "FilterWorkingProject_FormNewProject");
-        protected c_filterworkingproject_formselectproject FilterWorkingProject_FormSelectProject { get; } = new c_filterworkingproject_formselectproject("ctl00_usrCaption_CustomizationDialogs_WizardSelectProject_FormSelectProject", "FilterWorkingProject_FormSelectProject");
-        protected c_gridlist_gridgrid GridList_gridGrid { get; } = new c_gridlist_gridgrid("ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid", "GridList_gridGrid");
-        protected c_userlist_usergrid UserList_userGrid { get; } = new c_userlist_usergrid("ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid", "UserList_userGrid");
-        protected c_userlist_lv0 UserList_lv0 { get; } = new c_userlist_lv0("ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_lv0", "UserList_lv0");
-        protected c__soshipment_currencyinfo__rf _SOShipment_CurrencyInfo__rf { get; } = new c__soshipment_currencyinfo__rf("ctl00_phG_tab_t2_formF_edCury_pnlRate_rf", "_SOShipment_CurrencyInfo__rf");
-        protected c_currentdocument_formcarrierrates CurrentDocument_formCarrierRates { get; } = new c_currentdocument_formcarrierrates("ctl00_phG_PanelCarrierRates_formCarrierRates", "CurrentDocument_formCarrierRates");
-        protected c_currentdocument_formbroker CurrentDocument_formBroker { get; } = new c_currentdocument_formbroker("ctl00_phG_tab_t2_formBroker", "CurrentDocument_formBroker");
-        protected c_currentdocument_formi CurrentDocument_formI { get; } = new c_currentdocument_formi("ctl00_phG_tab_t2_formI", "CurrentDocument_formI");
-        protected c_currentdocument_formf CurrentDocument_formF { get; } = new c_currentdocument_formf("ctl00_phG_tab_t2_formF", "CurrentDocument_formF");
-        protected c_currentdocument_gridsm CurrentDocument_gridSM { get; } = new c_currentdocument_gridsm("ctl00_phG_tab_t2_gridSM", "CurrentDocument_gridSM");
-        protected c_transactions_grid Transactions_grid { get; } = new c_transactions_grid("ctl00_phG_tab_t0_grid", "Transactions_grid");
-        protected c_transactions_lv0 Transactions_lv0 { get; } = new c_transactions_lv0("ctl00_phG_tab_t0_grid_lv0", "Transactions_lv0");
-        protected c_splits_grid2 Splits_grid2 { get; } = new c_splits_grid2("ctl00_phG_PanelLS_grid2", "splits_grid2");
-        protected c_splits_lv0 Splits_lv0 { get; } = new c_splits_lv0("ctl00_phG_PanelLS_grid2_lv0", "splits_lv0");
-        protected c_shipping_address_formb Shipping_Address_formB { get; } = new c_shipping_address_formb("ctl00_phG_tab_t2_formB", "Shipping_Address_formB");
-        protected c_shipping_contact_formd Shipping_Contact_formD { get; } = new c_shipping_contact_formd("ctl00_phG_tab_t2_formD", "Shipping_Contact_formD");
-        protected c_orderlist_grid5 OrderList_grid5 { get; } = new c_orderlist_grid5("ctl00_phG_tab_t1_grid5", "OrderList_grid5");
-        protected c_orderlist_lv0 OrderList_lv0 { get; } = new c_orderlist_lv0("ctl00_phG_tab_t1_grid5_lv0", "OrderList_lv0");
-        protected c_packages_gridpackages Packages_gridPackages { get; } = new c_packages_gridpackages("ctl00_phG_tab_t3_gridPackages", "Packages_gridPackages");
-        protected c_packages_lv0 Packages_lv0 { get; } = new c_packages_lv0("ctl00_phG_tab_t3_gridPackages_lv0", "Packages_lv0");
-        protected c_packagesforrates_gridpackagesforrates PackagesForRates_gridPackagesForRates { get; } = new c_packagesforrates_gridpackagesforrates("ctl00_phG_PanelCarrierRates_gridPackagesForRates", "PackagesForRates_gridPackagesForRates");
-        protected c_packagesforrates_lv0 PackagesForRates_lv0 { get; } = new c_packagesforrates_lv0("ctl00_phG_PanelCarrierRates_gridPackagesForRates_lv0", "PackagesForRates_lv0");
-        protected c_addsofilter_form4 Addsofilter_form4 { get; } = new c_addsofilter_form4("ctl00_phG_PanelAddSO_form4", "addsofilter_form4");
-        protected c_soshipmentplan_grid4 Soshipmentplan_grid4 { get; } = new c_soshipmentplan_grid4("ctl00_phG_PanelAddSO_grid4", "soshipmentplan_grid4");
-        protected c_soshipmentplan_lv0 Soshipmentplan_lv0 { get; } = new c_soshipmentplan_lv0("ctl00_phG_PanelAddSO_grid4_lv0", "soshipmentplan_lv0");
-        protected c_carrierrates_gridrates CarrierRates_gridRates { get; } = new c_carrierrates_gridrates("ctl00_phG_PanelCarrierRates_gridRates", "CarrierRates_gridRates");
-        protected c_carrierrates_lv0 CarrierRates_lv0 { get; } = new c_carrierrates_lv0("ctl00_phG_PanelCarrierRates_gridRates_lv0", "CarrierRates_lv0");
-        protected c_packagedetailsplit_gridpackagedetailsplit PackageDetailSplit_gridPackageDetailSplit { get; } = new c_packagedetailsplit_gridpackagedetailsplit("ctl00_phG_tab_t3_gridPackageDetailSplit", "PackageDetailSplit_gridPackageDetailSplit");
-        protected c_packagedetailsplit_lv0 PackageDetailSplit_lv0 { get; } = new c_packagedetailsplit_lv0("ctl00_phG_tab_t3_gridPackageDetailSplit_lv0", "PackageDetailSplit_lv0");
-        protected c_addresslookupfilter_addresslookuppanelformaddress AddressLookupFilter_AddressLookupPanelformAddress { get; } = new c_addresslookupfilter_addresslookuppanelformaddress("ctl00_phG_AddressLookupPanel_AddressLookupPanelformAddress", "AddressLookupFilter_AddressLookupPanelformAddress");
-        protected c_picklistentries_picklistheader PickListEntries_PickListHeader { get; } = new c_picklistentries_picklistheader("ctl00_phG_PanelPickList_PickListHeader", "PickListEntries_PickListHeader");
-        protected c_picklistentries_gridpicklist PickListEntries_gridPickList { get; } = new c_picklistentries_gridpicklist("ctl00_phG_PanelPickList_gridPickList", "PickListEntries_gridPickList");
-        protected c_picklistentries_lv0 PickListEntries_lv0 { get; } = new c_picklistentries_lv0("ctl00_phG_PanelPickList_gridPickList_lv0", "PickListEntries_lv0");
-        protected c_soshipmentlinesplittingextension_lotseroptions_optform SOShipmentLineSplittingExtension_LotSerOptions_optform { get; } = new c_soshipmentlinesplittingextension_lotseroptions_optform("ctl00_phG_PanelLS_optform", "SOShipmentLineSplittingExtension_LotSerOptions_optform");
-        protected c_workflowview_workflowfictivediagram WorkflowView_WorkflowFictiveDiagram { get; } = new c_workflowview_workflowfictivediagram("ctl00_usrCaption_WorkflowDiagram_pnlWorkFlow_WorkflowFictiveDiagram", "WorkflowView_WorkflowFictiveDiagram");
-        protected c_filterpreview_formpreview FilterPreview_FormPreview { get; } = new c_filterpreview_formpreview("ctl00_usrCaption_PanelDynamicForm_FormPreview", "FilterPreview_FormPreview");
+        public c_document_form Document_form { get; } = new c_document_form("ctl00_phF_form", "Document_form");
+        public c_parameters_gridwizard Parameters_gridWizard { get; } = new c_parameters_gridwizard("ctl00_usrCaption_shareColumnsDlg_gridWizard", "Parameters_gridWizard");
+        public c_profilerinfoview_formprofiler ProfilerInfoView_formProfiler { get; } = new c_profilerinfoview_formprofiler("ctl00_usrCaption_pnlProfiler_formProfiler", "ProfilerInfoView_formProfiler");
+        public c_firstselect_formactions FirstSelect_FormActions { get; } = new c_firstselect_formactions("ctl00_usrCaption_CustomizationDialogs_PXSmartPanel1_FormActions", "FirstSelect_FormActions");
+        public c_comboboxvalues_gridcombos ComboBoxValues_gridCombos { get; } = new c_comboboxvalues_gridcombos("ctl00_usrCaption_CustomizationDialogs_ComboBoxValuesDictDialog_gridCombos", "ComboBoxValues_gridCombos");
+        public c_vieweleminfo_formeleminfo ViewElemInfo_FormElemInfo { get; } = new c_vieweleminfo_formeleminfo("ctl00_usrCaption_CustomizationDialogs_PanelElemInfo_FormElemInfo", "ViewElemInfo_FormElemInfo");
+        public c_filterworkingproject_formnewproject FilterWorkingProject_FormNewProject { get; } = new c_filterworkingproject_formnewproject("ctl00_usrCaption_CustomizationDialogs_DlgNewProject_FormNewProject", "FilterWorkingProject_FormNewProject");
+        public c_filterworkingproject_formselectproject FilterWorkingProject_FormSelectProject { get; } = new c_filterworkingproject_formselectproject("ctl00_usrCaption_CustomizationDialogs_WizardSelectProject_FormSelectProject", "FilterWorkingProject_FormSelectProject");
+        public c_gridlist_gridgrid GridList_gridGrid { get; } = new c_gridlist_gridgrid("ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid", "GridList_gridGrid");
+        public c_userlist_usergrid UserList_userGrid { get; } = new c_userlist_usergrid("ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid", "UserList_userGrid");
+        public c_userlist_lv0 UserList_lv0 { get; } = new c_userlist_lv0("ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_lv0", "UserList_lv0");
+        public c__soshipment_currencyinfo__rf _SOShipment_CurrencyInfo__rf { get; } = new c__soshipment_currencyinfo__rf("ctl00_phG_tab_t2_formF_edCury_pnlRate_rf", "_SOShipment_CurrencyInfo__rf");
+        public c_currentdocument_formcarrierrates CurrentDocument_formCarrierRates { get; } = new c_currentdocument_formcarrierrates("ctl00_phG_PanelCarrierRates_formCarrierRates", "CurrentDocument_formCarrierRates");
+        public c_currentdocument_formbroker CurrentDocument_formBroker { get; } = new c_currentdocument_formbroker("ctl00_phG_tab_t2_formBroker", "CurrentDocument_formBroker");
+        public c_currentdocument_formi CurrentDocument_formI { get; } = new c_currentdocument_formi("ctl00_phG_tab_t2_formI", "CurrentDocument_formI");
+        public c_currentdocument_formf CurrentDocument_formF { get; } = new c_currentdocument_formf("ctl00_phG_tab_t2_formF", "CurrentDocument_formF");
+        public c_currentdocument_gridsm CurrentDocument_gridSM { get; } = new c_currentdocument_gridsm("ctl00_phG_tab_t2_gridSM", "CurrentDocument_gridSM");
+        public c_currentdocument_cstformview10 CurrentDocument_CstFormView10 { get; } = new c_currentdocument_cstformview10("ctl00_phG_tab_t4_CstFormView10", "CurrentDocument_CstFormView10");
+        public c_transactions_grid Transactions_grid { get; } = new c_transactions_grid("ctl00_phG_tab_t0_grid", "Transactions_grid");
+        public c_transactions_lv0 Transactions_lv0 { get; } = new c_transactions_lv0("ctl00_phG_tab_t0_grid_lv0", "Transactions_lv0");
+        public c_splits_grid2 Splits_grid2 { get; } = new c_splits_grid2("ctl00_phG_PanelLS_grid2", "splits_grid2");
+        public c_splits_lv0 Splits_lv0 { get; } = new c_splits_lv0("ctl00_phG_PanelLS_grid2_lv0", "splits_lv0");
+        public c_shipping_address_formb Shipping_Address_formB { get; } = new c_shipping_address_formb("ctl00_phG_tab_t2_formB", "Shipping_Address_formB");
+        public c_shipping_contact_formd Shipping_Contact_formD { get; } = new c_shipping_contact_formd("ctl00_phG_tab_t2_formD", "Shipping_Contact_formD");
+        public c_orderlist_grid5 OrderList_grid5 { get; } = new c_orderlist_grid5("ctl00_phG_tab_t1_grid5", "OrderList_grid5");
+        public c_orderlist_lv0 OrderList_lv0 { get; } = new c_orderlist_lv0("ctl00_phG_tab_t1_grid5_lv0", "OrderList_lv0");
+        public c_packages_gridpackages Packages_gridPackages { get; } = new c_packages_gridpackages("ctl00_phG_tab_t3_gridPackages", "Packages_gridPackages");
+        public c_packages_lv0 Packages_lv0 { get; } = new c_packages_lv0("ctl00_phG_tab_t3_gridPackages_lv0", "Packages_lv0");
+        public c_packagesforrates_gridpackagesforrates PackagesForRates_gridPackagesForRates { get; } = new c_packagesforrates_gridpackagesforrates("ctl00_phG_PanelCarrierRates_gridPackagesForRates", "PackagesForRates_gridPackagesForRates");
+        public c_packagesforrates_lv0 PackagesForRates_lv0 { get; } = new c_packagesforrates_lv0("ctl00_phG_PanelCarrierRates_gridPackagesForRates_lv0", "PackagesForRates_lv0");
+        public c_addsofilter_form4 Addsofilter_form4 { get; } = new c_addsofilter_form4("ctl00_phG_PanelAddSO_form4", "addsofilter_form4");
+        public c_soshipmentplan_grid4 Soshipmentplan_grid4 { get; } = new c_soshipmentplan_grid4("ctl00_phG_PanelAddSO_grid4", "soshipmentplan_grid4");
+        public c_soshipmentplan_lv0 Soshipmentplan_lv0 { get; } = new c_soshipmentplan_lv0("ctl00_phG_PanelAddSO_grid4_lv0", "soshipmentplan_lv0");
+        public c_ispsmyurls_cstpxgrid52 IspsMyUrls_CstPXGrid52 { get; } = new c_ispsmyurls_cstpxgrid52("ctl00_phG_CstSmartPanel49_CstPXGrid52", "ispsMyUrls_CstPXGrid52");
+        public c_carrierrates_gridrates CarrierRates_gridRates { get; } = new c_carrierrates_gridrates("ctl00_phG_PanelCarrierRates_gridRates", "CarrierRates_gridRates");
+        public c_carrierrates_lv0 CarrierRates_lv0 { get; } = new c_carrierrates_lv0("ctl00_phG_PanelCarrierRates_gridRates_lv0", "CarrierRates_lv0");
+        public c_packagedetailsplit_gridpackagedetailsplit PackageDetailSplit_gridPackageDetailSplit { get; } = new c_packagedetailsplit_gridpackagedetailsplit("ctl00_phG_tab_t3_gridPackageDetailSplit", "PackageDetailSplit_gridPackageDetailSplit");
+        public c_packagedetailsplit_lv0 PackageDetailSplit_lv0 { get; } = new c_packagedetailsplit_lv0("ctl00_phG_tab_t3_gridPackageDetailSplit_lv0", "PackageDetailSplit_lv0");
+        public c_addresslookupfilter_addresslookuppanelformaddress AddressLookupFilter_AddressLookupPanelformAddress { get; } = new c_addresslookupfilter_addresslookuppanelformaddress("ctl00_phG_AddressLookupPanel_AddressLookupPanelformAddress", "AddressLookupFilter_AddressLookupPanelformAddress");
+        public c_picklistentries_picklistheader PickListEntries_PickListHeader { get; } = new c_picklistentries_picklistheader("ctl00_phG_PanelPickList_PickListHeader", "PickListEntries_PickListHeader");
+        public c_picklistentries_gridpicklist PickListEntries_gridPickList { get; } = new c_picklistentries_gridpicklist("ctl00_phG_PanelPickList_gridPickList", "PickListEntries_gridPickList");
+        public c_picklistentries_lv0 PickListEntries_lv0 { get; } = new c_picklistentries_lv0("ctl00_phG_PanelPickList_gridPickList_lv0", "PickListEntries_lv0");
+        public c_soshipmentlinesplittingextension_lotseroptions_optform SOShipmentLineSplittingExtension_LotSerOptions_optform { get; } = new c_soshipmentlinesplittingextension_lotseroptions_optform("ctl00_phG_PanelLS_optform", "SOShipmentLineSplittingExtension_LotSerOptions_optform");
+        public c_workflowview_workflowfictivediagram WorkflowView_WorkflowFictiveDiagram { get; } = new c_workflowview_workflowfictivediagram("ctl00_usrCaption_WorkflowDiagram_pnlWorkFlow_WorkflowFictiveDiagram", "WorkflowView_WorkflowFictiveDiagram");
+        public c_filterpreview_formpreview FilterPreview_FormPreview { get; } = new c_filterpreview_formpreview("ctl00_usrCaption_PanelDynamicForm_FormPreview", "FilterPreview_FormPreview");
         public c_attributes Attributes { get; } = new c_attributes("ctl00_phF_form_t1", "Attributes");
         
         public SO302000_SOShipmentEntry()
@@ -282,6 +284,11 @@ namespace GeneratedWrappers.SOLUTIONNAME
             ToolBar.ReleaseFromHold.Click();
         }
         
+        public virtual void ISPSPackingSlip()
+        {
+            ToolBar.ISPSPackingSlip.Click();
+        }
+        
         public virtual void ConfirmShipmentAction()
         {
             ToolBar.ConfirmShipmentAction.Click();
@@ -442,6 +449,22 @@ namespace GeneratedWrappers.SOLUTIONNAME
             ToolBar.Other_Category.Click();
         }
         
+        public virtual void ISPSGoSPS()
+        {
+            ToolBar.ISPSGoSPS.Click();
+        }
+        
+        public virtual void ISPSLoadFilterOk()
+        {
+            ToolBar.ISPSLoadFilterOk.Click();
+        }
+        
+        public virtual void ISPSLoadFilterOk(bool status, string message = null)
+        {
+            ToolBar.ISPSLoadFilterOk.WaitActionOverride = () => Wait.WaitForLongOperationToComplete(status, message);
+            ToolBar.ISPSLoadFilterOk.Click();
+        }
+        
         public virtual void ViewActivity()
         {
             ToolBar.ViewActivity.Click();
@@ -512,6 +535,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
 			public ToolBarButton Last { get; }
 			public ToolBarButton InitializeState { get; }
 			public ToolBarButton ReleaseFromHold { get; }
+			public ToolBarButton ISPSPackingSlip { get; }
 			public ToolBarButton ConfirmShipmentAction { get; }
 			public ToolBarButton CreateInvoice { get; }
 			public ToolBarButton CreateDropshipInvoice { get; }
@@ -538,6 +562,8 @@ namespace GeneratedWrappers.SOLUTIONNAME
 			public ToolBarButton Printing_and_Emailing_Category { get; }
 			public ToolBarButton Labels_Category { get; }
 			public ToolBarButton Other_Category { get; }
+			public ToolBarButton ISPSGoSPS { get; }
+			public ToolBarButton ISPSLoadFilterOk { get; }
 			public ToolBarButton ViewActivity { get; }
 			public ToolBarButton OpenActivityOwner { get; }
 			public ToolBarButton ViewAllActivities { get; }
@@ -591,6 +617,8 @@ namespace GeneratedWrappers.SOLUTIONNAME
                         "_item", "Initialize State", locator, MenuOpener);
                 ReleaseFromHold = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_ReleaseFromHold,#ctl00_phDS_ds_ToolBar_ReleaseFromHold" +
                         "_item", "Remove Hold", locator, MenuOpener);
+                ISPSPackingSlip = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_ISPSPackingSlip,#ctl00_phDS_ds_ToolBar_ISPSPackingSlip" +
+                        "_item", "Print Retailer Branded Packing Slip", locator, MenuOpener);
                 ConfirmShipmentAction = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_ConfirmShipmentAction,#ctl00_phDS_ds_ToolBar_ConfirmSh" +
                         "ipmentAction_item", "Confirm Shipment", locator, MenuOpener);
                 ConfirmShipmentAction.WaitAction = Wait.WaitForLongOperationToComplete;
@@ -635,6 +663,10 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 Printing_and_Emailing_Category = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_Printing_and_Emailing_Category", "Printing and Emailing", locator, MenuOpener);
                 Labels_Category = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_Labels_Category", "Labels", locator, MenuOpener);
                 Other_Category = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_Other_Category", "Other", locator, MenuOpener);
+                ISPSGoSPS = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_ISPSGoSPS,#ctl00_phDS_ds_ToolBar_ISPSGoSPS_item", "Additional EDI Documents", locator, MenuOpener);
+                ISPSLoadFilterOk = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_ISPSLoadFilterOk,#ctl00_phDS_ds_ToolBar_ISPSLoadFilter" +
+                        "Ok_item", "ISPSLoadFilterOk", locator, MenuOpener);
+                ISPSLoadFilterOk.WaitAction = Wait.WaitForLongOperationToComplete;
                 ViewActivity = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_viewActivity,#ctl00_phDS_ds_ToolBar_viewActivity_item", "viewActivity", locator, MenuOpener);
                 OpenActivityOwner = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_openActivityOwner,#ctl00_phDS_ds_ToolBar_openActivityO" +
                         "wner_item", "openActivityOwner", locator, MenuOpener);
@@ -2153,6 +2185,82 @@ namespace GeneratedWrappers.SOLUTIONNAME
             }
         }
         
+        public class c_currentdocument_cstformview10 : Container
+        {
+            
+			public PXTextEdit ISPSBillofLadingNo { get; }
+			public Label ISPSBillofLadingNoLabel { get; }
+			public PXTextEdit ISPSTrailerNumber { get; }
+			public Label ISPSTrailerNumberLabel { get; }
+			public PXTextEdit ISPSProNumber { get; }
+			public Label ISPSProNumberLabel { get; }
+			public PXTextEdit ISPSLoadID { get; }
+			public Label ISPSLoadIDLabel { get; }
+			public DateSelector ISPSDeliveryDate { get; }
+			public Label ISPSDeliveryDateLabel { get; }
+			public DateSelector ISPSDelTime { get; }
+			public Label ISPSDelTimeLabel { get; }
+			public PXNumberEdit ISPSTotalNumPallets { get; }
+			public Label ISPSTotalNumPalletsLabel { get; }
+			public PXTextEdit ISPSShipmentUDF1 { get; }
+			public Label ISPSShipmentUDF1Label { get; }
+			public PXTextEdit ISPSShipmentUDF2 { get; }
+			public Label ISPSShipmentUDF2Label { get; }
+			public PXTextEdit ISPSShipmentUDF3 { get; }
+			public Label ISPSShipmentUDF3Label { get; }
+			public PXTextEdit ISPSShipmentUDF4 { get; }
+			public Label ISPSShipmentUDF4Label { get; }
+			public PXTextEdit ISPSShipmentUDF5 { get; }
+			public Label ISPSShipmentUDF5Label { get; }
+			public CheckBox ISPSMarkForDelete { get; }
+			public Label ISPSMarkForDeleteLabel { get; }
+            
+            public c_currentdocument_cstformview10(string locator, string name) : 
+                    base(locator, name)
+            {
+                ISPSBillofLadingNo = new PXTextEdit("ctl00_phG_tab_t4_CstFormView10_CstPXTextEdit18", "Bill of Lading Number", locator, null);
+                ISPSBillofLadingNoLabel = new Label(ISPSBillofLadingNo);
+                ISPSBillofLadingNo.DataField = "ISPSBillofLadingNo";
+                ISPSTrailerNumber = new PXTextEdit("ctl00_phG_tab_t4_CstFormView10_CstPXTextEdit37", "Trailer Number", locator, null);
+                ISPSTrailerNumberLabel = new Label(ISPSTrailerNumber);
+                ISPSTrailerNumber.DataField = "ISPSTrailerNumber";
+                ISPSProNumber = new PXTextEdit("ctl00_phG_tab_t4_CstFormView10_CstPXTextEdit36", "PRO Number", locator, null);
+                ISPSProNumberLabel = new Label(ISPSProNumber);
+                ISPSProNumber.DataField = "ISPSProNumber";
+                ISPSLoadID = new PXTextEdit("ctl00_phG_tab_t4_CstFormView10_CstPXTextEdit35", "Load ID", locator, null);
+                ISPSLoadIDLabel = new Label(ISPSLoadID);
+                ISPSLoadID.DataField = "ISPSLoadID";
+                ISPSDeliveryDate = new DateSelector("ctl00_phG_tab_t4_CstFormView10_CstPXDateTimeEdit34", "Delivery Date", locator, null);
+                ISPSDeliveryDateLabel = new Label(ISPSDeliveryDate);
+                ISPSDeliveryDate.DataField = "ISPSDeliveryDate";
+                ISPSDelTime = new DateSelector("ctl00_phG_tab_t4_CstFormView10_CstPXDateTimeEdit48", "Delivery Time", locator, null);
+                ISPSDelTimeLabel = new Label(ISPSDelTime);
+                ISPSDelTime.DataField = "ISPSDelTime";
+                ISPSTotalNumPallets = new PXNumberEdit("ctl00_phG_tab_t4_CstFormView10_CstPXNumberEdit32", "Total Number of Pallets", locator, null);
+                ISPSTotalNumPalletsLabel = new Label(ISPSTotalNumPallets);
+                ISPSTotalNumPallets.DataField = "ISPSTotalNumPallets";
+                ISPSShipmentUDF1 = new PXTextEdit("ctl00_phG_tab_t4_CstFormView10_CstPXTextEdit44", "Shipment UDF 1", locator, null);
+                ISPSShipmentUDF1Label = new Label(ISPSShipmentUDF1);
+                ISPSShipmentUDF1.DataField = "ISPSShipmentUDF1";
+                ISPSShipmentUDF2 = new PXTextEdit("ctl00_phG_tab_t4_CstFormView10_CstPXTextEdit43", "Shipment UDF 2", locator, null);
+                ISPSShipmentUDF2Label = new Label(ISPSShipmentUDF2);
+                ISPSShipmentUDF2.DataField = "ISPSShipmentUDF2";
+                ISPSShipmentUDF3 = new PXTextEdit("ctl00_phG_tab_t4_CstFormView10_CstPXTextEdit42", "Shipment UDF 3", locator, null);
+                ISPSShipmentUDF3Label = new Label(ISPSShipmentUDF3);
+                ISPSShipmentUDF3.DataField = "ISPSShipmentUDF3";
+                ISPSShipmentUDF4 = new PXTextEdit("ctl00_phG_tab_t4_CstFormView10_CstPXTextEdit41", "Shipment UDF 4", locator, null);
+                ISPSShipmentUDF4Label = new Label(ISPSShipmentUDF4);
+                ISPSShipmentUDF4.DataField = "ISPSShipmentUDF4";
+                ISPSShipmentUDF5 = new PXTextEdit("ctl00_phG_tab_t4_CstFormView10_CstPXTextEdit40", "Shipment UDF 5", locator, null);
+                ISPSShipmentUDF5Label = new Label(ISPSShipmentUDF5);
+                ISPSShipmentUDF5.DataField = "ISPSShipmentUDF5";
+                ISPSMarkForDelete = new CheckBox("ctl00_phG_tab_t4_CstFormView10_CstPXCheckBox39", "Mark for Delete", locator, null);
+                ISPSMarkForDeleteLabel = new Label(ISPSMarkForDelete);
+                ISPSMarkForDelete.DataField = "ISPSMarkForDelete";
+                DataMemberName = "CurrentDocument";
+            }
+        }
+        
         public class c_transactions_grid : Grid<c_transactions_grid.c_grid_row, c_transactions_grid.c_grid_header>
         {
             
@@ -3610,6 +3718,10 @@ namespace GeneratedWrappers.SOLUTIONNAME
 			public PXNumberEdit COD { get; }
 			public DropDown StampsAddOns { get; }
 			public PXTextEdit TrackNumber { get; }
+			public PXTextEdit ISPSGroupID { get; }
+			public PXNumberEdit ISPSPalletNbr { get; }
+			public PXTextEdit ISPSUCC128 { get; }
+			public PXTextEdit ISPSSCC14 { get; }
 			public PXTextEdit TrackUrl { get; }
 			public PXTextEdit ReturnTrackNumber { get; }
 			public PXTextEdit CustomRefNbr1 { get; }
@@ -3622,6 +3734,36 @@ namespace GeneratedWrappers.SOLUTIONNAME
 			public PXTextEdit LicenseNumber { get; }
 			public PXTextEdit ShipmentNbr { get; }
 			public PXNumberEdit LineNbr { get; }
+			public Selector InventoryID { get; }
+			public PXNumberEdit Qty { get; }
+			public PXTextEdit QtyUOM { get; }
+			public Selector CreatedByID { get; }
+			public Selector LastModifiedByID { get; }
+			public PXTextEdit BoxDescription { get; }
+			public PXTextEdit CarrierBox { get; }
+			public PXNumberEdit BoxWeight { get; }
+			public PXNumberEdit MaxWeight { get; }
+			public PXNumberEdit NetWeight { get; }
+			public PXNumberEdit ISPSShipmentLineNbr { get; }
+			public PXTextEdit ISPSOrderNbr { get; }
+			public Selector ISPSCreatedByID { get; }
+			public DateSelector ISPSCreatedDateTime { get; }
+			public Selector ISPSLastModifiedByID { get; }
+			public DateSelector ISPSLastModifiedDateTime { get; }
+			public PXTextEdit InventoryID_InventoryItem_descr { get; }
+			public PXTextEdit InventoryID_description { get; }
+			public PXTextEdit CreatedByID_Creator_displayName { get; }
+			public PXTextEdit CreatedByID_description { get; }
+			public PXTextEdit CreatedByID_Creator_Username { get; }
+			public PXTextEdit LastModifiedByID_Modifier_displayName { get; }
+			public PXTextEdit LastModifiedByID_description { get; }
+			public PXTextEdit LastModifiedByID_Modifier_Username { get; }
+			public PXTextEdit ISPSCreatedByID_Creator_displayName { get; }
+			public PXTextEdit ISPSCreatedByID_description { get; }
+			public PXTextEdit ISPSCreatedByID_Creator_Username { get; }
+			public PXTextEdit ISPSLastModifiedByID_Modifier_displayName { get; }
+			public PXTextEdit ISPSLastModifiedByID_description { get; }
+			public PXTextEdit ISPSLastModifiedByID_Modifier_Username { get; }
                 
                 public c_grid_row(c_packages_gridpackages grid) : 
                         base(grid)
@@ -3668,6 +3810,14 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     StampsAddOns.Items.Add("SCAHP", "Hidden Postage");
                     TrackNumber = new PXTextEdit("_ctl00_phG_tab_t3_gridPackages_lv0_edTrackNumber", "Tracking Number", grid.Locator, "TrackNumber");
                     TrackNumber.DataField = "TrackNumber";
+                    ISPSGroupID = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_ei", "Group ID", grid.Locator, "ISPSGroupID");
+                    ISPSGroupID.DataField = "ISPSGroupID";
+                    ISPSPalletNbr = new PXNumberEdit("ctl00_phG_tab_t3_gridPackages_en", "Pallet Number", grid.Locator, "ISPSPalletNbr");
+                    ISPSPalletNbr.DataField = "ISPSPalletNbr";
+                    ISPSUCC128 = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_ei", "UCC 128", grid.Locator, "ISPSUCC128");
+                    ISPSUCC128.DataField = "ISPSUCC128";
+                    ISPSSCC14 = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_ei", "SCC 14", grid.Locator, "ISPSSCC14");
+                    ISPSSCC14.DataField = "ISPSSCC14";
                     TrackUrl = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_ei", "Tracking URL", grid.Locator, "TrackUrl");
                     TrackUrl.DataField = "TrackUrl";
                     ReturnTrackNumber = new PXTextEdit("_ctl00_phG_tab_t3_gridPackages_lv0_edReturnTrackNumber", "Return Tracking Number", grid.Locator, "ReturnTrackNumber");
@@ -3692,6 +3842,66 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     ShipmentNbr.DataField = "ShipmentNbr";
                     LineNbr = new PXNumberEdit("_ctl00_phG_tab_t3_gridPackages_lv0_edLineNbr_Pkg", "Line Nbr.", grid.Locator, "LineNbr");
                     LineNbr.DataField = "LineNbr";
+                    InventoryID = new Selector("_ctl00_phG_tab_t3_gridPackages_lv0_es", "Inventory ID", grid.Locator, "InventoryID");
+                    InventoryID.DataField = "InventoryID";
+                    Qty = new PXNumberEdit("ctl00_phG_tab_t3_gridPackages_en", "Qty", grid.Locator, "Qty");
+                    Qty.DataField = "Qty";
+                    QtyUOM = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_ei", "Qty. UOM", grid.Locator, "QtyUOM");
+                    QtyUOM.DataField = "QtyUOM";
+                    CreatedByID = new Selector("_ctl00_phG_tab_t3_gridPackages_lv0_es", "Created By", grid.Locator, "CreatedByID");
+                    CreatedByID.DataField = "CreatedByID";
+                    LastModifiedByID = new Selector("_ctl00_phG_tab_t3_gridPackages_lv0_es", "Last Modified By", grid.Locator, "LastModifiedByID");
+                    LastModifiedByID.DataField = "LastModifiedByID";
+                    BoxDescription = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_ei", "Box Description", grid.Locator, "BoxDescription");
+                    BoxDescription.DataField = "BoxDescription";
+                    CarrierBox = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_ei", "Carrier\'s Package", grid.Locator, "CarrierBox");
+                    CarrierBox.DataField = "CarrierBox";
+                    BoxWeight = new PXNumberEdit("ctl00_phG_tab_t3_gridPackages_en", "Box Weight", grid.Locator, "BoxWeight");
+                    BoxWeight.DataField = "BoxWeight";
+                    MaxWeight = new PXNumberEdit("ctl00_phG_tab_t3_gridPackages_en", "Max Weight", grid.Locator, "MaxWeight");
+                    MaxWeight.DataField = "MaxWeight";
+                    NetWeight = new PXNumberEdit("ctl00_phG_tab_t3_gridPackages_en", "Net Weight", grid.Locator, "NetWeight");
+                    NetWeight.DataField = "NetWeight";
+                    ISPSShipmentLineNbr = new PXNumberEdit("ctl00_phG_tab_t3_gridPackages_en", "ShipmentLineNbr", grid.Locator, "ISPSShipmentLineNbr");
+                    ISPSShipmentLineNbr.DataField = "ISPSShipmentLineNbr";
+                    ISPSOrderNbr = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_ei", "Sales Order Nbr", grid.Locator, "ISPSOrderNbr");
+                    ISPSOrderNbr.DataField = "ISPSOrderNbr";
+                    ISPSCreatedByID = new Selector("_ctl00_phG_tab_t3_gridPackages_lv0_es", "Created By", grid.Locator, "ISPSCreatedByID");
+                    ISPSCreatedByID.DataField = "ISPSCreatedByID";
+                    ISPSCreatedDateTime = new DateSelector("_ctl00_phG_tab_t3_gridPackages_lv0_ed46", "Date", grid.Locator, "ISPSCreatedDateTime");
+                    ISPSCreatedDateTime.DataField = "ISPSCreatedDateTime";
+                    ISPSLastModifiedByID = new Selector("_ctl00_phG_tab_t3_gridPackages_lv0_es", "Last Modified By", grid.Locator, "ISPSLastModifiedByID");
+                    ISPSLastModifiedByID.DataField = "ISPSLastModifiedByID";
+                    ISPSLastModifiedDateTime = new DateSelector("_ctl00_phG_tab_t3_gridPackages_lv0_ed48", "Last Modified Date Time", grid.Locator, "ISPSLastModifiedDateTime");
+                    ISPSLastModifiedDateTime.DataField = "ISPSLastModifiedDateTime";
+                    InventoryID_InventoryItem_descr = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_ei", "Description", grid.Locator, "InventoryID_InventoryItem_descr");
+                    InventoryID_InventoryItem_descr.DataField = "InventoryID_InventoryItem_descr";
+                    InventoryID_description = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_ei", "Description", grid.Locator, "InventoryID_description");
+                    InventoryID_description.DataField = "InventoryID_description";
+                    CreatedByID_Creator_displayName = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_ei", "Created By", grid.Locator, "CreatedByID_Creator_displayName");
+                    CreatedByID_Creator_displayName.DataField = "CreatedByID_Creator_displayName";
+                    CreatedByID_description = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_ei", "Created By", grid.Locator, "CreatedByID_description");
+                    CreatedByID_description.DataField = "CreatedByID_description";
+                    CreatedByID_Creator_Username = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_ei", "Created By", grid.Locator, "CreatedByID_Creator_Username");
+                    CreatedByID_Creator_Username.DataField = "CreatedByID_Creator_Username";
+                    LastModifiedByID_Modifier_displayName = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_ei", "Last Modified By", grid.Locator, "LastModifiedByID_Modifier_displayName");
+                    LastModifiedByID_Modifier_displayName.DataField = "LastModifiedByID_Modifier_displayName";
+                    LastModifiedByID_description = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_ei", "Last Modified By", grid.Locator, "LastModifiedByID_description");
+                    LastModifiedByID_description.DataField = "LastModifiedByID_description";
+                    LastModifiedByID_Modifier_Username = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_ei", "Last Modified By", grid.Locator, "LastModifiedByID_Modifier_Username");
+                    LastModifiedByID_Modifier_Username.DataField = "LastModifiedByID_Modifier_Username";
+                    ISPSCreatedByID_Creator_displayName = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_ei", "Created By", grid.Locator, "ISPSCreatedByID_Creator_displayName");
+                    ISPSCreatedByID_Creator_displayName.DataField = "ISPSCreatedByID_Creator_displayName";
+                    ISPSCreatedByID_description = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_ei", "Created By", grid.Locator, "ISPSCreatedByID_description");
+                    ISPSCreatedByID_description.DataField = "ISPSCreatedByID_description";
+                    ISPSCreatedByID_Creator_Username = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_ei", "Created By", grid.Locator, "ISPSCreatedByID_Creator_Username");
+                    ISPSCreatedByID_Creator_Username.DataField = "ISPSCreatedByID_Creator_Username";
+                    ISPSLastModifiedByID_Modifier_displayName = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_ei", "Last Modified By", grid.Locator, "ISPSLastModifiedByID_Modifier_displayName");
+                    ISPSLastModifiedByID_Modifier_displayName.DataField = "ISPSLastModifiedByID_Modifier_displayName";
+                    ISPSLastModifiedByID_description = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_ei", "Last Modified By", grid.Locator, "ISPSLastModifiedByID_description");
+                    ISPSLastModifiedByID_description.DataField = "ISPSLastModifiedByID_description";
+                    ISPSLastModifiedByID_Modifier_Username = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_ei", "Last Modified By", grid.Locator, "ISPSLastModifiedByID_Modifier_Username");
+                    ISPSLastModifiedByID_Modifier_Username.DataField = "ISPSLastModifiedByID_Modifier_Username";
                 }
             }
             
@@ -3715,6 +3925,10 @@ namespace GeneratedWrappers.SOLUTIONNAME
 				public PXNumberEditColumnFilter COD { get; }
 				public DropDownColumnFilter StampsAddOns { get; }
 				public PXTextEditColumnFilter TrackNumber { get; }
+				public PXTextEditColumnFilter ISPSGroupID { get; }
+				public PXNumberEditColumnFilter ISPSPalletNbr { get; }
+				public PXTextEditColumnFilter ISPSUCC128 { get; }
+				public PXTextEditColumnFilter ISPSSCC14 { get; }
 				public PXTextEditColumnFilter TrackUrl { get; }
 				public PXTextEditColumnFilter ReturnTrackNumber { get; }
 				public PXTextEditColumnFilter CustomRefNbr1 { get; }
@@ -3727,6 +3941,36 @@ namespace GeneratedWrappers.SOLUTIONNAME
 				public PXTextEditColumnFilter LicenseNumber { get; }
 				public PXTextEditColumnFilter ShipmentNbr { get; }
 				public PXNumberEditColumnFilter LineNbr { get; }
+				public SelectorColumnFilter InventoryID { get; }
+				public PXNumberEditColumnFilter Qty { get; }
+				public PXTextEditColumnFilter QtyUOM { get; }
+				public SelectorColumnFilter CreatedByID { get; }
+				public SelectorColumnFilter LastModifiedByID { get; }
+				public PXTextEditColumnFilter BoxDescription { get; }
+				public PXTextEditColumnFilter CarrierBox { get; }
+				public PXNumberEditColumnFilter BoxWeight { get; }
+				public PXNumberEditColumnFilter MaxWeight { get; }
+				public PXNumberEditColumnFilter NetWeight { get; }
+				public PXNumberEditColumnFilter ISPSShipmentLineNbr { get; }
+				public PXTextEditColumnFilter ISPSOrderNbr { get; }
+				public SelectorColumnFilter ISPSCreatedByID { get; }
+				public DateSelectorColumnFilter ISPSCreatedDateTime { get; }
+				public SelectorColumnFilter ISPSLastModifiedByID { get; }
+				public DateSelectorColumnFilter ISPSLastModifiedDateTime { get; }
+				public PXTextEditColumnFilter InventoryID_InventoryItem_descr { get; }
+				public PXTextEditColumnFilter InventoryID_description { get; }
+				public PXTextEditColumnFilter CreatedByID_Creator_displayName { get; }
+				public PXTextEditColumnFilter CreatedByID_description { get; }
+				public PXTextEditColumnFilter CreatedByID_Creator_Username { get; }
+				public PXTextEditColumnFilter LastModifiedByID_Modifier_displayName { get; }
+				public PXTextEditColumnFilter LastModifiedByID_description { get; }
+				public PXTextEditColumnFilter LastModifiedByID_Modifier_Username { get; }
+				public PXTextEditColumnFilter ISPSCreatedByID_Creator_displayName { get; }
+				public PXTextEditColumnFilter ISPSCreatedByID_description { get; }
+				public PXTextEditColumnFilter ISPSCreatedByID_Creator_Username { get; }
+				public PXTextEditColumnFilter ISPSLastModifiedByID_Modifier_displayName { get; }
+				public PXTextEditColumnFilter ISPSLastModifiedByID_description { get; }
+				public PXTextEditColumnFilter ISPSLastModifiedByID_Modifier_Username { get; }
                 
                 public c_grid_header(c_packages_gridpackages grid) : 
                         base(grid)
@@ -3748,6 +3992,10 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     COD = new PXNumberEditColumnFilter(grid.Row.COD);
                     StampsAddOns = new DropDownColumnFilter(grid.Row.StampsAddOns);
                     TrackNumber = new PXTextEditColumnFilter(grid.Row.TrackNumber);
+                    ISPSGroupID = new PXTextEditColumnFilter(grid.Row.ISPSGroupID);
+                    ISPSPalletNbr = new PXNumberEditColumnFilter(grid.Row.ISPSPalletNbr);
+                    ISPSUCC128 = new PXTextEditColumnFilter(grid.Row.ISPSUCC128);
+                    ISPSSCC14 = new PXTextEditColumnFilter(grid.Row.ISPSSCC14);
                     TrackUrl = new PXTextEditColumnFilter(grid.Row.TrackUrl);
                     ReturnTrackNumber = new PXTextEditColumnFilter(grid.Row.ReturnTrackNumber);
                     CustomRefNbr1 = new PXTextEditColumnFilter(grid.Row.CustomRefNbr1);
@@ -3760,6 +4008,36 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     LicenseNumber = new PXTextEditColumnFilter(grid.Row.LicenseNumber);
                     ShipmentNbr = new PXTextEditColumnFilter(grid.Row.ShipmentNbr);
                     LineNbr = new PXNumberEditColumnFilter(grid.Row.LineNbr);
+                    InventoryID = new SelectorColumnFilter(grid.Row.InventoryID);
+                    Qty = new PXNumberEditColumnFilter(grid.Row.Qty);
+                    QtyUOM = new PXTextEditColumnFilter(grid.Row.QtyUOM);
+                    CreatedByID = new SelectorColumnFilter(grid.Row.CreatedByID);
+                    LastModifiedByID = new SelectorColumnFilter(grid.Row.LastModifiedByID);
+                    BoxDescription = new PXTextEditColumnFilter(grid.Row.BoxDescription);
+                    CarrierBox = new PXTextEditColumnFilter(grid.Row.CarrierBox);
+                    BoxWeight = new PXNumberEditColumnFilter(grid.Row.BoxWeight);
+                    MaxWeight = new PXNumberEditColumnFilter(grid.Row.MaxWeight);
+                    NetWeight = new PXNumberEditColumnFilter(grid.Row.NetWeight);
+                    ISPSShipmentLineNbr = new PXNumberEditColumnFilter(grid.Row.ISPSShipmentLineNbr);
+                    ISPSOrderNbr = new PXTextEditColumnFilter(grid.Row.ISPSOrderNbr);
+                    ISPSCreatedByID = new SelectorColumnFilter(grid.Row.ISPSCreatedByID);
+                    ISPSCreatedDateTime = new DateSelectorColumnFilter(grid.Row.ISPSCreatedDateTime);
+                    ISPSLastModifiedByID = new SelectorColumnFilter(grid.Row.ISPSLastModifiedByID);
+                    ISPSLastModifiedDateTime = new DateSelectorColumnFilter(grid.Row.ISPSLastModifiedDateTime);
+                    InventoryID_InventoryItem_descr = new PXTextEditColumnFilter(grid.Row.InventoryID_InventoryItem_descr);
+                    InventoryID_description = new PXTextEditColumnFilter(grid.Row.InventoryID_description);
+                    CreatedByID_Creator_displayName = new PXTextEditColumnFilter(grid.Row.CreatedByID_Creator_displayName);
+                    CreatedByID_description = new PXTextEditColumnFilter(grid.Row.CreatedByID_description);
+                    CreatedByID_Creator_Username = new PXTextEditColumnFilter(grid.Row.CreatedByID_Creator_Username);
+                    LastModifiedByID_Modifier_displayName = new PXTextEditColumnFilter(grid.Row.LastModifiedByID_Modifier_displayName);
+                    LastModifiedByID_description = new PXTextEditColumnFilter(grid.Row.LastModifiedByID_description);
+                    LastModifiedByID_Modifier_Username = new PXTextEditColumnFilter(grid.Row.LastModifiedByID_Modifier_Username);
+                    ISPSCreatedByID_Creator_displayName = new PXTextEditColumnFilter(grid.Row.ISPSCreatedByID_Creator_displayName);
+                    ISPSCreatedByID_description = new PXTextEditColumnFilter(grid.Row.ISPSCreatedByID_description);
+                    ISPSCreatedByID_Creator_Username = new PXTextEditColumnFilter(grid.Row.ISPSCreatedByID_Creator_Username);
+                    ISPSLastModifiedByID_Modifier_displayName = new PXTextEditColumnFilter(grid.Row.ISPSLastModifiedByID_Modifier_displayName);
+                    ISPSLastModifiedByID_description = new PXTextEditColumnFilter(grid.Row.ISPSLastModifiedByID_description);
+                    ISPSLastModifiedByID_Modifier_Username = new PXTextEditColumnFilter(grid.Row.ISPSLastModifiedByID_Modifier_Username);
                 }
             }
         }
@@ -4555,6 +4833,75 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     AddSO = new Button("ctl00_phG_PanelAddSO_PXButton1", "Add", "ctl00_phG_PanelAddSO_grid4_lv0");
                     AddClose = new Button("ctl00_phG_PanelAddSO_PXButton2", "Add & Close", "ctl00_phG_PanelAddSO_grid4_lv0");
                     AddSOCancel = new Button("ctl00_phG_PanelAddSO_PXButton3", "Cancel", "ctl00_phG_PanelAddSO_grid4_lv0");
+                }
+            }
+        }
+        
+        public class c_ispsmyurls_cstpxgrid52 : Grid<c_ispsmyurls_cstpxgrid52.c_grid_row, c_ispsmyurls_cstpxgrid52.c_grid_header>
+        {
+            
+            public PxButtonCollection Buttons;
+            
+			public c_grid_filter FilterForm { get; }
+            
+            public c_ispsmyurls_cstpxgrid52(string locator, string name) : 
+                    base(locator, name)
+            {
+                DataMemberName = "ispsMyUrls";
+                Buttons = new PxButtonCollection();
+                FilterForm = new c_grid_filter("ctl00_phG_CstSmartPanel49_CstPXGrid52_fe_gf", "FilterForm");
+            }
+            
+            public virtual void LoadFilterOk()
+            {
+                Buttons.LoadFilterOk.Click();
+            }
+            
+            public virtual void Exit()
+            {
+                Buttons.Exit.Click();
+            }
+            
+            public class PxButtonCollection : PxControlCollection
+            {
+                
+			public Button LoadFilterOk { get; }
+			public Button Exit { get; }
+                
+                public PxButtonCollection()
+                {
+                    LoadFilterOk = new Button("ctl00_phG_CstSmartPanel49_CstButton56", "Get Branded Slips", "ctl00_phG_CstSmartPanel49_CstPXGrid52");
+                    Exit = new Button("ctl00_phG_CstSmartPanel49_CstButton55", "Exit", "ctl00_phG_CstSmartPanel49_CstPXGrid52");
+                }
+            }
+            
+            public class c_grid_row : GridRow
+            {
+                
+			public PXTextEdit URL { get; }
+			public PXNumberEdit Linenbr { get; }
+                
+                public c_grid_row(c_ispsmyurls_cstpxgrid52 grid) : 
+                        base(grid)
+                {
+                    URL = new PXTextEdit("ctl00_phG_CstSmartPanel49_CstPXGrid52_ei", "URL", grid.Locator, "URL");
+                    URL.DataField = "URL";
+                    Linenbr = new PXNumberEdit("ctl00_phG_CstSmartPanel49_CstPXGrid52_en", "linenbr", grid.Locator, "Linenbr");
+                    Linenbr.DataField = "Linenbr";
+                }
+            }
+            
+            public class c_grid_header : GridHeader
+            {
+                
+				public PXTextEditColumnFilter URL { get; }
+				public PXNumberEditColumnFilter Linenbr { get; }
+                
+                public c_grid_header(c_ispsmyurls_cstpxgrid52 grid) : 
+                        base(grid)
+                {
+                    URL = new PXTextEditColumnFilter(grid.Row.URL);
+                    Linenbr = new PXNumberEditColumnFilter(grid.Row.Linenbr);
                 }
             }
         }

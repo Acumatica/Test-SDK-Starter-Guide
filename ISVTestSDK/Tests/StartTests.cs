@@ -6,12 +6,12 @@ using Core.TestExecution;
 //in all capitals from the ISV Solutions page of the Acumatica Partner Portal.
 namespace GeneratedWrappers.SOLUTIONNAME
 {
-    public class StartTests : Check
+    internal class StartTests
     {
-        public override void Execute()
+        public void Execute() // launch your tests in order from this method
         {
             PxLogin.LoginToDestinationSite();
-            using (TestExecution.CreateTestStepGroup("Config site to the test start state"))
+            using (TestExecution.CreateTestStepGroup("Config site to the test start state")) 
             {
                 //Assumed Start State is fresh install of Acumatica Sales Demo Data
                 //plus your customization published
