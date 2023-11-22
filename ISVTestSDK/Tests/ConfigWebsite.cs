@@ -16,12 +16,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
 {
     internal class ConfigWebsite
     {
-
         IEnumerable<string> packages;
-        public const string ValidationSuccessfully = "Validation finished successfully.";
-        public const string PublishSuccessfully = "Website updated.";
-        public const string PublishNotEnoughRightsOnSelect = "Error: You don't have enough rights on 'Select'.";
-
 
         SM204505_ProjectList CustomizationProjects = new SM204505_ProjectList();
         SM203520_CompanyMaint Companies = new SM203520_CompanyMaint();
@@ -37,9 +32,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
             Companies.MessageBox.Ok();
             Companies.ExportSnapshotPanel_frmExportSnapshot.Description.Type(GetType().Name);
             Companies.ExportSnapshotPanel_frmExportSnapshot.Ok();
-
-
-
         }
         public void RestoreBackup()
         {
@@ -108,23 +100,19 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 CustomizationProjects.Projects_grid.SetTrue();
                 CustomizationProjects.Save();
             }
-
         }
 
         public void PublishCustomization()
         {
             #region Step 5
-
             using (TestExecution.CreateTestStepGroup("Publish customization projects."))
             {
                 CustomizationProjects.OpenScreen();
                 CustomizationProjects.CompilationPanel.WaitAction = () => Wait.WaitForLongOperationToComplete(Wait.LongTimeOut * 2);
-
-
                 CustomizationProjects.ActionPublish();
                 try
                 {
-                    CustomizationProjects.CompilationPanel.Validate(true, ValidationSuccessfully);
+                    CustomizationProjects.CompilationPanel.Validate(true, Constants.ValidationSuccessfully);
                     CustomizationProjects.CompilationPanel.Publish();
                 }
                 catch
@@ -133,9 +121,8 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 }
                 CustomizationProjects.RefreshScreen(true);
                 Log.Screenshot();
-                Log.Information("Published multiple Cusotmizations");
+                Log.Information("Published multiple Customizations");
             }
-
             #endregion
         }
 
@@ -148,7 +135,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 Console.WriteLine("Wrappers directory not found.");
                 return;
             }
-
             // Get all .cs files in the directory
             string[] csFiles = Directory.GetFiles(packagesPath, "*.cs", SearchOption.AllDirectories);
 
@@ -156,13 +142,10 @@ namespace GeneratedWrappers.SOLUTIONNAME
             {
                 // Read the contents of the file
                 string content = File.ReadAllText(file);
-
                 // Replace 'private' with 'public' - considering the indentation
                 string modifiedContent = Regex.Replace(content, @"\bprotected\b", "public");
-
                 // Write the modified content back to the file
                 File.WriteAllText(file, modifiedContent);
-
                 Console.WriteLine($"Updated {file}");
             }
         }

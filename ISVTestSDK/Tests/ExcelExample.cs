@@ -16,9 +16,9 @@ namespace GeneratedWrappers.SOLUTIONNAME
             // but you must not add any dependancies outside what is included in Acumatica's
             // TestSDK packages folder.
 
-            //Excel files must be placed in the project's Excels folder and the file imported as below
+            //Excel files must be placed in the project's DataFiles folder and the file imported as below
             //Excel files MUST start with your registered SOLUTIONNAME to make them uniquely named.
-            string excelsPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName + @"\Excels\";
+            string excelsPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName + @"\DataFiles\";
             var excel = new ExcelPackage(new FileInfo(excelsPath + "SOLUTIONNAMEExcelData.xlsx"));
 
             using (TestExecution.CreateTestStepGroup("Import and enter data from excel"))

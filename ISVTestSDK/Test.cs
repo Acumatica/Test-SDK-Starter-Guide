@@ -39,10 +39,8 @@ namespace GeneratedWrappers.SOLUTIONNAME
             configWebsite.MakePrivateFieldsPublic();
             // You must create an extension file for each wrapper you have generated.
             // Documentation/How to Create Extension Files.docx is a very useful guide to create extensions.
-
-
-
         }
+
         public override void Execute()
         {
             PxLogin.LoginToDestinationSite();
@@ -55,7 +53,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
             //configWebsite.ConfigForWrapperGeneration();
             GenerateWrappers();
 
-            // GenerateWrappers It takes 5-20 minutes to run, do not close it manually or else you will need to fix your web.config
+            // GenerateWrappers takes 5-20 minutes to run, do not close it manually or else you will need to fix your web.config
             // The wrappers are exact version specific due to small possible changes.
 
             // All Tests will be placed inside the Tests Folder. This is a strict requirement.
@@ -63,8 +61,5 @@ namespace GeneratedWrappers.SOLUTIONNAME
             StartTests startTests = new StartTests();
             startTests.Execute();
         }
-
-
-
     }
 }

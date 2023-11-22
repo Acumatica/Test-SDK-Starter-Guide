@@ -8,6 +8,8 @@ namespace GeneratedWrappers.SOLUTIONNAME
 {
     internal class Constants
     {
-        const string example = "example";
+        public const string ValidationSuccessfully = "Validation finished successfully.";
+        public const string PublishSuccessfully = "Website updated.";
+        public const string PublishNotEnoughRightsOnSelect = "Error: You don't have enough rights on 'Select'.";
     }
 }
