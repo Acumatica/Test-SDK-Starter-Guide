@@ -36,7 +36,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
             // You can also use regex such as:
             // classGenerator.Run("SO, AR5*"); // generates all SO screens and all AR5***** screens
             // more example screens : R201000,AR202000,AR209500,AR303000,CS205000,IN101000,IN201000,IN202000,IN202500,IN204060,IN301000,SM205020,SM208000,SM302000,SO201000,SO301000,SO302000
-               configWebsite.MakePrivateFieldsPublic();
+               //configWebsite.MakePrivateFieldsPublic();
             // You must create an extension file for each wrapper you have generated.
             // Documentation/How to Create Extension Files.docx is a very useful guide to create extensions.
         }
@@ -46,12 +46,12 @@ namespace GeneratedWrappers.SOLUTIONNAME
             PxLogin.LoginToDestinationSite();
 
             //  *+*+* Use these to easily reconfig your site *+*+*  \\
-            configWebsite.CreateBackup();
+              configWebsite.CreateBackup();
             //configWebsite.RestoreBackup();
             //configWebsite.ImportCustomization(); //imports all packages to be in /CustomizationPackages folder
             //configWebsite.PublishCustomization();
             //configWebsite.ConfigForWrapperGeneration();
-            GenerateWrappers();
+            //GenerateWrappers();
 
             // GenerateWrappers takes 5-20 minutes to run, do not close it manually or else you will need to fix your web.config
             // The wrappers are exact version specific due to small possible changes.
