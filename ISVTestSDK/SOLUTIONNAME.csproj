@@ -30,4 +30,8 @@
     <PackageReference Include="PX.QA.WrappersGenerator" Version="23.200.151.163" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Wrappers\" />
+  </ItemGroup>
+
 </Project>

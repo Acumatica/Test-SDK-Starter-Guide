@@ -18,10 +18,10 @@ namespace GeneratedWrappers.SOLUTIONNAME
     {
         IEnumerable<string> packages;
 
-        SM204505_ProjectList CustomizationProjects = new SM204505_ProjectList();
-        SM203520_CompanyMaint Companies = new SM203520_CompanyMaint();
-        CS100000_FeaturesMaint Features = new CS100000_FeaturesMaint();
-        SM201510_LicensingSetup licensing = new SM201510_LicensingSetup();
+        SM204505ProjectList CustomizationProjects = new SM204505ProjectList();
+        SM203520CompanyMaint Companies = new SM203520CompanyMaint();
+        CS100000FeaturesMaint Features = new CS100000FeaturesMaint();
+        SM201510LicensingSetup licensing = new SM201510LicensingSetup();
 
 
         public void GenerateWrappers(string physicalSitePath)
@@ -44,7 +44,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
             // You can also use regex such as:
             // classGenerator.Run("SO, AR5*"); // generates all SO screens and all AR5***** screens
             // more example screens : R201000,AR202000,AR209500,AR303000,CS205000,IN101000,IN201000,IN202000,IN202500,IN204060,IN301000,SM205020,SM208000,SM302000,SO201000,SO301000,SO302000
-            //configWebsite.MakePrivateFieldsPublic();
+            //configWebsite.MakePrivateFieldsPublic(); //uncomment to use wrappers directly with no extension (not recomended)
             // You must create an extension file for each wrapper you have generated.
             // Documentation/How to Create Extension Files.docx is a very useful guide to create extensions.
         }
@@ -55,17 +55,17 @@ namespace GeneratedWrappers.SOLUTIONNAME
             Companies.ExportSnapshotCommand();
             Companies.MessageBox.GetValue().VerifyEquals("The snapshot may contain corrupted data because you are not in maintenance mode.");
             Companies.MessageBox.Ok();
-            Companies.ExportSnapshotPanel_frmExportSnapshot.Description.Type(GetType().Name);
-            Companies.ExportSnapshotPanel_frmExportSnapshot.Ok();
+            Companies.ExportSnapshotPanel.Description.Type(GetType().Name);
+            Companies.ExportSnapshotPanel.Ok();
         }
         public void RestoreBackup()
         {
             PxLogin.LoginToDestinationSite();
             Companies.OpenScreen();
-            Companies.Snapshots_gridSnapshots.SelectRow(0);
+            Companies.Snapshots.SelectRow(0);
             Companies.ImportSnapshotCommand();
             Companies.MessageBox.Yes();
-            Companies.ImportSnapshotPanel_ftmImportSnapshot.Ok();
+            Companies.ImportSnapshotPanel.Ok();
             PxLogin.LoginToDestinationSite();
         }
         public void ConfigForWrapperGeneration()
@@ -73,21 +73,22 @@ namespace GeneratedWrappers.SOLUTIONNAME
             //Before Generating the Wrappers, all screens must be accessable at minimum for success.
             //The starting state of wrapper generation is SalesDemo data + your customization published.
             //Any aditional steps to enable the custom screens or features must be done before Wrapper generation.
-            CS100000_FeaturesMaint Features = new CS100000_FeaturesMaint();
+            CS100000FeaturesMaint Features = new CS100000FeaturesMaint();
             Features.OpenScreen();
             Features.Insert();
-            Features.Features_form.SalesQuotes.SetTrue();
-            Features.Features_form.DynamicControl<CheckBox>("Multicurrency Accounting").SetTrue();
+            Features.Summary.SalesQuotes.SetTrue();
+            Features.Summary.DynamicControl<CheckBox>("Multicurrency Accounting").SetTrue();
             Features.RequestValidation();
         }
         public void ConfigWebsiteFromSalesDemo()
         {
             // We assume the test starts from a blank salesdemo data + your customization published again.
             // If you had test steps running for wrapper generation, they must be run again here before the test.
+            CS100000FeaturesMaint Features = new CS100000FeaturesMaint();
             Features.OpenScreen();
             Features.Insert();
-            Features.Features_form.SalesQuotes.SetTrue();
-            Features.Features_form.DynamicControl<CheckBox>("Multicurrency Accounting").SetTrue();
+            Features.Summary.SalesQuotes.SetTrue();
+            Features.Summary.DynamicControl<CheckBox>("Multicurrency Accounting").SetTrue();
             Features.RequestValidation();
             // Use TestSDK code to enter any data required for the following tests to run.
             // eg. Configure numbering sequences, Enableing features, checkboxes on screens, setting up items

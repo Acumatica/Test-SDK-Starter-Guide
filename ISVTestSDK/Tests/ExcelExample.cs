@@ -18,12 +18,12 @@ namespace GeneratedWrappers.SOLUTIONNAME
 
             //Excel files must be placed in the project's DataFiles folder and the file imported as below
             //Excel files MUST start with your registered SOLUTIONNAME to make them uniquely named.
-            string excelsPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName + @"\DataFiles\";
+            string excelsPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName + @"\Excels\";
             var excel = new ExcelPackage(new FileInfo(excelsPath + "SOLUTIONNAMEExcelData.xlsx"));
 
             using (TestExecution.CreateTestStepGroup("Import and enter data from excel"))
             {
-                SO301000_SOOrderEntry SOOrderEntry = new SO301000_SOOrderEntry();
+                SO301000SOOrderEntry SOOrderEntry = new SO301000SOOrderEntry();
                 SOOrderEntry.OpenScreen();
                 {
                     var ExcelHeaderTab = excel.Workbook.Worksheets["Header"];
@@ -37,7 +37,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
                         {
                             //Header Area data
                             SOOrderEntry.Insert();
-                            SOOrderEntry.Document_form.CustomerID.Type(ExcelHeaderTab.Cells[row, 2].Text);
+                            SOOrderEntry.Document.CustomerID.Type(ExcelHeaderTab.Cells[row, 2].Text);
 
                             // For each inventoryID to add to order from excel
                             for (int detailsTab = ExcelDetailsTab.Dimension.Start.Row + 1; detailsTab <= ExcelDetailsTab.Dimension.End.Row; detailsTab++)
@@ -47,14 +47,14 @@ namespace GeneratedWrappers.SOLUTIONNAME
                                 else
                                 {
                                     //Deatils Tab fill in when ID matches the sales order id number
-                                    SOOrderEntry.Transactions_grid.New();
-                                    SOOrderEntry.Transactions_grid.Row.InventoryID.Type(ExcelDetailsTab.Cells[detailsTab, 2].Text);
-                                    SOOrderEntry.Transactions_grid.Row.OrderQty.Type(ExcelDetailsTab.Cells[detailsTab, 3].Text);
+                                    SOOrderEntry.Transactions.New();
+                                    SOOrderEntry.Transactions.Row.InventoryID.Type(ExcelDetailsTab.Cells[detailsTab, 2].Text);
+                                    SOOrderEntry.Transactions.Row.OrderQty.Type(ExcelDetailsTab.Cells[detailsTab, 3].Text);
                                 }
                             }
-                            SOOrderEntry.CurrentDocument_formDeliverySettings.ShipVia.Type(ExcelShippingTab.Cells[row, 2].Text);
-                            SOOrderEntry.Shipping_Address_formB.OverrideAddress.Set(true);
-                            SOOrderEntry.Shipping_Address_formB.AddressLine1.Type(ExcelAddressesTab.Cells[row, 3].Text);
+                            SOOrderEntry.Shipping.ShipVia.Type(ExcelShippingTab.Cells[row, 2].Text);
+                            SOOrderEntry.Addresses.OverrideAddress.Set(true);
+                            SOOrderEntry.Addresses.AddressLine1.Type(ExcelAddressesTab.Cells[row, 3].Text);
                             SOOrderEntry.Save();
                         }
                         catch (Exception ex)

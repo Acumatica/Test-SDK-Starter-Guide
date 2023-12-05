@@ -1,4 +1,5 @@
-﻿namespace GeneratedWrappers.SOLUTIONNAME
+﻿
+namespace GeneratedWrappers.SOLUTIONNAME
 {
     public partial class SO301000SOOrderEntry : SO301000_SOOrderEntry
     {
