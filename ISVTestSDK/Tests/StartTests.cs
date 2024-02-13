@@ -16,7 +16,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 //Assumed Start State is fresh install of Acumatica Sales Demo Data
                 //plus your customization published
                 ConfigWebsite configWebsite = new ConfigWebsite();
-                configWebsite.ConfigForWrapperGeneration();
                 configWebsite.ConfigWebsiteFromSalesDemo();
             }
             using (TestExecution.CreateTestStepGroup("Main Tests"))

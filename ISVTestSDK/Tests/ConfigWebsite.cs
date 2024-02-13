@@ -14,6 +14,11 @@ using System.Text.RegularExpressions;
 
 namespace GeneratedWrappers.SOLUTIONNAME
 {
+
+    /* 
+     * This class is optional to use, it provides reusable methods to backup/restore your website to the testing starting state (fresh salesdemo data)
+     * It also has methods that can be modified to do the initial configuration if needed, but customization plug-in .zip package is recomended for data setup of non acumatica fields.
+     */
     internal class ConfigWebsite
     {
         IEnumerable<string> packages;
@@ -23,31 +28,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
         CS100000FeaturesMaint Features = new CS100000FeaturesMaint();
         SM201510LicensingSetup licensing = new SM201510LicensingSetup();
 
-
-        public void GenerateWrappers(string physicalSitePath)
-        {
-            string projectPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
-            string wrapperPath = String.Format(projectPath + @"\Wrappers\");
-
-            PxLogin.LoginToDestinationSite();
-            //You must config the website to enable all screens before running Wrapper Generation
-
-            ClassGenerator.ClassGenerator classGenerator = new ClassGenerator.ClassGenerator(physicalSitePath, wrapperPath);
-            classGenerator.Username = "admin"; // If multi company = admin@Company 2
-            // Replace SOLUTIONNAME with your registered solution name from the Partner Portal in all capitals.
-            classGenerator.Namespace = "GeneratedWrappers.SOLUTIONNAME";
-
-            // PL and GI screens are added like this, get the "URL" from the site map screen.
-            classGenerator.Screens.Add("IN2025PL", "~/GenericInquiry/GenericInquiry.aspx?id=e4352bbd-a53a-42c4-9b96-e9f0fda070c7");
-            // Add all screens here you use in your test below, except PL screens are added as above.
-            classGenerator.Run("SM201510,SM204505,SM203520,CA306000,CS100000,SO301000,SO303000,SO302000");
-            // You can also use regex such as:
-            // classGenerator.Run("SO, AR5*"); // generates all SO screens and all AR5***** screens
-            // more example screens : R201000,AR202000,AR209500,AR303000,CS205000,IN101000,IN201000,IN202000,IN202500,IN204060,IN301000,SM205020,SM208000,SM302000,SO201000,SO301000,SO302000
-            //configWebsite.MakePrivateFieldsPublic(); //uncomment to use wrappers directly with no extension (not recomended)
-            // You must create an extension file for each wrapper you have generated.
-            // Documentation/How to Create Extension Files.docx is a very useful guide to create extensions.
-        }
         public void CreateBackup()
         {
             PxLogin.LoginToDestinationSite();
@@ -68,18 +48,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
             Companies.ImportSnapshotPanel.Ok();
             PxLogin.LoginToDestinationSite();
         }
-        public void ConfigForWrapperGeneration()
-        {
-            //Before Generating the Wrappers, all screens must be accessable at minimum for success.
-            //The starting state of wrapper generation is SalesDemo data + your customization published.
-            //Any aditional steps to enable the custom screens or features must be done before Wrapper generation.
-            CS100000FeaturesMaint Features = new CS100000FeaturesMaint();
-            Features.OpenScreen();
-            Features.Insert();
-            Features.Summary.SalesQuotes.SetTrue();
-            Features.Summary.DynamicControl<CheckBox>("Multicurrency Accounting").SetTrue();
-            Features.RequestValidation();
-        }
+
         public void ConfigWebsiteFromSalesDemo()
         {
             // We assume the test starts from a blank salesdemo data + your customization published again.
@@ -152,6 +121,8 @@ namespace GeneratedWrappers.SOLUTIONNAME
             #endregion
         }
 
+        /* Used if you want to use wrappers directly, note this may cause you to have to update tests more frequently when code changes happen.
+        May also cause severe performance issues 
         public void MakePrivateFieldsPublic()
         {
             var packagesPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName + @"\Wrappers\";
@@ -174,6 +145,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 File.WriteAllText(file, modifiedContent);
                 Console.WriteLine($"Updated {file}");
             }
-        }
+        }*/
     }
 }
