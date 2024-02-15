@@ -18,7 +18,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
 
             //Excel files must be placed in the project's DataFiles folder and the file imported as below
             //Excel files MUST start with your registered SOLUTIONNAME to make them uniquely named.
-            string excelsPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName + @"\Excels\";
+            string excelsPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName + @"\DataFiles\";
             var excel = new ExcelPackage(new FileInfo(excelsPath + "SOLUTIONNAMEExcelData.xlsx"));
 
             using (TestExecution.CreateTestStepGroup("Import and enter data from excel"))

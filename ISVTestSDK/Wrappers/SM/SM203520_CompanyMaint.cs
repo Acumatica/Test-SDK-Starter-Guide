@@ -46,30 +46,30 @@ namespace GeneratedWrappers.SOLUTIONNAME
         
         public PxToolBar ToolBar;
         
-        public c_companies_form Companies_form { get; } = new c_companies_form("ctl00_phF_form", "Companies_form");
-        public c_parameters_gridwizard Parameters_gridWizard { get; } = new c_parameters_gridwizard("ctl00_usrCaption_shareColumnsDlg_gridWizard", "Parameters_gridWizard");
-        public c_profilerinfoview_formprofiler ProfilerInfoView_formProfiler { get; } = new c_profilerinfoview_formprofiler("ctl00_usrCaption_pnlProfiler_formProfiler", "ProfilerInfoView_formProfiler");
-        public c_firstselect_formactions FirstSelect_FormActions { get; } = new c_firstselect_formactions("ctl00_usrCaption_CustomizationDialogs_PXSmartPanel1_FormActions", "FirstSelect_FormActions");
-        public c_comboboxvalues_gridcombos ComboBoxValues_gridCombos { get; } = new c_comboboxvalues_gridcombos("ctl00_usrCaption_CustomizationDialogs_ComboBoxValuesDictDialog_gridCombos", "ComboBoxValues_gridCombos");
-        public c_vieweleminfo_formeleminfo ViewElemInfo_FormElemInfo { get; } = new c_vieweleminfo_formeleminfo("ctl00_usrCaption_CustomizationDialogs_PanelElemInfo_FormElemInfo", "ViewElemInfo_FormElemInfo");
-        public c_filterworkingproject_formnewproject FilterWorkingProject_FormNewProject { get; } = new c_filterworkingproject_formnewproject("ctl00_usrCaption_CustomizationDialogs_DlgNewProject_FormNewProject", "FilterWorkingProject_FormNewProject");
-        public c_filterworkingproject_formselectproject FilterWorkingProject_FormSelectProject { get; } = new c_filterworkingproject_formselectproject("ctl00_usrCaption_CustomizationDialogs_WizardSelectProject_FormSelectProject", "FilterWorkingProject_FormSelectProject");
-        public c_gridlist_gridgrid GridList_gridGrid { get; } = new c_gridlist_gridgrid("ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid", "GridList_gridGrid");
-        public c_userlist_usergrid UserList_userGrid { get; } = new c_userlist_usergrid("ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid", "UserList_userGrid");
-        public c_userlist_lv0 UserList_lv0 { get; } = new c_userlist_lv0("ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_lv0", "UserList_lv0");
-        public c_companycurrent_tab CompanyCurrent_tab { get; } = new c_companycurrent_tab("ctl00_phG_tab", "CompanyCurrent_tab");
-        public c_snapshots_gridsnapshots Snapshots_gridSnapshots { get; } = new c_snapshots_gridsnapshots("ctl00_phG_tab_t0_gridSnapshots", "Snapshots_gridSnapshots");
-        public c_snapshots_lv0 Snapshots_lv0 { get; } = new c_snapshots_lv0("ctl00_phG_tab_t0_gridSnapshots_lv0", "Snapshots_lv0");
-        public c_snapshotshistory_gridhistory SnapshotsHistory_gridHistory { get; } = new c_snapshotshistory_gridhistory("ctl00_phG_tab_t1_gridHistory", "SnapshotsHistory_gridHistory");
-        public c_snapshotshistory_lv0 SnapshotsHistory_lv0 { get; } = new c_snapshotshistory_lv0("ctl00_phG_tab_t1_gridHistory_lv0", "SnapshotsHistory_lv0");
-        public c_users_gridusers Users_gridUsers { get; } = new c_users_gridusers("ctl00_phG_tab_t2_gridUsers", "Users_gridUsers");
-        public c_users_lv0 Users_lv0 { get; } = new c_users_lv0("ctl00_phG_tab_t2_gridUsers_lv0", "Users_lv0");
-        public c_copycompanypanel_frmcopycompany CopyCompanyPanel_frmCopyCompany { get; } = new c_copycompanypanel_frmcopycompany("ctl00_phF_pnlCopyCompany_frmCopyCompany", "CopyCompanyPanel_frmCopyCompany");
-        public c_exportsnapshotpanel_frmexportsnapshot ExportSnapshotPanel_frmExportSnapshot { get; } = new c_exportsnapshotpanel_frmexportsnapshot("ctl00_phF_pnlExportSnapshot_frmExportSnapshot", "ExportSnapshotPanel_frmExportSnapshot");
-        public c_reloadsnapshotpanel_frmreloadsnapshot ReloadSnapshotPanel_frmReloadSnapshot { get; } = new c_reloadsnapshotpanel_frmreloadsnapshot("ctl00_phF_pnlReloadSnapshot_frmReloadSnapshot", "ReloadSnapshotPanel_frmReloadSnapshot");
-        public c_importsnapshotpanel_ftmimportsnapshot ImportSnapshotPanel_ftmImportSnapshot { get; } = new c_importsnapshotpanel_ftmimportsnapshot("ctl00_phF_pnlImportSnapshot_ftmImportSnapshot", "ImportSnapshotPanel_ftmImportSnapshot");
-        public c_filterpreview_formpreview FilterPreview_FormPreview { get; } = new c_filterpreview_formpreview("ctl00_usrCaption_PanelDynamicForm_FormPreview", "FilterPreview_FormPreview");
-        public c_screen_upload UploadSnapshotPackage { get; } = new c_screen_upload("ctl00_phF_dlgUploadFile", "UploadSnapshotPackage");
+        protected c_companies_form Companies_form { get; } = new c_companies_form("ctl00_phF_form", "Companies_form");
+        protected c_parameters_gridwizard Parameters_gridWizard { get; } = new c_parameters_gridwizard("ctl00_usrCaption_shareColumnsDlg_gridWizard", "Parameters_gridWizard");
+        protected c_profilerinfoview_formprofiler ProfilerInfoView_formProfiler { get; } = new c_profilerinfoview_formprofiler("ctl00_usrCaption_pnlProfiler_formProfiler", "ProfilerInfoView_formProfiler");
+        protected c_firstselect_formactions FirstSelect_FormActions { get; } = new c_firstselect_formactions("ctl00_usrCaption_CustomizationDialogs_PXSmartPanel1_FormActions", "FirstSelect_FormActions");
+        protected c_comboboxvalues_gridcombos ComboBoxValues_gridCombos { get; } = new c_comboboxvalues_gridcombos("ctl00_usrCaption_CustomizationDialogs_ComboBoxValuesDictDialog_gridCombos", "ComboBoxValues_gridCombos");
+        protected c_vieweleminfo_formeleminfo ViewElemInfo_FormElemInfo { get; } = new c_vieweleminfo_formeleminfo("ctl00_usrCaption_CustomizationDialogs_PanelElemInfo_FormElemInfo", "ViewElemInfo_FormElemInfo");
+        protected c_filterworkingproject_formnewproject FilterWorkingProject_FormNewProject { get; } = new c_filterworkingproject_formnewproject("ctl00_usrCaption_CustomizationDialogs_DlgNewProject_FormNewProject", "FilterWorkingProject_FormNewProject");
+        protected c_filterworkingproject_formselectproject FilterWorkingProject_FormSelectProject { get; } = new c_filterworkingproject_formselectproject("ctl00_usrCaption_CustomizationDialogs_WizardSelectProject_FormSelectProject", "FilterWorkingProject_FormSelectProject");
+        protected c_gridlist_gridgrid GridList_gridGrid { get; } = new c_gridlist_gridgrid("ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid", "GridList_gridGrid");
+        protected c_userlist_usergrid UserList_userGrid { get; } = new c_userlist_usergrid("ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid", "UserList_userGrid");
+        protected c_userlist_lv0 UserList_lv0 { get; } = new c_userlist_lv0("ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_lv0", "UserList_lv0");
+        protected c_companycurrent_tab CompanyCurrent_tab { get; } = new c_companycurrent_tab("ctl00_phG_tab", "CompanyCurrent_tab");
+        protected c_snapshots_gridsnapshots Snapshots_gridSnapshots { get; } = new c_snapshots_gridsnapshots("ctl00_phG_tab_t0_gridSnapshots", "Snapshots_gridSnapshots");
+        protected c_snapshots_lv0 Snapshots_lv0 { get; } = new c_snapshots_lv0("ctl00_phG_tab_t0_gridSnapshots_lv0", "Snapshots_lv0");
+        protected c_snapshotshistory_gridhistory SnapshotsHistory_gridHistory { get; } = new c_snapshotshistory_gridhistory("ctl00_phG_tab_t1_gridHistory", "SnapshotsHistory_gridHistory");
+        protected c_snapshotshistory_lv0 SnapshotsHistory_lv0 { get; } = new c_snapshotshistory_lv0("ctl00_phG_tab_t1_gridHistory_lv0", "SnapshotsHistory_lv0");
+        protected c_users_gridusers Users_gridUsers { get; } = new c_users_gridusers("ctl00_phG_tab_t2_gridUsers", "Users_gridUsers");
+        protected c_users_lv0 Users_lv0 { get; } = new c_users_lv0("ctl00_phG_tab_t2_gridUsers_lv0", "Users_lv0");
+        protected c_copycompanypanel_frmcopycompany CopyCompanyPanel_frmCopyCompany { get; } = new c_copycompanypanel_frmcopycompany("ctl00_phF_pnlCopyCompany_frmCopyCompany", "CopyCompanyPanel_frmCopyCompany");
+        protected c_exportsnapshotpanel_frmexportsnapshot ExportSnapshotPanel_frmExportSnapshot { get; } = new c_exportsnapshotpanel_frmexportsnapshot("ctl00_phF_pnlExportSnapshot_frmExportSnapshot", "ExportSnapshotPanel_frmExportSnapshot");
+        protected c_reloadsnapshotpanel_frmreloadsnapshot ReloadSnapshotPanel_frmReloadSnapshot { get; } = new c_reloadsnapshotpanel_frmreloadsnapshot("ctl00_phF_pnlReloadSnapshot_frmReloadSnapshot", "ReloadSnapshotPanel_frmReloadSnapshot");
+        protected c_importsnapshotpanel_ftmimportsnapshot ImportSnapshotPanel_ftmImportSnapshot { get; } = new c_importsnapshotpanel_ftmimportsnapshot("ctl00_phF_pnlImportSnapshot_ftmImportSnapshot", "ImportSnapshotPanel_ftmImportSnapshot");
+        protected c_filterpreview_formpreview FilterPreview_FormPreview { get; } = new c_filterpreview_formpreview("ctl00_usrCaption_PanelDynamicForm_FormPreview", "FilterPreview_FormPreview");
+        protected c_screen_upload UploadSnapshotPackage { get; } = new c_screen_upload("ctl00_phF_dlgUploadFile", "UploadSnapshotPackage");
         
         public SM203520_CompanyMaint()
         {

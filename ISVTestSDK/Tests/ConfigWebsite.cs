@@ -79,10 +79,10 @@ namespace GeneratedWrappers.SOLUTIONNAME
             Log.Screenshot();
             CustomizationProjects.OpenScreen();
             CustomizationProjects.ActionUndoPublish(); //clear out old packages
-            CustomizationProjects.GridList_gridGrid.SetTrue();
-            CustomizationProjects.GridList_gridGrid.SetFalse();
+            CustomizationProjects.GridList.SetTrue();
+            CustomizationProjects.GridList.SetFalse();
             CustomizationProjects.Save();
-            CustomizationProjects.Projects_grid.RemoveAllRows();
+            CustomizationProjects.Projects.RemoveAllRows();
             CustomizationProjects.Save();
             GetPackages();
             Log.Screenshot();
@@ -90,9 +90,9 @@ namespace GeneratedWrappers.SOLUTIONNAME
             {
                 Log.Information("Importing: " + customization.ToString());
                 CustomizationProjects.ActionImport();
-                CustomizationProjects.OpenPackage.SelectFile(customization.ToString());
-                CustomizationProjects.OpenPackage.Upload();
-                CustomizationProjects.Projects_grid.SetTrue();
+                CustomizationProjects.cOpenPackage.SelectFile(customization.ToString());
+                CustomizationProjects.cOpenPackage.Upload();
+                CustomizationProjects.GridList.SetTrue();
                 CustomizationProjects.Save();
             }
         }
@@ -103,16 +103,16 @@ namespace GeneratedWrappers.SOLUTIONNAME
             using (TestExecution.CreateTestStepGroup("Publish customization projects."))
             {
                 CustomizationProjects.OpenScreen();
-                CustomizationProjects.CompilationPanel.WaitAction = () => Wait.WaitForLongOperationToComplete(Wait.LongTimeOut * 2);
+                CustomizationProjects.cCompilationPanel.WaitAction = () => Wait.WaitForLongOperationToComplete(Wait.LongTimeOut * 2);
                 CustomizationProjects.ActionPublish();
                 try
                 {
-                    CustomizationProjects.CompilationPanel.Validate(true, Constants.ValidationSuccessfully);
-                    CustomizationProjects.CompilationPanel.Publish();
+                    CustomizationProjects.cCompilationPanel.Validate(true, Constants.ValidationSuccessfully);
+                    CustomizationProjects.cCompilationPanel.Publish();
                 }
                 catch
                 {
-                    CustomizationProjects.CompilationPanel.Close();
+                    CustomizationProjects.cCompilationPanel.Close();
                 }
                 CustomizationProjects.RefreshScreen(true);
                 Log.Screenshot();

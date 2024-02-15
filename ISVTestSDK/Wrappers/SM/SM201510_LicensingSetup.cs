@@ -40,23 +40,23 @@ namespace GeneratedWrappers.SOLUTIONNAME
         
         public PxToolBar ToolBar;
         
-        public c_license_form License_form { get; } = new c_license_form("ctl00_phF_form", "License_form");
-        public c_parameters_gridwizard Parameters_gridWizard { get; } = new c_parameters_gridwizard("ctl00_usrCaption_shareColumnsDlg_gridWizard", "Parameters_gridWizard");
-        public c_profilerinfoview_formprofiler ProfilerInfoView_formProfiler { get; } = new c_profilerinfoview_formprofiler("ctl00_usrCaption_pnlProfiler_formProfiler", "ProfilerInfoView_formProfiler");
-        public c_firstselect_formactions FirstSelect_FormActions { get; } = new c_firstselect_formactions("ctl00_usrCaption_CustomizationDialogs_PXSmartPanel1_FormActions", "FirstSelect_FormActions");
-        public c_comboboxvalues_gridcombos ComboBoxValues_gridCombos { get; } = new c_comboboxvalues_gridcombos("ctl00_usrCaption_CustomizationDialogs_ComboBoxValuesDictDialog_gridCombos", "ComboBoxValues_gridCombos");
-        public c_vieweleminfo_formeleminfo ViewElemInfo_FormElemInfo { get; } = new c_vieweleminfo_formeleminfo("ctl00_usrCaption_CustomizationDialogs_PanelElemInfo_FormElemInfo", "ViewElemInfo_FormElemInfo");
-        public c_filterworkingproject_formnewproject FilterWorkingProject_FormNewProject { get; } = new c_filterworkingproject_formnewproject("ctl00_usrCaption_CustomizationDialogs_DlgNewProject_FormNewProject", "FilterWorkingProject_FormNewProject");
-        public c_filterworkingproject_formselectproject FilterWorkingProject_FormSelectProject { get; } = new c_filterworkingproject_formselectproject("ctl00_usrCaption_CustomizationDialogs_WizardSelectProject_FormSelectProject", "FilterWorkingProject_FormSelectProject");
-        public c_gridlist_gridgrid GridList_gridGrid { get; } = new c_gridlist_gridgrid("ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid", "GridList_gridGrid");
-        public c_userlist_usergrid UserList_userGrid { get; } = new c_userlist_usergrid("ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid", "UserList_userGrid");
-        public c_userlist_lv0 UserList_lv0 { get; } = new c_userlist_lv0("ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_lv0", "UserList_lv0");
-        public c_features_grid Features_grid { get; } = new c_features_grid("ctl00_phG_grid", "Features_grid");
-        public c_licensekeypanel_frminstall LicenseKeyPanel_frmInstall { get; } = new c_licensekeypanel_frminstall("ctl00_phF_pnlNewLicense_frmInstall", "LicenseKeyPanel_frmInstall");
-        public c_licensewarning_frmwarning LicenseWarning_frmWarning { get; } = new c_licensewarning_frmwarning("ctl00_phF_pnlWarning_frmWarning", "LicenseWarning_frmWarning");
-        public c_licenseagreement_frmagreement LicenseAgreement_frmAgreement { get; } = new c_licenseagreement_frmagreement("ctl00_phF_pnlAgreement_frmAgreement", "LicenseAgreement_frmAgreement");
-        public c_filterpreview_formpreview FilterPreview_FormPreview { get; } = new c_filterpreview_formpreview("ctl00_usrCaption_PanelDynamicForm_FormPreview", "FilterPreview_FormPreview");
-        public c_screen_upload UploadNewLicenseFile { get; } = new c_screen_upload("ctl00_phF_dlgUploadFile", "UploadNewLicenseFile");
+        protected c_license_form License_form { get; } = new c_license_form("ctl00_phF_form", "License_form");
+        protected c_parameters_gridwizard Parameters_gridWizard { get; } = new c_parameters_gridwizard("ctl00_usrCaption_shareColumnsDlg_gridWizard", "Parameters_gridWizard");
+        protected c_profilerinfoview_formprofiler ProfilerInfoView_formProfiler { get; } = new c_profilerinfoview_formprofiler("ctl00_usrCaption_pnlProfiler_formProfiler", "ProfilerInfoView_formProfiler");
+        protected c_firstselect_formactions FirstSelect_FormActions { get; } = new c_firstselect_formactions("ctl00_usrCaption_CustomizationDialogs_PXSmartPanel1_FormActions", "FirstSelect_FormActions");
+        protected c_comboboxvalues_gridcombos ComboBoxValues_gridCombos { get; } = new c_comboboxvalues_gridcombos("ctl00_usrCaption_CustomizationDialogs_ComboBoxValuesDictDialog_gridCombos", "ComboBoxValues_gridCombos");
+        protected c_vieweleminfo_formeleminfo ViewElemInfo_FormElemInfo { get; } = new c_vieweleminfo_formeleminfo("ctl00_usrCaption_CustomizationDialogs_PanelElemInfo_FormElemInfo", "ViewElemInfo_FormElemInfo");
+        protected c_filterworkingproject_formnewproject FilterWorkingProject_FormNewProject { get; } = new c_filterworkingproject_formnewproject("ctl00_usrCaption_CustomizationDialogs_DlgNewProject_FormNewProject", "FilterWorkingProject_FormNewProject");
+        protected c_filterworkingproject_formselectproject FilterWorkingProject_FormSelectProject { get; } = new c_filterworkingproject_formselectproject("ctl00_usrCaption_CustomizationDialogs_WizardSelectProject_FormSelectProject", "FilterWorkingProject_FormSelectProject");
+        protected c_gridlist_gridgrid GridList_gridGrid { get; } = new c_gridlist_gridgrid("ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid", "GridList_gridGrid");
+        protected c_userlist_usergrid UserList_userGrid { get; } = new c_userlist_usergrid("ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid", "UserList_userGrid");
+        protected c_userlist_lv0 UserList_lv0 { get; } = new c_userlist_lv0("ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_lv0", "UserList_lv0");
+        protected c_features_grid Features_grid { get; } = new c_features_grid("ctl00_phG_grid", "Features_grid");
+        protected c_licensekeypanel_frminstall LicenseKeyPanel_frmInstall { get; } = new c_licensekeypanel_frminstall("ctl00_phF_pnlNewLicense_frmInstall", "LicenseKeyPanel_frmInstall");
+        protected c_licensewarning_frmwarning LicenseWarning_frmWarning { get; } = new c_licensewarning_frmwarning("ctl00_phF_pnlWarning_frmWarning", "LicenseWarning_frmWarning");
+        protected c_licenseagreement_frmagreement LicenseAgreement_frmAgreement { get; } = new c_licenseagreement_frmagreement("ctl00_phF_pnlAgreement_frmAgreement", "LicenseAgreement_frmAgreement");
+        protected c_filterpreview_formpreview FilterPreview_FormPreview { get; } = new c_filterpreview_formpreview("ctl00_usrCaption_PanelDynamicForm_FormPreview", "FilterPreview_FormPreview");
+        protected c_screen_upload UploadNewLicenseFile { get; } = new c_screen_upload("ctl00_phF_dlgUploadFile", "UploadNewLicenseFile");
         
         public SM201510_LicensingSetup()
         {

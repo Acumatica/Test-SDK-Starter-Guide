@@ -47,22 +47,22 @@ namespace GeneratedWrappers.SOLUTIONNAME
         
         public PxToolBar ToolBar;
         
-        public c_projects_grid Projects_grid { get; } = new c_projects_grid("ctl00_phL_grid", "Projects_grid");
-        public c_projects_lv0 Projects_lv0 { get; } = new c_projects_lv0("ctl00_phL_grid_lv0", "Projects_lv0");
-        public c_parameters_gridwizard Parameters_gridWizard { get; } = new c_parameters_gridwizard("ctl00_usrCaption_shareColumnsDlg_gridWizard", "Parameters_gridWizard");
-        public c_profilerinfoview_formprofiler ProfilerInfoView_formProfiler { get; } = new c_profilerinfoview_formprofiler("ctl00_usrCaption_pnlProfiler_formProfiler", "ProfilerInfoView_formProfiler");
-        public c_gridlist_gridgrid GridList_gridGrid { get; } = new c_gridlist_gridgrid("ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid", "GridList_gridGrid");
-        public c_userlist_usergrid UserList_userGrid { get; } = new c_userlist_usergrid("ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid", "UserList_userGrid");
-        public c_userlist_lv0 UserList_lv0 { get; } = new c_userlist_lv0("ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_lv0", "UserList_lv0");
-        public c_projectschooser_gridchooser ProjectsChooser_gridChooser { get; } = new c_projectschooser_gridchooser("ctl00_phL_PanelChooseProjects_gridChooser", "ProjectsChooser_gridChooser");
-        public c_projectschooser_lv0 ProjectsChooser_lv0 { get; } = new c_projectschooser_lv0("ctl00_phL_PanelChooseProjects_gridChooser_lv0", "ProjectsChooser_lv0");
-        public c_viewpublishoptions_viewpublishoptions ViewPublishOptions_ViewPublishOptions { get; } = new c_viewpublishoptions_viewpublishoptions("ctl00_phL_PanelPublishExt_ViewPublishOptions", "ViewPublishOptions_ViewPublishOptions");
-        public c_viewcompanylist_gridcompanylist ViewCompanyList_GridCompanyList { get; } = new c_viewcompanylist_gridcompanylist("ctl00_phL_PanelPublishExt_GridCompanyList", "ViewCompanyList_GridCompanyList");
-        public c_viewcompanylist_lv0 ViewCompanyList_lv0 { get; } = new c_viewcompanylist_lv0("ctl00_phL_PanelPublishExt_GridCompanyList_lv0", "ViewCompanyList_lv0");
-        public c_viewvalidateextensions_pxformview4 ViewValidateExtensions_PXFormView4 { get; } = new c_viewvalidateextensions_pxformview4("ctl00_phL_PanelValidateExt_PXFormView4", "ViewValidateExtensions_PXFormView4");
-        public c_filterpreview_formpreview FilterPreview_FormPreview { get; } = new c_filterpreview_formpreview("ctl00_usrCaption_PanelDynamicForm_FormPreview", "FilterPreview_FormPreview");
-        public c_grid_upload OpenPackage { get; } = new c_grid_upload("ctl00_phL_UploadPackageDlg_UploadPackagePanel", "OpenPackage");
-        public CompilationPanel CompilationPanel { get; } = new CompilationPanel("ctl00_phL_PanelCompiler", "CompilationPanel");
+        protected c_projects_grid Projects_grid { get; } = new c_projects_grid("ctl00_phL_grid", "Projects_grid");
+        protected c_projects_lv0 Projects_lv0 { get; } = new c_projects_lv0("ctl00_phL_grid_lv0", "Projects_lv0");
+        protected c_parameters_gridwizard Parameters_gridWizard { get; } = new c_parameters_gridwizard("ctl00_usrCaption_shareColumnsDlg_gridWizard", "Parameters_gridWizard");
+        protected c_profilerinfoview_formprofiler ProfilerInfoView_formProfiler { get; } = new c_profilerinfoview_formprofiler("ctl00_usrCaption_pnlProfiler_formProfiler", "ProfilerInfoView_formProfiler");
+        protected c_gridlist_gridgrid GridList_gridGrid { get; } = new c_gridlist_gridgrid("ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid", "GridList_gridGrid");
+        protected c_userlist_usergrid UserList_userGrid { get; } = new c_userlist_usergrid("ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid", "UserList_userGrid");
+        protected c_userlist_lv0 UserList_lv0 { get; } = new c_userlist_lv0("ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_lv0", "UserList_lv0");
+        protected c_projectschooser_gridchooser ProjectsChooser_gridChooser { get; } = new c_projectschooser_gridchooser("ctl00_phL_PanelChooseProjects_gridChooser", "ProjectsChooser_gridChooser");
+        protected c_projectschooser_lv0 ProjectsChooser_lv0 { get; } = new c_projectschooser_lv0("ctl00_phL_PanelChooseProjects_gridChooser_lv0", "ProjectsChooser_lv0");
+        protected c_viewpublishoptions_viewpublishoptions ViewPublishOptions_ViewPublishOptions { get; } = new c_viewpublishoptions_viewpublishoptions("ctl00_phL_PanelPublishExt_ViewPublishOptions", "ViewPublishOptions_ViewPublishOptions");
+        protected c_viewcompanylist_gridcompanylist ViewCompanyList_GridCompanyList { get; } = new c_viewcompanylist_gridcompanylist("ctl00_phL_PanelPublishExt_GridCompanyList", "ViewCompanyList_GridCompanyList");
+        protected c_viewcompanylist_lv0 ViewCompanyList_lv0 { get; } = new c_viewcompanylist_lv0("ctl00_phL_PanelPublishExt_GridCompanyList_lv0", "ViewCompanyList_lv0");
+        protected c_viewvalidateextensions_pxformview4 ViewValidateExtensions_PXFormView4 { get; } = new c_viewvalidateextensions_pxformview4("ctl00_phL_PanelValidateExt_PXFormView4", "ViewValidateExtensions_PXFormView4");
+        protected c_filterpreview_formpreview FilterPreview_FormPreview { get; } = new c_filterpreview_formpreview("ctl00_usrCaption_PanelDynamicForm_FormPreview", "FilterPreview_FormPreview");
+        protected c_grid_upload OpenPackage { get; } = new c_grid_upload("ctl00_phL_UploadPackageDlg_UploadPackagePanel", "OpenPackage");
+        protected CompilationPanel CompilationPanel { get; } = new CompilationPanel("ctl00_phL_PanelCompiler", "CompilationPanel");
         
         public SM204505_ProjectList()
         {

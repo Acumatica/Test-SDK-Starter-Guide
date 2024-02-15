@@ -55,71 +55,71 @@ namespace GeneratedWrappers.SOLUTIONNAME
         
         public PxToolBar ToolBar;
         
-        public c_document_form Document_form { get; } = new c_document_form("ctl00_phF_form", "Document_form");
-        public c_parameters_gridwizard Parameters_gridWizard { get; } = new c_parameters_gridwizard("ctl00_usrCaption_shareColumnsDlg_gridWizard", "Parameters_gridWizard");
-        public c_profilerinfoview_formprofiler ProfilerInfoView_formProfiler { get; } = new c_profilerinfoview_formprofiler("ctl00_usrCaption_pnlProfiler_formProfiler", "ProfilerInfoView_formProfiler");
-        public c_firstselect_formactions FirstSelect_FormActions { get; } = new c_firstselect_formactions("ctl00_usrCaption_CustomizationDialogs_PXSmartPanel1_FormActions", "FirstSelect_FormActions");
-        public c_comboboxvalues_gridcombos ComboBoxValues_gridCombos { get; } = new c_comboboxvalues_gridcombos("ctl00_usrCaption_CustomizationDialogs_ComboBoxValuesDictDialog_gridCombos", "ComboBoxValues_gridCombos");
-        public c_vieweleminfo_formeleminfo ViewElemInfo_FormElemInfo { get; } = new c_vieweleminfo_formeleminfo("ctl00_usrCaption_CustomizationDialogs_PanelElemInfo_FormElemInfo", "ViewElemInfo_FormElemInfo");
-        public c_filterworkingproject_formnewproject FilterWorkingProject_FormNewProject { get; } = new c_filterworkingproject_formnewproject("ctl00_usrCaption_CustomizationDialogs_DlgNewProject_FormNewProject", "FilterWorkingProject_FormNewProject");
-        public c_filterworkingproject_formselectproject FilterWorkingProject_FormSelectProject { get; } = new c_filterworkingproject_formselectproject("ctl00_usrCaption_CustomizationDialogs_WizardSelectProject_FormSelectProject", "FilterWorkingProject_FormSelectProject");
-        public c_gridlist_gridgrid GridList_gridGrid { get; } = new c_gridlist_gridgrid("ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid", "GridList_gridGrid");
-        public c_userlist_usergrid UserList_userGrid { get; } = new c_userlist_usergrid("ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid", "UserList_userGrid");
-        public c_userlist_lv0 UserList_lv0 { get; } = new c_userlist_lv0("ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_lv0", "UserList_lv0");
-        public c_currencyinfo_rf CurrencyInfo_rf { get; } = new c_currencyinfo_rf("ctl00_phF_form_t0_edCury_pnlRate_rf", "CurrencyInfo_rf");
-        public c_currentdocument_tab CurrentDocument_tab { get; } = new c_currentdocument_tab("ctl00_phG_tab", "CurrentDocument_tab");
-        public c_currentdocument_commission CurrentDocument_Commission { get; } = new c_currentdocument_commission("ctl00_phG_tab_t2_Commission", "CurrentDocument_Commission");
-        public c_currentdocument_formg CurrentDocument_formG { get; } = new c_currentdocument_formg("ctl00_phG_tab_t3_formG", "CurrentDocument_formG");
-        public c_currentdocument_paylinks CurrentDocument_PayLinks { get; } = new c_currentdocument_paylinks("ctl00_phG_tab_t7_PayLinks", "CurrentDocument_PayLinks");
-        public c_currentdocument_formpt CurrentDocument_formPT { get; } = new c_currentdocument_formpt("ctl00_phG_tab_t8_formPT", "CurrentDocument_formPT");
-        public c_rutrots_rutrotform Rutrots_RUTROTForm { get; } = new c_rutrots_rutrotform("ctl00_phG_tab_t9_RUTROTForm", "Rutrots_RUTROTForm");
-        public c_transactions_grid Transactions_grid { get; } = new c_transactions_grid("ctl00_phG_tab_t0_grid", "Transactions_grid");
-        public c_transactions_lv0 Transactions_lv0 { get; } = new c_transactions_lv0("ctl00_phG_tab_t0_grid_lv0", "Transactions_lv0");
-        public c_sodocument_formp SODocument_formP { get; } = new c_sodocument_formp("ctl00_phG_tab_t4_formP", "SODocument_formP");
-        public c_taxes_grid1 Taxes_grid1 { get; } = new c_taxes_grid1("ctl00_phG_tab_t1_grid1", "Taxes_grid1");
-        public c_taxes_lv0 Taxes_lv0 { get; } = new c_taxes_lv0("ctl00_phG_tab_t1_grid1_lv0", "Taxes_lv0");
-        public c_adjustments_detgrid Adjustments_detgrid { get; } = new c_adjustments_detgrid("ctl00_phG_tab_t8_detgrid", "Adjustments_detgrid");
-        public c_adjustments_lv0 Adjustments_lv0 { get; } = new c_adjustments_lv0("ctl00_phG_tab_t8_detgrid_lv0", "Adjustments_lv0");
-        public c_adjustments_1_detgrid2 Adjustments_1_detgrid2 { get; } = new c_adjustments_1_detgrid2("ctl00_phG_tab_t8_detgrid2", "Adjustments_1_detgrid2");
-        public c_adjustments_1_lv0 Adjustments_1_lv0 { get; } = new c_adjustments_1_lv0("ctl00_phG_tab_t8_detgrid2_lv0", "Adjustments_1_lv0");
-        public c_shipping_address_shipping_address Shipping_Address_Shipping_Address { get; } = new c_shipping_address_shipping_address("ctl00_phG_tab_t5_Shipping_Address", "Shipping_Address_Shipping_Address");
-        public c_currentdocument_address CurrentDocument_Address { get; } = new c_currentdocument_address("ctl00_phG_tab_t5_Shipping_Address", "CurrentDocument_Address");
-        public c_shipping_contact_shipping_contact Shipping_Contact_Shipping_Contact { get; } = new c_shipping_contact_shipping_contact("ctl00_phG_tab_t5_Shipping_Contact", "Shipping_Contact_Shipping_Contact");
-        public c_billing_address_forma Billing_Address_formA { get; } = new c_billing_address_forma("ctl00_phG_tab_t5_formA", "Billing_Address_formA");
-        public c_billing_contact_formc Billing_Contact_formC { get; } = new c_billing_contact_formc("ctl00_phG_tab_t5_formC", "Billing_Contact_formC");
-        public c_recalcdiscountsfilter_formrecalcdiscounts Recalcdiscountsfilter_formRecalcDiscounts { get; } = new c_recalcdiscountsfilter_formrecalcdiscounts("ctl00_phG_PanelRecalcDiscounts_formRecalcDiscounts", "recalcdiscountsfilter_formRecalcDiscounts");
-        public c_ardiscountdetails_discountdetailgrid ARDiscountDetails_discountDetailGrid { get; } = new c_ardiscountdetails_discountdetailgrid("ctl00_phG_tab_t6_discountDetailGrid", "ARDiscountDetails_discountDetailGrid");
-        public c_ardiscountdetails_lv0 ARDiscountDetails_lv0 { get; } = new c_ardiscountdetails_lv0("ctl00_phG_tab_t6_discountDetailGrid_lv0", "ARDiscountDetails_lv0");
-        public c_salespertrans_gridsalespertran SalesPerTrans_gridSalesPerTran { get; } = new c_salespertrans_gridsalespertran("ctl00_phG_tab_t2_gridSalesPerTran", "SalesPerTrans_gridSalesPerTran");
-        public c_salespertrans_lv0 SalesPerTrans_lv0 { get; } = new c_salespertrans_lv0("ctl00_phG_tab_t2_gridSalesPerTran_lv0", "SalesPerTrans_lv0");
-        public c_freightdetails_gridfreightdetails FreightDetails_gridFreightDetails { get; } = new c_freightdetails_gridfreightdetails("ctl00_phG_tab_t3_gridFreightDetails", "FreightDetails_gridFreightDetails");
-        public c_freightdetails_lv0 FreightDetails_lv0 { get; } = new c_freightdetails_lv0("ctl00_phG_tab_t3_gridFreightDetails_lv0", "FreightDetails_lv0");
-        public c_rrdistribution_griddistribution RRDistribution_gridDistribution { get; } = new c_rrdistribution_griddistribution("ctl00_phG_tab_t9_RUTROTForm_gridDistribution", "RRDistribution_gridDistribution");
-        public c_rrdistribution_lv0 RRDistribution_lv0 { get; } = new c_rrdistribution_lv0("ctl00_phG_tab_t9_RUTROTForm_gridDistribution_lv0", "RRDistribution_lv0");
-        public c_duplicatefilter_pxformviewpanelduplicate Duplicatefilter_PXFormViewPanelDuplicate { get; } = new c_duplicatefilter_pxformviewpanelduplicate("ctl00_phG_panelDuplicate_PXFormViewPanelDuplicate", "duplicatefilter_PXFormViewPanelDuplicate");
-        public c_shipmentlist_grid4 Shipmentlist_grid4 { get; } = new c_shipmentlist_grid4("ctl00_phG_PanelAddShipment_grid4", "shipmentlist_grid4");
-        public c_shipmentlist_lv0 Shipmentlist_lv0 { get; } = new c_shipmentlist_lv0("ctl00_phG_PanelAddShipment_grid4_lv0", "shipmentlist_lv0");
-        public c_addresslookupfilter_addresslookuppanelformaddress AddressLookupFilter_AddressLookupPanelformAddress { get; } = new c_addresslookupfilter_addresslookuppanelformaddress("ctl00_phG_AddressLookupPanel_AddressLookupPanelformAddress", "AddressLookupFilter_AddressLookupPanelformAddress");
-        public c_relateditemsfilter_fvrelateditemsheader RelatedItemsFilter_fvRelatedItemsHeader { get; } = new c_relateditemsfilter_fvrelateditemsheader("ctl00_phG_spAddRelatedItems_fvRelatedItemsHeader", "RelatedItemsFilter_fvRelatedItemsHeader");
-        public c_allrelateditems_gridallrelateditems AllRelatedItems_gridAllRelatedItems { get; } = new c_allrelateditems_gridallrelateditems("ctl00_phG_spAddRelatedItems_tabRelatedItems_t0_gridAllRelatedItems", "allRelatedItems_gridAllRelatedItems");
-        public c_allrelateditems_lv0 AllRelatedItems_lv0 { get; } = new c_allrelateditems_lv0("ctl00_phG_spAddRelatedItems_tabRelatedItems_t0_gridAllRelatedItems_lv0", "allRelatedItems_lv0");
-        public c_substituteitems_gridsubstituteitems SubstituteItems_gridSubstituteItems { get; } = new c_substituteitems_gridsubstituteitems("ctl00_phG_spAddRelatedItems_tabRelatedItems_t1_gridSubstituteItems", "substituteItems_gridSubstituteItems");
-        public c_substituteitems_lv0 SubstituteItems_lv0 { get; } = new c_substituteitems_lv0("ctl00_phG_spAddRelatedItems_tabRelatedItems_t1_gridSubstituteItems_lv0", "substituteItems_lv0");
-        public c_upsellitems_gridupsellitems UpSellItems_gridUpSellItems { get; } = new c_upsellitems_gridupsellitems("ctl00_phG_spAddRelatedItems_tabRelatedItems_t2_gridUpSellItems", "upSellItems_gridUpSellItems");
-        public c_upsellitems_lv0 UpSellItems_lv0 { get; } = new c_upsellitems_lv0("ctl00_phG_spAddRelatedItems_tabRelatedItems_t2_gridUpSellItems_lv0", "upSellItems_lv0");
-        public c_crosssellitems_gridcrosssellitems CrossSellItems_gridCrossSellItems { get; } = new c_crosssellitems_gridcrosssellitems("ctl00_phG_spAddRelatedItems_tabRelatedItems_t3_gridCrossSellItems", "crossSellItems_gridCrossSellItems");
-        public c_crosssellitems_lv0 CrossSellItems_lv0 { get; } = new c_crosssellitems_lv0("ctl00_phG_spAddRelatedItems_tabRelatedItems_t3_gridCrossSellItems_lv0", "crossSellItems_lv0");
-        public c_otherrelateditems_gridotherrelateditems OtherRelatedItems_gridOtherRelatedItems { get; } = new c_otherrelateditems_gridotherrelateditems("ctl00_phG_spAddRelatedItems_tabRelatedItems_t4_gridOtherRelatedItems", "otherRelatedItems_gridOtherRelatedItems");
-        public c_otherrelateditems_lv0 OtherRelatedItems_lv0 { get; } = new c_otherrelateditems_lv0("ctl00_phG_spAddRelatedItems_tabRelatedItems_t4_gridOtherRelatedItems_lv0", "otherRelatedItems_lv0");
-        public c_artranlist_gridartranlist ArTranList_gridARTranList { get; } = new c_artranlist_gridartranlist("ctl00_phG_PanelAddARTran_gridARTranList", "arTranList_gridARTranList");
-        public c_artranlist_lv0 ArTranList_lv0 { get; } = new c_artranlist_lv0("ctl00_phG_PanelAddARTran_gridARTranList_lv0", "arTranList_lv0");
-        public c_solinelist_gridsolinelist SoLineList_gridSOLineList { get; } = new c_solinelist_gridsolinelist("ctl00_phG_PanelAddSOLine_gridSOLineList", "soLineList_gridSOLineList");
-        public c_solinelist_lv0 SoLineList_lv0 { get; } = new c_solinelist_lv0("ctl00_phG_PanelAddSOLine_gridSOLineList_lv0", "soLineList_lv0");
-        public c_quickpayment_createpaymentformview QuickPayment_CreatePaymentFormView { get; } = new c_quickpayment_createpaymentformview("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView", "QuickPayment_CreatePaymentFormView");
-        public c_importexternaltran_importpaymentformview ImportExternalTran_ImportPaymentFormView { get; } = new c_importexternaltran_importpaymentformview("ctl00_phG_ImportPaymentSmartPanel_ImportPaymentFormView", "ImportExternalTran_ImportPaymentFormView");
-        public c_paylink_pxformpaylink1 PayLink_PXFormPayLink1 { get; } = new c_paylink_pxformpaylink1("ctl00_phG_tab_t7_PayLinks_PXFormPayLink1", "PayLink_PXFormPayLink1");
-        public c_workflowview_workflowfictivediagram WorkflowView_WorkflowFictiveDiagram { get; } = new c_workflowview_workflowfictivediagram("ctl00_usrCaption_WorkflowDiagram_pnlWorkFlow_WorkflowFictiveDiagram", "WorkflowView_WorkflowFictiveDiagram");
-        public c_filterpreview_formpreview FilterPreview_FormPreview { get; } = new c_filterpreview_formpreview("ctl00_usrCaption_PanelDynamicForm_FormPreview", "FilterPreview_FormPreview");
+        protected c_document_form Document_form { get; } = new c_document_form("ctl00_phF_form", "Document_form");
+        protected c_parameters_gridwizard Parameters_gridWizard { get; } = new c_parameters_gridwizard("ctl00_usrCaption_shareColumnsDlg_gridWizard", "Parameters_gridWizard");
+        protected c_profilerinfoview_formprofiler ProfilerInfoView_formProfiler { get; } = new c_profilerinfoview_formprofiler("ctl00_usrCaption_pnlProfiler_formProfiler", "ProfilerInfoView_formProfiler");
+        protected c_firstselect_formactions FirstSelect_FormActions { get; } = new c_firstselect_formactions("ctl00_usrCaption_CustomizationDialogs_PXSmartPanel1_FormActions", "FirstSelect_FormActions");
+        protected c_comboboxvalues_gridcombos ComboBoxValues_gridCombos { get; } = new c_comboboxvalues_gridcombos("ctl00_usrCaption_CustomizationDialogs_ComboBoxValuesDictDialog_gridCombos", "ComboBoxValues_gridCombos");
+        protected c_vieweleminfo_formeleminfo ViewElemInfo_FormElemInfo { get; } = new c_vieweleminfo_formeleminfo("ctl00_usrCaption_CustomizationDialogs_PanelElemInfo_FormElemInfo", "ViewElemInfo_FormElemInfo");
+        protected c_filterworkingproject_formnewproject FilterWorkingProject_FormNewProject { get; } = new c_filterworkingproject_formnewproject("ctl00_usrCaption_CustomizationDialogs_DlgNewProject_FormNewProject", "FilterWorkingProject_FormNewProject");
+        protected c_filterworkingproject_formselectproject FilterWorkingProject_FormSelectProject { get; } = new c_filterworkingproject_formselectproject("ctl00_usrCaption_CustomizationDialogs_WizardSelectProject_FormSelectProject", "FilterWorkingProject_FormSelectProject");
+        protected c_gridlist_gridgrid GridList_gridGrid { get; } = new c_gridlist_gridgrid("ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid", "GridList_gridGrid");
+        protected c_userlist_usergrid UserList_userGrid { get; } = new c_userlist_usergrid("ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid", "UserList_userGrid");
+        protected c_userlist_lv0 UserList_lv0 { get; } = new c_userlist_lv0("ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_lv0", "UserList_lv0");
+        protected c_currencyinfo_rf CurrencyInfo_rf { get; } = new c_currencyinfo_rf("ctl00_phF_form_t0_edCury_pnlRate_rf", "CurrencyInfo_rf");
+        protected c_currentdocument_tab CurrentDocument_tab { get; } = new c_currentdocument_tab("ctl00_phG_tab", "CurrentDocument_tab");
+        protected c_currentdocument_commission CurrentDocument_Commission { get; } = new c_currentdocument_commission("ctl00_phG_tab_t2_Commission", "CurrentDocument_Commission");
+        protected c_currentdocument_formg CurrentDocument_formG { get; } = new c_currentdocument_formg("ctl00_phG_tab_t3_formG", "CurrentDocument_formG");
+        protected c_currentdocument_paylinks CurrentDocument_PayLinks { get; } = new c_currentdocument_paylinks("ctl00_phG_tab_t7_PayLinks", "CurrentDocument_PayLinks");
+        protected c_currentdocument_formpt CurrentDocument_formPT { get; } = new c_currentdocument_formpt("ctl00_phG_tab_t8_formPT", "CurrentDocument_formPT");
+        protected c_rutrots_rutrotform Rutrots_RUTROTForm { get; } = new c_rutrots_rutrotform("ctl00_phG_tab_t9_RUTROTForm", "Rutrots_RUTROTForm");
+        protected c_transactions_grid Transactions_grid { get; } = new c_transactions_grid("ctl00_phG_tab_t0_grid", "Transactions_grid");
+        protected c_transactions_lv0 Transactions_lv0 { get; } = new c_transactions_lv0("ctl00_phG_tab_t0_grid_lv0", "Transactions_lv0");
+        protected c_sodocument_formp SODocument_formP { get; } = new c_sodocument_formp("ctl00_phG_tab_t4_formP", "SODocument_formP");
+        protected c_taxes_grid1 Taxes_grid1 { get; } = new c_taxes_grid1("ctl00_phG_tab_t1_grid1", "Taxes_grid1");
+        protected c_taxes_lv0 Taxes_lv0 { get; } = new c_taxes_lv0("ctl00_phG_tab_t1_grid1_lv0", "Taxes_lv0");
+        protected c_adjustments_detgrid Adjustments_detgrid { get; } = new c_adjustments_detgrid("ctl00_phG_tab_t8_detgrid", "Adjustments_detgrid");
+        protected c_adjustments_lv0 Adjustments_lv0 { get; } = new c_adjustments_lv0("ctl00_phG_tab_t8_detgrid_lv0", "Adjustments_lv0");
+        protected c_adjustments_1_detgrid2 Adjustments_1_detgrid2 { get; } = new c_adjustments_1_detgrid2("ctl00_phG_tab_t8_detgrid2", "Adjustments_1_detgrid2");
+        protected c_adjustments_1_lv0 Adjustments_1_lv0 { get; } = new c_adjustments_1_lv0("ctl00_phG_tab_t8_detgrid2_lv0", "Adjustments_1_lv0");
+        protected c_shipping_address_shipping_address Shipping_Address_Shipping_Address { get; } = new c_shipping_address_shipping_address("ctl00_phG_tab_t5_Shipping_Address", "Shipping_Address_Shipping_Address");
+        protected c_currentdocument_address CurrentDocument_Address { get; } = new c_currentdocument_address("ctl00_phG_tab_t5_Shipping_Address", "CurrentDocument_Address");
+        protected c_shipping_contact_shipping_contact Shipping_Contact_Shipping_Contact { get; } = new c_shipping_contact_shipping_contact("ctl00_phG_tab_t5_Shipping_Contact", "Shipping_Contact_Shipping_Contact");
+        protected c_billing_address_forma Billing_Address_formA { get; } = new c_billing_address_forma("ctl00_phG_tab_t5_formA", "Billing_Address_formA");
+        protected c_billing_contact_formc Billing_Contact_formC { get; } = new c_billing_contact_formc("ctl00_phG_tab_t5_formC", "Billing_Contact_formC");
+        protected c_recalcdiscountsfilter_formrecalcdiscounts Recalcdiscountsfilter_formRecalcDiscounts { get; } = new c_recalcdiscountsfilter_formrecalcdiscounts("ctl00_phG_PanelRecalcDiscounts_formRecalcDiscounts", "recalcdiscountsfilter_formRecalcDiscounts");
+        protected c_ardiscountdetails_discountdetailgrid ARDiscountDetails_discountDetailGrid { get; } = new c_ardiscountdetails_discountdetailgrid("ctl00_phG_tab_t6_discountDetailGrid", "ARDiscountDetails_discountDetailGrid");
+        protected c_ardiscountdetails_lv0 ARDiscountDetails_lv0 { get; } = new c_ardiscountdetails_lv0("ctl00_phG_tab_t6_discountDetailGrid_lv0", "ARDiscountDetails_lv0");
+        protected c_salespertrans_gridsalespertran SalesPerTrans_gridSalesPerTran { get; } = new c_salespertrans_gridsalespertran("ctl00_phG_tab_t2_gridSalesPerTran", "SalesPerTrans_gridSalesPerTran");
+        protected c_salespertrans_lv0 SalesPerTrans_lv0 { get; } = new c_salespertrans_lv0("ctl00_phG_tab_t2_gridSalesPerTran_lv0", "SalesPerTrans_lv0");
+        protected c_freightdetails_gridfreightdetails FreightDetails_gridFreightDetails { get; } = new c_freightdetails_gridfreightdetails("ctl00_phG_tab_t3_gridFreightDetails", "FreightDetails_gridFreightDetails");
+        protected c_freightdetails_lv0 FreightDetails_lv0 { get; } = new c_freightdetails_lv0("ctl00_phG_tab_t3_gridFreightDetails_lv0", "FreightDetails_lv0");
+        protected c_rrdistribution_griddistribution RRDistribution_gridDistribution { get; } = new c_rrdistribution_griddistribution("ctl00_phG_tab_t9_RUTROTForm_gridDistribution", "RRDistribution_gridDistribution");
+        protected c_rrdistribution_lv0 RRDistribution_lv0 { get; } = new c_rrdistribution_lv0("ctl00_phG_tab_t9_RUTROTForm_gridDistribution_lv0", "RRDistribution_lv0");
+        protected c_duplicatefilter_pxformviewpanelduplicate Duplicatefilter_PXFormViewPanelDuplicate { get; } = new c_duplicatefilter_pxformviewpanelduplicate("ctl00_phG_panelDuplicate_PXFormViewPanelDuplicate", "duplicatefilter_PXFormViewPanelDuplicate");
+        protected c_shipmentlist_grid4 Shipmentlist_grid4 { get; } = new c_shipmentlist_grid4("ctl00_phG_PanelAddShipment_grid4", "shipmentlist_grid4");
+        protected c_shipmentlist_lv0 Shipmentlist_lv0 { get; } = new c_shipmentlist_lv0("ctl00_phG_PanelAddShipment_grid4_lv0", "shipmentlist_lv0");
+        protected c_addresslookupfilter_addresslookuppanelformaddress AddressLookupFilter_AddressLookupPanelformAddress { get; } = new c_addresslookupfilter_addresslookuppanelformaddress("ctl00_phG_AddressLookupPanel_AddressLookupPanelformAddress", "AddressLookupFilter_AddressLookupPanelformAddress");
+        protected c_relateditemsfilter_fvrelateditemsheader RelatedItemsFilter_fvRelatedItemsHeader { get; } = new c_relateditemsfilter_fvrelateditemsheader("ctl00_phG_spAddRelatedItems_fvRelatedItemsHeader", "RelatedItemsFilter_fvRelatedItemsHeader");
+        protected c_allrelateditems_gridallrelateditems AllRelatedItems_gridAllRelatedItems { get; } = new c_allrelateditems_gridallrelateditems("ctl00_phG_spAddRelatedItems_tabRelatedItems_t0_gridAllRelatedItems", "allRelatedItems_gridAllRelatedItems");
+        protected c_allrelateditems_lv0 AllRelatedItems_lv0 { get; } = new c_allrelateditems_lv0("ctl00_phG_spAddRelatedItems_tabRelatedItems_t0_gridAllRelatedItems_lv0", "allRelatedItems_lv0");
+        protected c_substituteitems_gridsubstituteitems SubstituteItems_gridSubstituteItems { get; } = new c_substituteitems_gridsubstituteitems("ctl00_phG_spAddRelatedItems_tabRelatedItems_t1_gridSubstituteItems", "substituteItems_gridSubstituteItems");
+        protected c_substituteitems_lv0 SubstituteItems_lv0 { get; } = new c_substituteitems_lv0("ctl00_phG_spAddRelatedItems_tabRelatedItems_t1_gridSubstituteItems_lv0", "substituteItems_lv0");
+        protected c_upsellitems_gridupsellitems UpSellItems_gridUpSellItems { get; } = new c_upsellitems_gridupsellitems("ctl00_phG_spAddRelatedItems_tabRelatedItems_t2_gridUpSellItems", "upSellItems_gridUpSellItems");
+        protected c_upsellitems_lv0 UpSellItems_lv0 { get; } = new c_upsellitems_lv0("ctl00_phG_spAddRelatedItems_tabRelatedItems_t2_gridUpSellItems_lv0", "upSellItems_lv0");
+        protected c_crosssellitems_gridcrosssellitems CrossSellItems_gridCrossSellItems { get; } = new c_crosssellitems_gridcrosssellitems("ctl00_phG_spAddRelatedItems_tabRelatedItems_t3_gridCrossSellItems", "crossSellItems_gridCrossSellItems");
+        protected c_crosssellitems_lv0 CrossSellItems_lv0 { get; } = new c_crosssellitems_lv0("ctl00_phG_spAddRelatedItems_tabRelatedItems_t3_gridCrossSellItems_lv0", "crossSellItems_lv0");
+        protected c_otherrelateditems_gridotherrelateditems OtherRelatedItems_gridOtherRelatedItems { get; } = new c_otherrelateditems_gridotherrelateditems("ctl00_phG_spAddRelatedItems_tabRelatedItems_t4_gridOtherRelatedItems", "otherRelatedItems_gridOtherRelatedItems");
+        protected c_otherrelateditems_lv0 OtherRelatedItems_lv0 { get; } = new c_otherrelateditems_lv0("ctl00_phG_spAddRelatedItems_tabRelatedItems_t4_gridOtherRelatedItems_lv0", "otherRelatedItems_lv0");
+        protected c_artranlist_gridartranlist ArTranList_gridARTranList { get; } = new c_artranlist_gridartranlist("ctl00_phG_PanelAddARTran_gridARTranList", "arTranList_gridARTranList");
+        protected c_artranlist_lv0 ArTranList_lv0 { get; } = new c_artranlist_lv0("ctl00_phG_PanelAddARTran_gridARTranList_lv0", "arTranList_lv0");
+        protected c_solinelist_gridsolinelist SoLineList_gridSOLineList { get; } = new c_solinelist_gridsolinelist("ctl00_phG_PanelAddSOLine_gridSOLineList", "soLineList_gridSOLineList");
+        protected c_solinelist_lv0 SoLineList_lv0 { get; } = new c_solinelist_lv0("ctl00_phG_PanelAddSOLine_gridSOLineList_lv0", "soLineList_lv0");
+        protected c_quickpayment_createpaymentformview QuickPayment_CreatePaymentFormView { get; } = new c_quickpayment_createpaymentformview("ctl00_phG_CreatePaymentSmartPanel_CreatePaymentFormView", "QuickPayment_CreatePaymentFormView");
+        protected c_importexternaltran_importpaymentformview ImportExternalTran_ImportPaymentFormView { get; } = new c_importexternaltran_importpaymentformview("ctl00_phG_ImportPaymentSmartPanel_ImportPaymentFormView", "ImportExternalTran_ImportPaymentFormView");
+        protected c_paylink_pxformpaylink1 PayLink_PXFormPayLink1 { get; } = new c_paylink_pxformpaylink1("ctl00_phG_tab_t7_PayLinks_PXFormPayLink1", "PayLink_PXFormPayLink1");
+        protected c_workflowview_workflowfictivediagram WorkflowView_WorkflowFictiveDiagram { get; } = new c_workflowview_workflowfictivediagram("ctl00_usrCaption_WorkflowDiagram_pnlWorkFlow_WorkflowFictiveDiagram", "WorkflowView_WorkflowFictiveDiagram");
+        protected c_filterpreview_formpreview FilterPreview_FormPreview { get; } = new c_filterpreview_formpreview("ctl00_usrCaption_PanelDynamicForm_FormPreview", "FilterPreview_FormPreview");
         public c_attributes Attributes { get; } = new c_attributes("ctl00_phF_form_t1", "Attributes");
         
         public SO303000_SOInvoiceEntry()
@@ -349,11 +349,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
             ToolBar.Report.Click();
         }
         
-        public virtual void ReassignApproval()
-        {
-            ToolBar.ReassignApproval.Click();
-        }
-        
         public virtual void Notification()
         {
             ToolBar.Notification.Click();
@@ -476,20 +471,14 @@ namespace GeneratedWrappers.SOLUTIONNAME
             ToolBar.SendEmail.Click();
         }
         
+        public virtual void ReassignApproval()
+        {
+            ToolBar.ReassignApproval.Click();
+        }
+        
         public virtual void PutOnHold()
         {
             ToolBar.PutOnHold.Click();
-        }
-        
-        public virtual void ISPSEDISend()
-        {
-            ToolBar.ISPSEDISend.Click();
-        }
-        
-        public virtual void ISPSEDISend(bool status, string message = null)
-        {
-            ToolBar.ISPSEDISend.WaitActionOverride = () => Wait.WaitForLongOperationToComplete(status, message);
-            ToolBar.ISPSEDISend.Click();
         }
         
         public virtual void ViewActivity()
@@ -607,7 +596,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
 			public ToolBarButton Printing_and_Emailing_Category { get; }
 			public ToolBarButton Other_Category { get; }
 			public ToolBarButton Report { get; }
-			public ToolBarButton ReassignApproval { get; }
 			public ToolBarButton Notification { get; }
 			public ToolBarButton Release { get; }
 			public ToolBarButton PayInvoice { get; }
@@ -630,8 +618,8 @@ namespace GeneratedWrappers.SOLUTIONNAME
 			public ToolBarButton ReverseInvoiceAndApplyToMemo { get; }
 			public ToolBarButton ReverseInvoice { get; }
 			public ToolBarButton SendEmail { get; }
+			public ToolBarButton ReassignApproval { get; }
 			public ToolBarButton PutOnHold { get; }
-			public ToolBarButton ISPSEDISend { get; }
 			public ToolBarButton ViewActivity { get; }
 			public ToolBarButton OpenActivityOwner { get; }
 			public ToolBarButton ViewAllActivities { get; }
@@ -698,8 +686,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 Printing_and_Emailing_Category = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_Printing_and_Emailing_Category", "Printing and Emailing", locator, MenuOpener);
                 Other_Category = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_Other_Category", "Other", locator, MenuOpener);
                 Report = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_Report", "Reports", locator, MenuOpener);
-                ReassignApproval = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_ReassignApproval,#ctl00_phDS_ds_ToolBar_ReassignApprov" +
-                        "al_item", "Reassign", locator, MenuOpener);
                 Notification = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_Notification,#ctl00_phDS_ds_ToolBar_Notification_item", "Notifications", locator, MenuOpener);
                 Release = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_Release,#ctl00_phDS_ds_ToolBar_Release_item", "Release", locator, MenuOpener);
                 Release.WaitAction = Wait.WaitForLongOperationToComplete;
@@ -736,9 +722,9 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 ReverseInvoice = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_ReverseInvoice,#ctl00_phDS_ds_ToolBar_ReverseInvoice_i" +
                         "tem", "Reverse", locator, MenuOpener);
                 SendEmail = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_SendEmail,#ctl00_phDS_ds_ToolBar_SendEmail_item", "Send Email", locator, MenuOpener);
+                ReassignApproval = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_ReassignApproval,#ctl00_phDS_ds_ToolBar_ReassignApprov" +
+                        "al_item", "Reassign", locator, MenuOpener);
                 PutOnHold = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_PutOnHold,#ctl00_phDS_ds_ToolBar_PutOnHold_item", "Hold", locator, MenuOpener);
-                ISPSEDISend = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_ISPSEDISend,#ctl00_phDS_ds_ToolBar_ISPSEDISend_item", "Send EDI Invoice", locator, MenuOpener);
-                ISPSEDISend.WaitAction = Wait.WaitForLongOperationToComplete;
                 ViewActivity = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_viewActivity,#ctl00_phDS_ds_ToolBar_viewActivity_item", "viewActivity", locator, MenuOpener);
                 OpenActivityOwner = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_openActivityOwner,#ctl00_phDS_ds_ToolBar_openActivityO" +
                         "wner_item", "openActivityOwner", locator, MenuOpener);
