@@ -1,10 +1,19 @@
 ﻿
+using GeneratedWrappers.Acumatica;
+
 namespace GeneratedWrappers.SOLUTIONNAME
 {
     internal class BasicExampleTests
     {
         public void BasicTest()
         {
+            SO301000SOOrderEntry SOOrderEntry = new SO301000SOOrderEntry();
+            SOOrderEntry.OpenScreen();
+            SOOrderEntry.Insert();
+            SOOrderEntry.Document.CustomerID.Type("AACUSTOMER");
+            SOOrderEntry.Save();
+            string soOrderNumber = SOOrderEntry.Document.OrderNbr.GetValue(); // Save SOOrder generated ID dynamically for later use if needed.
+
             CA306000CABankTransactions CABankTransactionsMaint = new CA306000CABankTransactions();
             CABankTransactionsMaint.OpenScreen();
             CABankTransactionsMaint.Filter.CashAccountID.Type("10200");

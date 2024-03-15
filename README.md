@@ -59,14 +59,14 @@ Welcome to the Acumatica Test SDK Starter Guide! This guide is designed to help 
 8. Configure and run the `GenerateWrappers()` method.
 
 ## Certification Submission Requirements
-- Submit the following folders and file inside a .zip `Excels, Extensions, Helpers,Tests, Wrappers, Test.cs`.
+- Submit the following folders and file inside a .zip `CustomizationPackages, DataFiles, Extensions, Helpers,Tests, Wrappers, Test.cs`.
 - You must use the exact folder structure and place files in their respective places, Helpers folder is for uncategorized items.
 - No external dependencies may be used to run the tests.
 - Any Excel files must be named starting with SOLUTONNAMEFileName.xlsx and Imported using the sample code with excelsPath and new ExcelPackage(new FileInfo(...));
 - **All files** should have the exact namespace: "namespace GeneratedWrappers.SOLUTIONNAME" where `SOLUTIONNAME` is your registered solution name from the ISV Partner Portal in uppercase.
 - Use the Test.cs to kick off the StartTests.cs and also use the `GenerateWrappers()` method.
 - From the starting state of SalesDemo data + your customization packages published - with no manual configuration - You must make all pages accessable before wrapper generation using a Customization Plug-In or testSDK code or wrapper generation will fail.
-- From the starting state of SalesDemo data + your customization packages published - All setup data must be done via testSDK code or Customization Plug-in to configure the test starting state. Snapshots are not supported.
+- From the starting state of SalesDemo data + your customization packages published - **All setup data must be done via testSDK code for acumatica screens (use DynamicControl for customized fields) or Customization Plug-in for custom screens to configure the test starting state. Snapshots are not supported.**
 
 ## Common Errors and Troubleshooting
 - **Error Codes**:

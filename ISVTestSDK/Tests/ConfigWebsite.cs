@@ -17,7 +17,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
 
     /* 
      * This class is optional to use, it provides reusable methods to backup/restore your website to the testing starting state (fresh salesdemo data)
-     * It also has methods that can be modified to do the initial configuration if needed, but customization plug-in .zip package is recomended for data setup of non acumatica fields.
+     * It also has methods that can be modified to do the initial configuration if needed, but customization plug-in .zip package is required for data setup of custom screenID's.
      */
     internal class ConfigWebsite
     {
@@ -121,30 +121,5 @@ namespace GeneratedWrappers.SOLUTIONNAME
             #endregion
         }
 
-        /* Used if you want to use wrappers directly, note this may cause you to have to update tests more frequently when code changes happen.
-        May also cause severe performance issues 
-        public void MakePrivateFieldsPublic()
-        {
-            var packagesPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName + @"\Wrappers\";
-            // Check if the directory exists
-            if (!Directory.Exists(packagesPath))
-            {
-                Console.WriteLine("Wrappers directory not found.");
-                return;
-            }
-            // Get all .cs files in the directory
-            string[] csFiles = Directory.GetFiles(packagesPath, "*.cs", SearchOption.AllDirectories);
-
-            foreach (var file in csFiles)
-            {
-                // Read the contents of the file
-                string content = File.ReadAllText(file);
-                // Replace 'private' with 'public' - considering the indentation
-                string modifiedContent = Regex.Replace(content, @"\bprotected\b", "public");
-                // Write the modified content back to the file
-                File.WriteAllText(file, modifiedContent);
-                Console.WriteLine($"Updated {file}");
-            }
-        }*/
     }
 }

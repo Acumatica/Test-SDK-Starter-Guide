@@ -8,13 +8,12 @@ namespace GeneratedWrappers.SOLUTIONNAME
 {
     internal class StartTests
     {
-        public void Execute() // launch your tests in order from this method
+        public void Execute()
         {
             PxLogin.LoginToDestinationSite();
             using (TestExecution.CreateTestStepGroup("Config site to the test start state"))
             {
-                //Assumed Start State is fresh install of Acumatica Sales Demo Data
-                //plus your customization published
+                //Assumed Start State is fresh install of Acumatica Sales Demo Data With your customization projects published
                 ConfigWebsite configWebsite = new ConfigWebsite();
                 configWebsite.ConfigWebsiteFromSalesDemo();
             }
