@@ -65,12 +65,12 @@ Welcome to the Acumatica Test SDK Starter Guide! This guide is designed to help 
 - Any Excel files must be named starting with SOLUTONNAMEFileName.xlsx and Imported using the sample code with excelsPath and new ExcelPackage(new FileInfo(...));
 - **All files** should have the exact namespace: "namespace GeneratedWrappers.SOLUTIONNAME" where `SOLUTIONNAME` is your registered solution name from the ISV Partner Portal in uppercase.
 - Use the Test.cs to kick off the StartTests.cs and also use the `GenerateWrappers()` method.
-- From the starting state of SalesDemo data + your customization packages published - with no manual configuration - You must make all pages accessable before wrapper generation using a Customization Plug-In or testSDK code or wrapper generation will fail.
-- From the starting state of SalesDemo data + your customization packages published - **All setup data must be done via testSDK code for acumatica screens (use DynamicControl for customized fields) or Customization Plug-in for custom screens to configure the test starting state. Snapshots are not supported.**
+- From the starting state of SalesDemo data + your customization packages published - with no manual configuration - You must make all pages accessible before wrapper generation using a Customization Plug-In or testSDK code or wrapper generation will fail.
+- From the starting state of SalesDemo data + your customization packages published - **All setup data must be done via testSDK code for Acumatica screens (use DynamicControl for customized fields) or Customization Plug-in for custom screens to configure the test starting state. Snapshots are not supported.**
 
 ## Common Errors and Troubleshooting
 - **Error Codes**:
   - `0`: Test passed successfully.
   - `2`: Test failed. Check the generated log at `C:\share\logs`.
   - `1`: Invalid/missing file or folder mapping error.
-- **Site Inaccessible after Generating Wrappers**: The Wrapper Generation cmd window was closed manually and didnt reset the `web.config` back to the prognal. You must wait for the Wrapper generation to complete and self-close. To restore the website you must copy the original web.config - now named `web.config.63b98fa0` and paste the contects back into the web.config file.
+- **Site Inaccessible after Generating Wrappers**: The Wrapper Generation cmd window was closed manually and didn't reset the `web.config` back to the original . You must wait for the Wrapper generation to complete and self-close. To restore the website you must copy the original web.config - now named `web.config.63b98fa0` and paste the contents back into the web.config file.
