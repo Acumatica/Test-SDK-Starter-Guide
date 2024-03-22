@@ -262,8 +262,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
         public class c_tranfilter_form : Container
         {
             
-            public PxButtonCollection Buttons;
-            
 			public Selector CashAccountID { get; }
 			public Label CashAccountIDLabel { get; }
 			public CheckBox IsCorpCardCashAccount { get; }
@@ -279,25 +277,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 IsCorpCardCashAccountLabel = new Label(IsCorpCardCashAccount);
                 IsCorpCardCashAccount.DataField = "IsCorpCardCashAccount";
                 DataMemberName = "TranFilter";
-                Buttons = new PxButtonCollection();
-            }
-            
-            public virtual void CashAccountIDEdit()
-            {
-                Buttons.CashAccountIDEdit.Click();
-            }
-            
-            public class PxButtonCollection : PxControlCollection
-            {
-                
-			public Button CashAccountIDEdit { get; }
-                
-                public PxButtonCollection()
-                {
-                    CashAccountIDEdit = new Button("css=div[id=\'ctl00_phG_PXSplitContainer_form_edCashAccountID\'] div[class=\'editBtnC" +
-                            "ont\'] > div > div", "CashAccountIDEdit", "ctl00_phG_PXSplitContainer_form");
-                    CashAccountIDEdit.WaitAction = Wait.WaitForNewWindowToOpen;
-                }
             }
         }
         
@@ -512,13 +491,13 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     Export = new ToolBarButtonGrid("css=#ctl00_usrCaption_CustomizationDialogs_ComboBoxValuesDictDialog_gridCombos_ab" +
                             "_tlb div[data-cmd=\'ExportExcel\']", "Export to Excel", locator, null);
                     PageFirst = new ToolBarButtonGrid("css=#ctl00_usrCaption_CustomizationDialogs_ComboBoxValuesDictDialog_gridCombos_ab" +
-                            "_tlb div[data-cmd=\'PageFirst\']", "Go to First Page (Ctrl+PgUp)", locator, null);
+                            "_tlb div[data-cmd=\'PageFirst\']", "Go to First Page", locator, null);
                     PagePrev = new ToolBarButtonGrid("css=#ctl00_usrCaption_CustomizationDialogs_ComboBoxValuesDictDialog_gridCombos_ab" +
                             "_tlb div[data-cmd=\'PagePrev\']", "Go to Previous Page (PgUp)", locator, null);
                     PageNext = new ToolBarButtonGrid("css=#ctl00_usrCaption_CustomizationDialogs_ComboBoxValuesDictDialog_gridCombos_ab" +
                             "_tlb div[data-cmd=\'PageNext\']", "Go to Next Page (PgDn)", locator, null);
                     PageLast = new ToolBarButtonGrid("css=#ctl00_usrCaption_CustomizationDialogs_ComboBoxValuesDictDialog_gridCombos_ab" +
-                            "_tlb div[data-cmd=\'PageLast\']", "Go to Last Page (Ctrl+PgDn)", locator, null);
+                            "_tlb div[data-cmd=\'PageLast\']", "Go to Last Page", locator, null);
                     Hi = new ToolBarButtonGrid("css=#ctl00_usrCaption_CustomizationDialogs_ComboBoxValuesDictDialog_gridCombos_ab" +
                             "_tlb div[data-cmd=\'hi\']", "Hi", locator, null);
                 }
@@ -796,13 +775,13 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 public PxToolBar(string locator)
                 {
                     PageFirst = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid_ab_tlb div[data-cmd=" +
-                            "\'PageFirst\']", "Go to First Page (Ctrl+PgUp)", locator, null);
+                            "\'PageFirst\']", "Go to First Page", locator, null);
                     PagePrev = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid_ab_tlb div[data-cmd=" +
                             "\'PagePrev\']", "Go to Previous Page (PgUp)", locator, null);
                     PageNext = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid_ab_tlb div[data-cmd=" +
                             "\'PageNext\']", "Go to Next Page (PgDn)", locator, null);
                     PageLast = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid_ab_tlb div[data-cmd=" +
-                            "\'PageLast\']", "Go to Last Page (Ctrl+PgDn)", locator, null);
+                            "\'PageLast\']", "Go to Last Page", locator, null);
                     Hi = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid_ab_tlb div[data-cmd=" +
                             "\'hi\']", "Hi", locator, null);
                 }
@@ -944,13 +923,13 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     Hi = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_at_tlb div[data-cmd=" +
                             "\'hi\']", "Hi", locator, null);
                     PageFirst = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_ab_tlb div[data-cmd=" +
-                            "\'PageFirst\']", "Go to First Page (Ctrl+PgUp)", locator, null);
+                            "\'PageFirst\']", "Go to First Page", locator, null);
                     PagePrev = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_ab_tlb div[data-cmd=" +
                             "\'PagePrev\']", "Go to Previous Page (PgUp)", locator, null);
                     PageNext = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_ab_tlb div[data-cmd=" +
                             "\'PageNext\']", "Go to Next Page (PgDn)", locator, null);
                     PageLast = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_ab_tlb div[data-cmd=" +
-                            "\'PageLast\']", "Go to Last Page (Ctrl+PgDn)", locator, null);
+                            "\'PageLast\']", "Go to Last Page", locator, null);
                     Hi1 = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_ab_tlb div[data-cmd=" +
                             "\'hi\']", "Hi", locator, null);
                 }
@@ -1151,10 +1130,10 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     Split = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_grid1_at_tlb div[data-cmd=\'cmdS\']", "Split", locator, null);
                     Filter = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_grid1_at_tlb div[data-cmd=\'FilterShow\']", "Filter Settings", locator, null);
                     Hi = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_grid1_at_tlb div[data-cmd=\'hi\']", "Hi", locator, null);
-                    PageFirst = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_grid1_ab_tlb div[data-cmd=\'PageFirst\']", "Go to First Page (Ctrl+PgUp)", locator, null);
+                    PageFirst = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_grid1_ab_tlb div[data-cmd=\'PageFirst\']", "Go to First Page", locator, null);
                     PagePrev = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_grid1_ab_tlb div[data-cmd=\'PagePrev\']", "Go to Previous Page (PgUp)", locator, null);
                     PageNext = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_grid1_ab_tlb div[data-cmd=\'PageNext\']", "Go to Next Page (PgDn)", locator, null);
-                    PageLast = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_grid1_ab_tlb div[data-cmd=\'PageLast\']", "Go to Last Page (Ctrl+PgDn)", locator, null);
+                    PageLast = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_grid1_ab_tlb div[data-cmd=\'PageLast\']", "Go to Last Page", locator, null);
                     Hi1 = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_grid1_ab_tlb div[data-cmd=\'hi\']", "Hi", locator, null);
                 }
             }
@@ -1188,6 +1167,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
 			public DropDown OrigModule1 { get; }
 			public Selector PayeeLocationID1 { get; }
 			public PXTextEdit UserDesc { get; }
+			public PXTextEdit BankFeedAccountMapID { get; }
 			public PXNumberEdit TranID { get; }
 			public PXTextEdit MatchStatsInfo { get; }
                 
@@ -1252,6 +1232,8 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     PayeeLocationID1.DataField = "PayeeLocationID1";
                     UserDesc = new PXTextEdit("ctl00_phG_PXSplitContainer_grid1_ei", "Custom Tran. Desc.", grid.Locator, "UserDesc");
                     UserDesc.DataField = "UserDesc";
+                    BankFeedAccountMapID = new PXTextEdit("ctl00_phG_PXSplitContainer_grid1", "Bank Feed Account", grid.Locator, "BankFeedAccountMapID");
+                    BankFeedAccountMapID.DataField = "BankFeedAccountMapID";
                     TranID = new PXNumberEdit("ctl00_phG_PXSplitContainer_grid1_en", "ID", grid.Locator, "TranID");
                     TranID.DataField = "TranID";
                     MatchStatsInfo = new PXTextEdit("ctl00_phG_PXSplitContainer_grid1_ei", "MatchStatsInfo", grid.Locator, "MatchStatsInfo");
@@ -1288,6 +1270,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
 				public DropDownColumnFilter OrigModule1 { get; }
 				public SelectorColumnFilter PayeeLocationID1 { get; }
 				public PXTextEditColumnFilter UserDesc { get; }
+				public PXTextEditColumnFilter BankFeedAccountMapID { get; }
 				public PXNumberEditColumnFilter TranID { get; }
 				public PXTextEditColumnFilter MatchStatsInfo { get; }
                 
@@ -1320,6 +1303,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     OrigModule1 = new DropDownColumnFilter(grid.Row.OrigModule1);
                     PayeeLocationID1 = new SelectorColumnFilter(grid.Row.PayeeLocationID1);
                     UserDesc = new PXTextEditColumnFilter(grid.Row.UserDesc);
+                    BankFeedAccountMapID = new PXTextEditColumnFilter(grid.Row.BankFeedAccountMapID);
                     TranID = new PXNumberEditColumnFilter(grid.Row.TranID);
                     MatchStatsInfo = new PXTextEditColumnFilter(grid.Row.MatchStatsInfo);
                 }
@@ -1520,11 +1504,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 Buttons.CreateRule.Click();
             }
             
-            public virtual void PayeeBAccountIDEdit()
-            {
-                Buttons.PayeeBAccountIDEdit.Click();
-            }
-            
             public virtual void Attachfile()
             {
                 Buttons.Attachfile.Click();
@@ -1535,16 +1514,12 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 
 			public Button ClearRule { get; }
 			public Button CreateRule { get; }
-			public Button PayeeBAccountIDEdit { get; }
 			public Button Attachfile { get; }
                 
                 public PxButtonCollection()
                 {
                     ClearRule = new Button("ctl00_phG_PXSplitContainer_tab2_t3_frmCreateDocument_btnUnapplyRule", "Clear Rule", "ctl00_phG_PXSplitContainer_tab2_t3_frmCreateDocument");
                     CreateRule = new Button("ctl00_phG_PXSplitContainer_tab2_t3_frmCreateDocument_btnCreateRule", "Create Rule", "ctl00_phG_PXSplitContainer_tab2_t3_frmCreateDocument");
-                    PayeeBAccountIDEdit = new Button("css=div[id=\'ctl00_phG_PXSplitContainer_tab2_t3_frmCreateDocument_edPayeeBAccountI" +
-                            "D\'] div[class=\'editBtnCont\'] > div > div", "PayeeBAccountIDEdit", "ctl00_phG_PXSplitContainer_tab2_t3_frmCreateDocument");
-                    PayeeBAccountIDEdit.WaitAction = Wait.WaitForNewWindowToOpen;
                     Attachfile = new Button("ctl00_phG_PXSplitContainer_tab2_t3_frmCreateDocument_imf", "Attach file", "ctl00_phG_PXSplitContainer_tab2_t3_frmCreateDocument");
                 }
             }
@@ -1757,10 +1732,10 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     Adjust = new ToolBarButtonGrid("css=#ctl00_phG_PXTaxPanel_PXTaxGrid_at_tlb div[data-cmd=\'AdjustColumns\']", "Fit to Screen", locator, null);
                     Export = new ToolBarButtonGrid("css=#ctl00_phG_PXTaxPanel_PXTaxGrid_at_tlb div[data-cmd=\'ExportExcel\']", "Export to Excel", locator, null);
                     Hi = new ToolBarButtonGrid("css=#ctl00_phG_PXTaxPanel_PXTaxGrid_at_tlb div[data-cmd=\'hi\']", "Hi", locator, null);
-                    PageFirst = new ToolBarButtonGrid("css=#ctl00_phG_PXTaxPanel_PXTaxGrid_ab_tlb div[data-cmd=\'PageFirst\']", "Go to First Page (Ctrl+PgUp)", locator, null);
+                    PageFirst = new ToolBarButtonGrid("css=#ctl00_phG_PXTaxPanel_PXTaxGrid_ab_tlb div[data-cmd=\'PageFirst\']", "Go to First Page", locator, null);
                     PagePrev = new ToolBarButtonGrid("css=#ctl00_phG_PXTaxPanel_PXTaxGrid_ab_tlb div[data-cmd=\'PagePrev\']", "Go to Previous Page (PgUp)", locator, null);
                     PageNext = new ToolBarButtonGrid("css=#ctl00_phG_PXTaxPanel_PXTaxGrid_ab_tlb div[data-cmd=\'PageNext\']", "Go to Next Page (PgDn)", locator, null);
-                    PageLast = new ToolBarButtonGrid("css=#ctl00_phG_PXTaxPanel_PXTaxGrid_ab_tlb div[data-cmd=\'PageLast\']", "Go to Last Page (Ctrl+PgDn)", locator, null);
+                    PageLast = new ToolBarButtonGrid("css=#ctl00_phG_PXTaxPanel_PXTaxGrid_ab_tlb div[data-cmd=\'PageLast\']", "Go to Last Page", locator, null);
                     Hi1 = new ToolBarButtonGrid("css=#ctl00_phG_PXTaxPanel_PXTaxGrid_ab_tlb div[data-cmd=\'hi\']", "Hi", locator, null);
                 }
             }
@@ -1960,10 +1935,10 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     Adjust = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_tab2_t0_PXGrid1_at_tlb div[data-cmd=\'AdjustColumn" +
                             "s\']", "Fit to Screen", locator, null);
                     Hi = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_tab2_t0_PXGrid1_at_tlb div[data-cmd=\'hi\']", "Hi", locator, null);
-                    PageFirst = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_tab2_t0_PXGrid1_ab_tlb div[data-cmd=\'PageFirst\']", "Go to First Page (Ctrl+PgUp)", locator, null);
+                    PageFirst = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_tab2_t0_PXGrid1_ab_tlb div[data-cmd=\'PageFirst\']", "Go to First Page", locator, null);
                     PagePrev = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_tab2_t0_PXGrid1_ab_tlb div[data-cmd=\'PagePrev\']", "Go to Previous Page (PgUp)", locator, null);
                     PageNext = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_tab2_t0_PXGrid1_ab_tlb div[data-cmd=\'PageNext\']", "Go to Next Page (PgDn)", locator, null);
-                    PageLast = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_tab2_t0_PXGrid1_ab_tlb div[data-cmd=\'PageLast\']", "Go to Last Page (Ctrl+PgDn)", locator, null);
+                    PageLast = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_tab2_t0_PXGrid1_ab_tlb div[data-cmd=\'PageLast\']", "Go to Last Page", locator, null);
                     Hi1 = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_tab2_t0_PXGrid1_ab_tlb div[data-cmd=\'hi\']", "Hi", locator, null);
                 }
             }
@@ -2027,6 +2002,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     OrigTranTypeUI.Items.Add("ADR", "Debit Adj.");
                     OrigTranTypeUI.Items.Add("QCK", "Cash Purchase");
                     OrigTranTypeUI.Items.Add("VQC", "Voided Cash Purchase");
+                    OrigTranTypeUI.Items.Add("RQC", "Cash Return");
                     OrigTranTypeUI.Items.Add("PPR", "Prepayment Req.");
                     OrigTranTypeUI.Items.Add("DRM", "Debit Memo");
                     OrigTranTypeUI.Items.Add("CRM", "Credit Memo");
@@ -2222,11 +2198,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 Buttons.Attachfile.Click();
             }
             
-            public virtual void PayeeBAccountIDEdit()
-            {
-                Buttons.PayeeBAccountIDEdit.Click();
-            }
-            
             public virtual void UnapplyRule()
             {
                 Buttons.UnapplyRule.Click();
@@ -2270,13 +2241,13 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     Hi = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_tab2_t3_gridAdjustments_at_tlb div[data-cmd=\'hi\']" +
                             "", "Hi", locator, null);
                     PageFirst = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_tab2_t3_gridAdjustments_ab_tlb div[data-cmd=\'Page" +
-                            "First\']", "Go to First Page (Ctrl+PgUp)", locator, null);
+                            "First\']", "Go to First Page", locator, null);
                     PagePrev = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_tab2_t3_gridAdjustments_ab_tlb div[data-cmd=\'Page" +
                             "Prev\']", "Go to Previous Page (PgUp)", locator, null);
                     PageNext = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_tab2_t3_gridAdjustments_ab_tlb div[data-cmd=\'Page" +
                             "Next\']", "Go to Next Page (PgDn)", locator, null);
                     PageLast = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_tab2_t3_gridAdjustments_ab_tlb div[data-cmd=\'Page" +
-                            "Last\']", "Go to Last Page (Ctrl+PgDn)", locator, null);
+                            "Last\']", "Go to Last Page", locator, null);
                     Hi1 = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_tab2_t3_gridAdjustments_ab_tlb div[data-cmd=\'hi\']" +
                             "", "Hi", locator, null);
                 }
@@ -2286,16 +2257,12 @@ namespace GeneratedWrappers.SOLUTIONNAME
             {
                 
 			public Button Attachfile { get; }
-			public Button PayeeBAccountIDEdit { get; }
 			public Button UnapplyRule { get; }
 			public Button CreateRule { get; }
                 
                 public PxButtonCollection()
                 {
                     Attachfile = new Button("ctl00_phG_PXSplitContainer_tab2_t3_frmCreateDocument_imf", "Attach file", "ctl00_phG_PXSplitContainer_tab2_t3_gridAdjustments");
-                    PayeeBAccountIDEdit = new Button("css=div[id=\'ctl00_phG_PXSplitContainer_tab2_t3_frmCreateDocument_edPayeeBAccountI" +
-                            "D\'] div[class=\'editBtnCont\'] > div > div", "PayeeBAccountIDEdit", "ctl00_phG_PXSplitContainer_tab2_t3_gridAdjustments");
-                    PayeeBAccountIDEdit.WaitAction = Wait.WaitForNewWindowToOpen;
                     UnapplyRule = new Button("ctl00_phG_PXSplitContainer_tab2_t3_frmCreateDocument_btnUnapplyRule", "Clear Rule", "ctl00_phG_PXSplitContainer_tab2_t3_gridAdjustments");
                     CreateRule = new Button("ctl00_phG_PXSplitContainer_tab2_t3_frmCreateDocument_btnCreateRule", "Create Rule", "ctl00_phG_PXSplitContainer_tab2_t3_gridAdjustments");
                 }
@@ -2508,11 +2475,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 Buttons.Attachfile.Click();
             }
             
-            public virtual void PayeeBAccountIDEdit()
-            {
-                Buttons.PayeeBAccountIDEdit.Click();
-            }
-            
             public virtual void UnapplyRule()
             {
                 Buttons.UnapplyRule.Click();
@@ -2527,16 +2489,12 @@ namespace GeneratedWrappers.SOLUTIONNAME
             {
                 
 			public Button Attachfile { get; }
-			public Button PayeeBAccountIDEdit { get; }
 			public Button UnapplyRule { get; }
 			public Button CreateRule { get; }
                 
                 public PxButtonCollection()
                 {
                     Attachfile = new Button("ctl00_phG_PXSplitContainer_tab2_t3_frmCreateDocument_imf", "Attach file", "ctl00_phG_PXSplitContainer_tab2_t3_gridAdjustments_lv0");
-                    PayeeBAccountIDEdit = new Button("css=div[id=\'ctl00_phG_PXSplitContainer_tab2_t3_frmCreateDocument_edPayeeBAccountI" +
-                            "D\'] div[class=\'editBtnCont\'] > div > div", "PayeeBAccountIDEdit", "ctl00_phG_PXSplitContainer_tab2_t3_gridAdjustments_lv0");
-                    PayeeBAccountIDEdit.WaitAction = Wait.WaitForNewWindowToOpen;
                     UnapplyRule = new Button("ctl00_phG_PXSplitContainer_tab2_t3_frmCreateDocument_btnUnapplyRule", "Clear Rule", "ctl00_phG_PXSplitContainer_tab2_t3_gridAdjustments_lv0");
                     CreateRule = new Button("ctl00_phG_PXSplitContainer_tab2_t3_frmCreateDocument_btnCreateRule", "Create Rule", "ctl00_phG_PXSplitContainer_tab2_t3_gridAdjustments_lv0");
                 }
@@ -2831,13 +2789,13 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     Hi = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_tab2_t1_gridDetailMatches4_at_tlb div[data-cmd=\'h" +
                             "i\']", "Hi", locator, null);
                     PageFirst = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_tab2_t1_gridDetailMatches4_ab_tlb div[data-cmd=\'P" +
-                            "ageFirst\']", "Go to First Page (Ctrl+PgUp)", locator, null);
+                            "ageFirst\']", "Go to First Page", locator, null);
                     PagePrev = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_tab2_t1_gridDetailMatches4_ab_tlb div[data-cmd=\'P" +
                             "agePrev\']", "Go to Previous Page (PgUp)", locator, null);
                     PageNext = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_tab2_t1_gridDetailMatches4_ab_tlb div[data-cmd=\'P" +
                             "ageNext\']", "Go to Next Page (PgDn)", locator, null);
                     PageLast = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_tab2_t1_gridDetailMatches4_ab_tlb div[data-cmd=\'P" +
-                            "ageLast\']", "Go to Last Page (Ctrl+PgDn)", locator, null);
+                            "ageLast\']", "Go to Last Page", locator, null);
                     Hi1 = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_tab2_t1_gridDetailMatches4_ab_tlb div[data-cmd=\'h" +
                             "i\']", "Hi", locator, null);
                 }
@@ -3058,13 +3016,13 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     Hi = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_tab2_t2_gridExpenseReceiptDetailMatches_at_tlb di" +
                             "v[data-cmd=\'hi\']", "Hi", locator, null);
                     PageFirst = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_tab2_t2_gridExpenseReceiptDetailMatches_ab_tlb di" +
-                            "v[data-cmd=\'PageFirst\']", "Go to First Page (Ctrl+PgUp)", locator, null);
+                            "v[data-cmd=\'PageFirst\']", "Go to First Page", locator, null);
                     PagePrev = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_tab2_t2_gridExpenseReceiptDetailMatches_ab_tlb di" +
                             "v[data-cmd=\'PagePrev\']", "Go to Previous Page (PgUp)", locator, null);
                     PageNext = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_tab2_t2_gridExpenseReceiptDetailMatches_ab_tlb di" +
                             "v[data-cmd=\'PageNext\']", "Go to Next Page (PgDn)", locator, null);
                     PageLast = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_tab2_t2_gridExpenseReceiptDetailMatches_ab_tlb di" +
-                            "v[data-cmd=\'PageLast\']", "Go to Last Page (Ctrl+PgDn)", locator, null);
+                            "v[data-cmd=\'PageLast\']", "Go to Last Page", locator, null);
                     Hi1 = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_tab2_t2_gridExpenseReceiptDetailMatches_ab_tlb di" +
                             "v[data-cmd=\'hi\']", "Hi", locator, null);
                 }
@@ -3258,11 +3216,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 Buttons.Attachfile.Click();
             }
             
-            public virtual void PayeeBAccountIDEdit()
-            {
-                Buttons.PayeeBAccountIDEdit.Click();
-            }
-            
             public virtual void UnapplyRule()
             {
                 Buttons.UnapplyRule.Click();
@@ -3302,13 +3255,13 @@ namespace GeneratedWrappers.SOLUTIONNAME
                             "xcel\']", "Export to Excel", locator, null);
                     Hi = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_tab2_t3_gridCASplits_at_tlb div[data-cmd=\'hi\']", "Hi", locator, null);
                     PageFirst = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_tab2_t3_gridCASplits_ab_tlb div[data-cmd=\'PageFir" +
-                            "st\']", "Go to First Page (Ctrl+PgUp)", locator, null);
+                            "st\']", "Go to First Page", locator, null);
                     PagePrev = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_tab2_t3_gridCASplits_ab_tlb div[data-cmd=\'PagePre" +
                             "v\']", "Go to Previous Page (PgUp)", locator, null);
                     PageNext = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_tab2_t3_gridCASplits_ab_tlb div[data-cmd=\'PageNex" +
                             "t\']", "Go to Next Page (PgDn)", locator, null);
                     PageLast = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_tab2_t3_gridCASplits_ab_tlb div[data-cmd=\'PageLas" +
-                            "t\']", "Go to Last Page (Ctrl+PgDn)", locator, null);
+                            "t\']", "Go to Last Page", locator, null);
                     Hi1 = new ToolBarButtonGrid("css=#ctl00_phG_PXSplitContainer_tab2_t3_gridCASplits_ab_tlb div[data-cmd=\'hi\']", "Hi", locator, null);
                 }
             }
@@ -3317,16 +3270,12 @@ namespace GeneratedWrappers.SOLUTIONNAME
             {
                 
 			public Button Attachfile { get; }
-			public Button PayeeBAccountIDEdit { get; }
 			public Button UnapplyRule { get; }
 			public Button CreateRule { get; }
                 
                 public PxButtonCollection()
                 {
                     Attachfile = new Button("ctl00_phG_PXSplitContainer_tab2_t3_frmCreateDocument_imf", "Attach file", "ctl00_phG_PXSplitContainer_tab2_t3_gridCASplits");
-                    PayeeBAccountIDEdit = new Button("css=div[id=\'ctl00_phG_PXSplitContainer_tab2_t3_frmCreateDocument_edPayeeBAccountI" +
-                            "D\'] div[class=\'editBtnCont\'] > div > div", "PayeeBAccountIDEdit", "ctl00_phG_PXSplitContainer_tab2_t3_gridCASplits");
-                    PayeeBAccountIDEdit.WaitAction = Wait.WaitForNewWindowToOpen;
                     UnapplyRule = new Button("ctl00_phG_PXSplitContainer_tab2_t3_frmCreateDocument_btnUnapplyRule", "Clear Rule", "ctl00_phG_PXSplitContainer_tab2_t3_gridCASplits");
                     CreateRule = new Button("ctl00_phG_PXSplitContainer_tab2_t3_frmCreateDocument_btnCreateRule", "Create Rule", "ctl00_phG_PXSplitContainer_tab2_t3_gridCASplits");
                 }
@@ -3520,19 +3469,9 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 Buttons = new PxButtonCollection();
             }
             
-            public virtual void InventoryIDEdit()
-            {
-                Buttons.InventoryIDEdit.Click();
-            }
-            
             public virtual void Attachfile()
             {
                 Buttons.Attachfile.Click();
-            }
-            
-            public virtual void PayeeBAccountIDEdit()
-            {
-                Buttons.PayeeBAccountIDEdit.Click();
             }
             
             public virtual void UnapplyRule()
@@ -3548,21 +3487,13 @@ namespace GeneratedWrappers.SOLUTIONNAME
             public class PxButtonCollection : PxControlCollection
             {
                 
-			public Button InventoryIDEdit { get; }
 			public Button Attachfile { get; }
-			public Button PayeeBAccountIDEdit { get; }
 			public Button UnapplyRule { get; }
 			public Button CreateRule { get; }
                 
                 public PxButtonCollection()
                 {
-                    InventoryIDEdit = new Button("css=div[id=\'ctl00_phG_PXSplitContainer_tab2_t3_gridCASplits_lv0_edInventoryID\'] d" +
-                            "iv[class=\'editBtnCont\'] > div > div", "InventoryIDEdit", "ctl00_phG_PXSplitContainer_tab2_t3_gridCASplits_lv0");
-                    InventoryIDEdit.WaitAction = Wait.WaitForNewWindowToOpen;
                     Attachfile = new Button("ctl00_phG_PXSplitContainer_tab2_t3_frmCreateDocument_imf", "Attach file", "ctl00_phG_PXSplitContainer_tab2_t3_gridCASplits_lv0");
-                    PayeeBAccountIDEdit = new Button("css=div[id=\'ctl00_phG_PXSplitContainer_tab2_t3_frmCreateDocument_edPayeeBAccountI" +
-                            "D\'] div[class=\'editBtnCont\'] > div > div", "PayeeBAccountIDEdit", "ctl00_phG_PXSplitContainer_tab2_t3_gridCASplits_lv0");
-                    PayeeBAccountIDEdit.WaitAction = Wait.WaitForNewWindowToOpen;
                     UnapplyRule = new Button("ctl00_phG_PXSplitContainer_tab2_t3_frmCreateDocument_btnUnapplyRule", "Clear Rule", "ctl00_phG_PXSplitContainer_tab2_t3_gridCASplits_lv0");
                     CreateRule = new Button("ctl00_phG_PXSplitContainer_tab2_t3_frmCreateDocument_btnCreateRule", "Create Rule", "ctl00_phG_PXSplitContainer_tab2_t3_gridCASplits_lv0");
                 }

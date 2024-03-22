@@ -11,7 +11,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
     {
         // Ensure to follow the readme.md steps for this project before running as to properly configure it.
         // https://github.com/Acumatica/Test-SDK-Starter-Guide/blob/master/README.md
-        const string physicalSitePath = @"C:\AcumaticaSites\23r203";
+        const string physicalSitePath = @"C:\AcumaticaSites\24r100";
         public override void Execute()
         {
             PxLogin.LoginToDestinationSite();

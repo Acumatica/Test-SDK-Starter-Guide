@@ -21,17 +21,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="ClassGenerator" Version="23.200.151.163" />
-    <PackageReference Include="Core" Version="23.200.151.163" />
-    <PackageReference Include="Execution" Version="23.200.151.163" />
-    <PackageReference Include="GeneratedWrappers.Acumatica" Version="23.200.143-P202684" />
-    <PackageReference Include="Host" Version="23.200.151.163" />
-    <PackageReference Include="PX.QA.Tools" Version="23.200.151.163" />
-    <PackageReference Include="PX.QA.WrappersGenerator" Version="23.200.151.163" />
+    <Folder Include="Wrappers\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Wrappers\" />
+    <PackageReference Include="ClassGenerator" Version="24.100.139.144" />
+    <PackageReference Include="Core" Version="24.100.139.144" />
+    <PackageReference Include="Execution" Version="24.100.139.144" />
+    <PackageReference Include="GeneratedWrappers.Acumatica" Version="24.100.108-P220615" />
+    <PackageReference Include="Host" Version="24.100.139.144" />
+    <PackageReference Include="PX.QA.Tools" Version="24.100.139.144" />
+    <PackageReference Include="PX.QA.WrappersGenerator" Version="24.100.139.144" />
   </ItemGroup>
 
 </Project>

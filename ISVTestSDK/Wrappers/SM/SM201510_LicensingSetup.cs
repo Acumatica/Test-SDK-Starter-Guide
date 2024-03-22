@@ -485,13 +485,13 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     Export = new ToolBarButtonGrid("css=#ctl00_usrCaption_CustomizationDialogs_ComboBoxValuesDictDialog_gridCombos_ab" +
                             "_tlb div[data-cmd=\'ExportExcel\']", "Export to Excel", locator, null);
                     PageFirst = new ToolBarButtonGrid("css=#ctl00_usrCaption_CustomizationDialogs_ComboBoxValuesDictDialog_gridCombos_ab" +
-                            "_tlb div[data-cmd=\'PageFirst\']", "Go to First Page (Ctrl+PgUp)", locator, null);
+                            "_tlb div[data-cmd=\'PageFirst\']", "Go to First Page", locator, null);
                     PagePrev = new ToolBarButtonGrid("css=#ctl00_usrCaption_CustomizationDialogs_ComboBoxValuesDictDialog_gridCombos_ab" +
                             "_tlb div[data-cmd=\'PagePrev\']", "Go to Previous Page (PgUp)", locator, null);
                     PageNext = new ToolBarButtonGrid("css=#ctl00_usrCaption_CustomizationDialogs_ComboBoxValuesDictDialog_gridCombos_ab" +
                             "_tlb div[data-cmd=\'PageNext\']", "Go to Next Page (PgDn)", locator, null);
                     PageLast = new ToolBarButtonGrid("css=#ctl00_usrCaption_CustomizationDialogs_ComboBoxValuesDictDialog_gridCombos_ab" +
-                            "_tlb div[data-cmd=\'PageLast\']", "Go to Last Page (Ctrl+PgDn)", locator, null);
+                            "_tlb div[data-cmd=\'PageLast\']", "Go to Last Page", locator, null);
                     Hi = new ToolBarButtonGrid("css=#ctl00_usrCaption_CustomizationDialogs_ComboBoxValuesDictDialog_gridCombos_ab" +
                             "_tlb div[data-cmd=\'hi\']", "Hi", locator, null);
                 }
@@ -769,13 +769,13 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 public PxToolBar(string locator)
                 {
                     PageFirst = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid_ab_tlb div[data-cmd=" +
-                            "\'PageFirst\']", "Go to First Page (Ctrl+PgUp)", locator, null);
+                            "\'PageFirst\']", "Go to First Page", locator, null);
                     PagePrev = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid_ab_tlb div[data-cmd=" +
                             "\'PagePrev\']", "Go to Previous Page (PgUp)", locator, null);
                     PageNext = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid_ab_tlb div[data-cmd=" +
                             "\'PageNext\']", "Go to Next Page (PgDn)", locator, null);
                     PageLast = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid_ab_tlb div[data-cmd=" +
-                            "\'PageLast\']", "Go to Last Page (Ctrl+PgDn)", locator, null);
+                            "\'PageLast\']", "Go to Last Page", locator, null);
                     Hi = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid_ab_tlb div[data-cmd=" +
                             "\'hi\']", "Hi", locator, null);
                 }
@@ -917,13 +917,13 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     Hi = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_at_tlb div[data-cmd=" +
                             "\'hi\']", "Hi", locator, null);
                     PageFirst = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_ab_tlb div[data-cmd=" +
-                            "\'PageFirst\']", "Go to First Page (Ctrl+PgUp)", locator, null);
+                            "\'PageFirst\']", "Go to First Page", locator, null);
                     PagePrev = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_ab_tlb div[data-cmd=" +
                             "\'PagePrev\']", "Go to Previous Page (PgUp)", locator, null);
                     PageNext = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_ab_tlb div[data-cmd=" +
                             "\'PageNext\']", "Go to Next Page (PgDn)", locator, null);
                     PageLast = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_ab_tlb div[data-cmd=" +
-                            "\'PageLast\']", "Go to Last Page (Ctrl+PgDn)", locator, null);
+                            "\'PageLast\']", "Go to Last Page", locator, null);
                     Hi1 = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_ab_tlb div[data-cmd=" +
                             "\'hi\']", "Hi", locator, null);
                 }
@@ -1096,10 +1096,10 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     Adjust = new ToolBarButtonGrid("css=#ctl00_phG_grid_at_tlb div[data-cmd=\'AdjustColumns\']", "Fit to Screen", locator, null);
                     Export = new ToolBarButtonGrid("css=#ctl00_phG_grid_at_tlb div[data-cmd=\'ExportExcel\']", "Export to Excel", locator, null);
                     Hi = new ToolBarButtonGrid("css=#ctl00_phG_grid_at_tlb div[data-cmd=\'hi\']", "Hi", locator, null);
-                    PageFirst = new ToolBarButtonGrid("css=#ctl00_phG_grid_ab_tlb div[data-cmd=\'PageFirst\']", "Go to First Page (Ctrl+PgUp)", locator, null);
+                    PageFirst = new ToolBarButtonGrid("css=#ctl00_phG_grid_ab_tlb div[data-cmd=\'PageFirst\']", "Go to First Page", locator, null);
                     PagePrev = new ToolBarButtonGrid("css=#ctl00_phG_grid_ab_tlb div[data-cmd=\'PagePrev\']", "Go to Previous Page (PgUp)", locator, null);
                     PageNext = new ToolBarButtonGrid("css=#ctl00_phG_grid_ab_tlb div[data-cmd=\'PageNext\']", "Go to Next Page (PgDn)", locator, null);
-                    PageLast = new ToolBarButtonGrid("css=#ctl00_phG_grid_ab_tlb div[data-cmd=\'PageLast\']", "Go to Last Page (Ctrl+PgDn)", locator, null);
+                    PageLast = new ToolBarButtonGrid("css=#ctl00_phG_grid_ab_tlb div[data-cmd=\'PageLast\']", "Go to Last Page", locator, null);
                     Hi1 = new ToolBarButtonGrid("css=#ctl00_phG_grid_ab_tlb div[data-cmd=\'hi\']", "Hi", locator, null);
                 }
             }

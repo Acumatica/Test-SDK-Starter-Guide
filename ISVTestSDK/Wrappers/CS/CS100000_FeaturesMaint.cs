@@ -447,6 +447,8 @@ namespace GeneratedWrappers.SOLUTIONNAME
 			public Label CustomCommerceConnectorsLabel { get; }
 			public CheckBox CommerceIntegration { get; }
 			public Label CommerceIntegrationLabel { get; }
+			public CheckBox AmazonIntegration { get; }
+			public Label AmazonIntegrationLabel { get; }
 			public CheckBox BigCommerceIntegration { get; }
 			public Label BigCommerceIntegrationLabel { get; }
 			public CheckBox ShopifyIntegration { get; }
@@ -479,12 +481,16 @@ namespace GeneratedWrappers.SOLUTIONNAME
 			public Label ShipEngineCarrierIntegrationLabel { get; }
 			public CheckBox EasyPostCarrierIntegration { get; }
 			public Label EasyPostCarrierIntegrationLabel { get; }
+			public CheckBox PacejetCarrierIntegration { get; }
+			public Label PacejetCarrierIntegrationLabel { get; }
 			public CheckBox CustomCarrierIntegration { get; }
 			public Label CustomCarrierIntegrationLabel { get; }
 			public CheckBox ExchangeIntegration { get; }
 			public Label ExchangeIntegrationLabel { get; }
 			public CheckBox AvalaraTax { get; }
 			public Label AvalaraTaxLabel { get; }
+			public CheckBox ECM { get; }
+			public Label ECMLabel { get; }
 			public CheckBox AddressValidation { get; }
 			public Label AddressValidationLabel { get; }
 			public CheckBox SalesforceIntegration { get; }
@@ -525,8 +531,12 @@ namespace GeneratedWrappers.SOLUTIONNAME
 			public Label TeamsIntegrationLabel { get; }
 			public CheckBox IntelligentTextCompletion { get; }
 			public Label IntelligentTextCompletionLabel { get; }
+			public CheckBox BankFeedAccountsMultipleMapping { get; }
+			public Label BankFeedAccountsMultipleMappingLabel { get; }
 			public CheckBox SalesTerritoryManagement { get; }
 			public Label SalesTerritoryManagementLabel { get; }
+			public CheckBox CaseCommitmentsTracking { get; }
+			public Label CaseCommitmentsTrackingLabel { get; }
             
             public c_features_form(string locator, string name) : 
                     base(locator, name)
@@ -883,6 +893,9 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 CommerceIntegration = new CheckBox("ctl00_phF_form_CommerceIntegration", "Retail Commerce", locator, null);
                 CommerceIntegrationLabel = new Label(CommerceIntegration);
                 CommerceIntegration.DataField = "CommerceIntegration";
+                AmazonIntegration = new CheckBox("ctl00_phF_form_AmazonIntegration", "Amazon Connector", locator, null);
+                AmazonIntegrationLabel = new Label(AmazonIntegration);
+                AmazonIntegration.DataField = "AmazonIntegration";
                 BigCommerceIntegration = new CheckBox("ctl00_phF_form_BigCommerceIntegration", "BigCommerce Connector", locator, null);
                 BigCommerceIntegrationLabel = new Label(BigCommerceIntegration);
                 BigCommerceIntegration.DataField = "BigCommerceIntegration";
@@ -931,6 +944,9 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 EasyPostCarrierIntegration = new CheckBox("ctl00_phF_form_EasyPostCarrierIntegration", "EasyPost", locator, null);
                 EasyPostCarrierIntegrationLabel = new Label(EasyPostCarrierIntegration);
                 EasyPostCarrierIntegration.DataField = "EasyPostCarrierIntegration";
+                PacejetCarrierIntegration = new CheckBox("ctl00_phF_form_PacejetCarrierIntegration", "Pacejet", locator, null);
+                PacejetCarrierIntegrationLabel = new Label(PacejetCarrierIntegration);
+                PacejetCarrierIntegration.DataField = "PacejetCarrierIntegration";
                 CustomCarrierIntegration = new CheckBox("ctl00_phF_form_CustomCarrierIntegration", "Custom", locator, null);
                 CustomCarrierIntegrationLabel = new Label(CustomCarrierIntegration);
                 CustomCarrierIntegration.DataField = "CustomCarrierIntegration";
@@ -940,6 +956,9 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 AvalaraTax = new CheckBox("ctl00_phF_form_AvalaraTax", "External Tax Calculation Integration", locator, null);
                 AvalaraTaxLabel = new Label(AvalaraTax);
                 AvalaraTax.DataField = "AvalaraTax";
+                ECM = new CheckBox("ctl00_phF_form_ECM", "Exemption Certificate Management", locator, null);
+                ECMLabel = new Label(ECM);
+                ECM.DataField = "ECM";
                 AddressValidation = new CheckBox("ctl00_phF_form_AddressValidation", "Address Validation Integration", locator, null);
                 AddressValidationLabel = new Label(AddressValidation);
                 AddressValidation.DataField = "AddressValidation";
@@ -1000,9 +1019,15 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 IntelligentTextCompletion = new CheckBox("ctl00_phF_form_IntelligentTextCompletion", "Intelligent Text Completion", locator, null);
                 IntelligentTextCompletionLabel = new Label(IntelligentTextCompletion);
                 IntelligentTextCompletion.DataField = "IntelligentTextCompletion";
+                BankFeedAccountsMultipleMapping = new CheckBox("ctl00_phF_form_BankFeedAccountsMultipleMapping", "Mapping of Multiple Accounts for Bank Feeds", locator, null);
+                BankFeedAccountsMultipleMappingLabel = new Label(BankFeedAccountsMultipleMapping);
+                BankFeedAccountsMultipleMapping.DataField = "BankFeedAccountsMultipleMapping";
                 SalesTerritoryManagement = new CheckBox("ctl00_phF_form_SalesTerritoryManagement", "Sales Territory Management", locator, null);
                 SalesTerritoryManagementLabel = new Label(SalesTerritoryManagement);
                 SalesTerritoryManagement.DataField = "SalesTerritoryManagement";
+                CaseCommitmentsTracking = new CheckBox("ctl00_phF_form_CaseCommitmentsTracking", "Case Commitments", locator, null);
+                CaseCommitmentsTrackingLabel = new Label(CaseCommitmentsTracking);
+                CaseCommitmentsTracking.DataField = "CaseCommitmentsTracking";
                 DataMemberName = "Features";
             }
         }
@@ -1218,13 +1243,13 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     Export = new ToolBarButtonGrid("css=#ctl00_usrCaption_CustomizationDialogs_ComboBoxValuesDictDialog_gridCombos_ab" +
                             "_tlb div[data-cmd=\'ExportExcel\']", "Export to Excel", locator, null);
                     PageFirst = new ToolBarButtonGrid("css=#ctl00_usrCaption_CustomizationDialogs_ComboBoxValuesDictDialog_gridCombos_ab" +
-                            "_tlb div[data-cmd=\'PageFirst\']", "Go to First Page (Ctrl+PgUp)", locator, null);
+                            "_tlb div[data-cmd=\'PageFirst\']", "Go to First Page", locator, null);
                     PagePrev = new ToolBarButtonGrid("css=#ctl00_usrCaption_CustomizationDialogs_ComboBoxValuesDictDialog_gridCombos_ab" +
                             "_tlb div[data-cmd=\'PagePrev\']", "Go to Previous Page (PgUp)", locator, null);
                     PageNext = new ToolBarButtonGrid("css=#ctl00_usrCaption_CustomizationDialogs_ComboBoxValuesDictDialog_gridCombos_ab" +
                             "_tlb div[data-cmd=\'PageNext\']", "Go to Next Page (PgDn)", locator, null);
                     PageLast = new ToolBarButtonGrid("css=#ctl00_usrCaption_CustomizationDialogs_ComboBoxValuesDictDialog_gridCombos_ab" +
-                            "_tlb div[data-cmd=\'PageLast\']", "Go to Last Page (Ctrl+PgDn)", locator, null);
+                            "_tlb div[data-cmd=\'PageLast\']", "Go to Last Page", locator, null);
                     Hi = new ToolBarButtonGrid("css=#ctl00_usrCaption_CustomizationDialogs_ComboBoxValuesDictDialog_gridCombos_ab" +
                             "_tlb div[data-cmd=\'hi\']", "Hi", locator, null);
                 }
@@ -1502,13 +1527,13 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 public PxToolBar(string locator)
                 {
                     PageFirst = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid_ab_tlb div[data-cmd=" +
-                            "\'PageFirst\']", "Go to First Page (Ctrl+PgUp)", locator, null);
+                            "\'PageFirst\']", "Go to First Page", locator, null);
                     PagePrev = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid_ab_tlb div[data-cmd=" +
                             "\'PagePrev\']", "Go to Previous Page (PgUp)", locator, null);
                     PageNext = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid_ab_tlb div[data-cmd=" +
                             "\'PageNext\']", "Go to Next Page (PgDn)", locator, null);
                     PageLast = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid_ab_tlb div[data-cmd=" +
-                            "\'PageLast\']", "Go to Last Page (Ctrl+PgDn)", locator, null);
+                            "\'PageLast\']", "Go to Last Page", locator, null);
                     Hi = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid_ab_tlb div[data-cmd=" +
                             "\'hi\']", "Hi", locator, null);
                 }
@@ -1650,13 +1675,13 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     Hi = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_at_tlb div[data-cmd=" +
                             "\'hi\']", "Hi", locator, null);
                     PageFirst = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_ab_tlb div[data-cmd=" +
-                            "\'PageFirst\']", "Go to First Page (Ctrl+PgUp)", locator, null);
+                            "\'PageFirst\']", "Go to First Page", locator, null);
                     PagePrev = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_ab_tlb div[data-cmd=" +
                             "\'PagePrev\']", "Go to Previous Page (PgUp)", locator, null);
                     PageNext = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_ab_tlb div[data-cmd=" +
                             "\'PageNext\']", "Go to Next Page (PgDn)", locator, null);
                     PageLast = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_ab_tlb div[data-cmd=" +
-                            "\'PageLast\']", "Go to Last Page (Ctrl+PgDn)", locator, null);
+                            "\'PageLast\']", "Go to Last Page", locator, null);
                     Hi1 = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_ab_tlb div[data-cmd=" +
                             "\'hi\']", "Hi", locator, null);
                 }

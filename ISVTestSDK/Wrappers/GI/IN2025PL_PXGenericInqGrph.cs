@@ -44,7 +44,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
         
         public PxToolBar ToolBar;
         
-        public Container Translations { get; } = new Container("ctl00_L10nEditor", "Translations");
+        public TranslationsContainer Translations { get; } = new TranslationsContainer("ctl00_L10nEditor", "Translations");
         protected c_filter_form Filter_form { get; } = new c_filter_form("ctl00_phF_form", "Filter_form");
         protected c_parameters_gridwizard Parameters_gridWizard { get; } = new c_parameters_gridwizard("ctl00_usrCaption_shareColumnsDlg_gridWizard", "Parameters_gridWizard");
         protected c_profilerinfoview_formprofiler ProfilerInfoView_formProfiler { get; } = new c_profilerinfoview_formprofiler("ctl00_usrCaption_pnlProfiler_formProfiler", "ProfilerInfoView_formProfiler");
@@ -396,13 +396,13 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 public PxToolBar(string locator)
                 {
                     PageFirst = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid_ab_tlb div[data-cmd=" +
-                            "\'PageFirst\']", "Go to First Page (Ctrl+PgUp)", locator, null);
+                            "\'PageFirst\']", "Go to First Page", locator, null);
                     PagePrev = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid_ab_tlb div[data-cmd=" +
                             "\'PagePrev\']", "Go to Previous Page (PgUp)", locator, null);
                     PageNext = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid_ab_tlb div[data-cmd=" +
                             "\'PageNext\']", "Go to Next Page (PgDn)", locator, null);
                     PageLast = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid_ab_tlb div[data-cmd=" +
-                            "\'PageLast\']", "Go to Last Page (Ctrl+PgDn)", locator, null);
+                            "\'PageLast\']", "Go to Last Page", locator, null);
                     Hi = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid_ab_tlb div[data-cmd=" +
                             "\'hi\']", "Hi", locator, null);
                 }
@@ -544,13 +544,13 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     Hi = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_at_tlb div[data-cmd=" +
                             "\'hi\']", "Hi", locator, null);
                     PageFirst = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_ab_tlb div[data-cmd=" +
-                            "\'PageFirst\']", "Go to First Page (Ctrl+PgUp)", locator, null);
+                            "\'PageFirst\']", "Go to First Page", locator, null);
                     PagePrev = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_ab_tlb div[data-cmd=" +
                             "\'PagePrev\']", "Go to Previous Page (PgUp)", locator, null);
                     PageNext = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_ab_tlb div[data-cmd=" +
                             "\'PageNext\']", "Go to Next Page (PgDn)", locator, null);
                     PageLast = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_ab_tlb div[data-cmd=" +
-                            "\'PageLast\']", "Go to Last Page (Ctrl+PgDn)", locator, null);
+                            "\'PageLast\']", "Go to Last Page", locator, null);
                     Hi1 = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_ab_tlb div[data-cmd=" +
                             "\'hi\']", "Hi", locator, null);
                 }
@@ -827,10 +827,10 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     XPagePrev = new ToolBarButtonGrid("css=#ctl00_phG_grid_pivotT_tlbB div[data-cmd=\'XPagePrev\']", "XPagePrev", locator, null);
                     XPageNext = new ToolBarButtonGrid("css=#ctl00_phG_grid_pivotT_tlbB div[data-cmd=\'XPageNext\']", "XPageNext", locator, null);
                     XPageLast = new ToolBarButtonGrid("css=#ctl00_phG_grid_pivotT_tlbB div[data-cmd=\'XPageLast\']", "XPageLast", locator, null);
-                    PageFirst = new ToolBarButtonGrid("css=#ctl00_phG_grid_ab_tlb div[data-cmd=\'PageFirst\']", "Go to First Page (Ctrl+PgUp)", locator, null);
+                    PageFirst = new ToolBarButtonGrid("css=#ctl00_phG_grid_ab_tlb div[data-cmd=\'PageFirst\']", "Go to First Page", locator, null);
                     PagePrev = new ToolBarButtonGrid("css=#ctl00_phG_grid_ab_tlb div[data-cmd=\'PagePrev\']", "Go to Previous Page (PgUp)", locator, null);
                     PageNext = new ToolBarButtonGrid("css=#ctl00_phG_grid_ab_tlb div[data-cmd=\'PageNext\']", "Go to Next Page (PgDn)", locator, null);
-                    PageLast = new ToolBarButtonGrid("css=#ctl00_phG_grid_ab_tlb div[data-cmd=\'PageLast\']", "Go to Last Page (Ctrl+PgDn)", locator, null);
+                    PageLast = new ToolBarButtonGrid("css=#ctl00_phG_grid_ab_tlb div[data-cmd=\'PageLast\']", "Go to Last Page", locator, null);
                     Hi1 = new ToolBarButtonGrid("css=#ctl00_phG_grid_ab_tlb div[data-cmd=\'hi\']", "Hi", locator, null);
                 }
             }
@@ -870,6 +870,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
 			public DateSelector InventoryItem_createdDateTime { get; }
 			public Selector InventoryItem_lastModifiedByID { get; }
 			public DateSelector InventoryItem_lastModifiedDateTime { get; }
+			public DropDown InventoryItem_planningMethod { get; }
 			public PXNumberEdit InventoryItemCurySettings_InventoryID { get; }
 			public Selector InventoryItemCurySettings_CuryID { get; }
 			public Selector INItemClass_ItemClassCD { get; }
@@ -959,6 +960,10 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     InventoryItem_lastModifiedByID.DataField = "InventoryItem_lastModifiedByID";
                     InventoryItem_lastModifiedDateTime = new DateSelector("_ctl00_phG_grid_lv0_ed31", "Last Modified On", grid.Locator, "InventoryItem_lastModifiedDateTime");
                     InventoryItem_lastModifiedDateTime.DataField = "InventoryItem_lastModifiedDateTime";
+                    InventoryItem_planningMethod = new DropDown("_ctl00_phG_grid_lv0_ec", "Planning Method", grid.Locator, "InventoryItem_planningMethod");
+                    InventoryItem_planningMethod.DataField = "InventoryItem_planningMethod";
+                    InventoryItem_planningMethod.Items.Add("N", "None");
+                    InventoryItem_planningMethod.Items.Add("R", "Inventory Replenishment");
                     InventoryItemCurySettings_InventoryID = new PXNumberEdit("ctl00_phG_grid_en", "Inventory ID", grid.Locator, "InventoryItemCurySettings_InventoryID");
                     InventoryItemCurySettings_InventoryID.DataField = "InventoryItemCurySettings_InventoryID";
                     InventoryItemCurySettings_CuryID = new Selector("_ctl00_phG_grid_lv0_es", "Currency", grid.Locator, "InventoryItemCurySettings_CuryID");
@@ -1007,6 +1012,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
 				public DateSelectorColumnFilter InventoryItem_createdDateTime { get; }
 				public SelectorColumnFilter InventoryItem_lastModifiedByID { get; }
 				public DateSelectorColumnFilter InventoryItem_lastModifiedDateTime { get; }
+				public DropDownColumnFilter InventoryItem_planningMethod { get; }
 				public PXNumberEditColumnFilter InventoryItemCurySettings_InventoryID { get; }
 				public SelectorColumnFilter InventoryItemCurySettings_CuryID { get; }
 				public SelectorColumnFilter INItemClass_ItemClassCD { get; }
@@ -1048,6 +1054,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     InventoryItem_createdDateTime = new DateSelectorColumnFilter(grid.Row.InventoryItem_createdDateTime);
                     InventoryItem_lastModifiedByID = new SelectorColumnFilter(grid.Row.InventoryItem_lastModifiedByID);
                     InventoryItem_lastModifiedDateTime = new DateSelectorColumnFilter(grid.Row.InventoryItem_lastModifiedDateTime);
+                    InventoryItem_planningMethod = new DropDownColumnFilter(grid.Row.InventoryItem_planningMethod);
                     InventoryItemCurySettings_InventoryID = new PXNumberEditColumnFilter(grid.Row.InventoryItemCurySettings_InventoryID);
                     InventoryItemCurySettings_CuryID = new SelectorColumnFilter(grid.Row.InventoryItemCurySettings_CuryID);
                     INItemClass_ItemClassCD = new SelectorColumnFilter(grid.Row.INItemClass_ItemClassCD);

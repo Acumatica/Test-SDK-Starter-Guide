@@ -55,7 +55,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
         
         public PxToolBar ToolBar;
         
-        public Container Translations { get; } = new Container("ctl00_L10nEditor", "Translations");
+        public TranslationsContainer Translations { get; } = new TranslationsContainer("ctl00_L10nEditor", "Translations");
         protected c_document_form Document_form { get; } = new c_document_form("ctl00_phF_form", "Document_form");
         protected c_parameters_gridwizard Parameters_gridWizard { get; } = new c_parameters_gridwizard("ctl00_usrCaption_shareColumnsDlg_gridWizard", "Parameters_gridWizard");
         protected c_profilerinfoview_formprofiler ProfilerInfoView_formProfiler { get; } = new c_profilerinfoview_formprofiler("ctl00_usrCaption_pnlProfiler_formProfiler", "ProfilerInfoView_formProfiler");
@@ -69,20 +69,21 @@ namespace GeneratedWrappers.SOLUTIONNAME
         protected c_userlist_lv0 UserList_lv0 { get; } = new c_userlist_lv0("ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_lv0", "UserList_lv0");
         protected c__soshipment_currencyinfo__rf _SOShipment_CurrencyInfo__rf { get; } = new c__soshipment_currencyinfo__rf("ctl00_phG_tab_t2_formF_edCury_pnlRate_rf", "_SOShipment_CurrencyInfo__rf");
         protected c_currentdocument_formcarrierrates CurrentDocument_formCarrierRates { get; } = new c_currentdocument_formcarrierrates("ctl00_phG_PanelCarrierRates_formCarrierRates", "CurrentDocument_formCarrierRates");
+        protected c_currentdocument_formf CurrentDocument_formF { get; } = new c_currentdocument_formf("ctl00_phG_tab_t2_formF", "CurrentDocument_formF");
+        protected c_currentdocument_formdeliverysettings CurrentDocument_formDeliverySettings { get; } = new c_currentdocument_formdeliverysettings("ctl00_phG_tab_t2_formDeliverySettings", "CurrentDocument_formDeliverySettings");
         protected c_currentdocument_formbroker CurrentDocument_formBroker { get; } = new c_currentdocument_formbroker("ctl00_phG_tab_t2_formBroker", "CurrentDocument_formBroker");
         protected c_currentdocument_formi CurrentDocument_formI { get; } = new c_currentdocument_formi("ctl00_phG_tab_t2_formI", "CurrentDocument_formI");
-        protected c_currentdocument_formf CurrentDocument_formF { get; } = new c_currentdocument_formf("ctl00_phG_tab_t2_formF", "CurrentDocument_formF");
         protected c_currentdocument_gridsm CurrentDocument_gridSM { get; } = new c_currentdocument_gridsm("ctl00_phG_tab_t2_gridSM", "CurrentDocument_gridSM");
         protected c_transactions_grid Transactions_grid { get; } = new c_transactions_grid("ctl00_phG_tab_t0_grid", "Transactions_grid");
         protected c_transactions_lv0 Transactions_lv0 { get; } = new c_transactions_lv0("ctl00_phG_tab_t0_grid_lv0", "Transactions_lv0");
         protected c_splits_grid2 Splits_grid2 { get; } = new c_splits_grid2("ctl00_phG_PanelLS_grid2", "splits_grid2");
         protected c_splits_lv0 Splits_lv0 { get; } = new c_splits_lv0("ctl00_phG_PanelLS_grid2_lv0", "splits_lv0");
-        protected c_shipping_address_formb Shipping_Address_formB { get; } = new c_shipping_address_formb("ctl00_phG_tab_t2_formB", "Shipping_Address_formB");
-        protected c_shipping_contact_formd Shipping_Contact_formD { get; } = new c_shipping_contact_formd("ctl00_phG_tab_t2_formD", "Shipping_Contact_formD");
+        protected c_shipping_address_formb Shipping_Address_formB { get; } = new c_shipping_address_formb("ctl00_phG_tab_t3_formB", "Shipping_Address_formB");
+        protected c_shipping_contact_formd Shipping_Contact_formD { get; } = new c_shipping_contact_formd("ctl00_phG_tab_t3_formD", "Shipping_Contact_formD");
         protected c_orderlist_grid5 OrderList_grid5 { get; } = new c_orderlist_grid5("ctl00_phG_tab_t1_grid5", "OrderList_grid5");
         protected c_orderlist_lv0 OrderList_lv0 { get; } = new c_orderlist_lv0("ctl00_phG_tab_t1_grid5_lv0", "OrderList_lv0");
-        protected c_packages_gridpackages Packages_gridPackages { get; } = new c_packages_gridpackages("ctl00_phG_tab_t3_gridPackages", "Packages_gridPackages");
-        protected c_packages_lv0 Packages_lv0 { get; } = new c_packages_lv0("ctl00_phG_tab_t3_gridPackages_lv0", "Packages_lv0");
+        protected c_packages_gridpackages Packages_gridPackages { get; } = new c_packages_gridpackages("ctl00_phG_tab_t4_gridPackages", "Packages_gridPackages");
+        protected c_packages_lv0 Packages_lv0 { get; } = new c_packages_lv0("ctl00_phG_tab_t4_gridPackages_lv0", "Packages_lv0");
         protected c_packagesforrates_gridpackagesforrates PackagesForRates_gridPackagesForRates { get; } = new c_packagesforrates_gridpackagesforrates("ctl00_phG_PanelCarrierRates_gridPackagesForRates", "PackagesForRates_gridPackagesForRates");
         protected c_packagesforrates_lv0 PackagesForRates_lv0 { get; } = new c_packagesforrates_lv0("ctl00_phG_PanelCarrierRates_gridPackagesForRates_lv0", "PackagesForRates_lv0");
         protected c_addsofilter_form4 Addsofilter_form4 { get; } = new c_addsofilter_form4("ctl00_phG_PanelAddSO_form4", "addsofilter_form4");
@@ -90,8 +91,11 @@ namespace GeneratedWrappers.SOLUTIONNAME
         protected c_soshipmentplan_lv0 Soshipmentplan_lv0 { get; } = new c_soshipmentplan_lv0("ctl00_phG_PanelAddSO_grid4_lv0", "soshipmentplan_lv0");
         protected c_carrierrates_gridrates CarrierRates_gridRates { get; } = new c_carrierrates_gridrates("ctl00_phG_PanelCarrierRates_gridRates", "CarrierRates_gridRates");
         protected c_carrierrates_lv0 CarrierRates_lv0 { get; } = new c_carrierrates_lv0("ctl00_phG_PanelCarrierRates_gridRates_lv0", "CarrierRates_lv0");
-        protected c_packagedetailsplit_gridpackagedetailsplit PackageDetailSplit_gridPackageDetailSplit { get; } = new c_packagedetailsplit_gridpackagedetailsplit("ctl00_phG_tab_t3_gridPackageDetailSplit", "PackageDetailSplit_gridPackageDetailSplit");
-        protected c_packagedetailsplit_lv0 PackageDetailSplit_lv0 { get; } = new c_packagedetailsplit_lv0("ctl00_phG_tab_t3_gridPackageDetailSplit_lv0", "PackageDetailSplit_lv0");
+        protected c_carrierdata_formpacejetprocessing CarrierData_formPacejetProcessing { get; } = new c_carrierdata_formpacejetprocessing("ctl00_phG_tab_t2_formF_formPacejetProcessing", "CarrierData_formPacejetProcessing");
+        protected c_carrierdata_formpacejetoptions CarrierData_formPacejetOptions { get; } = new c_carrierdata_formpacejetoptions("ctl00_phG_tab_t2_formDeliverySettings_formPacejetOptions", "CarrierData_formPacejetOptions");
+        protected c_carrierdata_formltlsettings CarrierData_formLTLSettings { get; } = new c_carrierdata_formltlsettings("ctl00_phG_tab_t2_formLTLSettings", "CarrierData_formLTLSettings");
+        protected c_packagedetailsplit_gridpackagedetailsplit PackageDetailSplit_gridPackageDetailSplit { get; } = new c_packagedetailsplit_gridpackagedetailsplit("ctl00_phG_tab_t4_gridPackageDetailSplit", "PackageDetailSplit_gridPackageDetailSplit");
+        protected c_packagedetailsplit_lv0 PackageDetailSplit_lv0 { get; } = new c_packagedetailsplit_lv0("ctl00_phG_tab_t4_gridPackageDetailSplit_lv0", "PackageDetailSplit_lv0");
         protected c_addresslookupfilter_addresslookuppanelformaddress AddressLookupFilter_AddressLookupPanelformAddress { get; } = new c_addresslookupfilter_addresslookuppanelformaddress("ctl00_phG_AddressLookupPanel_AddressLookupPanelformAddress", "AddressLookupFilter_AddressLookupPanelformAddress");
         protected c_picklistentries_picklistheader PickListEntries_PickListHeader { get; } = new c_picklistentries_picklistheader("ctl00_phG_PanelPickList_PickListHeader", "PickListEntries_PickListHeader");
         protected c_picklistentries_gridpicklist PickListEntries_gridPickList { get; } = new c_picklistentries_gridpicklist("ctl00_phG_PanelPickList_gridPickList", "PickListEntries_gridPickList");
@@ -355,12 +359,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
             ToolBar.GetReturnLabelsAction.Click();
         }
         
-        public virtual void GetReturnLabelsAction(bool status, string message = null)
-        {
-            ToolBar.GetReturnLabelsAction.WaitActionOverride = () => Wait.WaitForLongOperationToComplete(status, message);
-            ToolBar.GetReturnLabelsAction.Click();
-        }
-        
         public virtual void UpdateIN()
         {
             ToolBar.UpdateIN.Click();
@@ -374,6 +372,21 @@ namespace GeneratedWrappers.SOLUTIONNAME
         public virtual void ViewManifest()
         {
             ToolBar.ViewManifest.Click();
+        }
+        
+        public virtual void PacejetLink()
+        {
+            ToolBar.PacejetLink.Click();
+        }
+        
+        public virtual void UpdatePacejet()
+        {
+            ToolBar.UpdatePacejet.Click();
+        }
+        
+        public virtual void ShowPickList()
+        {
+            ToolBar.ShowPickList.Click();
         }
         
         public virtual void UnlinkFromWorksheet()
@@ -457,6 +470,11 @@ namespace GeneratedWrappers.SOLUTIONNAME
             ToolBar.ViewAllActivities.Click();
         }
         
+        public virtual void RefreshActivities()
+        {
+            ToolBar.RefreshActivities.Click();
+        }
+        
         public virtual void SOOrderShipmentDisplayShippingRefNoteIDLink()
         {
             ToolBar.SOOrderShipmentDisplayShippingRefNoteIDLink.Click();
@@ -526,6 +544,9 @@ namespace GeneratedWrappers.SOLUTIONNAME
 			public ToolBarButton UpdateIN { get; }
 			public ToolBarButton ValidateAddresses { get; }
 			public ToolBarButton ViewManifest { get; }
+			public ToolBarButton PacejetLink { get; }
+			public ToolBarButton UpdatePacejet { get; }
+			public ToolBarButton ShowPickList { get; }
 			public ToolBarButton UnlinkFromWorksheet { get; }
 			public ToolBarButton PutOnHold { get; }
 			public ToolBarButton Notification { get; }
@@ -541,6 +562,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
 			public ToolBarButton ViewActivity { get; }
 			public ToolBarButton OpenActivityOwner { get; }
 			public ToolBarButton ViewAllActivities { get; }
+			public ToolBarButton RefreshActivities { get; }
 			public ToolBarButton SOOrderShipmentDisplayShippingRefNoteIDLink { get; }
 			public ToolBarButton LongRun { get; }
 			public ToolBarButton LongRun_cancel { get; }
@@ -615,11 +637,14 @@ namespace GeneratedWrappers.SOLUTIONNAME
                         "mmercialInvoices_item", "Print Commercial Invoices", locator, MenuOpener);
                 GetReturnLabelsAction = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_GetReturnLabelsAction,#ctl00_phDS_ds_ToolBar_GetReturn" +
                         "LabelsAction_item", "Get Return Labels", locator, MenuOpener);
-                GetReturnLabelsAction.WaitAction = Wait.WaitForLongOperationToComplete;
                 UpdateIN = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_updateIN,#ctl00_phDS_ds_ToolBar_updateIN_item", "Update IN", locator, MenuOpener);
                 ValidateAddresses = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_ValidateAddresses,#ctl00_phDS_ds_ToolBar_ValidateAddre" +
                         "sses_item", "Validate Addresses", locator, MenuOpener);
                 ViewManifest = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_ViewManifest,#ctl00_phDS_ds_ToolBar_ViewManifest_item", "View Manifest/Scanform", locator, MenuOpener);
+                PacejetLink = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_pacejetLink,#ctl00_phDS_ds_ToolBar_pacejetLink_item", "Open Pacejet Workbench", locator, MenuOpener);
+                UpdatePacejet = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_updatePacejet,#ctl00_phDS_ds_ToolBar_updatePacejet_ite" +
+                        "m", "Update Shipment with Pacejet Data", locator, MenuOpener);
+                ShowPickList = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_showPickList,#ctl00_phDS_ds_ToolBar_showPickList_item", "Show Pick List", locator, MenuOpener);
                 UnlinkFromWorksheet = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_unlinkFromWorksheet,#ctl00_phDS_ds_ToolBar_unlinkFromW" +
                         "orksheet_item", "Remove from Worksheet", locator, MenuOpener);
                 UnlinkFromWorksheet.WaitAction = Wait.WaitForLongOperationToComplete;
@@ -640,6 +665,8 @@ namespace GeneratedWrappers.SOLUTIONNAME
                         "wner_item", "openActivityOwner", locator, MenuOpener);
                 ViewAllActivities = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_viewAllActivities,#ctl00_phDS_ds_ToolBar_viewAllActivi" +
                         "ties_item", "viewAllActivities", locator, MenuOpener);
+                RefreshActivities = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_refreshActivities,#ctl00_phDS_ds_ToolBar_refreshActivi" +
+                        "ties_item", "refreshActivities", locator, MenuOpener);
                 SOOrderShipmentDisplayShippingRefNoteIDLink = new ToolBarButton("css=#ctl00_phDS_ds_ToolBar_SOOrderShipment~DisplayShippingRefNoteID~Link,#ctl00_p" +
                         "hDS_ds_ToolBar_SOOrderShipment~DisplayShippingRefNoteID~Link_item", "SOOrderShipment\r\nDisplayShippingRefNoteID\r\nLink", locator, MenuOpener);
                 LongRun = new ToolBarButton("css=qp-long-run", "Nothing in progress", locator, null);
@@ -650,8 +677,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
         
         public class c_document_form : Container
         {
-            
-            public PxButtonCollection Buttons;
             
 			public Selector ShipmentNbr { get; }
 			public Label ShipmentNbrLabel { get; }
@@ -768,33 +793,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 ShipmentDesc.DataField = "ShipmentDesc";
                 Ctl02_ = new Label("ctl00_phF_form_t1_ctl02", "No user-defined fields have been found.", locator, null);
                 DataMemberName = "Document";
-                Buttons = new PxButtonCollection();
-            }
-            
-            public virtual void CustomerIDEdit()
-            {
-                Buttons.CustomerIDEdit.Click();
-            }
-            
-            public virtual void CurrentWorksheetNbrEdit()
-            {
-                Buttons.CurrentWorksheetNbrEdit.Click();
-            }
-            
-            public class PxButtonCollection : PxControlCollection
-            {
-                
-			public Button CustomerIDEdit { get; }
-			public Button CurrentWorksheetNbrEdit { get; }
-                
-                public PxButtonCollection()
-                {
-                    CustomerIDEdit = new Button("css=div[id=\'ctl00_phF_form_t0_edCustomerID\'] div[class=\'editBtnCont\'] > div > div" +
-                            "", "CustomerIDEdit", "ctl00_phF_form");
-                    CustomerIDEdit.WaitAction = Wait.WaitForNewWindowToOpen;
-                    CurrentWorksheetNbrEdit = new Button("css=div[id=\'ctl00_phF_form_t0_edWorksheet\'] div[class=\'editBtnCont\'] > div > div", "CurrentWorksheetNbrEdit", "ctl00_phF_form");
-                    CurrentWorksheetNbrEdit.WaitAction = Wait.WaitForNewWindowToOpen;
-                }
             }
         }
         
@@ -1009,13 +1007,13 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     Export = new ToolBarButtonGrid("css=#ctl00_usrCaption_CustomizationDialogs_ComboBoxValuesDictDialog_gridCombos_ab" +
                             "_tlb div[data-cmd=\'ExportExcel\']", "Export to Excel", locator, null);
                     PageFirst = new ToolBarButtonGrid("css=#ctl00_usrCaption_CustomizationDialogs_ComboBoxValuesDictDialog_gridCombos_ab" +
-                            "_tlb div[data-cmd=\'PageFirst\']", "Go to First Page (Ctrl+PgUp)", locator, null);
+                            "_tlb div[data-cmd=\'PageFirst\']", "Go to First Page", locator, null);
                     PagePrev = new ToolBarButtonGrid("css=#ctl00_usrCaption_CustomizationDialogs_ComboBoxValuesDictDialog_gridCombos_ab" +
                             "_tlb div[data-cmd=\'PagePrev\']", "Go to Previous Page (PgUp)", locator, null);
                     PageNext = new ToolBarButtonGrid("css=#ctl00_usrCaption_CustomizationDialogs_ComboBoxValuesDictDialog_gridCombos_ab" +
                             "_tlb div[data-cmd=\'PageNext\']", "Go to Next Page (PgDn)", locator, null);
                     PageLast = new ToolBarButtonGrid("css=#ctl00_usrCaption_CustomizationDialogs_ComboBoxValuesDictDialog_gridCombos_ab" +
-                            "_tlb div[data-cmd=\'PageLast\']", "Go to Last Page (Ctrl+PgDn)", locator, null);
+                            "_tlb div[data-cmd=\'PageLast\']", "Go to Last Page", locator, null);
                     Hi = new ToolBarButtonGrid("css=#ctl00_usrCaption_CustomizationDialogs_ComboBoxValuesDictDialog_gridCombos_ab" +
                             "_tlb div[data-cmd=\'hi\']", "Hi", locator, null);
                 }
@@ -1293,13 +1291,13 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 public PxToolBar(string locator)
                 {
                     PageFirst = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid_ab_tlb div[data-cmd=" +
-                            "\'PageFirst\']", "Go to First Page (Ctrl+PgUp)", locator, null);
+                            "\'PageFirst\']", "Go to First Page", locator, null);
                     PagePrev = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid_ab_tlb div[data-cmd=" +
                             "\'PagePrev\']", "Go to Previous Page (PgUp)", locator, null);
                     PageNext = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid_ab_tlb div[data-cmd=" +
                             "\'PageNext\']", "Go to Next Page (PgDn)", locator, null);
                     PageLast = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid_ab_tlb div[data-cmd=" +
-                            "\'PageLast\']", "Go to Last Page (Ctrl+PgDn)", locator, null);
+                            "\'PageLast\']", "Go to Last Page", locator, null);
                     Hi = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p0_gridGrid_ab_tlb div[data-cmd=" +
                             "\'hi\']", "Hi", locator, null);
                 }
@@ -1442,13 +1440,13 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     Hi = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_at_tlb div[data-cmd=" +
                             "\'hi\']", "Hi", locator, null);
                     PageFirst = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_ab_tlb div[data-cmd=" +
-                            "\'PageFirst\']", "Go to First Page (Ctrl+PgUp)", locator, null);
+                            "\'PageFirst\']", "Go to First Page", locator, null);
                     PagePrev = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_ab_tlb div[data-cmd=" +
                             "\'PagePrev\']", "Go to Previous Page (PgUp)", locator, null);
                     PageNext = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_ab_tlb div[data-cmd=" +
                             "\'PageNext\']", "Go to Next Page (PgDn)", locator, null);
                     PageLast = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_ab_tlb div[data-cmd=" +
-                            "\'PageLast\']", "Go to Last Page (Ctrl+PgDn)", locator, null);
+                            "\'PageLast\']", "Go to Last Page", locator, null);
                     Hi1 = new ToolBarButtonGrid("css=#ctl00_usrCaption_shareColumnsDlg_gridWizard_p1_userGrid_ab_tlb div[data-cmd=" +
                             "\'hi\']", "Hi", locator, null);
                 }
@@ -1702,155 +1700,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
             }
         }
         
-        public class c_currentdocument_formbroker : Container
-        {
-            
-            public PxButtonCollection Buttons;
-            
-			public Selector BrokerContactID { get; }
-			public Label BrokerContactIDLabel { get; }
-            
-            public c_currentdocument_formbroker(string locator, string name) : 
-                    base(locator, name)
-            {
-                BrokerContactID = new Selector("ctl00_phG_tab_t2_formBroker_edBrokerID", "Broker", locator, null);
-                BrokerContactIDLabel = new Label(BrokerContactID);
-                BrokerContactID.DataField = "BrokerContactID";
-                DataMemberName = "CurrentDocument";
-                Buttons = new PxButtonCollection();
-            }
-            
-            public virtual void BrokerContactIDEdit()
-            {
-                Buttons.BrokerContactIDEdit.Click();
-            }
-            
-            public virtual void AddressLookup()
-            {
-                Buttons.AddressLookup.Click();
-            }
-            
-            public virtual void ShopRates()
-            {
-                Buttons.ShopRates.Click();
-            }
-            
-            public virtual void Unnamed()
-            {
-                Buttons.Unnamed.Click();
-            }
-            
-            public virtual void Viewbase()
-            {
-                Buttons.Viewbase.Click();
-            }
-            
-            public virtual void Ok()
-            {
-                Buttons.Ok.Click();
-            }
-            
-            public class PxButtonCollection : PxControlCollection
-            {
-                
-			public Button BrokerContactIDEdit { get; }
-			public Button AddressLookup { get; }
-			public Button ShopRates { get; }
-			public Button Unnamed { get; }
-			public Button Viewbase { get; }
-			public Button Ok { get; }
-                
-                public PxButtonCollection()
-                {
-                    BrokerContactIDEdit = new Button("css=div[id=\'ctl00_phG_tab_t2_formBroker_edBrokerID\'] div[class=\'editBtnCont\'] > d" +
-                            "iv > div", "BrokerContactIDEdit", "ctl00_phG_tab_t2_formBroker");
-                    BrokerContactIDEdit.WaitAction = Wait.WaitForNewWindowToOpen;
-                    AddressLookup = new Button("ctl00_phG_tab_t2_formB_btnAddressLookup", "Address Lookup", "ctl00_phG_tab_t2_formBroker");
-                    ShopRates = new Button("ctl00_phG_tab_t2_formF_shopRates", "Shop for Rates", "ctl00_phG_tab_t2_formBroker");
-                    Unnamed = new Button("ctl00_phG_tab_t2_formF_edCury_rateB", "0", "ctl00_phG_tab_t2_formBroker");
-                    Viewbase = new Button("ctl00_phG_tab_t2_formF_edCury_curyB", "View base", "ctl00_phG_tab_t2_formBroker");
-                    Ok = new Button("ctl00_phG_tab_t2_formF_edCury_pnlRate_btnOk", "OK", "ctl00_phG_tab_t2_formBroker");
-                }
-            }
-        }
-        
-        public class c_currentdocument_formi : Container
-        {
-            
-            public PxButtonCollection Buttons;
-            
-			public Selector IntercompanyPOReceiptNbr { get; }
-			public Label IntercompanyPOReceiptNbrLabel { get; }
-			public CheckBox ExcludeFromIntercompanyProc { get; }
-			public Label ExcludeFromIntercompanyProcLabel { get; }
-            
-            public c_currentdocument_formi(string locator, string name) : 
-                    base(locator, name)
-            {
-                IntercompanyPOReceiptNbr = new Selector("ctl00_phG_tab_t2_formI_edIntercompanyPOReceiptNbr", "Related PO Receipt Nbr.", locator, null);
-                IntercompanyPOReceiptNbrLabel = new Label(IntercompanyPOReceiptNbr);
-                IntercompanyPOReceiptNbr.DataField = "IntercompanyPOReceiptNbr";
-                ExcludeFromIntercompanyProc = new CheckBox("ctl00_phG_tab_t2_formI_chkExcludeFromIntercompanyProc", "Exclude from Intercompany Processing", locator, null);
-                ExcludeFromIntercompanyProcLabel = new Label(ExcludeFromIntercompanyProc);
-                ExcludeFromIntercompanyProc.DataField = "ExcludeFromIntercompanyProc";
-                DataMemberName = "CurrentDocument";
-                Buttons = new PxButtonCollection();
-            }
-            
-            public virtual void AddressLookup()
-            {
-                Buttons.AddressLookup.Click();
-            }
-            
-            public virtual void BrokerContactIDEdit()
-            {
-                Buttons.BrokerContactIDEdit.Click();
-            }
-            
-            public virtual void ShopRates()
-            {
-                Buttons.ShopRates.Click();
-            }
-            
-            public virtual void Unnamed()
-            {
-                Buttons.Unnamed.Click();
-            }
-            
-            public virtual void Viewbase()
-            {
-                Buttons.Viewbase.Click();
-            }
-            
-            public virtual void Ok()
-            {
-                Buttons.Ok.Click();
-            }
-            
-            public class PxButtonCollection : PxControlCollection
-            {
-                
-			public Button AddressLookup { get; }
-			public Button BrokerContactIDEdit { get; }
-			public Button ShopRates { get; }
-			public Button Unnamed { get; }
-			public Button Viewbase { get; }
-			public Button Ok { get; }
-                
-                public PxButtonCollection()
-                {
-                    AddressLookup = new Button("ctl00_phG_tab_t2_formB_btnAddressLookup", "Address Lookup", "ctl00_phG_tab_t2_formI");
-                    BrokerContactIDEdit = new Button("css=div[id=\'ctl00_phG_tab_t2_formBroker_edBrokerID\'] div[class=\'editBtnCont\'] > d" +
-                            "iv > div", "BrokerContactIDEdit", "ctl00_phG_tab_t2_formI");
-                    BrokerContactIDEdit.WaitAction = Wait.WaitForNewWindowToOpen;
-                    ShopRates = new Button("ctl00_phG_tab_t2_formF_shopRates", "Shop for Rates", "ctl00_phG_tab_t2_formI");
-                    Unnamed = new Button("ctl00_phG_tab_t2_formF_edCury_rateB", "0", "ctl00_phG_tab_t2_formI");
-                    Viewbase = new Button("ctl00_phG_tab_t2_formF_edCury_curyB", "View base", "ctl00_phG_tab_t2_formI");
-                    Ok = new Button("ctl00_phG_tab_t2_formF_edCury_pnlRate_btnOk", "OK", "ctl00_phG_tab_t2_formI");
-                }
-            }
-        }
-        
         public class c_currentdocument_formf : Container
         {
             
@@ -1872,22 +1721,10 @@ namespace GeneratedWrappers.SOLUTIONNAME
 			public Label TermsOfSaleLabel { get; }
 			public PXTextEdit DHLBillingRef { get; }
 			public Label DHLBillingRefLabel { get; }
-			public CheckBox SkipAddressVerification { get; }
-			public Label SkipAddressVerificationLabel { get; }
 			public DropDown DeliveryConfirmation { get; }
 			public Label DeliveryConfirmationLabel { get; }
 			public DropDown EndorsementService { get; }
 			public Label EndorsementServiceLabel { get; }
-			public CheckBox Resedential { get; }
-			public Label ResedentialLabel { get; }
-			public CheckBox SaturdayDelivery { get; }
-			public Label SaturdayDeliveryLabel { get; }
-			public CheckBox UseCustomerAccount { get; }
-			public Label UseCustomerAccountLabel { get; }
-			public CheckBox Insurance { get; }
-			public Label InsuranceLabel { get; }
-			public CheckBox GroundCollect { get; }
-			public Label GroundCollectLabel { get; }
 			public Selector CuryID { get; }
 			public Label CuryIDLabel { get; }
 			public CheckBoxButton CuryViewState { get; }
@@ -1962,9 +1799,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 DHLBillingRef = new PXTextEdit("ctl00_phG_tab_t2_formF_edDHLBillingRef", "Billing Reference # (DHL)", locator, null);
                 DHLBillingRefLabel = new Label(DHLBillingRef);
                 DHLBillingRef.DataField = "DHLBillingRef";
-                SkipAddressVerification = new CheckBox("ctl00_phG_tab_t2_formF_edSkipAddressVerification", "Skip Address Verification", locator, null);
-                SkipAddressVerificationLabel = new Label(SkipAddressVerification);
-                SkipAddressVerification.DataField = "SkipAddressVerification";
                 DeliveryConfirmation = new DropDown("ctl00_phG_tab_t2_formF_edDeliveryConfirmation", "Delivery Confirmation", locator, null);
                 DeliveryConfirmationLabel = new Label(DeliveryConfirmation);
                 DeliveryConfirmation.DataField = "DeliveryConfirmation";
@@ -1984,21 +1818,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 EndorsementService.Items.Add("CHANGE_SERVICE_REQUESTED", "Change Service Requested");
                 EndorsementService.Items.Add("RETURN_SERVICE_REQUESTED", "Return Service Requested");
                 EndorsementService.Items.Add("LEAVE_IF_NO_RESPONSE", "Leave if No Response");
-                Resedential = new CheckBox("ctl00_phG_tab_t2_formF_chkResedential", "Residential Delivery", locator, null);
-                ResedentialLabel = new Label(Resedential);
-                Resedential.DataField = "Resedential";
-                SaturdayDelivery = new CheckBox("ctl00_phG_tab_t2_formF_chkSaturdayDelivery", "Saturday Delivery", locator, null);
-                SaturdayDeliveryLabel = new Label(SaturdayDelivery);
-                SaturdayDelivery.DataField = "SaturdayDelivery";
-                UseCustomerAccount = new CheckBox("ctl00_phG_tab_t2_formF_chkUseCustomerAccount", "Use Customer\'s Account", locator, null);
-                UseCustomerAccountLabel = new Label(UseCustomerAccount);
-                UseCustomerAccount.DataField = "UseCustomerAccount";
-                Insurance = new CheckBox("ctl00_phG_tab_t2_formF_chkInsurance", "Insurance", locator, null);
-                InsuranceLabel = new Label(Insurance);
-                Insurance.DataField = "Insurance";
-                GroundCollect = new CheckBox("ctl00_phG_tab_t2_formF_chkGroundCollect", "Ground Collect", locator, null);
-                GroundCollectLabel = new Label(GroundCollect);
-                GroundCollect.DataField = "GroundCollect";
                 CuryID = new Selector("ctl00_phG_tab_t2_formF_edCury_cury", "Cury ID", locator, null);
                 CuryIDLabel = new Label(CuryID);
                 CuryID.DataField = "CuryID";
@@ -2047,16 +1866,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 Buttons.Ok.Click();
             }
             
-            public virtual void AddressLookup()
-            {
-                Buttons.AddressLookup.Click();
-            }
-            
-            public virtual void BrokerContactIDEdit()
-            {
-                Buttons.BrokerContactIDEdit.Click();
-            }
-            
             public class PxButtonCollection : PxControlCollection
             {
                 
@@ -2064,8 +1873,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
 			public Button Unnamed { get; }
 			public Button Viewbase { get; }
 			public Button Ok { get; }
-			public Button AddressLookup { get; }
-			public Button BrokerContactIDEdit { get; }
                 
                 public PxButtonCollection()
                 {
@@ -2073,40 +1880,51 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     Unnamed = new Button("ctl00_phG_tab_t2_formF_edCury_rateB", "0", "ctl00_phG_tab_t2_formF");
                     Viewbase = new Button("ctl00_phG_tab_t2_formF_edCury_curyB", "View base", "ctl00_phG_tab_t2_formF");
                     Ok = new Button("ctl00_phG_tab_t2_formF_edCury_pnlRate_btnOk", "OK", "ctl00_phG_tab_t2_formF");
-                    AddressLookup = new Button("ctl00_phG_tab_t2_formB_btnAddressLookup", "Address Lookup", "ctl00_phG_tab_t2_formF");
-                    BrokerContactIDEdit = new Button("css=div[id=\'ctl00_phG_tab_t2_formBroker_edBrokerID\'] div[class=\'editBtnCont\'] > d" +
-                            "iv > div", "BrokerContactIDEdit", "ctl00_phG_tab_t2_formF");
-                    BrokerContactIDEdit.WaitAction = Wait.WaitForNewWindowToOpen;
                 }
             }
         }
         
-        public class c_currentdocument_gridsm : Container
+        public class c_currentdocument_formdeliverysettings : Container
         {
             
             public PxButtonCollection Buttons;
             
-			public CheckBox Installed { get; }
-			public Label InstalledLabel { get; }
+			public CheckBox SkipAddressVerification { get; }
+			public Label SkipAddressVerificationLabel { get; }
+			public CheckBox UseCustomerAccount { get; }
+			public Label UseCustomerAccountLabel { get; }
+			public CheckBox Insurance { get; }
+			public Label InsuranceLabel { get; }
+			public CheckBox GroundCollect { get; }
+			public Label GroundCollectLabel { get; }
+			public CheckBox Resedential { get; }
+			public Label ResedentialLabel { get; }
+			public CheckBox SaturdayDelivery { get; }
+			public Label SaturdayDeliveryLabel { get; }
             
-            public c_currentdocument_gridsm(string locator, string name) : 
+            public c_currentdocument_formdeliverysettings(string locator, string name) : 
                     base(locator, name)
             {
-                Installed = new CheckBox("ctl00_phG_tab_t2_gridSM_edInstalled", "Installed", locator, null);
-                InstalledLabel = new Label(Installed);
-                Installed.DataField = "Installed";
+                SkipAddressVerification = new CheckBox("ctl00_phG_tab_t2_formDeliverySettings_chkAddressVerification", "Skip Address Verification", locator, null);
+                SkipAddressVerificationLabel = new Label(SkipAddressVerification);
+                SkipAddressVerification.DataField = "SkipAddressVerification";
+                UseCustomerAccount = new CheckBox("ctl00_phG_tab_t2_formDeliverySettings_chkUseCustomerAccount", "Use Customer\'s Account", locator, null);
+                UseCustomerAccountLabel = new Label(UseCustomerAccount);
+                UseCustomerAccount.DataField = "UseCustomerAccount";
+                Insurance = new CheckBox("ctl00_phG_tab_t2_formDeliverySettings_chkInsurance", "Insurance", locator, null);
+                InsuranceLabel = new Label(Insurance);
+                Insurance.DataField = "Insurance";
+                GroundCollect = new CheckBox("ctl00_phG_tab_t2_formDeliverySettings_chkGroundCollect", "Ground Collect", locator, null);
+                GroundCollectLabel = new Label(GroundCollect);
+                GroundCollect.DataField = "GroundCollect";
+                Resedential = new CheckBox("ctl00_phG_tab_t2_formDeliverySettings_chkResedential", "Residential Delivery", locator, null);
+                ResedentialLabel = new Label(Resedential);
+                Resedential.DataField = "Resedential";
+                SaturdayDelivery = new CheckBox("ctl00_phG_tab_t2_formDeliverySettings_chkSaturdayDelivery", "Saturday Delivery", locator, null);
+                SaturdayDeliveryLabel = new Label(SaturdayDelivery);
+                SaturdayDelivery.DataField = "SaturdayDelivery";
                 DataMemberName = "CurrentDocument";
                 Buttons = new PxButtonCollection();
-            }
-            
-            public virtual void AddressLookup()
-            {
-                Buttons.AddressLookup.Click();
-            }
-            
-            public virtual void BrokerContactIDEdit()
-            {
-                Buttons.BrokerContactIDEdit.Click();
             }
             
             public virtual void ShopRates()
@@ -2132,8 +1950,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
             public class PxButtonCollection : PxControlCollection
             {
                 
-			public Button AddressLookup { get; }
-			public Button BrokerContactIDEdit { get; }
 			public Button ShopRates { get; }
 			public Button Unnamed { get; }
 			public Button Viewbase { get; }
@@ -2141,10 +1957,179 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 
                 public PxButtonCollection()
                 {
-                    AddressLookup = new Button("ctl00_phG_tab_t2_formB_btnAddressLookup", "Address Lookup", "ctl00_phG_tab_t2_gridSM");
-                    BrokerContactIDEdit = new Button("css=div[id=\'ctl00_phG_tab_t2_formBroker_edBrokerID\'] div[class=\'editBtnCont\'] > d" +
-                            "iv > div", "BrokerContactIDEdit", "ctl00_phG_tab_t2_gridSM");
-                    BrokerContactIDEdit.WaitAction = Wait.WaitForNewWindowToOpen;
+                    ShopRates = new Button("ctl00_phG_tab_t2_formF_shopRates", "Shop for Rates", "ctl00_phG_tab_t2_formDeliverySettings");
+                    Unnamed = new Button("ctl00_phG_tab_t2_formF_edCury_rateB", "0", "ctl00_phG_tab_t2_formDeliverySettings");
+                    Viewbase = new Button("ctl00_phG_tab_t2_formF_edCury_curyB", "View base", "ctl00_phG_tab_t2_formDeliverySettings");
+                    Ok = new Button("ctl00_phG_tab_t2_formF_edCury_pnlRate_btnOk", "OK", "ctl00_phG_tab_t2_formDeliverySettings");
+                }
+            }
+        }
+        
+        public class c_currentdocument_formbroker : Container
+        {
+            
+            public PxButtonCollection Buttons;
+            
+			public Selector BrokerContactID { get; }
+			public Label BrokerContactIDLabel { get; }
+            
+            public c_currentdocument_formbroker(string locator, string name) : 
+                    base(locator, name)
+            {
+                BrokerContactID = new Selector("ctl00_phG_tab_t2_formBroker_edBrokerID", "Broker", locator, null);
+                BrokerContactIDLabel = new Label(BrokerContactID);
+                BrokerContactID.DataField = "BrokerContactID";
+                DataMemberName = "CurrentDocument";
+                Buttons = new PxButtonCollection();
+            }
+            
+            public virtual void ShopRates()
+            {
+                Buttons.ShopRates.Click();
+            }
+            
+            public virtual void Unnamed()
+            {
+                Buttons.Unnamed.Click();
+            }
+            
+            public virtual void Viewbase()
+            {
+                Buttons.Viewbase.Click();
+            }
+            
+            public virtual void Ok()
+            {
+                Buttons.Ok.Click();
+            }
+            
+            public class PxButtonCollection : PxControlCollection
+            {
+                
+			public Button ShopRates { get; }
+			public Button Unnamed { get; }
+			public Button Viewbase { get; }
+			public Button Ok { get; }
+                
+                public PxButtonCollection()
+                {
+                    ShopRates = new Button("ctl00_phG_tab_t2_formF_shopRates", "Shop for Rates", "ctl00_phG_tab_t2_formBroker");
+                    Unnamed = new Button("ctl00_phG_tab_t2_formF_edCury_rateB", "0", "ctl00_phG_tab_t2_formBroker");
+                    Viewbase = new Button("ctl00_phG_tab_t2_formF_edCury_curyB", "View base", "ctl00_phG_tab_t2_formBroker");
+                    Ok = new Button("ctl00_phG_tab_t2_formF_edCury_pnlRate_btnOk", "OK", "ctl00_phG_tab_t2_formBroker");
+                }
+            }
+        }
+        
+        public class c_currentdocument_formi : Container
+        {
+            
+            public PxButtonCollection Buttons;
+            
+			public Selector IntercompanyPOReceiptNbr { get; }
+			public Label IntercompanyPOReceiptNbrLabel { get; }
+			public CheckBox ExcludeFromIntercompanyProc { get; }
+			public Label ExcludeFromIntercompanyProcLabel { get; }
+            
+            public c_currentdocument_formi(string locator, string name) : 
+                    base(locator, name)
+            {
+                IntercompanyPOReceiptNbr = new Selector("ctl00_phG_tab_t2_formI_edIntercompanyPOReceiptNbr", "Related PO Receipt Nbr.", locator, null);
+                IntercompanyPOReceiptNbrLabel = new Label(IntercompanyPOReceiptNbr);
+                IntercompanyPOReceiptNbr.DataField = "IntercompanyPOReceiptNbr";
+                ExcludeFromIntercompanyProc = new CheckBox("ctl00_phG_tab_t2_formI_chkExcludeFromIntercompanyProc", "Exclude from Intercompany Processing", locator, null);
+                ExcludeFromIntercompanyProcLabel = new Label(ExcludeFromIntercompanyProc);
+                ExcludeFromIntercompanyProc.DataField = "ExcludeFromIntercompanyProc";
+                DataMemberName = "CurrentDocument";
+                Buttons = new PxButtonCollection();
+            }
+            
+            public virtual void ShopRates()
+            {
+                Buttons.ShopRates.Click();
+            }
+            
+            public virtual void Unnamed()
+            {
+                Buttons.Unnamed.Click();
+            }
+            
+            public virtual void Viewbase()
+            {
+                Buttons.Viewbase.Click();
+            }
+            
+            public virtual void Ok()
+            {
+                Buttons.Ok.Click();
+            }
+            
+            public class PxButtonCollection : PxControlCollection
+            {
+                
+			public Button ShopRates { get; }
+			public Button Unnamed { get; }
+			public Button Viewbase { get; }
+			public Button Ok { get; }
+                
+                public PxButtonCollection()
+                {
+                    ShopRates = new Button("ctl00_phG_tab_t2_formF_shopRates", "Shop for Rates", "ctl00_phG_tab_t2_formI");
+                    Unnamed = new Button("ctl00_phG_tab_t2_formF_edCury_rateB", "0", "ctl00_phG_tab_t2_formI");
+                    Viewbase = new Button("ctl00_phG_tab_t2_formF_edCury_curyB", "View base", "ctl00_phG_tab_t2_formI");
+                    Ok = new Button("ctl00_phG_tab_t2_formF_edCury_pnlRate_btnOk", "OK", "ctl00_phG_tab_t2_formI");
+                }
+            }
+        }
+        
+        public class c_currentdocument_gridsm : Container
+        {
+            
+            public PxButtonCollection Buttons;
+            
+			public CheckBox Installed { get; }
+			public Label InstalledLabel { get; }
+            
+            public c_currentdocument_gridsm(string locator, string name) : 
+                    base(locator, name)
+            {
+                Installed = new CheckBox("ctl00_phG_tab_t2_gridSM_edInstalled", "Installed", locator, null);
+                InstalledLabel = new Label(Installed);
+                Installed.DataField = "Installed";
+                DataMemberName = "CurrentDocument";
+                Buttons = new PxButtonCollection();
+            }
+            
+            public virtual void ShopRates()
+            {
+                Buttons.ShopRates.Click();
+            }
+            
+            public virtual void Unnamed()
+            {
+                Buttons.Unnamed.Click();
+            }
+            
+            public virtual void Viewbase()
+            {
+                Buttons.Viewbase.Click();
+            }
+            
+            public virtual void Ok()
+            {
+                Buttons.Ok.Click();
+            }
+            
+            public class PxButtonCollection : PxControlCollection
+            {
+                
+			public Button ShopRates { get; }
+			public Button Unnamed { get; }
+			public Button Viewbase { get; }
+			public Button Ok { get; }
+                
+                public PxButtonCollection()
+                {
                     ShopRates = new Button("ctl00_phG_tab_t2_formF_shopRates", "Shop for Rates", "ctl00_phG_tab_t2_gridSM");
                     Unnamed = new Button("ctl00_phG_tab_t2_formF_edCury_rateB", "0", "ctl00_phG_tab_t2_gridSM");
                     Viewbase = new Button("ctl00_phG_tab_t2_formF_edCury_curyB", "View base", "ctl00_phG_tab_t2_gridSM");
@@ -2158,8 +2143,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
             
             public PxToolBar ToolBar;
             
-            public PxButtonCollection Buttons;
-            
             private Label _StatusBar = new Label("ctl00_phG_tab_t0_grid_ab_tlb_ul", "Status Bar", "ctl00_phG_tab_t0_grid", null);
             
 			public c_grid_filter FilterForm { get; }
@@ -2171,7 +2154,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
             {
                 ToolBar = new PxToolBar("ctl00_phG_tab_t0_grid");
                 DataMemberName = "Transactions";
-                Buttons = new PxButtonCollection();
                 FilterForm = new c_grid_filter("ctl00_phG_tab_t0_grid_fe_gf", "FilterForm");
                 FilesUploadDialog = new SmartPanel_AttachFile(locator);
                 NotePanel = new Note(locator);
@@ -2260,11 +2242,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 ToolBar.Hi1.Click();
             }
             
-            public virtual void BlanketNbrEdit()
-            {
-                Buttons.BlanketNbrEdit.Click();
-            }
-            
             public class PxToolBar : PxControlCollection
             {
                 
@@ -2297,24 +2274,11 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     Adjust = new ToolBarButtonGrid("css=#ctl00_phG_tab_t0_grid_at_tlb div[data-cmd=\'AdjustColumns\']", "Fit to Screen", locator, null);
                     Export = new ToolBarButtonGrid("css=#ctl00_phG_tab_t0_grid_at_tlb div[data-cmd=\'ExportExcel\']", "Export to Excel", locator, null);
                     Hi = new ToolBarButtonGrid("css=#ctl00_phG_tab_t0_grid_at_tlb div[data-cmd=\'hi\']", "Hi", locator, null);
-                    PageFirst = new ToolBarButtonGrid("css=#ctl00_phG_tab_t0_grid_ab_tlb div[data-cmd=\'PageFirst\']", "Go to First Page (Ctrl+PgUp)", locator, null);
+                    PageFirst = new ToolBarButtonGrid("css=#ctl00_phG_tab_t0_grid_ab_tlb div[data-cmd=\'PageFirst\']", "Go to First Page", locator, null);
                     PagePrev = new ToolBarButtonGrid("css=#ctl00_phG_tab_t0_grid_ab_tlb div[data-cmd=\'PagePrev\']", "Go to Previous Page (PgUp)", locator, null);
                     PageNext = new ToolBarButtonGrid("css=#ctl00_phG_tab_t0_grid_ab_tlb div[data-cmd=\'PageNext\']", "Go to Next Page (PgDn)", locator, null);
-                    PageLast = new ToolBarButtonGrid("css=#ctl00_phG_tab_t0_grid_ab_tlb div[data-cmd=\'PageLast\']", "Go to Last Page (Ctrl+PgDn)", locator, null);
+                    PageLast = new ToolBarButtonGrid("css=#ctl00_phG_tab_t0_grid_ab_tlb div[data-cmd=\'PageLast\']", "Go to Last Page", locator, null);
                     Hi1 = new ToolBarButtonGrid("css=#ctl00_phG_tab_t0_grid_ab_tlb div[data-cmd=\'hi\']", "Hi", locator, null);
-                }
-            }
-            
-            public class PxButtonCollection : PxControlCollection
-            {
-                
-			public Button BlanketNbrEdit { get; }
-                
-                public PxButtonCollection()
-                {
-                    BlanketNbrEdit = new Button("css=div[id=\'ctl00_phG_tab_t0_grid_lv0_edBlanketNbr\'] div[class=\'editBtnCont\'] > d" +
-                            "iv > div", "BlanketNbrEdit", "ctl00_phG_tab_t0_grid");
-                    BlanketNbrEdit.WaitAction = Wait.WaitForNewWindowToOpen;
                 }
             }
             
@@ -2503,8 +2467,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
         public class c_transactions_lv0 : Container
         {
             
-            public PxButtonCollection Buttons;
-            
 			public PXTextEdit OrigOrderType { get; }
 			public Label OrigOrderTypeLabel { get; }
 			public Selector OrigOrderNbr { get; }
@@ -2617,34 +2579,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 AvailabilityLabel = new Label(Availability);
                 Availability.DataField = "Availability";
                 DataMemberName = "Transactions";
-                Buttons = new PxButtonCollection();
-            }
-            
-            public virtual void InventoryIDEdit()
-            {
-                Buttons.InventoryIDEdit.Click();
-            }
-            
-            public virtual void BlanketNbrEdit()
-            {
-                Buttons.BlanketNbrEdit.Click();
-            }
-            
-            public class PxButtonCollection : PxControlCollection
-            {
-                
-			public Button InventoryIDEdit { get; }
-			public Button BlanketNbrEdit { get; }
-                
-                public PxButtonCollection()
-                {
-                    InventoryIDEdit = new Button("css=div[id=\'ctl00_phG_tab_t0_grid_lv0_edInventoryID\'] div[class=\'editBtnCont\'] > " +
-                            "div > div", "InventoryIDEdit", "ctl00_phG_tab_t0_grid_lv0");
-                    InventoryIDEdit.WaitAction = Wait.WaitForNewWindowToOpen;
-                    BlanketNbrEdit = new Button("css=div[id=\'ctl00_phG_tab_t0_grid_lv0_edBlanketNbr\'] div[class=\'editBtnCont\'] > d" +
-                            "iv > div", "BlanketNbrEdit", "ctl00_phG_tab_t0_grid_lv0");
-                    BlanketNbrEdit.WaitAction = Wait.WaitForNewWindowToOpen;
-                }
             }
         }
         
@@ -2755,10 +2689,10 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     Adjust = new ToolBarButtonGrid("css=#ctl00_phG_PanelLS_grid2_at_tlb div[data-cmd=\'AdjustColumns\']", "Fit to Screen", locator, null);
                     Export = new ToolBarButtonGrid("css=#ctl00_phG_PanelLS_grid2_at_tlb div[data-cmd=\'ExportExcel\']", "Export to Excel", locator, null);
                     Hi = new ToolBarButtonGrid("css=#ctl00_phG_PanelLS_grid2_at_tlb div[data-cmd=\'hi\']", "Hi", locator, null);
-                    PageFirst = new ToolBarButtonGrid("css=#ctl00_phG_PanelLS_grid2_ab_tlb div[data-cmd=\'PageFirst\']", "Go to First Page (Ctrl+PgUp)", locator, null);
+                    PageFirst = new ToolBarButtonGrid("css=#ctl00_phG_PanelLS_grid2_ab_tlb div[data-cmd=\'PageFirst\']", "Go to First Page", locator, null);
                     PagePrev = new ToolBarButtonGrid("css=#ctl00_phG_PanelLS_grid2_ab_tlb div[data-cmd=\'PagePrev\']", "Go to Previous Page (PgUp)", locator, null);
                     PageNext = new ToolBarButtonGrid("css=#ctl00_phG_PanelLS_grid2_ab_tlb div[data-cmd=\'PageNext\']", "Go to Next Page (PgDn)", locator, null);
-                    PageLast = new ToolBarButtonGrid("css=#ctl00_phG_PanelLS_grid2_ab_tlb div[data-cmd=\'PageLast\']", "Go to Last Page (Ctrl+PgDn)", locator, null);
+                    PageLast = new ToolBarButtonGrid("css=#ctl00_phG_PanelLS_grid2_ab_tlb div[data-cmd=\'PageLast\']", "Go to Last Page", locator, null);
                     Hi1 = new ToolBarButtonGrid("css=#ctl00_phG_PanelLS_grid2_ab_tlb div[data-cmd=\'hi\']", "Hi", locator, null);
                 }
             }
@@ -2820,7 +2754,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     ShipmentNbr.DataField = "ShipmentNbr";
                     LineNbr = new PXNumberEdit("ctl00_phG_PanelLS_grid2_en", "Line Nbr.", grid.Locator, "LineNbr");
                     LineNbr.DataField = "LineNbr";
-                    SplitLineNbr = new PXNumberEdit("ctl00_phG_PanelLS_grid2_en", "SplitLineNbr", grid.Locator, "SplitLineNbr");
+                    SplitLineNbr = new PXNumberEdit("ctl00_phG_PanelLS_grid2_en", "Split Line Nbr.", grid.Locator, "SplitLineNbr");
                     SplitLineNbr.DataField = "SplitLineNbr";
                 }
             }
@@ -2962,34 +2896,34 @@ namespace GeneratedWrappers.SOLUTIONNAME
             public c_shipping_address_formb(string locator, string name) : 
                     base(locator, name)
             {
-                OverrideAddress = new CheckBox("ctl00_phG_tab_t2_formB_chkOverrideAddress", "Override Address", locator, null);
+                OverrideAddress = new CheckBox("ctl00_phG_tab_t3_formB_chkOverrideAddress", "Override Address", locator, null);
                 OverrideAddressLabel = new Label(OverrideAddress);
                 OverrideAddress.DataField = "OverrideAddress";
-                AddressLine1 = new PXTextEdit("ctl00_phG_tab_t2_formB_edAddressLine1", "Address Line 1", locator, null);
+                AddressLine1 = new PXTextEdit("ctl00_phG_tab_t3_formB_edAddressLine1", "Address Line 1", locator, null);
                 AddressLine1Label = new Label(AddressLine1);
                 AddressLine1.DataField = "AddressLine1";
-                AddressLine2 = new PXTextEdit("ctl00_phG_tab_t2_formB_edAddressLine2", "Address Line 2", locator, null);
+                AddressLine2 = new PXTextEdit("ctl00_phG_tab_t3_formB_edAddressLine2", "Address Line 2", locator, null);
                 AddressLine2Label = new Label(AddressLine2);
                 AddressLine2.DataField = "AddressLine2";
-                City = new PXTextEdit("ctl00_phG_tab_t2_formB_edCity", "City", locator, null);
+                City = new PXTextEdit("ctl00_phG_tab_t3_formB_edCity", "City", locator, null);
                 CityLabel = new Label(City);
                 City.DataField = "City";
-                CountryID = new Selector("ctl00_phG_tab_t2_formB_edCountryID", "Country", locator, null);
+                CountryID = new Selector("ctl00_phG_tab_t3_formB_edCountryID", "Country", locator, null);
                 CountryIDLabel = new Label(CountryID);
                 CountryID.DataField = "CountryID";
-                State = new Selector("ctl00_phG_tab_t2_formB_edState", "State", locator, null);
+                State = new Selector("ctl00_phG_tab_t3_formB_edState", "State", locator, null);
                 StateLabel = new Label(State);
                 State.DataField = "State";
-                PostalCode = new PXTextEdit("ctl00_phG_tab_t2_formB_edPostalCode", "Postal Code", locator, null);
+                PostalCode = new PXTextEdit("ctl00_phG_tab_t3_formB_edPostalCode", "Postal Code", locator, null);
                 PostalCodeLabel = new Label(PostalCode);
                 PostalCode.DataField = "PostalCode";
-                Latitude = new PXNumberEdit("ctl00_phG_tab_t2_formB_edLatitude", "Latitude", locator, null);
+                Latitude = new PXNumberEdit("ctl00_phG_tab_t3_formB_edLatitude", "Latitude", locator, null);
                 LatitudeLabel = new Label(Latitude);
                 Latitude.DataField = "Latitude";
-                Longitude = new PXNumberEdit("ctl00_phG_tab_t2_formB_edLongitude", "Longitude", locator, null);
+                Longitude = new PXNumberEdit("ctl00_phG_tab_t3_formB_edLongitude", "Longitude", locator, null);
                 LongitudeLabel = new Label(Longitude);
                 Longitude.DataField = "Longitude";
-                IsValidated = new CheckBox("ctl00_phG_tab_t2_formB_chkIsValidated", "Validated", locator, null);
+                IsValidated = new CheckBox("ctl00_phG_tab_t3_formB_chkIsValidated", "Validated", locator, null);
                 IsValidatedLabel = new Label(IsValidated);
                 IsValidated.DataField = "IsValidated";
                 DataMemberName = "Shipping_Address";
@@ -3001,51 +2935,14 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 Buttons.AddressLookup.Click();
             }
             
-            public virtual void BrokerContactIDEdit()
-            {
-                Buttons.BrokerContactIDEdit.Click();
-            }
-            
-            public virtual void ShopRates()
-            {
-                Buttons.ShopRates.Click();
-            }
-            
-            public virtual void Unnamed()
-            {
-                Buttons.Unnamed.Click();
-            }
-            
-            public virtual void Viewbase()
-            {
-                Buttons.Viewbase.Click();
-            }
-            
-            public virtual void Ok()
-            {
-                Buttons.Ok.Click();
-            }
-            
             public class PxButtonCollection : PxControlCollection
             {
                 
 			public Button AddressLookup { get; }
-			public Button BrokerContactIDEdit { get; }
-			public Button ShopRates { get; }
-			public Button Unnamed { get; }
-			public Button Viewbase { get; }
-			public Button Ok { get; }
                 
                 public PxButtonCollection()
                 {
-                    AddressLookup = new Button("ctl00_phG_tab_t2_formB_btnAddressLookup", "Address Lookup", "ctl00_phG_tab_t2_formB");
-                    BrokerContactIDEdit = new Button("css=div[id=\'ctl00_phG_tab_t2_formBroker_edBrokerID\'] div[class=\'editBtnCont\'] > d" +
-                            "iv > div", "BrokerContactIDEdit", "ctl00_phG_tab_t2_formB");
-                    BrokerContactIDEdit.WaitAction = Wait.WaitForNewWindowToOpen;
-                    ShopRates = new Button("ctl00_phG_tab_t2_formF_shopRates", "Shop for Rates", "ctl00_phG_tab_t2_formB");
-                    Unnamed = new Button("ctl00_phG_tab_t2_formF_edCury_rateB", "0", "ctl00_phG_tab_t2_formB");
-                    Viewbase = new Button("ctl00_phG_tab_t2_formF_edCury_curyB", "View base", "ctl00_phG_tab_t2_formB");
-                    Ok = new Button("ctl00_phG_tab_t2_formF_edCury_pnlRate_btnOk", "OK", "ctl00_phG_tab_t2_formB");
+                    AddressLookup = new Button("ctl00_phG_tab_t3_formB_btnAddressLookup", "Address Lookup", "ctl00_phG_tab_t3_formB");
                 }
             }
         }
@@ -3069,19 +2966,19 @@ namespace GeneratedWrappers.SOLUTIONNAME
             public c_shipping_contact_formd(string locator, string name) : 
                     base(locator, name)
             {
-                OverrideContact = new CheckBox("ctl00_phG_tab_t2_formD_chkOverrideContact", "Override Contact", locator, null);
+                OverrideContact = new CheckBox("ctl00_phG_tab_t3_formD_chkOverrideContact", "Override Contact", locator, null);
                 OverrideContactLabel = new Label(OverrideContact);
                 OverrideContact.DataField = "OverrideContact";
-                FullName = new PXTextEdit("ctl00_phG_tab_t2_formD_edFullName", "Account Name", locator, null);
+                FullName = new PXTextEdit("ctl00_phG_tab_t3_formD_edFullName", "Account Name", locator, null);
                 FullNameLabel = new Label(FullName);
                 FullName.DataField = "FullName";
-                Attention = new PXTextEdit("ctl00_phG_tab_t2_formD_edAttention", "Attention", locator, null);
+                Attention = new PXTextEdit("ctl00_phG_tab_t3_formD_edAttention", "Attention", locator, null);
                 AttentionLabel = new Label(Attention);
                 Attention.DataField = "Attention";
-                Phone1 = new PXTextEdit("ctl00_phG_tab_t2_formD_edPhone1", "Phone 1", locator, null);
+                Phone1 = new PXTextEdit("ctl00_phG_tab_t3_formD_edPhone1", "Phone 1", locator, null);
                 Phone1Label = new Label(Phone1);
                 Phone1.DataField = "Phone1";
-                Email = new EmailEdit("ctl00_phG_tab_t2_formD_edEmail", "Email", locator, null);
+                Email = new EmailEdit("ctl00_phG_tab_t3_formD_edEmail", "Email", locator, null);
                 EmailLabel = new Label(Email);
                 Email.DataField = "Email";
                 DataMemberName = "Shipping_Contact";
@@ -3093,51 +2990,14 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 Buttons.AddressLookup.Click();
             }
             
-            public virtual void BrokerContactIDEdit()
-            {
-                Buttons.BrokerContactIDEdit.Click();
-            }
-            
-            public virtual void ShopRates()
-            {
-                Buttons.ShopRates.Click();
-            }
-            
-            public virtual void Unnamed()
-            {
-                Buttons.Unnamed.Click();
-            }
-            
-            public virtual void Viewbase()
-            {
-                Buttons.Viewbase.Click();
-            }
-            
-            public virtual void Ok()
-            {
-                Buttons.Ok.Click();
-            }
-            
             public class PxButtonCollection : PxControlCollection
             {
                 
 			public Button AddressLookup { get; }
-			public Button BrokerContactIDEdit { get; }
-			public Button ShopRates { get; }
-			public Button Unnamed { get; }
-			public Button Viewbase { get; }
-			public Button Ok { get; }
                 
                 public PxButtonCollection()
                 {
-                    AddressLookup = new Button("ctl00_phG_tab_t2_formB_btnAddressLookup", "Address Lookup", "ctl00_phG_tab_t2_formD");
-                    BrokerContactIDEdit = new Button("css=div[id=\'ctl00_phG_tab_t2_formBroker_edBrokerID\'] div[class=\'editBtnCont\'] > d" +
-                            "iv > div", "BrokerContactIDEdit", "ctl00_phG_tab_t2_formD");
-                    BrokerContactIDEdit.WaitAction = Wait.WaitForNewWindowToOpen;
-                    ShopRates = new Button("ctl00_phG_tab_t2_formF_shopRates", "Shop for Rates", "ctl00_phG_tab_t2_formD");
-                    Unnamed = new Button("ctl00_phG_tab_t2_formF_edCury_rateB", "0", "ctl00_phG_tab_t2_formD");
-                    Viewbase = new Button("ctl00_phG_tab_t2_formF_edCury_curyB", "View base", "ctl00_phG_tab_t2_formD");
-                    Ok = new Button("ctl00_phG_tab_t2_formF_edCury_pnlRate_btnOk", "OK", "ctl00_phG_tab_t2_formD");
+                    AddressLookup = new Button("ctl00_phG_tab_t3_formB_btnAddressLookup", "Address Lookup", "ctl00_phG_tab_t3_formD");
                 }
             }
         }
@@ -3146,8 +3006,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
         {
             
             public PxToolBar ToolBar;
-            
-            public PxButtonCollection Buttons;
             
 			public c_grid_filter FilterForm { get; }
 			public SmartPanel_AttachFile FilesUploadDialog { get; }
@@ -3158,7 +3016,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
             {
                 ToolBar = new PxToolBar("ctl00_phG_tab_t1_grid5");
                 DataMemberName = "OrderList";
-                Buttons = new PxButtonCollection();
                 FilterForm = new c_grid_filter("ctl00_phG_tab_t1_grid5_fe_gf", "FilterForm");
                 FilesUploadDialog = new SmartPanel_AttachFile(locator);
                 NotePanel = new Note(locator);
@@ -3219,21 +3076,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 ToolBar.Hi1.Click();
             }
             
-            public virtual void OrderNbrEdit()
-            {
-                Buttons.OrderNbrEdit.Click();
-            }
-            
-            public virtual void InvoiceNbrEdit()
-            {
-                Buttons.InvoiceNbrEdit.Click();
-            }
-            
-            public virtual void InvtRefNbrEdit()
-            {
-                Buttons.InvtRefNbrEdit.Click();
-            }
-            
             public class PxToolBar : PxControlCollection
             {
                 
@@ -3258,32 +3100,11 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     Adjust = new ToolBarButtonGrid("css=#ctl00_phG_tab_t1_grid5_at_tlb div[data-cmd=\'AdjustColumns\']", "Fit to Screen", locator, null);
                     Export = new ToolBarButtonGrid("css=#ctl00_phG_tab_t1_grid5_at_tlb div[data-cmd=\'ExportExcel\']", "Export to Excel", locator, null);
                     Hi = new ToolBarButtonGrid("css=#ctl00_phG_tab_t1_grid5_at_tlb div[data-cmd=\'hi\']", "Hi", locator, null);
-                    PageFirst = new ToolBarButtonGrid("css=#ctl00_phG_tab_t1_grid5_ab_tlb div[data-cmd=\'PageFirst\']", "Go to First Page (Ctrl+PgUp)", locator, null);
+                    PageFirst = new ToolBarButtonGrid("css=#ctl00_phG_tab_t1_grid5_ab_tlb div[data-cmd=\'PageFirst\']", "Go to First Page", locator, null);
                     PagePrev = new ToolBarButtonGrid("css=#ctl00_phG_tab_t1_grid5_ab_tlb div[data-cmd=\'PagePrev\']", "Go to Previous Page (PgUp)", locator, null);
                     PageNext = new ToolBarButtonGrid("css=#ctl00_phG_tab_t1_grid5_ab_tlb div[data-cmd=\'PageNext\']", "Go to Next Page (PgDn)", locator, null);
-                    PageLast = new ToolBarButtonGrid("css=#ctl00_phG_tab_t1_grid5_ab_tlb div[data-cmd=\'PageLast\']", "Go to Last Page (Ctrl+PgDn)", locator, null);
+                    PageLast = new ToolBarButtonGrid("css=#ctl00_phG_tab_t1_grid5_ab_tlb div[data-cmd=\'PageLast\']", "Go to Last Page", locator, null);
                     Hi1 = new ToolBarButtonGrid("css=#ctl00_phG_tab_t1_grid5_ab_tlb div[data-cmd=\'hi\']", "Hi", locator, null);
-                }
-            }
-            
-            public class PxButtonCollection : PxControlCollection
-            {
-                
-			public Button OrderNbrEdit { get; }
-			public Button InvoiceNbrEdit { get; }
-			public Button InvtRefNbrEdit { get; }
-                
-                public PxButtonCollection()
-                {
-                    OrderNbrEdit = new Button("css=div[id=\'ctl00_phG_tab_t1_grid5_lv0_edOrderNbr3\'] div[class=\'editBtnCont\'] > d" +
-                            "iv > div", "OrderNbrEdit", "ctl00_phG_tab_t1_grid5");
-                    OrderNbrEdit.WaitAction = Wait.WaitForNewWindowToOpen;
-                    InvoiceNbrEdit = new Button("css=div[id=\'ctl00_phG_tab_t1_grid5_lv0_edInvoiceNbr3\'] div[class=\'editBtnCont\'] >" +
-                            " div > div", "InvoiceNbrEdit", "ctl00_phG_tab_t1_grid5");
-                    InvoiceNbrEdit.WaitAction = Wait.WaitForNewWindowToOpen;
-                    InvtRefNbrEdit = new Button("css=div[id=\'ctl00_phG_tab_t1_grid5_lv0_edInvtRefNbr3\'] div[class=\'editBtnCont\'] >" +
-                            " div > div", "InvtRefNbrEdit", "ctl00_phG_tab_t1_grid5");
-                    InvtRefNbrEdit.WaitAction = Wait.WaitForNewWindowToOpen;
                 }
             }
             
@@ -3345,7 +3166,7 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     InvtDocType.Items.Add("R", "Receipt");
                     InvtDocType.Items.Add("T", "Transfer");
                     InvtDocType.Items.Add("A", "Adjustment");
-                    InvtDocType.Items.Add("P", "Production");
+                    InvtDocType.Items.Add("P", "Assembly");
                     InvtDocType.Items.Add("D", "Disassembly");
                     InvtRefNbr = new Selector("_ctl00_phG_tab_t1_grid5_lv0_edInvtRefNbr3", "Inventory Ref. Nbr.", grid.Locator, "InvtRefNbr");
                     InvtRefNbr.DataField = "InvtRefNbr";
@@ -3394,8 +3215,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
         public class c_orderlist_lv0 : Container
         {
             
-            public PxButtonCollection Buttons;
-            
 			public PXTextEdit OrderType { get; }
 			public Label OrderTypeLabel { get; }
 			public Selector OrderNbr { get; }
@@ -3437,43 +3256,6 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 EsLabel = new Label(Es);
                 Ec = new DropDown("ctl00_phG_tab_t1_grid5_lv0_ec", "Ec", locator, null);
                 DataMemberName = "OrderList";
-                Buttons = new PxButtonCollection();
-            }
-            
-            public virtual void OrderNbrEdit()
-            {
-                Buttons.OrderNbrEdit.Click();
-            }
-            
-            public virtual void InvoiceNbrEdit()
-            {
-                Buttons.InvoiceNbrEdit.Click();
-            }
-            
-            public virtual void InvtRefNbrEdit()
-            {
-                Buttons.InvtRefNbrEdit.Click();
-            }
-            
-            public class PxButtonCollection : PxControlCollection
-            {
-                
-			public Button OrderNbrEdit { get; }
-			public Button InvoiceNbrEdit { get; }
-			public Button InvtRefNbrEdit { get; }
-                
-                public PxButtonCollection()
-                {
-                    OrderNbrEdit = new Button("css=div[id=\'ctl00_phG_tab_t1_grid5_lv0_edOrderNbr3\'] div[class=\'editBtnCont\'] > d" +
-                            "iv > div", "OrderNbrEdit", "ctl00_phG_tab_t1_grid5_lv0");
-                    OrderNbrEdit.WaitAction = Wait.WaitForNewWindowToOpen;
-                    InvoiceNbrEdit = new Button("css=div[id=\'ctl00_phG_tab_t1_grid5_lv0_edInvoiceNbr3\'] div[class=\'editBtnCont\'] >" +
-                            " div > div", "InvoiceNbrEdit", "ctl00_phG_tab_t1_grid5_lv0");
-                    InvoiceNbrEdit.WaitAction = Wait.WaitForNewWindowToOpen;
-                    InvtRefNbrEdit = new Button("css=div[id=\'ctl00_phG_tab_t1_grid5_lv0_edInvtRefNbr3\'] div[class=\'editBtnCont\'] >" +
-                            " div > div", "InvtRefNbrEdit", "ctl00_phG_tab_t1_grid5_lv0");
-                    InvtRefNbrEdit.WaitAction = Wait.WaitForNewWindowToOpen;
-                }
             }
         }
         
@@ -3489,9 +3271,9 @@ namespace GeneratedWrappers.SOLUTIONNAME
             public c_packages_gridpackages(string locator, string name) : 
                     base(locator, name)
             {
-                ToolBar = new PxToolBar("ctl00_phG_tab_t3_gridPackages");
+                ToolBar = new PxToolBar("ctl00_phG_tab_t4_gridPackages");
                 DataMemberName = "Packages";
-                FilterForm = new c_grid_filter("ctl00_phG_tab_t3_gridPackages_fe_gf", "FilterForm");
+                FilterForm = new c_grid_filter("ctl00_phG_tab_t4_gridPackages_fe_gf", "FilterForm");
                 FilesUploadDialog = new SmartPanel_AttachFile(locator);
                 NotePanel = new Note(locator);
             }
@@ -3574,19 +3356,19 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 
                 public PxToolBar(string locator)
                 {
-                    Refresh = new ToolBarButtonGrid("css=#ctl00_phG_tab_t3_gridPackages_at_tlb div[data-cmd=\'Refresh\']", "Refresh", locator, null);
-                    New = new ToolBarButtonGrid("css=#ctl00_phG_tab_t3_gridPackages_at_tlb div[data-cmd=\'AddNew\']", "Add Row", locator, null);
-                    Delete = new ToolBarButtonGrid("css=#ctl00_phG_tab_t3_gridPackages_at_tlb div[data-cmd=\'Delete\']", "Delete Row", locator, null);
+                    Refresh = new ToolBarButtonGrid("css=#ctl00_phG_tab_t4_gridPackages_at_tlb div[data-cmd=\'Refresh\']", "Refresh", locator, null);
+                    New = new ToolBarButtonGrid("css=#ctl00_phG_tab_t4_gridPackages_at_tlb div[data-cmd=\'AddNew\']", "Add Row", locator, null);
+                    Delete = new ToolBarButtonGrid("css=#ctl00_phG_tab_t4_gridPackages_at_tlb div[data-cmd=\'Delete\']", "Delete Row", locator, null);
                     Delete.ConfirmAction = () => Alert.AlertToException("The current {0} record will be deleted.");
-                    RecalculatePackages = new ToolBarButtonGrid("css=#ctl00_phG_tab_t3_gridPackages_at_tlb div[data-cmd=\'RecalculatePackages\']", "Refresh Packages", locator, null);
-                    Adjust = new ToolBarButtonGrid("css=#ctl00_phG_tab_t3_gridPackages_at_tlb div[data-cmd=\'AdjustColumns\']", "Fit to Screen", locator, null);
-                    Export = new ToolBarButtonGrid("css=#ctl00_phG_tab_t3_gridPackages_at_tlb div[data-cmd=\'ExportExcel\']", "Export to Excel", locator, null);
-                    Hi = new ToolBarButtonGrid("css=#ctl00_phG_tab_t3_gridPackages_at_tlb div[data-cmd=\'hi\']", "Hi", locator, null);
-                    PageFirst = new ToolBarButtonGrid("css=#ctl00_phG_tab_t3_gridPackages_ab_tlb div[data-cmd=\'PageFirst\']", "Go to First Page (Ctrl+PgUp)", locator, null);
-                    PagePrev = new ToolBarButtonGrid("css=#ctl00_phG_tab_t3_gridPackages_ab_tlb div[data-cmd=\'PagePrev\']", "Go to Previous Page (PgUp)", locator, null);
-                    PageNext = new ToolBarButtonGrid("css=#ctl00_phG_tab_t3_gridPackages_ab_tlb div[data-cmd=\'PageNext\']", "Go to Next Page (PgDn)", locator, null);
-                    PageLast = new ToolBarButtonGrid("css=#ctl00_phG_tab_t3_gridPackages_ab_tlb div[data-cmd=\'PageLast\']", "Go to Last Page (Ctrl+PgDn)", locator, null);
-                    Hi1 = new ToolBarButtonGrid("css=#ctl00_phG_tab_t3_gridPackages_ab_tlb div[data-cmd=\'hi\']", "Hi", locator, null);
+                    RecalculatePackages = new ToolBarButtonGrid("css=#ctl00_phG_tab_t4_gridPackages_at_tlb div[data-cmd=\'RecalculatePackages\']", "Refresh Packages", locator, null);
+                    Adjust = new ToolBarButtonGrid("css=#ctl00_phG_tab_t4_gridPackages_at_tlb div[data-cmd=\'AdjustColumns\']", "Fit to Screen", locator, null);
+                    Export = new ToolBarButtonGrid("css=#ctl00_phG_tab_t4_gridPackages_at_tlb div[data-cmd=\'ExportExcel\']", "Export to Excel", locator, null);
+                    Hi = new ToolBarButtonGrid("css=#ctl00_phG_tab_t4_gridPackages_at_tlb div[data-cmd=\'hi\']", "Hi", locator, null);
+                    PageFirst = new ToolBarButtonGrid("css=#ctl00_phG_tab_t4_gridPackages_ab_tlb div[data-cmd=\'PageFirst\']", "Go to First Page", locator, null);
+                    PagePrev = new ToolBarButtonGrid("css=#ctl00_phG_tab_t4_gridPackages_ab_tlb div[data-cmd=\'PagePrev\']", "Go to Previous Page (PgUp)", locator, null);
+                    PageNext = new ToolBarButtonGrid("css=#ctl00_phG_tab_t4_gridPackages_ab_tlb div[data-cmd=\'PageNext\']", "Go to Next Page (PgDn)", locator, null);
+                    PageLast = new ToolBarButtonGrid("css=#ctl00_phG_tab_t4_gridPackages_ab_tlb div[data-cmd=\'PageLast\']", "Go to Last Page", locator, null);
+                    Hi1 = new ToolBarButtonGrid("css=#ctl00_phG_tab_t4_gridPackages_ab_tlb div[data-cmd=\'hi\']", "Hi", locator, null);
                 }
             }
             
@@ -3612,6 +3394,9 @@ namespace GeneratedWrappers.SOLUTIONNAME
 			public PXTextEdit TrackNumber { get; }
 			public PXTextEdit TrackUrl { get; }
 			public PXTextEdit ReturnTrackNumber { get; }
+			public PXTextEdit NonStandardContainer { get; }
+			public PXTextEdit AdditionalHandling { get; }
+			public PXTextEdit SSCC { get; }
 			public PXTextEdit CustomRefNbr1 { get; }
 			public PXTextEdit CustomRefNbr2 { get; }
 			public DropDown ContentType { get; }
@@ -3628,35 +3413,35 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 {
                     Files = new FileColumnButton(null, "Files", grid.Locator, "Files");
                     Notes = new NoteColumnButton(null, "Notes", grid.Locator, "Notes");
-                    Confirmed = new CheckBox("ctl00_phG_tab_t3_gridPackages_ef", "Confirmed", grid.Locator, "Confirmed");
+                    Confirmed = new CheckBox("ctl00_phG_tab_t4_gridPackages_ef", "Confirmed", grid.Locator, "Confirmed");
                     Confirmed.DataField = "Confirmed";
-                    BoxID = new Selector("_ctl00_phG_tab_t3_gridPackages_lv0_edBoxID", "Box ID", grid.Locator, "BoxID");
+                    BoxID = new Selector("_ctl00_phG_tab_t4_gridPackages_lv0_edBoxID", "Box ID", grid.Locator, "BoxID");
                     BoxID.DataField = "BoxID";
-                    PackageType = new DropDown("_ctl00_phG_tab_t3_gridPackages_lv0_edType", "Type", grid.Locator, "PackageType");
+                    PackageType = new DropDown("_ctl00_phG_tab_t4_gridPackages_lv0_edType", "Type", grid.Locator, "PackageType");
                     PackageType.DataField = "PackageType";
                     PackageType.Items.Add("A", "Auto");
                     PackageType.Items.Add("M", "Manual");
-                    Description = new PXTextEdit("_ctl00_phG_tab_t3_gridPackages_lv0_PXTextEdit3", "Description", grid.Locator, "Description");
+                    Description = new PXTextEdit("_ctl00_phG_tab_t4_gridPackages_lv0_PXTextEdit3", "Description", grid.Locator, "Description");
                     Description.DataField = "Description";
-                    AllowOverrideDimension = new CheckBox("ctl00_phG_tab_t3_gridPackages", "Editable Dimensions", grid.Locator, "AllowOverrideDimension");
+                    AllowOverrideDimension = new CheckBox("ctl00_phG_tab_t4_gridPackages", "Editable Dimensions", grid.Locator, "AllowOverrideDimension");
                     AllowOverrideDimension.DataField = "AllowOverrideDimension";
-                    Length = new PXNumberEdit("ctl00_phG_tab_t3_gridPackages_en", "Length", grid.Locator, "Length");
+                    Length = new PXNumberEdit("ctl00_phG_tab_t4_gridPackages_en", "Length", grid.Locator, "Length");
                     Length.DataField = "Length";
-                    Width = new PXNumberEdit("ctl00_phG_tab_t3_gridPackages_en", "Width", grid.Locator, "Width");
+                    Width = new PXNumberEdit("ctl00_phG_tab_t4_gridPackages_en", "Width", grid.Locator, "Width");
                     Width.DataField = "Width";
-                    Height = new PXNumberEdit("ctl00_phG_tab_t3_gridPackages_en", "Height", grid.Locator, "Height");
+                    Height = new PXNumberEdit("ctl00_phG_tab_t4_gridPackages_en", "Height", grid.Locator, "Height");
                     Height.DataField = "Height";
-                    LinearUOM = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_ei", "Linear UOM", grid.Locator, "LinearUOM");
+                    LinearUOM = new PXTextEdit("ctl00_phG_tab_t4_gridPackages_ei", "Linear UOM", grid.Locator, "LinearUOM");
                     LinearUOM.DataField = "LinearUOM";
-                    Weight = new PXNumberEdit("_ctl00_phG_tab_t3_gridPackages_lv0_edWeight", "Weight", grid.Locator, "Weight");
+                    Weight = new PXNumberEdit("_ctl00_phG_tab_t4_gridPackages_lv0_edWeight", "Weight", grid.Locator, "Weight");
                     Weight.DataField = "Weight";
-                    WeightUOM = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_ei", "UOM", grid.Locator, "WeightUOM");
+                    WeightUOM = new PXTextEdit("ctl00_phG_tab_t4_gridPackages_ei", "UOM", grid.Locator, "WeightUOM");
                     WeightUOM.DataField = "WeightUOM";
-                    DeclaredValue = new PXNumberEdit("_ctl00_phG_tab_t3_gridPackages_lv0_PXNumberEdit6", "Declared Value", grid.Locator, "DeclaredValue");
+                    DeclaredValue = new PXNumberEdit("_ctl00_phG_tab_t4_gridPackages_lv0_PXNumberEdit6", "Declared Value", grid.Locator, "DeclaredValue");
                     DeclaredValue.DataField = "DeclaredValue";
-                    COD = new PXNumberEdit("_ctl00_phG_tab_t3_gridPackages_lv0_PXNumberEdit5", "C.O.D. Amount", grid.Locator, "COD");
+                    COD = new PXNumberEdit("_ctl00_phG_tab_t4_gridPackages_lv0_PXNumberEdit5", "C.O.D. Amount", grid.Locator, "COD");
                     COD.DataField = "COD";
-                    StampsAddOns = new DropDown("_ctl00_phG_tab_t3_gridPackages_lv0_edStampsAddOns", "Stamps Surcharges", grid.Locator, "StampsAddOns");
+                    StampsAddOns = new DropDown("_ctl00_phG_tab_t4_gridPackages_lv0_edStampsAddOns", "Stamps Surcharges", grid.Locator, "StampsAddOns");
                     StampsAddOns.DataField = "StampsAddOns";
                     StampsAddOns.Items.Add("USARD", "USPS Restricted Delivery");
                     StampsAddOns.Items.Add("USAESH", "Priority Mail Express delivery on a Sunday/holiday");
@@ -3666,31 +3451,37 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     StampsAddOns.Items.Add("USASH", "Fragile items");
                     StampsAddOns.Items.Add("USA1030", "Deliver by 10:30 AM");
                     StampsAddOns.Items.Add("SCAHP", "Hidden Postage");
-                    TrackNumber = new PXTextEdit("_ctl00_phG_tab_t3_gridPackages_lv0_edTrackNumber", "Tracking Number", grid.Locator, "TrackNumber");
+                    TrackNumber = new PXTextEdit("_ctl00_phG_tab_t4_gridPackages_lv0_edTrackNumber", "Tracking Number", grid.Locator, "TrackNumber");
                     TrackNumber.DataField = "TrackNumber";
-                    TrackUrl = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_ei", "Tracking URL", grid.Locator, "TrackUrl");
+                    TrackUrl = new PXTextEdit("ctl00_phG_tab_t4_gridPackages_ei", "Tracking URL", grid.Locator, "TrackUrl");
                     TrackUrl.DataField = "TrackUrl";
-                    ReturnTrackNumber = new PXTextEdit("_ctl00_phG_tab_t3_gridPackages_lv0_edReturnTrackNumber", "Return Tracking Number", grid.Locator, "ReturnTrackNumber");
+                    ReturnTrackNumber = new PXTextEdit("_ctl00_phG_tab_t4_gridPackages_lv0_edReturnTrackNumber", "Return Tracking Number", grid.Locator, "ReturnTrackNumber");
                     ReturnTrackNumber.DataField = "ReturnTrackNumber";
-                    CustomRefNbr1 = new PXTextEdit("_ctl00_phG_tab_t3_gridPackages_lv0_PXTextEdit1", "Custom Ref. Nbr. 1", grid.Locator, "CustomRefNbr1");
+                    NonStandardContainer = new PXTextEdit("ctl00_phG_tab_t4_gridPackages_ef", "Non-Standard Container", grid.Locator, "NonStandardContainer");
+                    NonStandardContainer.DataField = "NonStandardContainer";
+                    AdditionalHandling = new PXTextEdit("ctl00_phG_tab_t4_gridPackages_ef", "Additional Handling", grid.Locator, "AdditionalHandling");
+                    AdditionalHandling.DataField = "AdditionalHandling";
+                    SSCC = new PXTextEdit("ctl00_phG_tab_t4_gridPackages_ei", "SSCC", grid.Locator, "SSCC");
+                    SSCC.DataField = "SSCC";
+                    CustomRefNbr1 = new PXTextEdit("_ctl00_phG_tab_t4_gridPackages_lv0_PXTextEdit1", "Custom Ref. Nbr. 1", grid.Locator, "CustomRefNbr1");
                     CustomRefNbr1.DataField = "CustomRefNbr1";
-                    CustomRefNbr2 = new PXTextEdit("_ctl00_phG_tab_t3_gridPackages_lv0_PXTextEdit2", "Custom Ref. Nbr. 2", grid.Locator, "CustomRefNbr2");
+                    CustomRefNbr2 = new PXTextEdit("_ctl00_phG_tab_t4_gridPackages_lv0_PXTextEdit2", "Custom Ref. Nbr. 2", grid.Locator, "CustomRefNbr2");
                     CustomRefNbr2.DataField = "CustomRefNbr2";
-                    ContentType = new DropDown("_ctl00_phG_tab_t3_gridPackages_lv0_ec", "Content Type", grid.Locator, "ContentType");
+                    ContentType = new DropDown("_ctl00_phG_tab_t4_gridPackages_lv0_ec", "Content Type", grid.Locator, "ContentType");
                     ContentType.DataField = "ContentType";
-                    EELPFC = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_ei", "EEL/PFC (EasyPost)", grid.Locator, "EELPFC");
+                    EELPFC = new PXTextEdit("ctl00_phG_tab_t4_gridPackages_ei", "EEL/PFC (EasyPost)", grid.Locator, "EELPFC");
                     EELPFC.DataField = "EELPFC";
-                    ContentTypeDesc = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_ea", "Other Content Type Desc.", grid.Locator, "ContentTypeDesc");
+                    ContentTypeDesc = new PXTextEdit("ctl00_phG_tab_t4_gridPackages_ea", "Other Content Type Desc.", grid.Locator, "ContentTypeDesc");
                     ContentTypeDesc.DataField = "ContentTypeDesc";
-                    CertificateNumber = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_ei", "Certificate Number", grid.Locator, "CertificateNumber");
+                    CertificateNumber = new PXTextEdit("ctl00_phG_tab_t4_gridPackages_ei", "Certificate Number", grid.Locator, "CertificateNumber");
                     CertificateNumber.DataField = "CertificateNumber";
-                    InvoiceNumber = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_ei", "Invoice Number", grid.Locator, "InvoiceNumber");
+                    InvoiceNumber = new PXTextEdit("ctl00_phG_tab_t4_gridPackages_ei", "Invoice Number", grid.Locator, "InvoiceNumber");
                     InvoiceNumber.DataField = "InvoiceNumber";
-                    LicenseNumber = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_ei", "License Number", grid.Locator, "LicenseNumber");
+                    LicenseNumber = new PXTextEdit("ctl00_phG_tab_t4_gridPackages_ei", "License Number", grid.Locator, "LicenseNumber");
                     LicenseNumber.DataField = "LicenseNumber";
-                    ShipmentNbr = new PXTextEdit("_ctl00_phG_tab_t3_gridPackages_lv0_edShipmentNbr_Pkg", "Shipment Nbr.", grid.Locator, "ShipmentNbr");
+                    ShipmentNbr = new PXTextEdit("_ctl00_phG_tab_t4_gridPackages_lv0_edShipmentNbr_Pkg", "Shipment Nbr.", grid.Locator, "ShipmentNbr");
                     ShipmentNbr.DataField = "ShipmentNbr";
-                    LineNbr = new PXNumberEdit("_ctl00_phG_tab_t3_gridPackages_lv0_edLineNbr_Pkg", "Line Nbr.", grid.Locator, "LineNbr");
+                    LineNbr = new PXNumberEdit("_ctl00_phG_tab_t4_gridPackages_lv0_edLineNbr_Pkg", "Line Nbr.", grid.Locator, "LineNbr");
                     LineNbr.DataField = "LineNbr";
                 }
             }
@@ -3717,6 +3508,9 @@ namespace GeneratedWrappers.SOLUTIONNAME
 				public PXTextEditColumnFilter TrackNumber { get; }
 				public PXTextEditColumnFilter TrackUrl { get; }
 				public PXTextEditColumnFilter ReturnTrackNumber { get; }
+				public PXTextEditColumnFilter NonStandardContainer { get; }
+				public PXTextEditColumnFilter AdditionalHandling { get; }
+				public PXTextEditColumnFilter SSCC { get; }
 				public PXTextEditColumnFilter CustomRefNbr1 { get; }
 				public PXTextEditColumnFilter CustomRefNbr2 { get; }
 				public InputColumnFilter ContentType { get; }
@@ -3750,6 +3544,9 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     TrackNumber = new PXTextEditColumnFilter(grid.Row.TrackNumber);
                     TrackUrl = new PXTextEditColumnFilter(grid.Row.TrackUrl);
                     ReturnTrackNumber = new PXTextEditColumnFilter(grid.Row.ReturnTrackNumber);
+                    NonStandardContainer = new PXTextEditColumnFilter(grid.Row.NonStandardContainer);
+                    AdditionalHandling = new PXTextEditColumnFilter(grid.Row.AdditionalHandling);
+                    SSCC = new PXTextEditColumnFilter(grid.Row.SSCC);
                     CustomRefNbr1 = new PXTextEditColumnFilter(grid.Row.CustomRefNbr1);
                     CustomRefNbr2 = new PXTextEditColumnFilter(grid.Row.CustomRefNbr2);
                     ContentType = new InputColumnFilter(grid.Row.ContentType);
@@ -3804,42 +3601,42 @@ namespace GeneratedWrappers.SOLUTIONNAME
             public c_packages_lv0(string locator, string name) : 
                     base(locator, name)
             {
-                ShipmentNbr = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_lv0_edShipmentNbr_Pkg", "Shipment Nbr.", locator, null);
+                ShipmentNbr = new PXTextEdit("ctl00_phG_tab_t4_gridPackages_lv0_edShipmentNbr_Pkg", "Shipment Nbr.", locator, null);
                 ShipmentNbrLabel = new Label(ShipmentNbr);
                 ShipmentNbr.DataField = "ShipmentNbr";
-                BoxID = new Selector("ctl00_phG_tab_t3_gridPackages_lv0_edBoxID", "Box ID", locator, null);
+                BoxID = new Selector("ctl00_phG_tab_t4_gridPackages_lv0_edBoxID", "Box ID", locator, null);
                 BoxIDLabel = new Label(BoxID);
                 BoxID.DataField = "BoxID";
-                LineNbr = new PXNumberEdit("ctl00_phG_tab_t3_gridPackages_lv0_edLineNbr_Pkg", "Line Nbr.", locator, null);
+                LineNbr = new PXNumberEdit("ctl00_phG_tab_t4_gridPackages_lv0_edLineNbr_Pkg", "Line Nbr.", locator, null);
                 LineNbrLabel = new Label(LineNbr);
                 LineNbr.DataField = "LineNbr";
-                Weight = new PXNumberEdit("ctl00_phG_tab_t3_gridPackages_lv0_edWeight", "Weight", locator, null);
+                Weight = new PXNumberEdit("ctl00_phG_tab_t4_gridPackages_lv0_edWeight", "Weight", locator, null);
                 WeightLabel = new Label(Weight);
                 Weight.DataField = "Weight";
-                COD = new PXNumberEdit("ctl00_phG_tab_t3_gridPackages_lv0_PXNumberEdit5", "C.O.D. Amount", locator, null);
+                COD = new PXNumberEdit("ctl00_phG_tab_t4_gridPackages_lv0_PXNumberEdit5", "C.O.D. Amount", locator, null);
                 CODLabel = new Label(COD);
                 COD.DataField = "COD";
-                DeclaredValue = new PXNumberEdit("ctl00_phG_tab_t3_gridPackages_lv0_PXNumberEdit6", "Declared Value", locator, null);
+                DeclaredValue = new PXNumberEdit("ctl00_phG_tab_t4_gridPackages_lv0_PXNumberEdit6", "Declared Value", locator, null);
                 DeclaredValueLabel = new Label(DeclaredValue);
                 DeclaredValue.DataField = "DeclaredValue";
-                TrackNumber = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_lv0_edTrackNumber", "Tracking Number", locator, null);
+                TrackNumber = new PXTextEdit("ctl00_phG_tab_t4_gridPackages_lv0_edTrackNumber", "Tracking Number", locator, null);
                 TrackNumberLabel = new Label(TrackNumber);
                 TrackNumber.DataField = "TrackNumber";
-                CustomRefNbr1 = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_lv0_PXTextEdit1", "Custom Ref. Nbr. 1", locator, null);
+                CustomRefNbr1 = new PXTextEdit("ctl00_phG_tab_t4_gridPackages_lv0_PXTextEdit1", "Custom Ref. Nbr. 1", locator, null);
                 CustomRefNbr1Label = new Label(CustomRefNbr1);
                 CustomRefNbr1.DataField = "CustomRefNbr1";
-                CustomRefNbr2 = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_lv0_PXTextEdit2", "Custom Ref. Nbr. 2", locator, null);
+                CustomRefNbr2 = new PXTextEdit("ctl00_phG_tab_t4_gridPackages_lv0_PXTextEdit2", "Custom Ref. Nbr. 2", locator, null);
                 CustomRefNbr2Label = new Label(CustomRefNbr2);
                 CustomRefNbr2.DataField = "CustomRefNbr2";
-                Description = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_lv0_PXTextEdit3", "Description", locator, null);
+                Description = new PXTextEdit("ctl00_phG_tab_t4_gridPackages_lv0_PXTextEdit3", "Description", locator, null);
                 DescriptionLabel = new Label(Description);
                 Description.DataField = "Description";
-                PackageType = new DropDown("ctl00_phG_tab_t3_gridPackages_lv0_edType", "Type", locator, null);
+                PackageType = new DropDown("ctl00_phG_tab_t4_gridPackages_lv0_edType", "Type", locator, null);
                 PackageTypeLabel = new Label(PackageType);
                 PackageType.DataField = "PackageType";
                 PackageType.Items.Add("A", "Auto");
                 PackageType.Items.Add("M", "Manual");
-                StampsAddOns = new DropDown("ctl00_phG_tab_t3_gridPackages_lv0_edStampsAddOns", "Stamps Surcharges", locator, null);
+                StampsAddOns = new DropDown("ctl00_phG_tab_t4_gridPackages_lv0_edStampsAddOns", "Stamps Surcharges", locator, null);
                 StampsAddOnsLabel = new Label(StampsAddOns);
                 StampsAddOns.DataField = "StampsAddOns";
                 StampsAddOns.Items.Add("USARD", "USPS Restricted Delivery");
@@ -3850,15 +3647,15 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 StampsAddOns.Items.Add("USASH", "Fragile items");
                 StampsAddOns.Items.Add("USA1030", "Deliver by 10:30 AM");
                 StampsAddOns.Items.Add("SCAHP", "Hidden Postage");
-                ReturnTrackNumber = new PXTextEdit("ctl00_phG_tab_t3_gridPackages_lv0_edReturnTrackNumber", "Return Tracking Number", locator, null);
+                ReturnTrackNumber = new PXTextEdit("ctl00_phG_tab_t4_gridPackages_lv0_edReturnTrackNumber", "Return Tracking Number", locator, null);
                 ReturnTrackNumberLabel = new Label(ReturnTrackNumber);
                 ReturnTrackNumber.DataField = "ReturnTrackNumber";
-                Es = new Selector("ctl00_phG_tab_t3_gridPackages_lv0_es", "Es", locator, null);
+                Es = new Selector("ctl00_phG_tab_t4_gridPackages_lv0_es", "Es", locator, null);
                 EsLabel = new Label(Es);
-                Ed = new DateSelector("ctl00_phG_tab_t3_gridPackages_lv0_ed", "Ed", locator, null);
+                Ed = new DateSelector("ctl00_phG_tab_t4_gridPackages_lv0_ed", "Ed", locator, null);
                 EdLabel = new Label(Ed);
-                Ec = new DropDown("ctl00_phG_tab_t3_gridPackages_lv0_ec", "Ec", locator, null);
-                Em = new Selector("ctl00_phG_tab_t3_gridPackages_lv0_em", "Em", locator, null);
+                Ec = new DropDown("ctl00_phG_tab_t4_gridPackages_lv0_ec", "Ec", locator, null);
+                Em = new Selector("ctl00_phG_tab_t4_gridPackages_lv0_em", "Em", locator, null);
                 EmLabel = new Label(Em);
                 DataMemberName = "Packages";
             }
@@ -4399,10 +4196,10 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     Adjust = new ToolBarButtonGrid("css=#ctl00_phG_PanelAddSO_grid4_at_tlb div[data-cmd=\'AdjustColumns\']", "Fit to Screen", locator, null);
                     Export = new ToolBarButtonGrid("css=#ctl00_phG_PanelAddSO_grid4_at_tlb div[data-cmd=\'ExportExcel\']", "Export to Excel", locator, null);
                     Hi = new ToolBarButtonGrid("css=#ctl00_phG_PanelAddSO_grid4_at_tlb div[data-cmd=\'hi\']", "Hi", locator, null);
-                    PageFirst = new ToolBarButtonGrid("css=#ctl00_phG_PanelAddSO_grid4_ab_tlb div[data-cmd=\'PageFirst\']", "Go to First Page (Ctrl+PgUp)", locator, null);
+                    PageFirst = new ToolBarButtonGrid("css=#ctl00_phG_PanelAddSO_grid4_ab_tlb div[data-cmd=\'PageFirst\']", "Go to First Page", locator, null);
                     PagePrev = new ToolBarButtonGrid("css=#ctl00_phG_PanelAddSO_grid4_ab_tlb div[data-cmd=\'PagePrev\']", "Go to Previous Page (PgUp)", locator, null);
                     PageNext = new ToolBarButtonGrid("css=#ctl00_phG_PanelAddSO_grid4_ab_tlb div[data-cmd=\'PageNext\']", "Go to Next Page (PgDn)", locator, null);
-                    PageLast = new ToolBarButtonGrid("css=#ctl00_phG_PanelAddSO_grid4_ab_tlb div[data-cmd=\'PageLast\']", "Go to Last Page (Ctrl+PgDn)", locator, null);
+                    PageLast = new ToolBarButtonGrid("css=#ctl00_phG_PanelAddSO_grid4_ab_tlb div[data-cmd=\'PageLast\']", "Go to Last Page", locator, null);
                     Hi1 = new ToolBarButtonGrid("css=#ctl00_phG_PanelAddSO_grid4_ab_tlb div[data-cmd=\'hi\']", "Hi", locator, null);
                 }
             }
@@ -4851,6 +4648,218 @@ namespace GeneratedWrappers.SOLUTIONNAME
             }
         }
         
+        public class c_carrierdata_formpacejetprocessing : Container
+        {
+            
+            public PxButtonCollection Buttons;
+            
+			public DropDown ExternalStatus { get; }
+			public Label ExternalStatusLabel { get; }
+			public PXTextEdit PacejetWorkstationID { get; }
+			public Label PacejetWorkstationIDLabel { get; }
+            
+            public c_carrierdata_formpacejetprocessing(string locator, string name) : 
+                    base(locator, name)
+            {
+                ExternalStatus = new DropDown("ctl00_phG_tab_t2_formF_formPacejetProcessing_edExternalStatus", "Pacejet Status", locator, null);
+                ExternalStatusLabel = new Label(ExternalStatus);
+                ExternalStatus.DataField = "ExternalStatus";
+                ExternalStatus.Items.Add("X", "N/A");
+                ExternalStatus.Items.Add("N", "Not Submitted");
+                ExternalStatus.Items.Add("S", "Workbench Processing");
+                ExternalStatus.Items.Add("C", "Completed");
+                PacejetWorkstationID = new PXTextEdit("ctl00_phG_tab_t2_formF_formPacejetProcessing_edPacejetWorkstationID", "Pacejet Workstation ID", locator, null);
+                PacejetWorkstationIDLabel = new Label(PacejetWorkstationID);
+                PacejetWorkstationID.DataField = "PacejetWorkstationID";
+                DataMemberName = "CarrierData";
+                Buttons = new PxButtonCollection();
+            }
+            
+            public virtual void ShopRates()
+            {
+                Buttons.ShopRates.Click();
+            }
+            
+            public virtual void Unnamed()
+            {
+                Buttons.Unnamed.Click();
+            }
+            
+            public virtual void Viewbase()
+            {
+                Buttons.Viewbase.Click();
+            }
+            
+            public virtual void Ok()
+            {
+                Buttons.Ok.Click();
+            }
+            
+            public class PxButtonCollection : PxControlCollection
+            {
+                
+			public Button ShopRates { get; }
+			public Button Unnamed { get; }
+			public Button Viewbase { get; }
+			public Button Ok { get; }
+                
+                public PxButtonCollection()
+                {
+                    ShopRates = new Button("ctl00_phG_tab_t2_formF_shopRates", "Shop for Rates", "ctl00_phG_tab_t2_formF_formPacejetProcessing");
+                    Unnamed = new Button("ctl00_phG_tab_t2_formF_edCury_rateB", "0", "ctl00_phG_tab_t2_formF_formPacejetProcessing");
+                    Viewbase = new Button("ctl00_phG_tab_t2_formF_edCury_curyB", "View base", "ctl00_phG_tab_t2_formF_formPacejetProcessing");
+                    Ok = new Button("ctl00_phG_tab_t2_formF_edCury_pnlRate_btnOk", "OK", "ctl00_phG_tab_t2_formF_formPacejetProcessing");
+                }
+            }
+        }
+        
+        public class c_carrierdata_formpacejetoptions : Container
+        {
+            
+            public PxButtonCollection Buttons;
+            
+			public CheckBox AdditionalHandling { get; }
+			public Label AdditionalHandlingLabel { get; }
+			public CheckBox EmailNotification { get; }
+			public Label EmailNotificationLabel { get; }
+			public CheckBox HazardousMaterials { get; }
+			public Label HazardousMaterialsLabel { get; }
+			public CheckBox PrintReturnLabel { get; }
+			public Label PrintReturnLabelLabel { get; }
+			public PXTextEdit ProBillNbr { get; }
+			public Label ProBillNbrLabel { get; }
+			public PXTextEdit DeliveryInstructions { get; }
+			public Label DeliveryInstructionsLabel { get; }
+            
+            public c_carrierdata_formpacejetoptions(string locator, string name) : 
+                    base(locator, name)
+            {
+                AdditionalHandling = new CheckBox("ctl00_phG_tab_t2_formDeliverySettings_formPacejetOptions_chkAdditionalHandling", "Additional Handling", locator, null);
+                AdditionalHandlingLabel = new Label(AdditionalHandling);
+                AdditionalHandling.DataField = "AdditionalHandling";
+                EmailNotification = new CheckBox("ctl00_phG_tab_t2_formDeliverySettings_formPacejetOptions_chkEmailNotification", "Email Notifications", locator, null);
+                EmailNotificationLabel = new Label(EmailNotification);
+                EmailNotification.DataField = "EmailNotification";
+                HazardousMaterials = new CheckBox("ctl00_phG_tab_t2_formDeliverySettings_formPacejetOptions_chkHazardousMaterials", "Hazardous Materials", locator, null);
+                HazardousMaterialsLabel = new Label(HazardousMaterials);
+                HazardousMaterials.DataField = "HazardousMaterials";
+                PrintReturnLabel = new CheckBox("ctl00_phG_tab_t2_formDeliverySettings_formPacejetOptions_edPrintReturnLabel", "Preprint Return Label", locator, null);
+                PrintReturnLabelLabel = new Label(PrintReturnLabel);
+                PrintReturnLabel.DataField = "PrintReturnLabel";
+                ProBillNbr = new PXTextEdit("ctl00_phG_tab_t2_formDeliverySettings_formPacejetOptions_edProBillNbr", "Pro Bill Nbr.", locator, null);
+                ProBillNbrLabel = new Label(ProBillNbr);
+                ProBillNbr.DataField = "ProBillNbr";
+                DeliveryInstructions = new PXTextEdit("ctl00_phG_tab_t2_formDeliverySettings_formPacejetOptions_edDeliveryInstructions", "Delivery Instructions", locator, null);
+                DeliveryInstructionsLabel = new Label(DeliveryInstructions);
+                DeliveryInstructions.DataField = "DeliveryInstructions";
+                DataMemberName = "CarrierData";
+                Buttons = new PxButtonCollection();
+            }
+            
+            public virtual void ShopRates()
+            {
+                Buttons.ShopRates.Click();
+            }
+            
+            public virtual void Unnamed()
+            {
+                Buttons.Unnamed.Click();
+            }
+            
+            public virtual void Viewbase()
+            {
+                Buttons.Viewbase.Click();
+            }
+            
+            public virtual void Ok()
+            {
+                Buttons.Ok.Click();
+            }
+            
+            public class PxButtonCollection : PxControlCollection
+            {
+                
+			public Button ShopRates { get; }
+			public Button Unnamed { get; }
+			public Button Viewbase { get; }
+			public Button Ok { get; }
+                
+                public PxButtonCollection()
+                {
+                    ShopRates = new Button("ctl00_phG_tab_t2_formF_shopRates", "Shop for Rates", "ctl00_phG_tab_t2_formDeliverySettings_formPacejetOptions");
+                    Unnamed = new Button("ctl00_phG_tab_t2_formF_edCury_rateB", "0", "ctl00_phG_tab_t2_formDeliverySettings_formPacejetOptions");
+                    Viewbase = new Button("ctl00_phG_tab_t2_formF_edCury_curyB", "View base", "ctl00_phG_tab_t2_formDeliverySettings_formPacejetOptions");
+                    Ok = new Button("ctl00_phG_tab_t2_formF_edCury_pnlRate_btnOk", "OK", "ctl00_phG_tab_t2_formDeliverySettings_formPacejetOptions");
+                }
+            }
+        }
+        
+        public class c_carrierdata_formltlsettings : Container
+        {
+            
+            public PxButtonCollection Buttons;
+            
+			public CheckBox LiftGate { get; }
+			public Label LiftGateLabel { get; }
+			public CheckBox InsideDelivery { get; }
+			public Label InsideDeliveryLabel { get; }
+			public CheckBox LimitedAccess { get; }
+			public Label LimitedAccessLabel { get; }
+            
+            public c_carrierdata_formltlsettings(string locator, string name) : 
+                    base(locator, name)
+            {
+                LiftGate = new CheckBox("ctl00_phG_tab_t2_formLTLSettings_edLiftGate", "Lift Gate", locator, null);
+                LiftGateLabel = new Label(LiftGate);
+                LiftGate.DataField = "LiftGate";
+                InsideDelivery = new CheckBox("ctl00_phG_tab_t2_formLTLSettings_edInsideDelivery", "Inside Delivery", locator, null);
+                InsideDeliveryLabel = new Label(InsideDelivery);
+                InsideDelivery.DataField = "InsideDelivery";
+                LimitedAccess = new CheckBox("ctl00_phG_tab_t2_formLTLSettings_edLimitedAccess", "Limited Access", locator, null);
+                LimitedAccessLabel = new Label(LimitedAccess);
+                LimitedAccess.DataField = "LimitedAccess";
+                DataMemberName = "CarrierData";
+                Buttons = new PxButtonCollection();
+            }
+            
+            public virtual void ShopRates()
+            {
+                Buttons.ShopRates.Click();
+            }
+            
+            public virtual void Unnamed()
+            {
+                Buttons.Unnamed.Click();
+            }
+            
+            public virtual void Viewbase()
+            {
+                Buttons.Viewbase.Click();
+            }
+            
+            public virtual void Ok()
+            {
+                Buttons.Ok.Click();
+            }
+            
+            public class PxButtonCollection : PxControlCollection
+            {
+                
+			public Button ShopRates { get; }
+			public Button Unnamed { get; }
+			public Button Viewbase { get; }
+			public Button Ok { get; }
+                
+                public PxButtonCollection()
+                {
+                    ShopRates = new Button("ctl00_phG_tab_t2_formF_shopRates", "Shop for Rates", "ctl00_phG_tab_t2_formLTLSettings");
+                    Unnamed = new Button("ctl00_phG_tab_t2_formF_edCury_rateB", "0", "ctl00_phG_tab_t2_formLTLSettings");
+                    Viewbase = new Button("ctl00_phG_tab_t2_formF_edCury_curyB", "View base", "ctl00_phG_tab_t2_formLTLSettings");
+                    Ok = new Button("ctl00_phG_tab_t2_formF_edCury_pnlRate_btnOk", "OK", "ctl00_phG_tab_t2_formLTLSettings");
+                }
+            }
+        }
+        
         public class c_packagedetailsplit_gridpackagedetailsplit : Grid<c_packagedetailsplit_gridpackagedetailsplit.c_grid_row, c_packagedetailsplit_gridpackagedetailsplit.c_grid_header>
         {
             
@@ -4861,9 +4870,9 @@ namespace GeneratedWrappers.SOLUTIONNAME
             public c_packagedetailsplit_gridpackagedetailsplit(string locator, string name) : 
                     base(locator, name)
             {
-                ToolBar = new PxToolBar("ctl00_phG_tab_t3_gridPackageDetailSplit");
+                ToolBar = new PxToolBar("ctl00_phG_tab_t4_gridPackageDetailSplit");
                 DataMemberName = "PackageDetailSplit";
-                FilterForm = new c_grid_filter("ctl00_phG_tab_t3_gridPackageDetailSplit_fe_gf", "FilterForm");
+                FilterForm = new c_grid_filter("ctl00_phG_tab_t4_gridPackageDetailSplit_fe_gf", "FilterForm");
             }
             
             public virtual void Refresh()
@@ -4938,19 +4947,19 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 
                 public PxToolBar(string locator)
                 {
-                    Refresh = new ToolBarButtonGrid("css=#ctl00_phG_tab_t3_gridPackageDetailSplit_at_tlb div[data-cmd=\'Refresh\']", "Refresh", locator, null);
-                    New = new ToolBarButtonGrid("css=#ctl00_phG_tab_t3_gridPackageDetailSplit_at_tlb div[data-cmd=\'AddNew\']", "Add Row", locator, null);
-                    Delete = new ToolBarButtonGrid("css=#ctl00_phG_tab_t3_gridPackageDetailSplit_at_tlb div[data-cmd=\'Delete\']", "Delete Row", locator, null);
+                    Refresh = new ToolBarButtonGrid("css=#ctl00_phG_tab_t4_gridPackageDetailSplit_at_tlb div[data-cmd=\'Refresh\']", "Refresh", locator, null);
+                    New = new ToolBarButtonGrid("css=#ctl00_phG_tab_t4_gridPackageDetailSplit_at_tlb div[data-cmd=\'AddNew\']", "Add Row", locator, null);
+                    Delete = new ToolBarButtonGrid("css=#ctl00_phG_tab_t4_gridPackageDetailSplit_at_tlb div[data-cmd=\'Delete\']", "Delete Row", locator, null);
                     Delete.ConfirmAction = () => Alert.AlertToException("The current {0} record will be deleted.");
-                    Adjust = new ToolBarButtonGrid("css=#ctl00_phG_tab_t3_gridPackageDetailSplit_at_tlb div[data-cmd=\'AdjustColumns\']" +
+                    Adjust = new ToolBarButtonGrid("css=#ctl00_phG_tab_t4_gridPackageDetailSplit_at_tlb div[data-cmd=\'AdjustColumns\']" +
                             "", "Fit to Screen", locator, null);
-                    Export = new ToolBarButtonGrid("css=#ctl00_phG_tab_t3_gridPackageDetailSplit_at_tlb div[data-cmd=\'ExportExcel\']", "Export to Excel", locator, null);
-                    Hi = new ToolBarButtonGrid("css=#ctl00_phG_tab_t3_gridPackageDetailSplit_at_tlb div[data-cmd=\'hi\']", "Hi", locator, null);
-                    PageFirst = new ToolBarButtonGrid("css=#ctl00_phG_tab_t3_gridPackageDetailSplit_ab_tlb div[data-cmd=\'PageFirst\']", "Go to First Page (Ctrl+PgUp)", locator, null);
-                    PagePrev = new ToolBarButtonGrid("css=#ctl00_phG_tab_t3_gridPackageDetailSplit_ab_tlb div[data-cmd=\'PagePrev\']", "Go to Previous Page (PgUp)", locator, null);
-                    PageNext = new ToolBarButtonGrid("css=#ctl00_phG_tab_t3_gridPackageDetailSplit_ab_tlb div[data-cmd=\'PageNext\']", "Go to Next Page (PgDn)", locator, null);
-                    PageLast = new ToolBarButtonGrid("css=#ctl00_phG_tab_t3_gridPackageDetailSplit_ab_tlb div[data-cmd=\'PageLast\']", "Go to Last Page (Ctrl+PgDn)", locator, null);
-                    Hi1 = new ToolBarButtonGrid("css=#ctl00_phG_tab_t3_gridPackageDetailSplit_ab_tlb div[data-cmd=\'hi\']", "Hi", locator, null);
+                    Export = new ToolBarButtonGrid("css=#ctl00_phG_tab_t4_gridPackageDetailSplit_at_tlb div[data-cmd=\'ExportExcel\']", "Export to Excel", locator, null);
+                    Hi = new ToolBarButtonGrid("css=#ctl00_phG_tab_t4_gridPackageDetailSplit_at_tlb div[data-cmd=\'hi\']", "Hi", locator, null);
+                    PageFirst = new ToolBarButtonGrid("css=#ctl00_phG_tab_t4_gridPackageDetailSplit_ab_tlb div[data-cmd=\'PageFirst\']", "Go to First Page", locator, null);
+                    PagePrev = new ToolBarButtonGrid("css=#ctl00_phG_tab_t4_gridPackageDetailSplit_ab_tlb div[data-cmd=\'PagePrev\']", "Go to Previous Page (PgUp)", locator, null);
+                    PageNext = new ToolBarButtonGrid("css=#ctl00_phG_tab_t4_gridPackageDetailSplit_ab_tlb div[data-cmd=\'PageNext\']", "Go to Next Page (PgDn)", locator, null);
+                    PageLast = new ToolBarButtonGrid("css=#ctl00_phG_tab_t4_gridPackageDetailSplit_ab_tlb div[data-cmd=\'PageLast\']", "Go to Last Page", locator, null);
+                    Hi1 = new ToolBarButtonGrid("css=#ctl00_phG_tab_t4_gridPackageDetailSplit_ab_tlb div[data-cmd=\'hi\']", "Hi", locator, null);
                 }
             }
             
@@ -4968,19 +4977,19 @@ namespace GeneratedWrappers.SOLUTIONNAME
                 public c_grid_row(c_packagedetailsplit_gridpackagedetailsplit grid) : 
                         base(grid)
                 {
-                    ShipmentSplitLineNbr = new Selector("_ctl00_phG_tab_t3_gridPackageDetailSplit_lv0_edShipmentSplitLineNbr", "Shipment Split Line Nbr.", grid.Locator, "ShipmentSplitLineNbr");
+                    ShipmentSplitLineNbr = new Selector("_ctl00_phG_tab_t4_gridPackageDetailSplit_lv0_edShipmentSplitLineNbr", "Shipment Split Line Nbr.", grid.Locator, "ShipmentSplitLineNbr");
                     ShipmentSplitLineNbr.DataField = "ShipmentSplitLineNbr";
-                    InventoryID = new Selector("_ctl00_phG_tab_t3_gridPackageDetailSplit_lv0_edInventoryIDSplit", "Inventory ID", grid.Locator, "InventoryID");
+                    InventoryID = new Selector("_ctl00_phG_tab_t4_gridPackageDetailSplit_lv0_edInventoryIDSplit", "Inventory ID", grid.Locator, "InventoryID");
                     InventoryID.DataField = "InventoryID";
-                    SubItemID = new Selector("_ctl00_phG_tab_t3_gridPackageDetailSplit_lv0_edSubItemIDSplit", "Subitem", grid.Locator, "SubItemID");
+                    SubItemID = new Selector("_ctl00_phG_tab_t4_gridPackageDetailSplit_lv0_edSubItemIDSplit", "Subitem", grid.Locator, "SubItemID");
                     SubItemID.DataField = "SubItemID";
-                    LotSerialNbr = new PXTextEdit("_ctl00_phG_tab_t3_gridPackageDetailSplit_lv0_edLotSerialNbrSplit", "Lot/Serial Nbr.", grid.Locator, "LotSerialNbr");
+                    LotSerialNbr = new PXTextEdit("_ctl00_phG_tab_t4_gridPackageDetailSplit_lv0_edLotSerialNbrSplit", "Lot/Serial Nbr.", grid.Locator, "LotSerialNbr");
                     LotSerialNbr.DataField = "LotSerialNbr";
-                    UOM = new PXTextEdit("_ctl00_phG_tab_t3_gridPackageDetailSplit_lv0_edUOMSplit", "UOM", grid.Locator, "UOM");
+                    UOM = new PXTextEdit("_ctl00_phG_tab_t4_gridPackageDetailSplit_lv0_edUOMSplit", "UOM", grid.Locator, "UOM");
                     UOM.DataField = "UOM";
-                    PackedQty = new PXNumberEdit("_ctl00_phG_tab_t3_gridPackageDetailSplit_lv0_edQtySplit", "Quantity", grid.Locator, "PackedQty");
+                    PackedQty = new PXNumberEdit("_ctl00_phG_tab_t4_gridPackageDetailSplit_lv0_edQtySplit", "Quantity", grid.Locator, "PackedQty");
                     PackedQty.DataField = "PackedQty";
-                    RecordID = new PXNumberEdit("ctl00_phG_tab_t3_gridPackageDetailSplit_en", "RecordID", grid.Locator, "RecordID");
+                    RecordID = new PXNumberEdit("ctl00_phG_tab_t4_gridPackageDetailSplit_en", "RecordID", grid.Locator, "RecordID");
                     RecordID.DataField = "RecordID";
                 }
             }
@@ -5031,25 +5040,25 @@ namespace GeneratedWrappers.SOLUTIONNAME
             public c_packagedetailsplit_lv0(string locator, string name) : 
                     base(locator, name)
             {
-                InventoryID = new Selector("ctl00_phG_tab_t3_gridPackageDetailSplit_lv0_edInventoryIDSplit", "Inventory ID", locator, null);
+                InventoryID = new Selector("ctl00_phG_tab_t4_gridPackageDetailSplit_lv0_edInventoryIDSplit", "Inventory ID", locator, null);
                 InventoryIDLabel = new Label(InventoryID);
                 InventoryID.DataField = "InventoryID";
-                SubItemID = new Selector("ctl00_phG_tab_t3_gridPackageDetailSplit_lv0_edSubItemIDSplit", "Subitem", locator, null);
+                SubItemID = new Selector("ctl00_phG_tab_t4_gridPackageDetailSplit_lv0_edSubItemIDSplit", "Subitem", locator, null);
                 SubItemIDLabel = new Label(SubItemID);
                 SubItemID.DataField = "SubItemID";
-                LotSerialNbr = new PXTextEdit("ctl00_phG_tab_t3_gridPackageDetailSplit_lv0_edLotSerialNbrSplit", "Lot/Serial Nbr.", locator, null);
+                LotSerialNbr = new PXTextEdit("ctl00_phG_tab_t4_gridPackageDetailSplit_lv0_edLotSerialNbrSplit", "Lot/Serial Nbr.", locator, null);
                 LotSerialNbrLabel = new Label(LotSerialNbr);
                 LotSerialNbr.DataField = "LotSerialNbr";
-                PackedQty = new PXNumberEdit("ctl00_phG_tab_t3_gridPackageDetailSplit_lv0_edQtySplit", "Quantity", locator, null);
+                PackedQty = new PXNumberEdit("ctl00_phG_tab_t4_gridPackageDetailSplit_lv0_edQtySplit", "Quantity", locator, null);
                 PackedQtyLabel = new Label(PackedQty);
                 PackedQty.DataField = "PackedQty";
-                UOM = new PXTextEdit("ctl00_phG_tab_t3_gridPackageDetailSplit_lv0_edUOMSplit", "UOM", locator, null);
+                UOM = new PXTextEdit("ctl00_phG_tab_t4_gridPackageDetailSplit_lv0_edUOMSplit", "UOM", locator, null);
                 UOMLabel = new Label(UOM);
                 UOM.DataField = "UOM";
-                ShipmentSplitLineNbr = new Selector("ctl00_phG_tab_t3_gridPackageDetailSplit_lv0_edShipmentSplitLineNbr", "Shipment Split Line Nbr.", locator, null);
+                ShipmentSplitLineNbr = new Selector("ctl00_phG_tab_t4_gridPackageDetailSplit_lv0_edShipmentSplitLineNbr", "Shipment Split Line Nbr.", locator, null);
                 ShipmentSplitLineNbrLabel = new Label(ShipmentSplitLineNbr);
                 ShipmentSplitLineNbr.DataField = "ShipmentSplitLineNbr";
-                Es = new Selector("ctl00_phG_tab_t3_gridPackageDetailSplit_lv0_es", "Es", locator, null);
+                Es = new Selector("ctl00_phG_tab_t4_gridPackageDetailSplit_lv0_es", "Es", locator, null);
                 EsLabel = new Label(Es);
                 DataMemberName = "PackageDetailSplit";
             }
@@ -5329,10 +5338,10 @@ namespace GeneratedWrappers.SOLUTIONNAME
                     Adjust = new ToolBarButtonGrid("css=#ctl00_phG_PanelPickList_gridPickList_at_tlb div[data-cmd=\'AdjustColumns\']", "Fit to Screen", locator, null);
                     Export = new ToolBarButtonGrid("css=#ctl00_phG_PanelPickList_gridPickList_at_tlb div[data-cmd=\'ExportExcel\']", "Export to Excel", locator, null);
                     Hi = new ToolBarButtonGrid("css=#ctl00_phG_PanelPickList_gridPickList_at_tlb div[data-cmd=\'hi\']", "Hi", locator, null);
-                    PageFirst = new ToolBarButtonGrid("css=#ctl00_phG_PanelPickList_gridPickList_ab_tlb div[data-cmd=\'PageFirst\']", "Go to First Page (Ctrl+PgUp)", locator, null);
+                    PageFirst = new ToolBarButtonGrid("css=#ctl00_phG_PanelPickList_gridPickList_ab_tlb div[data-cmd=\'PageFirst\']", "Go to First Page", locator, null);
                     PagePrev = new ToolBarButtonGrid("css=#ctl00_phG_PanelPickList_gridPickList_ab_tlb div[data-cmd=\'PagePrev\']", "Go to Previous Page (PgUp)", locator, null);
                     PageNext = new ToolBarButtonGrid("css=#ctl00_phG_PanelPickList_gridPickList_ab_tlb div[data-cmd=\'PageNext\']", "Go to Next Page (PgDn)", locator, null);
-                    PageLast = new ToolBarButtonGrid("css=#ctl00_phG_PanelPickList_gridPickList_ab_tlb div[data-cmd=\'PageLast\']", "Go to Last Page (Ctrl+PgDn)", locator, null);
+                    PageLast = new ToolBarButtonGrid("css=#ctl00_phG_PanelPickList_gridPickList_ab_tlb div[data-cmd=\'PageLast\']", "Go to Last Page", locator, null);
                     Hi1 = new ToolBarButtonGrid("css=#ctl00_phG_PanelPickList_gridPickList_ab_tlb div[data-cmd=\'hi\']", "Hi", locator, null);
                 }
             }
@@ -5356,36 +5365,45 @@ namespace GeneratedWrappers.SOLUTIONNAME
             {
                 
 			public Selector LocationID { get; }
-			public PXTextEdit InventoryID { get; }
+			public Selector InventoryID { get; }
 			public Selector SubItemID { get; }
 			public PXTextEdit LotSerialNbr { get; }
 			public PXNumberEdit Qty { get; }
 			public Selector UOM { get; }
 			public DateSelector ExpireDate { get; }
 			public PXNumberEdit PickedQty { get; }
-			public PXTextEdit ToteID { get; }
+			public Selector ToteID { get; }
+			public PXTextEdit WorksheetNbr { get; }
+			public PXNumberEdit PickerNbr { get; }
+			public PXNumberEdit EntryNbr { get; }
                 
                 public c_grid_row(c_picklistentries_gridpicklist grid) : 
                         base(grid)
                 {
-                    LocationID = new Selector("_ctl00_phG_PanelPickList_gridPickList_lv0_edPick_LocationID", "Location ID", grid.Locator, "LocationID");
+                    LocationID = new Selector("_ctl00_phG_PanelPickList_gridPickList_lv0_edPick_LocationID", "Location", grid.Locator, "LocationID");
                     LocationID.DataField = "LocationID";
-                    InventoryID = new PXTextEdit("ctl00_phG_PanelPickList_gridPickList_ei", "Inventory ID", grid.Locator, "InventoryID");
+                    InventoryID = new Selector("_ctl00_phG_PanelPickList_gridPickList_lv0_es", "Inventory ID", grid.Locator, "InventoryID");
                     InventoryID.DataField = "InventoryID";
-                    SubItemID = new Selector("_ctl00_phG_PanelPickList_gridPickList_lv0_edPick_SubItemID", "Sub Item ID", grid.Locator, "SubItemID");
+                    SubItemID = new Selector("_ctl00_phG_PanelPickList_gridPickList_lv0_edPick_SubItemID", "Subitem", grid.Locator, "SubItemID");
                     SubItemID.DataField = "SubItemID";
-                    LotSerialNbr = new PXTextEdit("_ctl00_phG_PanelPickList_gridPickList_lv0_edPick_LotSerialNbr", "Lot Serial Nbr", grid.Locator, "LotSerialNbr");
+                    LotSerialNbr = new PXTextEdit("_ctl00_phG_PanelPickList_gridPickList_lv0_edPick_LotSerialNbr", "Lot/Serial Nbr.", grid.Locator, "LotSerialNbr");
                     LotSerialNbr.DataField = "LotSerialNbr";
-                    Qty = new PXNumberEdit("_ctl00_phG_PanelPickList_gridPickList_lv0_edPick_Qty", "Qty", grid.Locator, "Qty");
+                    Qty = new PXNumberEdit("_ctl00_phG_PanelPickList_gridPickList_lv0_edPick_Qty", "Quantity", grid.Locator, "Qty");
                     Qty.DataField = "Qty";
                     UOM = new Selector("_ctl00_phG_PanelPickList_gridPickList_lv0_edPick_UOM", "UOM", grid.Locator, "UOM");
                     UOM.DataField = "UOM";
-                    ExpireDate = new DateSelector("_ctl00_phG_PanelPickList_gridPickList_lv0_edPick_ExpireDate", "Expire Date", grid.Locator, "ExpireDate");
+                    ExpireDate = new DateSelector("_ctl00_phG_PanelPickList_gridPickList_lv0_edPick_ExpireDate", "Expiration Date", grid.Locator, "ExpireDate");
                     ExpireDate.DataField = "ExpireDate";
-                    PickedQty = new PXNumberEdit("_ctl00_phG_PanelPickList_gridPickList_lv0_edPick_PickedQty", "Picked Qty", grid.Locator, "PickedQty");
+                    PickedQty = new PXNumberEdit("_ctl00_phG_PanelPickList_gridPickList_lv0_edPick_PickedQty", "Picked Quantity", grid.Locator, "PickedQty");
                     PickedQty.DataField = "PickedQty";
-                    ToteID = new PXTextEdit("ctl00_phG_PanelPickList_gridPickList_ei", "Tote ID", grid.Locator, "ToteID");
+                    ToteID = new Selector("_ctl00_phG_PanelPickList_gridPickList_lv0_es", "Tote ID", grid.Locator, "ToteID");
                     ToteID.DataField = "ToteID";
+                    WorksheetNbr = new PXTextEdit("ctl00_phG_PanelPickList_gridPickList_em", "Worksheet Nbr.", grid.Locator, "WorksheetNbr");
+                    WorksheetNbr.DataField = "WorksheetNbr";
+                    PickerNbr = new PXNumberEdit("ctl00_phG_PanelPickList_gridPickList_en", "Picker Nbr.", grid.Locator, "PickerNbr");
+                    PickerNbr.DataField = "PickerNbr";
+                    EntryNbr = new PXNumberEdit("ctl00_phG_PanelPickList_gridPickList_en", "Entry Nbr.", grid.Locator, "EntryNbr");
+                    EntryNbr.DataField = "EntryNbr";
                 }
             }
             
@@ -5393,27 +5411,33 @@ namespace GeneratedWrappers.SOLUTIONNAME
             {
                 
 				public SelectorColumnFilter LocationID { get; }
-				public PXTextEditColumnFilter InventoryID { get; }
+				public SelectorColumnFilter InventoryID { get; }
 				public SelectorColumnFilter SubItemID { get; }
 				public PXTextEditColumnFilter LotSerialNbr { get; }
 				public PXNumberEditColumnFilter Qty { get; }
 				public SelectorColumnFilter UOM { get; }
 				public DateSelectorColumnFilter ExpireDate { get; }
 				public PXNumberEditColumnFilter PickedQty { get; }
-				public PXTextEditColumnFilter ToteID { get; }
+				public SelectorColumnFilter ToteID { get; }
+				public PXTextEditColumnFilter WorksheetNbr { get; }
+				public PXNumberEditColumnFilter PickerNbr { get; }
+				public PXNumberEditColumnFilter EntryNbr { get; }
                 
                 public c_grid_header(c_picklistentries_gridpicklist grid) : 
                         base(grid)
                 {
                     LocationID = new SelectorColumnFilter(grid.Row.LocationID);
-                    InventoryID = new PXTextEditColumnFilter(grid.Row.InventoryID);
+                    InventoryID = new SelectorColumnFilter(grid.Row.InventoryID);
                     SubItemID = new SelectorColumnFilter(grid.Row.SubItemID);
                     LotSerialNbr = new PXTextEditColumnFilter(grid.Row.LotSerialNbr);
                     Qty = new PXNumberEditColumnFilter(grid.Row.Qty);
                     UOM = new SelectorColumnFilter(grid.Row.UOM);
                     ExpireDate = new DateSelectorColumnFilter(grid.Row.ExpireDate);
                     PickedQty = new PXNumberEditColumnFilter(grid.Row.PickedQty);
-                    ToteID = new PXTextEditColumnFilter(grid.Row.ToteID);
+                    ToteID = new SelectorColumnFilter(grid.Row.ToteID);
+                    WorksheetNbr = new PXTextEditColumnFilter(grid.Row.WorksheetNbr);
+                    PickerNbr = new PXNumberEditColumnFilter(grid.Row.PickerNbr);
+                    EntryNbr = new PXNumberEditColumnFilter(grid.Row.EntryNbr);
                 }
             }
         }
@@ -5437,31 +5461,35 @@ namespace GeneratedWrappers.SOLUTIONNAME
 			public Label ExpireDateLabel { get; }
 			public PXNumberEdit PickedQty { get; }
 			public Label PickedQtyLabel { get; }
+			public Selector Es { get; }
+			public Label EsLabel { get; }
             
             public c_picklistentries_lv0(string locator, string name) : 
                     base(locator, name)
             {
-                LocationID = new Selector("ctl00_phG_PanelPickList_gridPickList_lv0_edPick_LocationID", "Location ID", locator, null);
+                LocationID = new Selector("ctl00_phG_PanelPickList_gridPickList_lv0_edPick_LocationID", "Location", locator, null);
                 LocationIDLabel = new Label(LocationID);
                 LocationID.DataField = "LocationID";
-                SubItemID = new Selector("ctl00_phG_PanelPickList_gridPickList_lv0_edPick_SubItemID", "Sub Item ID", locator, null);
+                SubItemID = new Selector("ctl00_phG_PanelPickList_gridPickList_lv0_edPick_SubItemID", "Subitem", locator, null);
                 SubItemIDLabel = new Label(SubItemID);
                 SubItemID.DataField = "SubItemID";
-                Qty = new PXNumberEdit("ctl00_phG_PanelPickList_gridPickList_lv0_edPick_Qty", "Qty", locator, null);
+                Qty = new PXNumberEdit("ctl00_phG_PanelPickList_gridPickList_lv0_edPick_Qty", "Quantity", locator, null);
                 QtyLabel = new Label(Qty);
                 Qty.DataField = "Qty";
                 UOM = new Selector("ctl00_phG_PanelPickList_gridPickList_lv0_edPick_UOM", "UOM", locator, null);
                 UOMLabel = new Label(UOM);
                 UOM.DataField = "UOM";
-                LotSerialNbr = new PXTextEdit("ctl00_phG_PanelPickList_gridPickList_lv0_edPick_LotSerialNbr", "Lot Serial Nbr", locator, null);
+                LotSerialNbr = new PXTextEdit("ctl00_phG_PanelPickList_gridPickList_lv0_edPick_LotSerialNbr", "Lot/Serial Nbr.", locator, null);
                 LotSerialNbrLabel = new Label(LotSerialNbr);
                 LotSerialNbr.DataField = "LotSerialNbr";
-                ExpireDate = new DateSelector("ctl00_phG_PanelPickList_gridPickList_lv0_edPick_ExpireDate", "Expire Date", locator, null);
+                ExpireDate = new DateSelector("ctl00_phG_PanelPickList_gridPickList_lv0_edPick_ExpireDate", "Expiration Date", locator, null);
                 ExpireDateLabel = new Label(ExpireDate);
                 ExpireDate.DataField = "ExpireDate";
-                PickedQty = new PXNumberEdit("ctl00_phG_PanelPickList_gridPickList_lv0_edPick_PickedQty", "Picked Qty", locator, null);
+                PickedQty = new PXNumberEdit("ctl00_phG_PanelPickList_gridPickList_lv0_edPick_PickedQty", "Picked Quantity", locator, null);
                 PickedQtyLabel = new Label(PickedQty);
                 PickedQty.DataField = "PickedQty";
+                Es = new Selector("ctl00_phG_PanelPickList_gridPickList_lv0_es", "Es", locator, null);
+                EsLabel = new Label(Es);
                 DataMemberName = "PickListEntries";
                 Buttons = new PxButtonCollection();
             }
